@@ -1,0 +1,105 @@
+"""Step 5：问答 CLI。
+
+用法（InternVL 环境，项目根目录）：
+  python ask.py "请事假需要提前几天申请？"     # 单发问答（带引用）
+  python ask.py                                  # 交互式 REPL（输入 exit 退出）
+  python ask.py "问题" --no-llm                  # 仅检索，展示 Top-K 片段（无需 API）
+  python ask.py "问题" --top-k 10                # 调整送入的块数
+"""
+from __future__ import annotations
+
+import argparse
+import sys
+
+from ragcore.config import FINAL_TOP_K, ROOT
+from ragcore.llm import api_ready, generate
+from ragcore.retriever import retrieve
+
+HELP = """可用的示例问题：
+  请事假需要提前几天申请？
+  带薪年假的天数如何计算？
+  加班费怎么计算？
+  员工离职需要办理哪些流程？
+  违反保密义务有什么后果？
+输入 exit / quit 退出。"""
+
+
+def ensure_utf8() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            try:
+                stream.reconfigure(encoding="utf-8")
+            except Exception:
+                pass
+
+
+def print_sources(chunks: list[dict]) -> None:
+    print("\n— 参考来源（按相关度）—")
+    for i, c in enumerate(chunks, 1):
+        pages = ",".join(str(p) for p in c["pages"])
+        head = c["text"].replace("\n", " ")
+        if len(head) > 150:
+            head = head[:150] + "…"
+        print(f"{i}. 第{pages}页 · {c['path'] or '(无章节)'}")
+        print(f"   {head}")
+
+
+def answer_once(question: str, top_k: int, use_llm: bool) -> int:
+    print(f"Q: {question}\n")
+    chunks = retrieve(question, k=top_k)
+    if not chunks:
+        print("（未检索到任何相关内容）")
+        return 1
+    if use_llm:
+        if not api_ready():
+            print("[提示] .env 未配置 OPENAI_API_KEY / OPENAI_BASE_URL，改用仅检索模式。")
+            use_llm = False
+        else:
+            try:
+                print("A:", generate(question, chunks), "\n")
+            except Exception as exc:
+                print(f"[提示] LLM 调用失败（{type(exc).__name__}: {exc}），展示检索片段：\n")
+    if not use_llm:
+        print_sources(chunks)
+    else:
+        print("\n— 检索命中的核心片段（供核对）—")
+        for i, c in enumerate(chunks[:3], 1):
+            pages = ",".join(str(p) for p in c["pages"])
+            head = c["text"].replace("\n", " ")
+            if len(head) > 150:
+                head = head[:150] + "…"
+            print(f"{i}. 第{pages}页 · {c['path'] or '(无章节)'}")
+            print(f"   {head}")
+    return 0
+
+
+def main() -> int:
+    ensure_utf8()
+    ap = argparse.ArgumentParser(description="京东员工手册 RAG 问答")
+    ap.add_argument("question", nargs="?", default=None, help="问题；缺省进入交互模式")
+    ap.add_argument("--top-k", type=int, default=FINAL_TOP_K, help=f"送入的块数（默认 {FINAL_TOP_K}）")
+    ap.add_argument("--no-llm", action="store_true", help="仅检索，不调用 LLM")
+    args = ap.parse_args()
+
+    use_llm = not args.no_llm
+    if args.question:
+        return answer_once(args.question, args.top_k, use_llm)
+
+    print("京东员工手册 RAG 问答（交互模式）· exit 退出\n" + HELP)
+    while True:
+        try:
+            q = input("\n> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n再见")
+            return 0
+        if not q:
+            continue
+        if q.lower() in ("exit", "quit"):
+            print("再见")
+            return 0
+        answer_once(q, args.top_k, use_llm)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

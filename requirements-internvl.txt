@@ -1,0 +1,10 @@
+# InternVL conda 环境 (C:\Users\wuhao\.conda\envs\InternVL) 补充依赖
+# 环境内已预装：chromadb 1.5.9 / sentence-transformers 6.0.1 / torch 2.9.0+cpu /
+#              transformers 5.16.1 / openai 3.7.0 / pypdf 6.16.2 / numpy 2.2.6
+#
+# 安装：& "C:\Users\wuhao\.conda\envs\InternVL\python.exe" -m pip install -r requirements-internvl.txt
+
+pdfplumber          # 逐页文本 + 表格提取（extract.py）
+rank_bm25           # BM25 词法检索（retriever.py）
+jieba               # 中文分词（retriever.py BM25 tokenizer）
+python-dotenv       # 读取 .env（ask.py / llm.py）
