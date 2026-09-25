@@ -46,6 +46,8 @@ python -m ragcore.redteam --rescore
 
 完整结果和逐题输出见 `data/eval/report_ir.md`、`data/eval/robust_report.md`、`data/eval/redteam_report.md`。红队回答的 176 处引用中，页码不存在的引用为 0；有 1 处把两个前言页塞进同一引用标记，触发章节路径告警。规则通过不代表回答事实正确，仍需逐条核对。
 
+另有 16 条待复核的拟真问法与困难负样本，见 `data/eval/challenge_review_v1.md`。它们尚未并入上述正式评测，也不被称为真实员工提问。
+
 ## 设计取舍与当前边界
 
 - 检索支持 dense、BM25 和 RRF 对照。现有 golden set 显示 BM25 更强，后续应先补充真实改写与困难负样本，再决定是否调整融合策略。
