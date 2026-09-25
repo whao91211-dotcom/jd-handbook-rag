@@ -9,10 +9,11 @@ import functools
 import os
 from typing import Iterable
 
-# 必须在导入 sentence_transformers / transformers 之前设置：
-# 模型已在本机 HF 缓存，禁止任何联网探测（否则会卡在 huggingface.co 连接超时）。
-os.environ.setdefault("HF_HUB_OFFLINE", "1")
-os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
+# 可选离线模式：设置 RAG_OFFLINE=1，要求模型已预先缓存。
+# 首次运行默认允许下载模型，避免只在开发者电脑上可用。
+if os.getenv("RAG_OFFLINE") == "1":
+    os.environ.setdefault("HF_HUB_OFFLINE", "1")
+    os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 from sentence_transformers import SentenceTransformer
 

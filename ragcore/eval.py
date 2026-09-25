@@ -1,66 +1,75 @@
-"""Step 4 配套：检索冒烟评测（不调用 LLM）。
-
-判定：问题的关键词出现在 Top-3 检索结果的正文中即为 PASS。
-结果同时打印并写入 data/eval_report.txt。
-
-用法：python -m ragcore.eval
-"""
+"""离线检索评测：人工标注证据页和原文片段，不调用生成模型。"""
 from __future__ import annotations
 
+import json
+import re
 import sys
 
-from .config import DATA_DIR
+from .config import DATA_DIR, PAGES_JSONL
 from .retriever import retrieve
 
-# (问题, 期望命中的关键词列表，命中任一即可)
-EVAL_CASES = [
-    ("员工请事假需要提前几天申请？", ["事假"]),
-    ("带薪年假的天数如何计算？", ["年假"]),
-    ("病假期间的工资如何发放？", ["病假"]),
-    ("加班费如何计算？", ["加班"]),
-    ("员工离职需要办理哪些流程？", ["离职"]),
-    ("女员工产假能休多少天？", ["产假"]),
-    ("新员工试用期多长？", ["试用"]),
-    ("违反保密义务有什么后果？", ["保密"]),
-    ("公司提供哪些员工福利？", ["福利"]),
-    ("员工申诉与投诉的渠道是什么？", ["申诉"]),
-    ("差旅费用报销有什么要求？", ["报销"]),
+# (问题, 证据页, 证据片段)：片段已在 PDF 提取文本中人工核对。
+ANSWERABLE_CASES = [
+    ("员工申请事假有哪些前提？", 23, "年休假及调休休完后申请事假"),
+    ("累计工作满十年不满二十年，法定年假多少天？", 23, "每年法定年假标准为 10 天"),
+    ("员工每年有多少天全薪福利病假？", 22, "5 天全薪福利病假"),
+    ("法定节假日加班如何支付加班费？", 21, "按照国家规定支付加班费"),
+    ("试用期员工辞职需要提前多久申请？", 18, "至少提前三日提出书面离职申请"),
+    ("手册举例中，北京地区女员工产假是多少天？", 24, "北京地区员工享有 128 天的产假"),
+    ("新员工的试用期是多久？", 15, "试用期为一至六个月"),
+    ("手册如何界定违反保密义务的行为？", 46, "泄漏公司秘密、违反保密义务的"),
+    ("每月十五日后入职，社保和公积金何时办理？", 29, "每月 15 日后入职的员工，于次月办理"),
+    ("员工申诉可以拨打什么热线？", 33, "大耳朵热线：4006183638"),
+    ("手册对不真实的费用报销有什么规定？", 46, "费用报销不真实"),
+]
+
+# 检索命中相关章节也不代表有答案；这两例需在生成阶段测拒答。
+UNANSWERABLE_CASES = [
+    "员工请事假必须提前几天申请？",
+    "差旅费用报销的票据和审批标准是什么？",
 ]
 
 
-def ensure_utf8() -> None:
-    for stream in (sys.stdout, sys.stderr):
-        if hasattr(stream, "reconfigure"):
-            try:
-                stream.reconfigure(encoding="utf-8")
-            except Exception:
-                pass
+def normalize(text: str) -> str:
+    return re.sub(r"\s+", "", text)
+
+
+def validate_evidence() -> None:
+    pages = {p["page"]: p for p in (json.loads(line) for line in PAGES_JSONL.open(encoding="utf-8"))}
+    for question, page, evidence in ANSWERABLE_CASES:
+        if page not in pages or normalize(evidence) not in normalize(pages[page]["text"]):
+            raise ValueError(f"评测证据未在第 {page} 页找到：{question} / {evidence}")
 
 
 def main() -> int:
-    ensure_utf8()
-    lines: list[str] = []
-    passed = 0
-    for q, keywords in EVAL_CASES:
-        hits = retrieve(q, k=3)
-        texts = " ".join(h["text"] for h in hits)
-        ok = any(kw in texts for kw in keywords)
-        passed += int(ok)
-        top = hits[0] if hits else None
-        topinfo = (
-            f"p{top['page_start']} | {top['path']}" if top else "无结果"
-        )
-        lines.append(f"[{'PASS' if ok else 'FAIL'}] {q}")
-        lines.append(f"        期望关键词: {'/'.join(keywords)} | Top1: {topinfo}")
-        print(f"[{'PASS' if ok else 'FAIL'}] {q}")
-        print(f"        期望关键词: {'/'.join(keywords)} | Top1: {topinfo}")
-    summary = f"\n通过 {passed}/{len(EVAL_CASES)}"
-    lines.append(summary)
-    print(summary)
-    report = DATA_DIR / "eval_report.txt"
-    report.write_text("\n".join(lines), encoding="utf-8")
-    print(f"报告已写入 {report}")
-    return 0 if passed == len(EVAL_CASES) else 1
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+    validate_evidence()
+    rows = []
+    for question, page, evidence in ANSWERABLE_CASES:
+        hits = retrieve(question, k=3)
+        rank = next((i for i, hit in enumerate(hits, 1)
+                     if page in hit["pages"] and normalize(evidence) in normalize(hit["text"])), None)
+        rows.append({"question": question, "evidence_page": page,
+                     "evidence": evidence, "rank": rank,
+                     "top3": [{"id": h["id"], "pages": h["pages"]} for h in hits]})
+        print(f"[{'PASS' if rank else 'FAIL'}] rank={rank or '-'} p{page} {question}")
+    n = len(rows)
+    metrics = {
+        "hit_at_1": sum(r["rank"] == 1 for r in rows) / n,
+        "hit_at_3": sum(r["rank"] is not None for r in rows) / n,
+        "mrr_at_3": sum(1 / r["rank"] if r["rank"] else 0 for r in rows) / n,
+    }
+    report = {"method": "page-and-evidence", "metrics": metrics,
+              "answerable_cases": rows, "unanswerable_cases_not_scored": UNANSWERABLE_CASES}
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    path = DATA_DIR / "eval_report.json"
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Hit@1={metrics['hit_at_1']:.1%} Hit@3={metrics['hit_at_3']:.1%} MRR@3={metrics['mrr_at_3']:.3f}")
+    print(f"报告：{path}")
+    print(f"另有 {len(UNANSWERABLE_CASES)} 个拒答问题，需单独评测生成答案。")
+    return 0 if metrics["hit_at_3"] == 1 else 1
 
 
 if __name__ == "__main__":

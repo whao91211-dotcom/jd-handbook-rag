@@ -59,6 +59,7 @@ def answer_once(question: str, top_k: int, use_llm: bool) -> int:
                 print("A:", generate(question, chunks), "\n")
             except Exception as exc:
                 print(f"[提示] LLM 调用失败（{type(exc).__name__}: {exc}），展示检索片段：\n")
+                use_llm = False
     if not use_llm:
         print_sources(chunks)
     else:

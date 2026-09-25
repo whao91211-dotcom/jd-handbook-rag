@@ -17,7 +17,7 @@ load_dotenv(ROOT / ".env")
 
 SYSTEM_PROMPT = """你是《京东集团员工手册》的政策问答助手。规则：
 1. 只能依据下方【参考资料】作答，禁止编造手册中不存在的内容。
-2. 每个事实点后标注来源，格式：〔第X页·章节路径〕。
+2. 每个事实点后标注来源，使用参考资料中提供的页码或页码范围与章节路径。
 3. 若资料不足以回答，明确说明"手册未查到相关内容"。
 4. 回答使用简体中文，条理清晰；涉及天数/金额/比例时尽量引用原文。
 5. 参考资料按相关度排序，优先采信前面条目。"""
@@ -31,7 +31,9 @@ def build_context(chunks: list[dict]) -> str:
         text = c["text"]
         if used + len(text) > LLM_CONTEXT_BUDGET:
             break
-        parts.append(f"〔第{c['page_start']}页·{c['path'] or '无章节'}〕\n{text}")
+        pages = c["pages"]
+        page_label = str(pages[0]) if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
+        parts.append(f"〔第{page_label}页·{c['path'] or '无章节'}〕\n{text}")
         used += len(text)
     return "\n\n".join(parts)
 

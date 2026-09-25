@@ -1,0 +1,9 @@
+# 已在 Python 3.10 / Windows CPU 环境验证的版本
+chromadb==1.5.9
+sentence-transformers==6.0.1
+torch==2.9.0
+pdfplumber==0.11.10
+rank-bm25==0.2.2
+jieba==0.42.1
+python-dotenv==1.2.3
+openai==3.7.0

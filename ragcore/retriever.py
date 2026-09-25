@@ -12,6 +12,7 @@ from .embedder import embed_query
 from .store import get_collection
 
 _corpus = None
+_bm25 = None
 
 
 def _load_corpus() -> tuple[list[str], list[dict], list[dict]]:
@@ -25,11 +26,15 @@ def _load_corpus() -> tuple[list[str], list[dict], list[dict]]:
 
 
 def _bm25_index(docs: list[str]):
+    global _bm25
+    if _bm25 is not None:
+        return _bm25
     import jieba
     from rank_bm25 import BM25Okapi
 
     corpus = [list(jieba.cut(d)) for d in docs]
-    return BM25Okapi(corpus), jieba
+    _bm25 = (BM25Okapi(corpus), jieba)
+    return _bm25
 
 
 def retrieve(query: str, k: int = FINAL_TOP_K) -> list[dict]:
