@@ -11,8 +11,8 @@ from __future__ import annotations
 import argparse
 import sys
 
-from ragcore.config import FINAL_TOP_K, ROOT
-from ragcore.llm import api_ready, generate
+from ragcore.config import FINAL_TOP_K, RETRIEVE_MODES, ROOT
+from ragcore.llm import api_ready, generate, last_usage
 from ragcore.retriever import retrieve
 
 HELP = """可用的示例问题：
@@ -44,9 +44,12 @@ def print_sources(chunks: list[dict]) -> None:
         print(f"   {head}")
 
 
-def answer_once(question: str, top_k: int, use_llm: bool) -> int:
-    print(f"Q: {question}\n")
-    chunks = retrieve(question, k=top_k)
+def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf") -> int:
+    print(f"Q: {question}")
+    if mode != "rrf":
+        print(f"[消融] 检索模式 = {mode}（线上默认为 rrf）")
+    print()
+    chunks = retrieve(question, k=top_k, mode=mode)
     if not chunks:
         print("（未检索到任何相关内容）")
         return 1
@@ -56,9 +59,21 @@ def answer_once(question: str, top_k: int, use_llm: bool) -> int:
             use_llm = False
         else:
             try:
-                print("A:", generate(question, chunks), "\n")
+                answer = generate(question, chunks)
+                # 双保险：generate() 已保证不返回空串，这里再兜一层，防止将来改坏
+                if not answer.strip():
+                    raise RuntimeError("模型返回了空内容")
+                print("A:", answer, "\n")
+                u = last_usage()
+                if u:
+                    print("— 本次用量 — %s · 第%s次尝试 · 预算%s · "
+                          "prompt %s + completion %s（其中 reasoning %s）· 正文 %s 字\n" % (
+                              u.get("model"), u.get("attempt"), u.get("max_tokens"),
+                              u.get("prompt_tokens"), u.get("completion_tokens"),
+                              u.get("reasoning_tokens"), u.get("content_chars")))
             except Exception as exc:
-                print(f"[提示] LLM 调用失败（{type(exc).__name__}: {exc}），展示检索片段：\n")
+                print(f"[提示] LLM 调用失败（{type(exc).__name__}: {exc}），降级为仅检索模式：\n")
+                use_llm = False
     if not use_llm:
         print_sources(chunks)
     else:
@@ -79,11 +94,17 @@ def main() -> int:
     ap.add_argument("question", nargs="?", default=None, help="问题；缺省进入交互模式")
     ap.add_argument("--top-k", type=int, default=FINAL_TOP_K, help=f"送入的块数（默认 {FINAL_TOP_K}）")
     ap.add_argument("--no-llm", action="store_true", help="仅检索，不调用 LLM")
+    ap.add_argument(
+        "--mode",
+        choices=RETRIEVE_MODES,
+        default="rrf",
+        help="检索模式（消融实验）：rrf=双路融合（默认）/ dense=仅向量 / bm25=仅词法",
+    )
     args = ap.parse_args()
 
     use_llm = not args.no_llm
     if args.question:
-        return answer_once(args.question, args.top_k, use_llm)
+        return answer_once(args.question, args.top_k, use_llm, args.mode)
 
     print("京东员工手册 RAG 问答（交互模式）· exit 退出\n" + HELP)
     while True:
@@ -97,7 +118,7 @@ def main() -> int:
         if q.lower() in ("exit", "quit"):
             print("再见")
             return 0
-        answer_once(q, args.top_k, use_llm)
+        answer_once(q, args.top_k, use_llm, args.mode)
     return 0
 
 

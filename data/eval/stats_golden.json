@@ -1,0 +1,18 @@
+{
+  "step": "make_golden",
+  "total": 46,
+  "positive": 35,
+  "negative": 11,
+  "type_dist": {
+    "table": 11,
+    "numeric": 14,
+    "fact": 10,
+    "negative": 11
+  },
+  "source_chunks": 35,
+  "negative_check_pass": 11,
+  "negative_check_fail": 0,
+  "llm_failures": [],
+  "model": "deepseek-v4-flash",
+  "generated_at": "2026-09-14 16:17:13"
+}
