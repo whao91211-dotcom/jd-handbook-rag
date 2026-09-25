@@ -46,7 +46,7 @@ python -m ragcore.redteam --rescore
 
 完整结果和逐题输出见 `data/eval/report_ir.md`、`data/eval/robust_report.md`、`data/eval/redteam_report.md`。红队回答的 176 处引用中，页码不存在的引用为 0；有 1 处把两个前言页塞进同一引用标记，触发章节路径告警。规则通过不代表回答事实正确，仍需逐条核对。
 
-另有 16 条待复核的拟真问法与困难负样本，见 `data/eval/challenge_review_v1.md`。它们尚未并入上述正式评测，也不被称为真实员工提问。
+回答层题库另收录 36 条模拟员工问法：8 条口语化正样本、16 条困难负样本、12 条含糊或缺少个人条件的问题，见 `data/eval/answer_eval_review_v1.md`。它们不计入上面的检索层基线；回答准确性和引用支持性尚待独立人工标注，不能称为真实员工提问或正式准确率。
 
 ## 设计取舍与当前边界
 
