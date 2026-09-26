@@ -27,13 +27,15 @@ def main():
     parser.add_argument('--generate', action='store_true')
     parser.add_argument('--guarded-only', action='store_true')
     parser.add_argument('--fast-only', action='store_true')
+    parser.add_argument('--low-only', action='store_true')
     parser.add_argument('--retry-incomplete', action='store_true')
     parser.add_argument('--workers', type=int, default=3)
     args = parser.parse_args()
-    if args.fast_only and args.guarded_only:
-        parser.error('choose guarded-only or fast-only')
-    scoped = args.guarded_only or args.fast_only
-    folder = ('fast_experiment_2026-09-26' if args.fast_only else
+    if sum((args.fast_only,args.guarded_only,args.low_only))>1:
+        parser.error('choose guarded-only, fast-only or low-only')
+    scoped = args.guarded_only or args.fast_only or args.low_only
+    folder = ('low_experiment_2026-09-26' if args.low_only else
+              'fast_experiment_2026-09-26' if args.fast_only else
               'guarded_experiment_2026-09-26' if args.guarded_only else 'evidence_experiment_2026-09-26')
     out = ROOT / 'evaluation' / folder
     out.mkdir(exist_ok=True)
@@ -97,6 +99,8 @@ def main():
         variants = [('E', 'guarded', 'baseline'), ('F', 'guarded', 'evidence')]
     if args.fast_only:
         variants = [('G', 'guarded', 'evidence', 'disabled')]
+    if args.low_only:
+        variants = [('H', 'guarded', 'evidence', 'low')]
     stop_batch = threading.Event()
     def run(case, variant, strategy, prompt, thinking_mode='default'):
         if stop_batch.is_set():

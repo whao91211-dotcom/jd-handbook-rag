@@ -107,7 +107,7 @@ def main() -> int:
     )
     ap.add_argument('--strategy', choices=STRATEGIES, default='baseline', help='检索实验策略')
     ap.add_argument('--prompt-version', choices=('baseline','evidence'), default='baseline', help='回答实验版本')
-    ap.add_argument('--thinking-mode', choices=('default','disabled'), default='default', help='兼容DeepSeek接口的思考模式对照；disabled需供应商支持')
+    ap.add_argument('--thinking-mode', choices=('default','disabled','low'), default='default', help='兼容DeepSeek接口的思考模式对照；disabled/low需供应商支持')
     args = ap.parse_args()
 
     use_llm = not args.no_llm

@@ -151,8 +151,8 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
     理由：reasoning token 长度随问题难度变化，**任何固定值都有边界**，
     所以用"宽松起步 + 按需抬高 + 有限次后显式失败"，而不是猜一个够大的数。
     """
-    if thinking_mode not in ('default', 'disabled'):
-        raise ValueError('thinking_mode must be default or disabled')
+    if thinking_mode not in ('default', 'disabled', 'low'):
+        raise ValueError('thinking_mode must be default, disabled or low')
     LAST_USAGE.clear()
     cfg = env_config()
     client = get_client()
@@ -172,7 +172,8 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
             resp = client.chat.completions.create(
                 model=cfg["model"], messages=messages,
                 temperature=0.2, max_tokens=budget,
-                **({'extra_body': {'thinking': {'type': 'disabled'}}} if thinking_mode == 'disabled' else {}),
+                **({'extra_body': {'thinking': {'type': 'disabled'}}} if thinking_mode == 'disabled' else
+                   {'extra_body': {'thinking': {'type': 'enabled'}}, 'reasoning_effort': 'low'} if thinking_mode == 'low' else {}),
             )
         except Exception as exc:
             status = getattr(exc, 'status_code', None)

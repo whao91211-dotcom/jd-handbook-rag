@@ -18,9 +18,12 @@ class GenerationTests(unittest.TestCase):
         with patch.object(llm,'get_client',return_value=client), patch.object(llm,'env_config',return_value={'model':'fake'}):
             llm.generate('问题',chunks)
             llm.generate('问题',chunks,thinking_mode='disabled',usage_sink=usage)
+            llm.generate('问题',chunks,thinking_mode='low')
         self.assertNotIn('extra_body',calls[0])
         self.assertEqual(calls[1]['extra_body'],{'thinking':{'type':'disabled'}})
         self.assertEqual(usage[0]['response_model'],'returned-model')
+        self.assertEqual(calls[2]['reasoning_effort'],'low')
+        self.assertEqual(calls[2]['extra_body'],{'thinking':{'type':'enabled'}})
 
     def test_evidence_mode_rejects_a_truncated_final_answer(self):
         response=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content='未完成的政策'),
