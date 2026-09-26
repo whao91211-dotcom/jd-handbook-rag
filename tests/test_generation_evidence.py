@@ -6,6 +6,22 @@ from ragcore import llm
 
 
 class GenerationTests(unittest.TestCase):
+    def test_exhausted_balance_is_not_retried_with_larger_budget(self):
+        class BalanceError(Exception):
+            status_code = 402
+        calls = []
+        def create(**kwargs):
+            calls.append(kwargs)
+            raise BalanceError('balance exhausted')
+        client=SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+        chunks=[{'id':'a','text':'规则','page_start':1,'path':'政策'}]
+        usage=[]
+        with patch.object(llm,'get_client',return_value=client), patch.object(llm,'env_config',return_value={'model':'fake'}):
+            with self.assertRaises(BalanceError):
+                llm.generate('问题',chunks,usage_sink=usage)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(usage[0]['status_code'],402)
+
     def prepare(self, chunks):
         function = getattr(llm, 'prepare_context', None)
         self.assertIsNotNone(function, 'Missing traceable evidence context')

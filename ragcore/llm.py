@@ -172,8 +172,12 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
                 temperature=0.2, max_tokens=budget,
             )
         except Exception as exc:
+            status = getattr(exc, 'status_code', None)
             if usage_sink is not None:
-                usage_sink.append({'attempt': i+1, 'max_tokens': budget, 'error_type': type(exc).__name__, 'prompt_tokens': None, 'completion_tokens': None})
+                usage_sink.append({'attempt': i+1, 'max_tokens': budget, 'error_type': type(exc).__name__, 'status_code': status, 'prompt_tokens': None, 'completion_tokens': None})
+            # Larger token budgets cannot fix credentials, balance, invalid parameters or rate limits.
+            if status in (400, 401, 402, 403, 404, 429):
+                raise
             attempts.append(f"第{i + 1}次(预算{budget})调用异常: {type(exc).__name__}: {exc}")
             continue
 
