@@ -45,7 +45,7 @@ def print_sources(chunks: list[dict]) -> None:
         print(f"   {head}")
 
 
-def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline") -> int:
+def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline", prompt_version: str = "baseline") -> int:
     print(f"Q: {question}")
     if mode != "rrf":
         print(f"[消融] 检索模式 = {mode}（线上默认为 rrf）")
@@ -60,7 +60,7 @@ def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", str
             use_llm = False
         else:
             try:
-                answer = generate(question, chunks)
+                answer = generate(question, chunks, prompt_version=prompt_version)
                 # 双保险：generate() 已保证不返回空串，这里再兜一层，防止将来改坏
                 if not answer.strip():
                     raise RuntimeError("模型返回了空内容")
@@ -79,12 +79,16 @@ def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", str
         print_sources(chunks)
     else:
         print("\n— 检索命中的核心片段（供核对）—")
-        for i, c in enumerate(chunks[:3], 1):
+        from ragcore.llm import prepare_context
+        _, source_map = prepare_context(chunks, prompt_version)
+        visible = chunks[:3] if prompt_version == 'baseline' else [c for c in chunks if c['id'] in source_map.values()]
+        for i, c in enumerate(visible, 1):
             pages = ",".join(str(p) for p in c["pages"])
             head = c["text"].replace("\n", " ")
             if len(head) > 150:
                 head = head[:150] + "…"
-            print(f"{i}. 第{pages}页 · {c['path'] or '(无章节)'}")
+            prefix = f"〔来源{i}〕" if prompt_version == 'evidence' else f"{i}."
+            print(f"{prefix} 第{pages}页 · {c['path'] or '(无章节)'}")
             print(f"   {head}")
     return 0
 
@@ -102,11 +106,12 @@ def main() -> int:
         help="检索模式（消融实验）：rrf=双路融合（默认）/ dense=仅向量 / bm25=仅词法",
     )
     ap.add_argument('--strategy', choices=STRATEGIES, default='baseline', help='检索实验策略')
+    ap.add_argument('--prompt-version', choices=('baseline','evidence'), default='baseline', help='回答实验版本')
     args = ap.parse_args()
 
     use_llm = not args.no_llm
     if args.question:
-        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy)
+        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version)
 
     print("京东员工手册 RAG 问答（交互模式）· exit 退出\n" + HELP)
     while True:
@@ -120,7 +125,7 @@ def main() -> int:
         if q.lower() in ("exit", "quit"):
             print("再见")
             return 0
-        answer_once(q, args.top_k, use_llm, args.mode, args.strategy)
+        answer_once(q, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version)
     return 0
 
 

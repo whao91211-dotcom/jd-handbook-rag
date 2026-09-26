@@ -36,17 +36,47 @@ SYSTEM_PROMPT = """你是《京东集团员工手册》的政策问答助手。�
    推断它仍是最新版本；资料没有当前版本证据时明确说明无法确认。"""
 
 
-def build_context(chunks: list[dict]) -> str:
-    """把检索结果拼成上下文，超过预算则截断（保持块完整）。"""
+EVIDENCE_PROMPT = """你是员工手册政策问答助手，仅根据提供的参考资料回答。
+1. 先判断用户问的是哪种事项。缺少假别、岗位、工龄、地点、日期等必要条件时，给有条件的规则并提出最少的澄清问题，不替用户选择个人结论。
+2. 必须先结合事项定义、分类总则、具体条款及例外再回答。单条没有某个字样不等于没有规则：例如假别性质要与该类假期的薪酬福利总则共同理解。
+3. 数值示例必须保留资格、年度累计、入职当年折算、转正及属地条件；条件不全时不给个人天数、工资或预算。上限不等于额外额度。
+4. 离职按辞职、公司解除、协商解除、依法终止区分，调动按发起方区分。不同条款有张力时分别列明，不自行确定优先级或口头同意的法律效力。
+5. 未定义的时间地点边界保持未知，建议向负责部门核实；不要推断21点整等边界。资料未给出的申请时限、软件名称、补考次数、费用、余额及结转规则不能编造。
+6. 找不到信息时只说“提供的参考资料未明确”，不能据此宣称整本手册没有规定。已给出的相关规则应先说明，未提供的专项制度不推测其内容。
+7. 仅回答与问题直接相关的内容。简体中文，优先使用“结论、规则与条件、仍需确认”三段，避免罗列无关福利和处分。
+8. 每个制度事实后复制对应的来源标记，如〔来源1〕。仅引用输入中存在且支持该事实的来源，不编造页码、章节或子条号；多条共同支持时列多个来源。
+9. 不代写个人文件、不替用户作法律职业决定；权益事项建议向HR或负责部门核实。生效日期不能证明当前最新版本，未给现行证据时说明无法确认。
+"""
+
+
+def prepare_context(chunks: list[dict], prompt_version: str = "baseline") -> tuple[str, dict]:
+    if prompt_version not in ("baseline", "evidence"):
+        raise ValueError("prompt_version must be baseline or evidence")
     parts = []
     used = 0
+    mapping = {}
     for c in chunks:
         text = c["text"]
-        if used + len(text) > LLM_CONTEXT_BUDGET:
-            break
-        parts.append(f"〔第{c['page_start']}页·{c['path'] or '无章节'}〕\n{text}")
-        used += len(text)
-    return "\n\n".join(parts)
+        if prompt_version == "baseline":
+            if used + len(text) > LLM_CONTEXT_BUDGET:
+                break
+            parts.append(f"〔第{c['page_start']}页·{c['path'] or '无章节'}〕\n{text}")
+            used += len(text)
+        else:
+            label = f"来源{len(parts)+1}"
+            part = f"〔{label}〕 第{c['page_start']}页·{c['path'] or '无章节'}\n{text}"
+            cost = len(part) + (2 if parts else 0)
+            if used + cost > LLM_CONTEXT_BUDGET:
+                continue
+            parts.append(part)
+            mapping[label] = c['id']
+            used += cost
+    return "\n\n".join(parts), mapping
+
+
+def build_context(chunks: list[dict]) -> str:
+    """Keep the historical baseline context unchanged."""
+    return prepare_context(chunks, "baseline")[0]
 
 
 def env_config() -> dict:
@@ -110,7 +140,7 @@ def last_usage() -> dict:
     return dict(LAST_USAGE)
 
 
-def generate(question: str, chunks: list[dict]) -> str:
+def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseline", usage_sink: Optional[list[dict]] = None) -> str:
     """生成回答。
 
     契约：**失败必须抛异常，绝不返回空串。**
@@ -124,12 +154,12 @@ def generate(question: str, chunks: list[dict]) -> str:
     LAST_USAGE.clear()
     cfg = env_config()
     client = get_client()
-    context = build_context(chunks)
+    context, _ = prepare_context(chunks, prompt_version)
     if not context:
         return "（未能检索到相关手册内容，请换一种问法。）"
 
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "system", "content": SYSTEM_PROMPT if prompt_version == "baseline" else EVIDENCE_PROMPT},
         {"role": "user", "content": f"问题：{question}\n\n【参考资料】\n{context}"},
     ]
     attempts: list[str] = []
@@ -142,6 +172,8 @@ def generate(question: str, chunks: list[dict]) -> str:
                 temperature=0.2, max_tokens=budget,
             )
         except Exception as exc:
+            if usage_sink is not None:
+                usage_sink.append({'attempt': i+1, 'max_tokens': budget, 'error_type': type(exc).__name__, 'prompt_tokens': None, 'completion_tokens': None})
             attempts.append(f"第{i + 1}次(预算{budget})调用异常: {type(exc).__name__}: {exc}")
             continue
 
@@ -151,15 +183,18 @@ def generate(question: str, chunks: list[dict]) -> str:
         details = getattr(usage, "completion_tokens_details", None)
         reasoning = getattr(details, "reasoning_tokens", None) if details else None
 
-        LAST_USAGE.clear()
-        LAST_USAGE.update({
+        request_usage = {
             "model": cfg["model"], "attempt": i + 1, "max_tokens": budget,
             "prompt_tokens": getattr(usage, "prompt_tokens", None),
             "completion_tokens": getattr(usage, "completion_tokens", None),
             "reasoning_tokens": reasoning,
             "finish_reason": choice.finish_reason,
             "content_chars": len(content),
-        })
+        }
+        LAST_USAGE.clear()
+        LAST_USAGE.update(request_usage)
+        if usage_sink is not None:
+            usage_sink.append(dict(request_usage))
         if content and choice.finish_reason != "length":
             return content                       # 只有"有正文且正常收尾"才算成功
 
