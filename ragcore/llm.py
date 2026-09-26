@@ -140,7 +140,7 @@ def last_usage() -> dict:
     return dict(LAST_USAGE)
 
 
-def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseline", usage_sink: Optional[list[dict]] = None) -> str:
+def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseline", usage_sink: Optional[list[dict]] = None, thinking_mode: str = 'default') -> str:
     """生成回答。
 
     契约：**失败必须抛异常，绝不返回空串。**
@@ -151,6 +151,8 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
     理由：reasoning token 长度随问题难度变化，**任何固定值都有边界**，
     所以用"宽松起步 + 按需抬高 + 有限次后显式失败"，而不是猜一个够大的数。
     """
+    if thinking_mode not in ('default', 'disabled'):
+        raise ValueError('thinking_mode must be default or disabled')
     LAST_USAGE.clear()
     cfg = env_config()
     client = get_client()
@@ -170,6 +172,7 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
             resp = client.chat.completions.create(
                 model=cfg["model"], messages=messages,
                 temperature=0.2, max_tokens=budget,
+                **({'extra_body': {'thinking': {'type': 'disabled'}}} if thinking_mode == 'disabled' else {}),
             )
         except Exception as exc:
             status = getattr(exc, 'status_code', None)
@@ -189,6 +192,7 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
 
         request_usage = {
             "model": cfg["model"], "attempt": i + 1, "max_tokens": budget,
+            "response_model": getattr(resp, 'model', None), "thinking_mode": thinking_mode,
             "prompt_tokens": getattr(usage, "prompt_tokens", None),
             "completion_tokens": getattr(usage, "completion_tokens", None),
             "reasoning_tokens": reasoning,

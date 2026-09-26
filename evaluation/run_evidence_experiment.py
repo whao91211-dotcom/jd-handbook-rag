@@ -26,10 +26,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--generate', action='store_true')
     parser.add_argument('--guarded-only', action='store_true')
+    parser.add_argument('--fast-only', action='store_true')
     parser.add_argument('--retry-incomplete', action='store_true')
     parser.add_argument('--workers', type=int, default=3)
     args = parser.parse_args()
-    folder = 'guarded_experiment_2026-09-26' if args.guarded_only else 'evidence_experiment_2026-09-26'
+    if args.fast_only and args.guarded_only:
+        parser.error('choose guarded-only or fast-only')
+    scoped = args.guarded_only or args.fast_only
+    folder = ('fast_experiment_2026-09-26' if args.fast_only else
+              'guarded_experiment_2026-09-26' if args.guarded_only else 'evidence_experiment_2026-09-26')
     out = ROOT / 'evaluation' / folder
     out.mkdir(exist_ok=True)
     revision = subprocess.check_output(['git','rev-parse','HEAD'], cwd=ROOT, text=True).strip()
@@ -50,7 +55,7 @@ def main():
     prepared = {}
     for dataset, questions in [('development36', cases), ('original35', old)]:
         for case in questions:
-            for strategy in (('baseline', 'guarded') if args.guarded_only else ('baseline', 'expanded', 'coverage')):
+            for strategy in (('baseline', 'guarded') if scoped else ('baseline', 'expanded', 'coverage')):
                 start = time.perf_counter()
                 chunks = retrieve(case['question'], strategy=strategy)
                 elapsed = time.perf_counter() - start
@@ -70,7 +75,7 @@ def main():
     save(out / 'retrieval.json', rows)
     summary = {}
     for dataset in ('development36', 'original35'):
-        for strategy in (('baseline', 'guarded') if args.guarded_only else ('baseline', 'expanded', 'coverage')):
+        for strategy in (('baseline', 'guarded') if scoped else ('baseline', 'expanded', 'coverage')):
             eligible = [x for x in rows if x['dataset'] == dataset and x['strategy'] == strategy
                         and (dataset != 'development36' or x['kind'] == 'naturalistic_positive')]
             summary[f'{dataset}/{strategy}'] = {'n': len(eligible), **{
@@ -90,8 +95,10 @@ def main():
                 ('C', 'coverage', 'baseline'), ('D', 'coverage', 'evidence')]
     if args.guarded_only:
         variants = [('E', 'guarded', 'baseline'), ('F', 'guarded', 'evidence')]
+    if args.fast_only:
+        variants = [('G', 'guarded', 'evidence', 'disabled')]
     stop_batch = threading.Event()
-    def run(case, variant, strategy, prompt):
+    def run(case, variant, strategy, prompt, thinking_mode='default'):
         if stop_batch.is_set():
             return None
         chunks, retrieval = prepared[(case['qid'], strategy)]
@@ -101,13 +108,14 @@ def main():
         start = time.perf_counter()
         error = None
         try:
-            answer = generate(case['question'], chunks, prompt_version=prompt, usage_sink=usage)
+            answer = generate(case['question'], chunks, prompt_version=prompt, usage_sink=usage, thinking_mode=thinking_mode)
         except Exception as exc:
             answer, error = '', type(exc).__name__
             if any(u.get('status_code') in (401,402,403,429) for u in usage):
                 stop_batch.set()
         return {'variant': variant, 'qid': case['qid'], 'question': case['question'],
                 'code_revision': revision,
+                'thinking_mode': thinking_mode,
                 'strategy': strategy, 'prompt_version': prompt, 'context': context,
                 'source_map': source_map, 'retrieved_ids': retrieval['retrieved_ids'],
                 'system_prompt': system, 'system_sha256': digest(system), 'context_sha256': digest(context),

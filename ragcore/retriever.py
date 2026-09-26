@@ -88,7 +88,7 @@ def retrieve(
     bm25_top_k: int | None = BM25_TOP_K,
     strategy: str = "baseline",
 ) -> list[dict]:
-    """返回检索结果 Top-k（从高到低）。
+    """返回 Top-k；baseline/expanded按融合分排序，分面策略按证据选择顺序返回。
 
     Args:
         query: 查询文本。

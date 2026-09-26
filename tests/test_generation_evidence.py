@@ -6,6 +6,22 @@ from ragcore import llm
 
 
 class GenerationTests(unittest.TestCase):
+    def test_thinking_toggle_is_explicit_and_default_request_is_unchanged(self):
+        calls=[]
+        def create(**kwargs):
+            calls.append(kwargs)
+            return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content='答复'),finish_reason='stop')],
+                usage=SimpleNamespace(prompt_tokens=10,completion_tokens=20,completion_tokens_details=None),model='returned-model')
+        client=SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+        chunks=[{'id':'a','text':'规则','page_start':1,'path':'政策'}]
+        usage=[]
+        with patch.object(llm,'get_client',return_value=client), patch.object(llm,'env_config',return_value={'model':'fake'}):
+            llm.generate('问题',chunks)
+            llm.generate('问题',chunks,thinking_mode='disabled',usage_sink=usage)
+        self.assertNotIn('extra_body',calls[0])
+        self.assertEqual(calls[1]['extra_body'],{'thinking':{'type':'disabled'}})
+        self.assertEqual(usage[0]['response_model'],'returned-model')
+
     def test_evidence_mode_rejects_a_truncated_final_answer(self):
         response=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content='未完成的政策'),
             finish_reason='length')], usage=SimpleNamespace(prompt_tokens=10,completion_tokens=20,

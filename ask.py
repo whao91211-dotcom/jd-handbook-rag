@@ -45,7 +45,7 @@ def print_sources(chunks: list[dict]) -> None:
         print(f"   {head}")
 
 
-def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline", prompt_version: str = "baseline") -> int:
+def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline", prompt_version: str = "baseline", thinking_mode: str = 'default') -> int:
     print(f"Q: {question}")
     if mode != "rrf":
         print(f"[消融] 检索模式 = {mode}（线上默认为 rrf）")
@@ -60,7 +60,7 @@ def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", str
             use_llm = False
         else:
             try:
-                answer = generate(question, chunks, prompt_version=prompt_version)
+                answer = generate(question, chunks, prompt_version=prompt_version, thinking_mode=thinking_mode)
                 # 双保险：generate() 已保证不返回空串，这里再兜一层，防止将来改坏
                 if not answer.strip():
                     raise RuntimeError("模型返回了空内容")
@@ -107,11 +107,12 @@ def main() -> int:
     )
     ap.add_argument('--strategy', choices=STRATEGIES, default='baseline', help='检索实验策略')
     ap.add_argument('--prompt-version', choices=('baseline','evidence'), default='baseline', help='回答实验版本')
+    ap.add_argument('--thinking-mode', choices=('default','disabled'), default='default', help='兼容DeepSeek接口的思考模式对照；disabled需供应商支持')
     args = ap.parse_args()
 
     use_llm = not args.no_llm
     if args.question:
-        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version)
+        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version, args.thinking_mode)
 
     print("京东员工手册 RAG 问答（交互模式）· exit 退出\n" + HELP)
     while True:
@@ -125,7 +126,7 @@ def main() -> int:
         if q.lower() in ("exit", "quit"):
             print("再见")
             return 0
-        answer_once(q, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version)
+        answer_once(q, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version, args.thinking_mode)
     return 0
 
 
