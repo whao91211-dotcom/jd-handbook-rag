@@ -14,6 +14,7 @@ import sys
 from ragcore.config import FINAL_TOP_K, RETRIEVE_MODES, ROOT
 from ragcore.llm import api_ready, generate, last_usage
 from ragcore.retriever import retrieve
+from ragcore.evidence import STRATEGIES
 
 HELP = """可用的示例问题：
   请事假需要提前几天申请？
@@ -44,12 +45,12 @@ def print_sources(chunks: list[dict]) -> None:
         print(f"   {head}")
 
 
-def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf") -> int:
+def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline") -> int:
     print(f"Q: {question}")
     if mode != "rrf":
         print(f"[消融] 检索模式 = {mode}（线上默认为 rrf）")
     print()
-    chunks = retrieve(question, k=top_k, mode=mode)
+    chunks = retrieve(question, k=top_k, mode=mode, strategy=strategy)
     if not chunks:
         print("（未检索到任何相关内容）")
         return 1
@@ -100,11 +101,12 @@ def main() -> int:
         default="rrf",
         help="检索模式（消融实验）：rrf=双路融合（默认）/ dense=仅向量 / bm25=仅词法",
     )
+    ap.add_argument('--strategy', choices=STRATEGIES, default='baseline', help='检索实验策略')
     args = ap.parse_args()
 
     use_llm = not args.no_llm
     if args.question:
-        return answer_once(args.question, args.top_k, use_llm, args.mode)
+        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy)
 
     print("京东员工手册 RAG 问答（交互模式）· exit 退出\n" + HELP)
     while True:
@@ -118,7 +120,7 @@ def main() -> int:
         if q.lower() in ("exit", "quit"):
             print("再见")
             return 0
-        answer_once(q, args.top_k, use_llm, args.mode)
+        answer_once(q, args.top_k, use_llm, args.mode, args.strategy)
     return 0
 
 

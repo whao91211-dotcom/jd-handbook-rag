@@ -34,3 +34,28 @@ def fuse_ranks(rank_maps: list[dict[str, int]], constant: int = 60) -> dict[str,
         for iid, rank in ranks.items():
             scores[iid] = scores.get(iid, 0.0) + 1.0 / (constant + rank)
     return scores
+
+
+def select_evidence(fused: list[str], facets: list[list[str]], k: int) -> list[str]:
+    """Reserve original-query evidence and at most two sources per extra facet."""
+    if k <= 0:
+        return []
+    if len(facets) <= 1:
+        return fused[:k]
+    selected = []
+    available = set(fused)
+
+    def add(order, limit):
+        count = 0
+        for iid in order:
+            if len(selected) >= k or count >= limit:
+                break
+            if iid in available and iid not in selected:
+                selected.append(iid)
+                count += 1
+
+    add(facets[0], min(3, k))
+    for facet in facets[1:]:
+        add(facet, 2)
+    add(fused, k)
+    return selected

@@ -22,7 +22,7 @@ from __future__ import annotations
 from .config import BM25_TOP_K, DENSE_TOP_K, FINAL_TOP_K, RETRIEVE_MODES, RRF_K
 from .embedder import embed_query
 from .store import get_collection
-from .evidence import STRATEGIES, expand_queries, fuse_ranks
+from .evidence import STRATEGIES, expand_queries, fuse_ranks, select_evidence
 
 _corpus = None
 _bm25_cache: tuple | None = None   # (ids_tuple, BM25Okapi, jieba)
@@ -128,7 +128,12 @@ def retrieve(
 
     # ---- RRF 融合（单路时退化为该路自身排序）----
     rrf = fuse_ranks(list(rank_maps.values()), RRF_K)
-    top_ids = sorted(rrf, key=lambda iid: -rrf[iid])[:k]
+    fused_ids = sorted(rrf, key=lambda iid: -rrf[iid])
+    facet_orders = []
+    for group in query_groups:
+        group_scores = fuse_ranks(list(group.values()), RRF_K)
+        facet_orders.append(sorted(group_scores, key=lambda iid: -group_scores[iid]))
+    top_ids = select_evidence(fused_ids, facet_orders, k) if strategy == "coverage" else fused_ids[:k]
 
     dense_rank = rank_maps.get("dense", {})
     bm25_rank = rank_maps.get("bm25", {})
