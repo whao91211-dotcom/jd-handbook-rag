@@ -1,0 +1,4067 @@
+{
+  "n": 36,
+  "modes": {
+    "rrf": {
+      "summary": {
+        "ambiguous": {
+          "1": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.5,
+            "mean_coverage": 0.2333333333333333,
+            "full_coverage_rate": 0.0
+          },
+          "3": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.9,
+            "mean_coverage": 0.6666666666666666,
+            "full_coverage_rate": 0.4
+          },
+          "5": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.9,
+            "mean_coverage": 0.75,
+            "full_coverage_rate": 0.6
+          },
+          "8": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.9,
+            "mean_coverage": 0.8,
+            "full_coverage_rate": 0.7
+          }
+        },
+        "hard_negative": {
+          "1": {
+            "n_with_target": 16,
+            "any_hit_rate": 0.5625,
+            "mean_coverage": 0.46875,
+            "full_coverage_rate": 0.375
+          },
+          "3": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.96875,
+            "full_coverage_rate": 0.9375
+          },
+          "5": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.96875,
+            "full_coverage_rate": 0.9375
+          },
+          "8": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.96875,
+            "full_coverage_rate": 0.9375
+          }
+        },
+        "naturalistic_positive": {
+          "1": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.25,
+            "mean_coverage": 0.16666666666666666,
+            "full_coverage_rate": 0.125
+          },
+          "3": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.5,
+            "mean_coverage": 0.41666666666666663,
+            "full_coverage_rate": 0.375
+          },
+          "5": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.625,
+            "mean_coverage": 0.5416666666666667,
+            "full_coverage_rate": 0.5
+          },
+          "8": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.875,
+            "mean_coverage": 0.7916666666666666,
+            "full_coverage_rate": 0.75
+          }
+        }
+      },
+      "rows": [
+        {
+          "qid": "C-P01",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p15-82fc10ff7f",
+            "p18-cc5ae09343",
+            "p15-a99dbf1c9b",
+            "p43-54058878ec",
+            "p17-18df625d5a",
+            "p3-1913155f3d",
+            "p3-ea5bc5fd17"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P02",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p22-c42b3d394c"
+          ],
+          "retrieved_ids": [
+            "p22-8f3ddee8c0",
+            "p3-ea5bc5fd17",
+            "p23-27249d61bf",
+            "p18-cc5ae09343",
+            "p30-d8fe59b41b",
+            "p30-c81f9880c1",
+            "p5-8263b6e785",
+            "p22-c42b3d394c"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P03",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p11-5ed9c253db"
+          ],
+          "retrieved_ids": [
+            "p43-0f1879984e",
+            "p41-2d2c8ff79a",
+            "p44-b7d4d94080",
+            "p47-eced5c88c6",
+            "p41-97c1a0e032",
+            "p4-b79067ffc6",
+            "p48-246a7c42de",
+            "p3-ea5bc5fd17"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-P04",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p17-3912472149"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p16-161eb98f4e",
+            "p15-a99dbf1c9b",
+            "p14-1ad6eab8c6",
+            "p34-b3db9e8572",
+            "p17-3912472149",
+            "p15-82fc10ff7f",
+            "p39-66776572f1"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P05",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p29-d2fd640689",
+            "p25-a584b8e997",
+            "p23-2435daf3ec",
+            "p21-5ab774b695",
+            "p15-a99dbf1c9b",
+            "p23-27249d61bf"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P06",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p21-88de6db287",
+            "p23-2435daf3ec",
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p23-2435daf3ec",
+            "p24-3e46efee64",
+            "p22-3579d5cfe2",
+            "p24-7893cf4f6d",
+            "p23-77b2224c12",
+            "p21-5ab774b695",
+            "p23-27249d61bf",
+            "p25-a584b8e997"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            }
+          }
+        },
+        {
+          "qid": "C-P07",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p33-a867f06b3c"
+          ],
+          "retrieved_ids": [
+            "p14-1ad6eab8c6",
+            "p33-a867f06b3c",
+            "p35-e55115a49e",
+            "p34-b3db9e8572",
+            "p14-4058f096f6",
+            "p17-903c410674",
+            "p29-90e2f16e13",
+            "p15-6a942bbddd"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P08",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p42-83f9d6df8d"
+          ],
+          "retrieved_ids": [
+            "p42-83f9d6df8d",
+            "p43-54058878ec",
+            "p19-afcfc09fb7",
+            "p41-2d2c8ff79a",
+            "p44-51f4c64ab2",
+            "p19-e4323f19a5",
+            "p40-c769d87f54",
+            "p16-cd9e2a0253"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N01",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b",
+            "p17-18df625d5a"
+          ],
+          "retrieved_ids": [
+            "p15-a99dbf1c9b",
+            "p16-161eb98f4e",
+            "p17-18df625d5a",
+            "p24-bea93ab4d6",
+            "p23-2435daf3ec",
+            "p24-3e46efee64",
+            "p29-d2fd640689",
+            "p21-88de6db287"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N02",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p17-903c410674"
+          ],
+          "retrieved_ids": [
+            "p17-903c410674",
+            "p18-cc5ae09343",
+            "p15-a99dbf1c9b",
+            "p47-6d0d97ead8",
+            "p16-161eb98f4e",
+            "p26-44bfeef242",
+            "p17-18df625d5a",
+            "p34-fb05ac7b83"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N03",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p20-28e5161ba4",
+            "p30-526ea28baa",
+            "p31-6dead0b231",
+            "p31-77990d6c90",
+            "p22-3579d5cfe2",
+            "p25-64fe3a97a0",
+            "p19-e4323f19a5",
+            "p24-3e46efee64"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N04",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p50-0b87b65099"
+          ],
+          "retrieved_ids": [
+            "p50-314299f759",
+            "p50-0b87b65099",
+            "p50-8c19ffbac4",
+            "p47-eced5c88c6",
+            "p49-4740f94d50",
+            "p18-9152394435",
+            "p4-b79067ffc6",
+            "p43-0f1879984e"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N05",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p15-a99dbf1c9b",
+            "p16-161eb98f4e",
+            "p15-82fc10ff7f",
+            "p15-0a1082927d",
+            "p36-08d8beab1c",
+            "p36-d366d34e7a",
+            "p26-d4c5fd8947"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N06",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p20-28e5161ba4"
+          ],
+          "retrieved_ids": [
+            "p20-28e5161ba4",
+            "p20-a13b1b7d85",
+            "p30-526ea28baa",
+            "p30-c81f9880c1",
+            "p31-6dead0b231",
+            "p31-77990d6c90",
+            "p25-64fe3a97a0",
+            "p40-c769d87f54"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N07",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p31-6dead0b231",
+            "p26-44bfeef242",
+            "p28-a1f0b33346",
+            "p13-d0acd34adc",
+            "p41-0042d06121",
+            "p8-e96529a8f2",
+            "p30-d8fe59b41b",
+            "p3-1913155f3d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N08",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p50-0b87b65099"
+          ],
+          "retrieved_ids": [
+            "p50-0b87b65099",
+            "p47-eced5c88c6",
+            "p43-0f1879984e",
+            "p4-b79067ffc6",
+            "p50-314299f759",
+            "p44-fd23d4dad7",
+            "p44-b7d4d94080",
+            "p41-97c1a0e032"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A01",
+          "kind": "ambiguous",
+          "target_ids": [],
+          "retrieved_ids": [
+            "p15-0a1082927d",
+            "p3-ea5bc5fd17",
+            "p23-77b2224c12",
+            "p29-d2fd640689",
+            "p46-0c8bfd37c1",
+            "p9-ceeffd39f5",
+            "p25-64fe3a97a0",
+            "p3-1913155f3d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": null
+            }
+          }
+        },
+        {
+          "qid": "C-A02",
+          "kind": "ambiguous",
+          "target_ids": [],
+          "retrieved_ids": [
+            "p30-526ea28baa",
+            "p29-d2fd640689",
+            "p30-6ab8ae0a44",
+            "p24-7893cf4f6d",
+            "p26-44bfeef242",
+            "p25-64fe3a97a0",
+            "p48-246a7c42de",
+            "p25-a584b8e997"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": null
+            }
+          }
+        },
+        {
+          "qid": "C-A03",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p21-88de6db287"
+          ],
+          "retrieved_ids": [
+            "p25-64fe3a97a0",
+            "p21-88de6db287",
+            "p25-a584b8e997",
+            "p24-7893cf4f6d",
+            "p24-3e46efee64",
+            "p25-47545b89bc",
+            "p23-77b2224c12",
+            "p22-3579d5cfe2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A04",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p23-2435daf3ec",
+            "p23-27249d61bf",
+            "p23-77b2224c12"
+          ],
+          "retrieved_ids": [
+            "p23-2435daf3ec",
+            "p24-bea93ab4d6",
+            "p23-77b2224c12",
+            "p23-27249d61bf",
+            "p21-5ab774b695",
+            "p21-88de6db287",
+            "p30-d8fe59b41b",
+            "p25-47545b89bc"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.6666666666666666
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A05",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p22-3579d5cfe2",
+            "p23-2435daf3ec"
+          ],
+          "retrieved_ids": [
+            "p22-3579d5cfe2",
+            "p21-88de6db287",
+            "p23-77b2224c12",
+            "p22-8f3ddee8c0",
+            "p23-27249d61bf",
+            "p21-5ab774b695",
+            "p6-26357691a1",
+            "p25-47545b89bc"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-A06",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p20-28e5161ba4",
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p31-77990d6c90",
+            "p20-431bc5ac7e",
+            "p31-6dead0b231",
+            "p43-0f1879984e",
+            "p44-b7d4d94080",
+            "p46-0c8bfd37c1",
+            "p19-afcfc09fb7",
+            "p32-f13ba747ab"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-A07",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p24-3e46efee64",
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-3e46efee64",
+            "p25-a584b8e997",
+            "p23-27249d61bf",
+            "p24-7893cf4f6d",
+            "p23-2435daf3ec",
+            "p21-88de6db287",
+            "p29-d2fd640689",
+            "p26-d4c5fd8947"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A08",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p17-903c410674"
+          ],
+          "retrieved_ids": [
+            "p18-cc5ae09343",
+            "p17-903c410674",
+            "p15-6a942bbddd",
+            "p15-a99dbf1c9b",
+            "p7-8c84c7a216",
+            "p17-18df625d5a",
+            "p16-622e53fafe",
+            "p16-cd9e2a0253"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A09",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p23-77b2224c12",
+            "p30-d8fe59b41b"
+          ],
+          "retrieved_ids": [
+            "p23-77b2224c12",
+            "p23-2435daf3ec",
+            "p22-8f3ddee8c0",
+            "p30-d8fe59b41b",
+            "p23-27249d61bf",
+            "p24-bea93ab4d6",
+            "p24-3e46efee64",
+            "p21-88de6db287"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A10",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p42-83f9d6df8d"
+          ],
+          "retrieved_ids": [
+            "p19-afcfc09fb7",
+            "p41-2d2c8ff79a",
+            "p40-c769d87f54",
+            "p43-54058878ec",
+            "p19-c92ec39c2b",
+            "p16-622e53fafe",
+            "p22-f5b350b0d5",
+            "p22-8f3ddee8c0"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-A11",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p20-28e5161ba4",
+            "p20-431bc5ac7e"
+          ],
+          "retrieved_ids": [
+            "p20-431bc5ac7e",
+            "p20-28e5161ba4",
+            "p31-77990d6c90",
+            "p31-6dead0b231",
+            "p19-e4323f19a5",
+            "p11-0d836f509d",
+            "p29-d2fd640689",
+            "p20-a13b1b7d85"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A12",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p20-28e5161ba4",
+            "p30-526ea28baa",
+            "p25-64fe3a97a0",
+            "p25-a584b8e997",
+            "p24-7893cf4f6d",
+            "p25-47545b89bc",
+            "p22-3579d5cfe2",
+            "p24-3e46efee64"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N09",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6"
+          ],
+          "retrieved_ids": [
+            "p24-bea93ab4d6",
+            "p21-5ab774b695",
+            "p24-3e46efee64",
+            "p22-8f3ddee8c0",
+            "p23-27249d61bf",
+            "p19-afcfc09fb7",
+            "p23-77b2224c12",
+            "p25-64fe3a97a0"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N10",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p11-0d836f509d"
+          ],
+          "retrieved_ids": [
+            "p11-0d836f509d",
+            "p41-2d2c8ff79a",
+            "p19-e4323f19a5",
+            "p18-9152394435",
+            "p13-f991984ff3",
+            "p20-28e5161ba4",
+            "p37-5902b8f6e2",
+            "p38-4270231bbc"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N11",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6"
+          ],
+          "retrieved_ids": [
+            "p23-2435daf3ec",
+            "p24-bea93ab4d6",
+            "p21-5ab774b695",
+            "p23-77b2224c12",
+            "p23-27249d61bf",
+            "p22-8f3ddee8c0",
+            "p30-d8fe59b41b",
+            "p22-3579d5cfe2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N12",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p18-cc5ae09343",
+            "p26-44bfeef242"
+          ],
+          "retrieved_ids": [
+            "p18-cc5ae09343",
+            "p17-18df625d5a",
+            "p15-82fc10ff7f",
+            "p21-88de6db287",
+            "p15-a99dbf1c9b",
+            "p20-a13b1b7d85",
+            "p23-27249d61bf",
+            "p19-afcfc09fb7"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-N13",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p15-a99dbf1c9b",
+            "p36-08d8beab1c",
+            "p36-d366d34e7a",
+            "p16-161eb98f4e",
+            "p37-8b226afe1b",
+            "p35-e55115a49e",
+            "p18-cc5ae09343"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N14",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p24-7893cf4f6d",
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p29-d2fd640689",
+            "p21-88de6db287",
+            "p21-5ab774b695",
+            "p22-8f3ddee8c0",
+            "p24-bea93ab4d6",
+            "p23-2435daf3ec"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N15",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p31-6dead0b231",
+            "p41-0042d06121",
+            "p26-44bfeef242",
+            "p30-d8fe59b41b",
+            "p45-db974bfc73",
+            "p38-4270231bbc",
+            "p24-bea93ab4d6",
+            "p24-7893cf4f6d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N16",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p22-8f3ddee8c0"
+          ],
+          "retrieved_ids": [
+            "p22-3579d5cfe2",
+            "p22-8f3ddee8c0",
+            "p21-88de6db287",
+            "p25-47545b89bc",
+            "p24-3e46efee64",
+            "p21-5ab774b695",
+            "p24-7893cf4f6d",
+            "p25-a584b8e997"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        }
+      ]
+    },
+    "dense": {
+      "summary": {
+        "ambiguous": {
+          "1": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.3,
+            "mean_coverage": 0.13333333333333333,
+            "full_coverage_rate": 0.0
+          },
+          "3": {
+            "n_with_target": 10,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.7666666666666666,
+            "full_coverage_rate": 0.5
+          },
+          "5": {
+            "n_with_target": 10,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.85,
+            "full_coverage_rate": 0.7
+          },
+          "8": {
+            "n_with_target": 10,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.95,
+            "full_coverage_rate": 0.9
+          }
+        },
+        "hard_negative": {
+          "1": {
+            "n_with_target": 16,
+            "any_hit_rate": 0.4375,
+            "mean_coverage": 0.3125,
+            "full_coverage_rate": 0.1875
+          },
+          "3": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.875,
+            "full_coverage_rate": 0.75
+          },
+          "5": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.9375,
+            "full_coverage_rate": 0.875
+          },
+          "8": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.96875,
+            "full_coverage_rate": 0.9375
+          }
+        },
+        "naturalistic_positive": {
+          "1": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.125,
+            "mean_coverage": 0.125,
+            "full_coverage_rate": 0.125
+          },
+          "3": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.25,
+            "mean_coverage": 0.25,
+            "full_coverage_rate": 0.25
+          },
+          "5": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.625,
+            "mean_coverage": 0.5416666666666667,
+            "full_coverage_rate": 0.5
+          },
+          "8": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.75,
+            "mean_coverage": 0.7083333333333333,
+            "full_coverage_rate": 0.625
+          }
+        }
+      },
+      "rows": [
+        {
+          "qid": "C-P01",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p17-18df625d5a",
+            "p15-6a942bbddd",
+            "p15-82fc10ff7f",
+            "p18-cc5ae09343",
+            "p15-a99dbf1c9b",
+            "p15-0a1082927d",
+            "p16-622e53fafe",
+            "p16-161eb98f4e"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P02",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p22-c42b3d394c"
+          ],
+          "retrieved_ids": [
+            "p30-d8fe59b41b",
+            "p30-c81f9880c1",
+            "p22-c42b3d394c",
+            "p30-526ea28baa",
+            "p30-6ab8ae0a44",
+            "p22-8f3ddee8c0",
+            "p22-3579d5cfe2",
+            "p23-2435daf3ec"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P03",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p11-5ed9c253db"
+          ],
+          "retrieved_ids": [
+            "p44-b7d4d94080",
+            "p43-0f1879984e",
+            "p41-97c1a0e032",
+            "p44-fd23d4dad7",
+            "p40-c769d87f54",
+            "p46-7e4d5f20c3",
+            "p45-db974bfc73",
+            "p42-3b562e40b0"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-P04",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p17-3912472149"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p15-82fc10ff7f",
+            "p16-161eb98f4e",
+            "p14-1ad6eab8c6",
+            "p17-903c410674",
+            "p15-a99dbf1c9b",
+            "p14-4fe055e429",
+            "p13-d0acd34adc"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-P05",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p25-a584b8e997",
+            "p29-d2fd640689",
+            "p15-a99dbf1c9b",
+            "p23-2435daf3ec",
+            "p25-47545b89bc",
+            "p23-27249d61bf"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P06",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p21-88de6db287",
+            "p23-2435daf3ec",
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p25-64fe3a97a0",
+            "p22-3579d5cfe2",
+            "p25-47545b89bc",
+            "p24-3e46efee64",
+            "p21-88de6db287",
+            "p21-5ab774b695",
+            "p23-2435daf3ec",
+            "p24-7893cf4f6d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.6666666666666666
+            }
+          }
+        },
+        {
+          "qid": "C-P07",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p33-a867f06b3c"
+          ],
+          "retrieved_ids": [
+            "p14-1ad6eab8c6",
+            "p35-e55115a49e",
+            "p34-b3db9e8572",
+            "p15-6a942bbddd",
+            "p4-b79067ffc6",
+            "p14-4058f096f6",
+            "p33-a867f06b3c",
+            "p15-0a1082927d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P08",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p42-83f9d6df8d"
+          ],
+          "retrieved_ids": [
+            "p42-83f9d6df8d",
+            "p43-54058878ec",
+            "p19-afcfc09fb7",
+            "p40-c769d87f54",
+            "p16-cd9e2a0253",
+            "p41-0042d06121",
+            "p19-c92ec39c2b",
+            "p41-97c1a0e032"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N01",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b",
+            "p17-18df625d5a"
+          ],
+          "retrieved_ids": [
+            "p15-a99dbf1c9b",
+            "p16-161eb98f4e",
+            "p23-27249d61bf",
+            "p24-bea93ab4d6",
+            "p20-28e5161ba4",
+            "p29-d2fd640689",
+            "p17-18df625d5a",
+            "p25-64fe3a97a0"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N02",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p17-903c410674"
+          ],
+          "retrieved_ids": [
+            "p15-a99dbf1c9b",
+            "p17-903c410674",
+            "p18-cc5ae09343",
+            "p16-161eb98f4e",
+            "p17-18df625d5a",
+            "p22-8f3ddee8c0",
+            "p23-27249d61bf",
+            "p16-cd9e2a0253"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N03",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p20-28e5161ba4",
+            "p31-6dead0b231",
+            "p30-526ea28baa",
+            "p20-431bc5ac7e",
+            "p31-77990d6c90",
+            "p25-64fe3a97a0",
+            "p19-e4323f19a5",
+            "p19-c92ec39c2b"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N04",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p50-0b87b65099"
+          ],
+          "retrieved_ids": [
+            "p50-314299f759",
+            "p50-0b87b65099",
+            "p13-f991984ff3",
+            "p50-8c19ffbac4",
+            "p47-eced5c88c6",
+            "p10-5052e898cb",
+            "p44-fd23d4dad7",
+            "p18-9152394435"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N05",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p15-a99dbf1c9b",
+            "p16-161eb98f4e",
+            "p15-0a1082927d",
+            "p19-afcfc09fb7",
+            "p15-82fc10ff7f",
+            "p20-28e5161ba4",
+            "p36-08d8beab1c"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N06",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p20-28e5161ba4"
+          ],
+          "retrieved_ids": [
+            "p30-c81f9880c1",
+            "p20-28e5161ba4",
+            "p30-526ea28baa",
+            "p25-64fe3a97a0",
+            "p21-88de6db287",
+            "p20-a13b1b7d85",
+            "p22-3579d5cfe2",
+            "p24-3e46efee64"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N07",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p31-6dead0b231",
+            "p30-d8fe59b41b",
+            "p30-6ab8ae0a44",
+            "p30-526ea28baa",
+            "p30-c81f9880c1",
+            "p29-d2fd640689",
+            "p29-90e2f16e13",
+            "p27-1dfbb46c86"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N08",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p50-0b87b65099"
+          ],
+          "retrieved_ids": [
+            "p50-0b87b65099",
+            "p4-b79067ffc6",
+            "p47-eced5c88c6",
+            "p44-fd23d4dad7",
+            "p44-b7d4d94080",
+            "p49-4740f94d50",
+            "p43-0f1879984e",
+            "p50-314299f759"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A01",
+          "kind": "ambiguous",
+          "target_ids": [],
+          "retrieved_ids": [
+            "p46-0c8bfd37c1",
+            "p25-64fe3a97a0",
+            "p22-f5b350b0d5",
+            "p15-0a1082927d",
+            "p32-f13ba747ab",
+            "p16-cd9e2a0253",
+            "p3-ea5bc5fd17",
+            "p16-622e53fafe"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": null
+            }
+          }
+        },
+        {
+          "qid": "C-A02",
+          "kind": "ambiguous",
+          "target_ids": [],
+          "retrieved_ids": [
+            "p30-526ea28baa",
+            "p25-64fe3a97a0",
+            "p25-a584b8e997",
+            "p25-47545b89bc",
+            "p30-c81f9880c1",
+            "p30-6ab8ae0a44",
+            "p21-88de6db287",
+            "p29-d2fd640689"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": null
+            }
+          }
+        },
+        {
+          "qid": "C-A03",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p21-88de6db287"
+          ],
+          "retrieved_ids": [
+            "p25-64fe3a97a0",
+            "p21-88de6db287",
+            "p21-5ab774b695",
+            "p24-7893cf4f6d",
+            "p24-3e46efee64",
+            "p25-a584b8e997",
+            "p19-c92ec39c2b",
+            "p22-3579d5cfe2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A04",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p23-2435daf3ec",
+            "p23-27249d61bf",
+            "p23-77b2224c12"
+          ],
+          "retrieved_ids": [
+            "p23-27249d61bf",
+            "p24-bea93ab4d6",
+            "p23-77b2224c12",
+            "p23-2435daf3ec",
+            "p25-64fe3a97a0",
+            "p22-8f3ddee8c0",
+            "p21-5ab774b695",
+            "p21-88de6db287"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.6666666666666666
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A05",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p22-3579d5cfe2",
+            "p23-2435daf3ec"
+          ],
+          "retrieved_ids": [
+            "p22-3579d5cfe2",
+            "p25-47545b89bc",
+            "p21-88de6db287",
+            "p22-8f3ddee8c0",
+            "p23-2435daf3ec",
+            "p24-3e46efee64",
+            "p23-27249d61bf",
+            "p24-7893cf4f6d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A06",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p20-28e5161ba4",
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p31-77990d6c90",
+            "p31-6dead0b231",
+            "p20-431bc5ac7e",
+            "p19-afcfc09fb7",
+            "p19-e4323f19a5",
+            "p20-28e5161ba4",
+            "p22-f5b350b0d5",
+            "p44-51f4c64ab2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A07",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p24-3e46efee64",
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p25-a584b8e997",
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p23-27249d61bf",
+            "p22-c42b3d394c",
+            "p25-47545b89bc",
+            "p22-8f3ddee8c0",
+            "p24-bea93ab4d6"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-A08",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p17-903c410674"
+          ],
+          "retrieved_ids": [
+            "p18-cc5ae09343",
+            "p17-18df625d5a",
+            "p17-903c410674",
+            "p16-622e53fafe",
+            "p16-cd9e2a0253",
+            "p15-a99dbf1c9b",
+            "p22-f5b350b0d5",
+            "p18-9152394435"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A09",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p23-77b2224c12",
+            "p30-d8fe59b41b"
+          ],
+          "retrieved_ids": [
+            "p22-8f3ddee8c0",
+            "p23-77b2224c12",
+            "p24-bea93ab4d6",
+            "p23-27249d61bf",
+            "p21-88de6db287",
+            "p23-2435daf3ec",
+            "p30-d8fe59b41b",
+            "p25-64fe3a97a0"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A10",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p42-83f9d6df8d"
+          ],
+          "retrieved_ids": [
+            "p22-f5b350b0d5",
+            "p42-83f9d6df8d",
+            "p43-54058878ec",
+            "p19-c92ec39c2b",
+            "p41-0042d06121",
+            "p16-cd9e2a0253",
+            "p40-c769d87f54",
+            "p19-afcfc09fb7"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A11",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p20-28e5161ba4",
+            "p20-431bc5ac7e"
+          ],
+          "retrieved_ids": [
+            "p20-28e5161ba4",
+            "p20-431bc5ac7e",
+            "p31-6dead0b231",
+            "p31-77990d6c90",
+            "p19-e4323f19a5",
+            "p19-c92ec39c2b",
+            "p22-f5b350b0d5",
+            "p19-afcfc09fb7"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A12",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p31-6dead0b231",
+            "p31-77990d6c90",
+            "p30-526ea28baa",
+            "p25-a584b8e997",
+            "p20-28e5161ba4",
+            "p25-64fe3a97a0",
+            "p24-7893cf4f6d",
+            "p20-431bc5ac7e"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N09",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6"
+          ],
+          "retrieved_ids": [
+            "p24-bea93ab4d6",
+            "p24-3e46efee64",
+            "p25-64fe3a97a0",
+            "p21-5ab774b695",
+            "p24-7893cf4f6d",
+            "p25-a584b8e997",
+            "p26-d4c5fd8947",
+            "p29-d2fd640689"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N10",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p11-0d836f509d"
+          ],
+          "retrieved_ids": [
+            "p11-0d836f509d",
+            "p44-51f4c64ab2",
+            "p19-afcfc09fb7",
+            "p19-c92ec39c2b",
+            "p41-2d2c8ff79a",
+            "p30-526ea28baa",
+            "p22-f5b350b0d5",
+            "p46-0c8bfd37c1"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N11",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6"
+          ],
+          "retrieved_ids": [
+            "p24-bea93ab4d6",
+            "p23-2435daf3ec",
+            "p23-27249d61bf",
+            "p21-5ab774b695",
+            "p23-77b2224c12",
+            "p22-8f3ddee8c0",
+            "p25-64fe3a97a0",
+            "p29-d2fd640689"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N12",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p18-cc5ae09343",
+            "p26-44bfeef242"
+          ],
+          "retrieved_ids": [
+            "p18-cc5ae09343",
+            "p19-afcfc09fb7",
+            "p17-18df625d5a",
+            "p15-a99dbf1c9b",
+            "p19-c92ec39c2b",
+            "p15-82fc10ff7f",
+            "p20-a13b1b7d85",
+            "p16-161eb98f4e"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-N13",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-6a942bbddd",
+            "p36-08d8beab1c",
+            "p15-a99dbf1c9b",
+            "p36-d366d34e7a",
+            "p16-161eb98f4e",
+            "p33-a867f06b3c",
+            "p32-f13ba747ab",
+            "p35-e55115a49e"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N14",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p24-7893cf4f6d",
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-3e46efee64",
+            "p29-d2fd640689",
+            "p24-7893cf4f6d",
+            "p22-8f3ddee8c0",
+            "p23-77b2224c12",
+            "p21-88de6db287",
+            "p24-bea93ab4d6",
+            "p25-a584b8e997"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N15",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p41-0042d06121",
+            "p31-6dead0b231",
+            "p30-d8fe59b41b",
+            "p45-db974bfc73",
+            "p24-bea93ab4d6",
+            "p30-526ea28baa",
+            "p16-cd9e2a0253",
+            "p30-6ab8ae0a44"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N16",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p22-8f3ddee8c0"
+          ],
+          "retrieved_ids": [
+            "p22-3579d5cfe2",
+            "p22-8f3ddee8c0",
+            "p22-f5b350b0d5",
+            "p25-47545b89bc",
+            "p23-2435daf3ec",
+            "p21-5ab774b695",
+            "p21-88de6db287",
+            "p24-3e46efee64"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        }
+      ]
+    },
+    "bm25": {
+      "summary": {
+        "ambiguous": {
+          "1": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.3,
+            "mean_coverage": 0.13333333333333333,
+            "full_coverage_rate": 0.0
+          },
+          "3": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.6,
+            "mean_coverage": 0.4666666666666666,
+            "full_coverage_rate": 0.3
+          },
+          "5": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.7,
+            "mean_coverage": 0.5166666666666666,
+            "full_coverage_rate": 0.3
+          },
+          "8": {
+            "n_with_target": 10,
+            "any_hit_rate": 0.8,
+            "mean_coverage": 0.65,
+            "full_coverage_rate": 0.5
+          }
+        },
+        "hard_negative": {
+          "1": {
+            "n_with_target": 16,
+            "any_hit_rate": 0.6875,
+            "mean_coverage": 0.5625,
+            "full_coverage_rate": 0.4375
+          },
+          "3": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.9375,
+            "full_coverage_rate": 0.875
+          },
+          "5": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.96875,
+            "full_coverage_rate": 0.9375
+          },
+          "8": {
+            "n_with_target": 16,
+            "any_hit_rate": 1.0,
+            "mean_coverage": 0.96875,
+            "full_coverage_rate": 0.9375
+          }
+        },
+        "naturalistic_positive": {
+          "1": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.375,
+            "mean_coverage": 0.375,
+            "full_coverage_rate": 0.375
+          },
+          "3": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.625,
+            "mean_coverage": 0.5416666666666667,
+            "full_coverage_rate": 0.5
+          },
+          "5": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.625,
+            "mean_coverage": 0.5416666666666667,
+            "full_coverage_rate": 0.5
+          },
+          "8": {
+            "n_with_target": 8,
+            "any_hit_rate": 0.625,
+            "mean_coverage": 0.5416666666666667,
+            "full_coverage_rate": 0.5
+          }
+        }
+      },
+      "rows": [
+        {
+          "qid": "C-P01",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p3-1913155f3d",
+            "p3-ea5bc5fd17",
+            "p26-44bfeef242",
+            "p42-83f9d6df8d",
+            "p15-6a942bbddd",
+            "p50-314299f759",
+            "p8-e96529a8f2",
+            "p48-246a7c42de"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-P02",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p22-c42b3d394c"
+          ],
+          "retrieved_ids": [
+            "p3-ea5bc5fd17",
+            "p5-8263b6e785",
+            "p22-8f3ddee8c0",
+            "p36-d366d34e7a",
+            "p6-26357691a1",
+            "p34-fb05ac7b83",
+            "p39-66776572f1",
+            "p3-1913155f3d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-P03",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p11-5ed9c253db"
+          ],
+          "retrieved_ids": [
+            "p47-eced5c88c6",
+            "p48-246a7c42de",
+            "p3-ea5bc5fd17",
+            "p34-b3db9e8572",
+            "p41-2d2c8ff79a",
+            "p13-f991984ff3",
+            "p14-1ad6eab8c6",
+            "p18-9152394435"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-P04",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p17-3912472149"
+          ],
+          "retrieved_ids": [
+            "p17-3912472149",
+            "p39-66776572f1",
+            "p32-2836efc163",
+            "p28-a1f0b33346",
+            "p15-6a942bbddd",
+            "p26-d4c5fd8947",
+            "p21-88de6db287",
+            "p8-d256d9ce4c"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P05",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-7893cf4f6d",
+            "p24-3e46efee64",
+            "p29-d2fd640689",
+            "p26-d4c5fd8947",
+            "p34-b3db9e8572",
+            "p21-5ab774b695",
+            "p23-2435daf3ec",
+            "p15-6a942bbddd"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P06",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p21-88de6db287",
+            "p23-2435daf3ec",
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p23-77b2224c12",
+            "p23-2435daf3ec",
+            "p48-246a7c42de",
+            "p6-26357691a1",
+            "p23-27249d61bf",
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p29-90e2f16e13"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            }
+          }
+        },
+        {
+          "qid": "C-P07",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p33-a867f06b3c"
+          ],
+          "retrieved_ids": [
+            "p33-a867f06b3c",
+            "p29-90e2f16e13",
+            "p14-1ad6eab8c6",
+            "p47-6d0d97ead8",
+            "p36-0b975ee0b9",
+            "p34-b3db9e8572",
+            "p35-e55115a49e",
+            "p45-2edc9e7a4d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-P08",
+          "kind": "naturalistic_positive",
+          "target_ids": [
+            "p42-83f9d6df8d"
+          ],
+          "retrieved_ids": [
+            "p42-83f9d6df8d",
+            "p43-54058878ec",
+            "p41-2d2c8ff79a",
+            "p19-afcfc09fb7",
+            "p50-314299f759",
+            "p23-2435daf3ec",
+            "p16-161eb98f4e",
+            "p26-d4c5fd8947"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N01",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b",
+            "p17-18df625d5a"
+          ],
+          "retrieved_ids": [
+            "p17-18df625d5a",
+            "p15-a99dbf1c9b",
+            "p16-161eb98f4e",
+            "p24-3e46efee64",
+            "p23-2435daf3ec",
+            "p30-526ea28baa",
+            "p24-7893cf4f6d",
+            "p21-88de6db287"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N02",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p17-903c410674"
+          ],
+          "retrieved_ids": [
+            "p17-903c410674",
+            "p18-cc5ae09343",
+            "p47-6d0d97ead8",
+            "p26-44bfeef242",
+            "p34-fb05ac7b83",
+            "p29-90e2f16e13",
+            "p50-314299f759",
+            "p17-3912472149"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N03",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p22-3579d5cfe2",
+            "p20-28e5161ba4",
+            "p30-526ea28baa",
+            "p24-3e46efee64",
+            "p31-77990d6c90",
+            "p14-1ad6eab8c6",
+            "p31-6dead0b231",
+            "p34-b3db9e8572"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N04",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p50-0b87b65099"
+          ],
+          "retrieved_ids": [
+            "p50-314299f759",
+            "p50-0b87b65099",
+            "p50-8c19ffbac4",
+            "p47-eced5c88c6",
+            "p49-4740f94d50",
+            "p41-2d2c8ff79a",
+            "p40-c769d87f54",
+            "p43-0f1879984e"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N05",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-a99dbf1c9b",
+            "p15-6a942bbddd",
+            "p16-161eb98f4e",
+            "p36-d366d34e7a",
+            "p18-cc5ae09343",
+            "p15-82fc10ff7f",
+            "p23-2435daf3ec",
+            "p40-c769d87f54"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N06",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p20-28e5161ba4"
+          ],
+          "retrieved_ids": [
+            "p20-28e5161ba4",
+            "p20-a13b1b7d85",
+            "p31-6dead0b231",
+            "p40-c769d87f54",
+            "p30-526ea28baa",
+            "p30-6ab8ae0a44",
+            "p20-431bc5ac7e",
+            "p40-a41581b4e3"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N07",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p8-e96529a8f2",
+            "p3-1913155f3d",
+            "p31-6dead0b231",
+            "p26-44bfeef242",
+            "p9-ceeffd39f5",
+            "p28-a1f0b33346",
+            "p7-8c84c7a216",
+            "p6-4913ab3280"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N08",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p50-0b87b65099"
+          ],
+          "retrieved_ids": [
+            "p50-0b87b65099",
+            "p47-eced5c88c6",
+            "p18-9152394435",
+            "p43-0f1879984e",
+            "p32-2836efc163",
+            "p50-314299f759",
+            "p41-97c1a0e032",
+            "p22-3579d5cfe2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A01",
+          "kind": "ambiguous",
+          "target_ids": [],
+          "retrieved_ids": [
+            "p9-ceeffd39f5",
+            "p3-1913155f3d",
+            "p48-246a7c42de",
+            "p36-d366d34e7a",
+            "p23-77b2224c12",
+            "p3-ea5bc5fd17",
+            "p49-f58de990f7",
+            "p15-0a1082927d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": null
+            }
+          }
+        },
+        {
+          "qid": "C-A02",
+          "kind": "ambiguous",
+          "target_ids": [],
+          "retrieved_ids": [
+            "p29-d2fd640689",
+            "p48-246a7c42de",
+            "p30-526ea28baa",
+            "p30-6ab8ae0a44",
+            "p36-d366d34e7a",
+            "p44-fd23d4dad7",
+            "p26-44bfeef242",
+            "p24-7893cf4f6d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": null
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": null
+            }
+          }
+        },
+        {
+          "qid": "C-A03",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p21-88de6db287"
+          ],
+          "retrieved_ids": [
+            "p25-47545b89bc",
+            "p25-a584b8e997",
+            "p23-77b2224c12",
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p21-88de6db287",
+            "p25-64fe3a97a0",
+            "p22-3579d5cfe2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A04",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p23-2435daf3ec",
+            "p23-27249d61bf",
+            "p23-77b2224c12"
+          ],
+          "retrieved_ids": [
+            "p23-2435daf3ec",
+            "p23-77b2224c12",
+            "p24-bea93ab4d6",
+            "p30-d8fe59b41b",
+            "p48-246a7c42de",
+            "p23-27249d61bf",
+            "p3-ea5bc5fd17",
+            "p29-d2fd640689"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.3333333333333333
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.6666666666666666
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.6666666666666666
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A05",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p22-3579d5cfe2",
+            "p23-2435daf3ec"
+          ],
+          "retrieved_ids": [
+            "p6-26357691a1",
+            "p23-77b2224c12",
+            "p3-ea5bc5fd17",
+            "p48-246a7c42de",
+            "p22-3579d5cfe2",
+            "p21-88de6db287",
+            "p49-f58de990f7",
+            "p23-27249d61bf"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-A06",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p20-28e5161ba4",
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p20-431bc5ac7e",
+            "p31-77990d6c90",
+            "p31-6dead0b231",
+            "p32-f13ba747ab",
+            "p40-a41581b4e3",
+            "p44-b7d4d94080",
+            "p43-0f1879984e",
+            "p41-97c1a0e032"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-A07",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p24-3e46efee64",
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-3e46efee64",
+            "p23-27249d61bf",
+            "p23-2435daf3ec",
+            "p24-7893cf4f6d",
+            "p25-a584b8e997",
+            "p21-88de6db287",
+            "p26-d4c5fd8947",
+            "p42-83f9d6df8d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-A08",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p17-903c410674"
+          ],
+          "retrieved_ids": [
+            "p7-8c84c7a216",
+            "p17-903c410674",
+            "p18-cc5ae09343",
+            "p15-6a942bbddd",
+            "p8-e96529a8f2",
+            "p9-ceeffd39f5",
+            "p8-d256d9ce4c",
+            "p39-66776572f1"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A09",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p23-77b2224c12",
+            "p30-d8fe59b41b"
+          ],
+          "retrieved_ids": [
+            "p23-2435daf3ec",
+            "p30-d8fe59b41b",
+            "p23-77b2224c12",
+            "p24-3e46efee64",
+            "p24-7893cf4f6d",
+            "p23-27249d61bf",
+            "p22-8f3ddee8c0",
+            "p24-bea93ab4d6"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A10",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p42-83f9d6df8d"
+          ],
+          "retrieved_ids": [
+            "p22-8f3ddee8c0",
+            "p13-d0acd34adc",
+            "p41-2d2c8ff79a",
+            "p3-1913155f3d",
+            "p19-afcfc09fb7",
+            "p10-5052e898cb",
+            "p23-2435daf3ec",
+            "p19-e4323f19a5"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-A11",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p20-28e5161ba4",
+            "p20-431bc5ac7e"
+          ],
+          "retrieved_ids": [
+            "p20-431bc5ac7e",
+            "p31-77990d6c90",
+            "p20-28e5161ba4",
+            "p31-6dead0b231",
+            "p21-88de6db287",
+            "p19-e4323f19a5",
+            "p11-0d836f509d",
+            "p22-8f3ddee8c0"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-A12",
+          "kind": "ambiguous",
+          "target_ids": [
+            "p30-526ea28baa"
+          ],
+          "retrieved_ids": [
+            "p48-246a7c42de",
+            "p9-ceeffd39f5",
+            "p3-1913155f3d",
+            "p3-ea5bc5fd17",
+            "p49-f58de990f7",
+            "p6-26357691a1",
+            "p5-8263b6e785",
+            "p25-47545b89bc"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "5": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "8": {
+              "any_hit": false,
+              "coverage": 0.0
+            }
+          }
+        },
+        {
+          "qid": "C-N09",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6"
+          ],
+          "retrieved_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6",
+            "p17-18df625d5a",
+            "p22-8f3ddee8c0",
+            "p48-8e3321fd75",
+            "p8-d256d9ce4c",
+            "p20-a13b1b7d85",
+            "p15-6a942bbddd"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N10",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p11-0d836f509d"
+          ],
+          "retrieved_ids": [
+            "p38-4270231bbc",
+            "p11-0d836f509d",
+            "p19-e4323f19a5",
+            "p3-ea5bc5fd17",
+            "p13-f991984ff3",
+            "p41-2d2c8ff79a",
+            "p48-246a7c42de",
+            "p37-5902b8f6e2"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N11",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p21-5ab774b695",
+            "p24-bea93ab4d6"
+          ],
+          "retrieved_ids": [
+            "p17-18df625d5a",
+            "p23-2435daf3ec",
+            "p21-5ab774b695",
+            "p24-bea93ab4d6",
+            "p23-77b2224c12",
+            "p8-d256d9ce4c",
+            "p30-d8fe59b41b",
+            "p23-27249d61bf"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": false,
+              "coverage": 0.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N12",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p18-cc5ae09343",
+            "p26-44bfeef242"
+          ],
+          "retrieved_ids": [
+            "p18-cc5ae09343",
+            "p46-7e4d5f20c3",
+            "p17-18df625d5a",
+            "p21-88de6db287",
+            "p13-f991984ff3",
+            "p15-82fc10ff7f",
+            "p25-47545b89bc",
+            "p50-314299f759"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 0.5
+            }
+          }
+        },
+        {
+          "qid": "C-N13",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p15-a99dbf1c9b"
+          ],
+          "retrieved_ids": [
+            "p15-a99dbf1c9b",
+            "p36-08d8beab1c",
+            "p15-6a942bbddd",
+            "p36-d366d34e7a",
+            "p16-161eb98f4e",
+            "p18-cc5ae09343",
+            "p37-8b226afe1b",
+            "p3-ea5bc5fd17"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N14",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p24-7893cf4f6d",
+            "p29-d2fd640689"
+          ],
+          "retrieved_ids": [
+            "p24-7893cf4f6d",
+            "p24-3e46efee64",
+            "p29-d2fd640689",
+            "p17-18df625d5a",
+            "p20-a13b1b7d85",
+            "p21-5ab774b695",
+            "p15-6a942bbddd",
+            "p35-972422580c"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 0.5
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N15",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p31-6dead0b231"
+          ],
+          "retrieved_ids": [
+            "p31-6dead0b231",
+            "p26-44bfeef242",
+            "p41-0042d06121",
+            "p38-4270231bbc",
+            "p24-7893cf4f6d",
+            "p24-3e46efee64",
+            "p28-a1f0b33346",
+            "p6-26357691a1"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        },
+        {
+          "qid": "C-N16",
+          "kind": "hard_negative",
+          "target_ids": [
+            "p22-8f3ddee8c0"
+          ],
+          "retrieved_ids": [
+            "p22-8f3ddee8c0",
+            "p22-3579d5cfe2",
+            "p8-d256d9ce4c",
+            "p21-88de6db287",
+            "p23-77b2224c12",
+            "p24-3e46efee64",
+            "p13-f991984ff3",
+            "p24-7893cf4f6d"
+          ],
+          "metrics": {
+            "1": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "3": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "5": {
+              "any_hit": true,
+              "coverage": 1.0
+            },
+            "8": {
+              "any_hit": true,
+              "coverage": 1.0
+            }
+          }
+        }
+      ]
+    }
+  }
+}

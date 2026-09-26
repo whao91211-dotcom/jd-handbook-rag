@@ -1,0 +1,24 @@
+{
+  "version": "rag-baseline-v1-2026-09-26",
+  "files_sha256": {
+    "cases.jsonl": "d2541f5bc80b9e75cd4706fc034cbf28bbfb8bec6c513e024c48ffcde4ad5148",
+    "answers_raw.jsonl": "fdede55d08f5dad7ce54138456e0bf219abd449ad43d0ae06fc871de40ef87c9",
+    "claim_audit.jsonl": "a8df0bbef0a1d2e550ff43a02abcb4f7a254f8fc358432c4891d88700798578d",
+    "chunks.jsonl": "0d59ea02c6ae78f5dda956db7adc0e78acb88f07678eff36d8977efaf7970a12",
+    "handbook_editable.md": "e98cf5cb9b1ab0c8786faff6fa6b896fc91dd2d240e5cf1df2cac7024d5ce660",
+    "retrieval_saved.json": "dc9f365f32f8af9b5037dc3350e42042b1fd40f838c1aa237feaed1343341dc3",
+    "answers_regraded.jsonl": "ace7b3ed7a0064d29aceae156643c2266208728e146d5bfca1ce1cb75a12f949",
+    "summary.json": "42287821f43eff7102547617d47a892a668b75346647680db16ab4d81830699d",
+    "RUBRIC.md": "34b2465b2ec0b990d0aadd28f8ad2f4f695f6b9a28c68f5cf27dedc6fd9c5c89"
+  },
+  "source_run": "原2026-09-25保存的生成输出与检索结果，不重新生成",
+  "generation_settings_provenance": "模型及温度等来自原测试记录；原运行未保存完整请求体与模型服务端修订，不能声称逐字可复现生成",
+  "historical_code_reference_sha256": {
+    "llm.py": "52a2fb808d9b28b2c5ad9fa3c3a148d927a396fff6e3877a815dcab50d70c5f6",
+    "config.py": "54bc31c3251a38cd635a0c87b132cdac469e19eafd89c9ee9a2e71aac267c76b",
+    "retriever.py": "384604367c70ad343c25c7fd73817286050ebb91fe7410cd7e4d705a10a4226e"
+  },
+  "code_reference_note": "工作副本代码参考哈希，不是经日志证明的历史执行代码快照；未来实验应保存请求上下文与提示词哈希",
+  "raw_original_answer_sha256": "fdede55d08f5dad7ce54138456e0bf219abd449ad43d0ae06fc871de40ef87c9",
+  "is_full_human_gold": false
+}

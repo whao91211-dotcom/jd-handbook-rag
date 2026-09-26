@@ -1,0 +1,56 @@
+{
+  "baseline_version": "rag-baseline-v1-2026-09-26",
+  "review_date": "2026-09-26",
+  "generation_date": "2026-09-25",
+  "review_provenance": "模型重评；三处用户裁决，不是36题全部由用户标注的人工金标",
+  "answers": 36,
+  "answer_counts": {
+    "correct": 19,
+    "incorrect": 2,
+    "partial": 15
+  },
+  "strict_answer_accuracy": 0.5277777777777778,
+  "by_kind": {
+    "naturalistic_positive": {
+      "correct": 5,
+      "incorrect": 2,
+      "partial": 2
+    },
+    "hard_negative": {
+      "correct": 10,
+      "partial": 5
+    },
+    "ambiguous": {
+      "partial": 8,
+      "correct": 4
+    }
+  },
+  "fully_supported_answers": 14,
+  "joint_correct_and_supported": 14,
+  "citation_review_items": {
+    "supported": 273,
+    "partial": 20,
+    "unsupported": 10,
+    "missing": 3
+  },
+  "generation": {
+    "model": "deepseek-v4-flash",
+    "temperature": 0.2,
+    "retrieval": "rrf",
+    "top_k": 8,
+    "rerun": false
+  },
+  "saved_generation_latency_seconds": {
+    "median": 6.925,
+    "mean": 15.9925,
+    "p95": 53.269999999999996,
+    "max": 62.67
+  },
+  "tokens_and_cost": null,
+  "tokens_and_cost_note": "原运行未可靠保存每题token，不从共享LAST_USAGE或时长推测费用",
+  "positive_erroneous_refusal_qids": [
+    "C-P03",
+    "C-P06"
+  ],
+  "comparison_note": "32/36初轮与本轮是同批输出的重评分，不是系统性能前后实验"
+}

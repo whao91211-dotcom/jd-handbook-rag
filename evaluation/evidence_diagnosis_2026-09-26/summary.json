@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-26",
+  "answers": 36,
+  "top8_exact_matches": 36,
+  "answers_with_budget_drops": 0,
+  "saved_chunks_dropped": 0,
+  "positive_questions": 9,
+  "positive_full_in_replayed_candidates": 8,
+  "positive_full_in_saved_top8": 7,
+  "positive_full_in_reconstructed_context": 7,
+  "trace_item_counts": {
+    "present_in_reconstructed_context": 51,
+    "absent_from_replayed_candidates": 2,
+    "not_in_saved_top8_but_in_replayed_candidates": 15
+  },
+  "generation_calls": 0,
+  "code_reference_sha256": {
+    "retriever.py": "384604367c70ad343c25c7fd73817286050ebb91fe7410cd7e4d705a10a4226e",
+    "llm.py": "52a2fb808d9b28b2c5ad9fa3c3a148d927a396fff6e3877a815dcab50d70c5f6",
+    "config.py": "54bc31c3251a38cd635a0c87b132cdac469e19eafd89c9ee9a2e71aac267c76b"
+  },
+  "provenance": "候选名单为当前同代码同文本索引的本地重放；历史请求未保存候选及完整上下文。Top8对齐及上下文重建不能证明历史全部执行状态相同。",
+  "negative_ambiguous_targets_note": "仅正样本gold统计完整证据率；相关块和诊断补充块仅作逐块定位，不能解释成答案充分性。"
+}
