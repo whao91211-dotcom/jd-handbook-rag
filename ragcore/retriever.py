@@ -22,6 +22,7 @@ from __future__ import annotations
 from .config import BM25_TOP_K, DENSE_TOP_K, FINAL_TOP_K, RETRIEVE_MODES, RRF_K
 from .embedder import embed_query
 from .store import get_collection
+from .evidence import STRATEGIES, expand_queries, fuse_ranks
 
 _corpus = None
 _bm25_cache: tuple | None = None   # (ids_tuple, BM25Okapi, jieba)
@@ -85,6 +86,7 @@ def retrieve(
     k: int = FINAL_TOP_K,
     mode: str = "rrf",
     bm25_top_k: int | None = BM25_TOP_K,
+    strategy: str = "baseline",
 ) -> list[dict]:
     """返回检索结果 Top-k（从高到低）。
 
@@ -96,6 +98,8 @@ def retrieve(
     """
     if mode not in RETRIEVE_MODES:
         raise ValueError(f"mode 必须是 {RETRIEVE_MODES} 之一，收到 {mode!r}")
+    if strategy not in STRATEGIES:
+        raise ValueError(f"strategy 必须是 {STRATEGIES} 之一")
     if not query or not query.strip():
         return []
     query = query.strip()
@@ -110,12 +114,20 @@ def retrieve(
         rank_maps["dense"] = _dense_ranks(query, n)
     if mode in ("rrf", "bm25"):
         rank_maps["bm25"] = _bm25_ranks(query, ids, docs, bm25_top_k)
+    queries = [query] if strategy == "baseline" else expand_queries(query)
+    query_groups = [rank_maps.copy()]
+    for number, supplement in enumerate(queries[1:], 1):
+        group = {}
+        if mode in ("rrf", "dense"):
+            group["dense"] = _dense_ranks(supplement, n)
+        if mode in ("rrf", "bm25"):
+            group["bm25"] = _bm25_ranks(supplement, ids, docs, bm25_top_k)
+        query_groups.append(group)
+        for channel, ranks in group.items():
+            rank_maps[f"{channel}:{number}"] = ranks
 
     # ---- RRF 融合（单路时退化为该路自身排序）----
-    rrf: dict[str, float] = {}
-    for rank_map in rank_maps.values():
-        for iid, rank in rank_map.items():
-            rrf[iid] = rrf.get(iid, 0.0) + 1.0 / (RRF_K + rank)
+    rrf = fuse_ranks(list(rank_maps.values()), RRF_K)
     top_ids = sorted(rrf, key=lambda iid: -rrf[iid])[:k]
 
     dense_rank = rank_maps.get("dense", {})
@@ -139,6 +151,9 @@ def retrieve(
                 "path": meta.get("path", ""),
                 "clause": meta.get("clause", ""),
                 "char_len": int(meta.get("char_len", 0)),
+                "queries": queries,
+                "strategy": strategy,
+                "candidate_count": len(rrf),
             }
         )
     return results
