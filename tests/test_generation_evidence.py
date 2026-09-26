@@ -6,6 +6,18 @@ from ragcore import llm
 
 
 class GenerationTests(unittest.TestCase):
+    def test_evidence_mode_rejects_a_truncated_final_answer(self):
+        response=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content='未完成的政策'),
+            finish_reason='length')], usage=SimpleNamespace(prompt_tokens=10,completion_tokens=20,
+            completion_tokens_details=None))
+        client=SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=lambda **kwargs: response)))
+        chunks=[{'id':'a','text':'规则','page_start':1,'path':'政策'}]
+        usage=[]
+        with patch.object(llm,'get_client',return_value=client), patch.object(llm,'env_config',return_value={'model':'fake'}):
+            with self.assertRaises(llm.EmptyGenerationError):
+                llm.generate('问题',chunks,prompt_version='evidence',usage_sink=usage)
+        self.assertEqual(len(usage),3)
+
     def test_exhausted_balance_is_not_retried_with_larger_budget(self):
         class BalanceError(Exception):
             status_code = 402

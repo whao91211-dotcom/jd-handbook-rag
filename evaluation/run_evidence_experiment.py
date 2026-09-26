@@ -4,6 +4,7 @@ import concurrent.futures
 import hashlib
 import json
 import os
+import subprocess
 from pathlib import Path
 import sys
 import threading
@@ -31,6 +32,7 @@ def main():
     folder = 'guarded_experiment_2026-09-26' if args.guarded_only else 'evidence_experiment_2026-09-26'
     out = ROOT / 'evaluation' / folder
     out.mkdir(exist_ok=True)
+    revision = subprocess.check_output(['git','rev-parse','HEAD'], cwd=ROOT, text=True).strip()
     print('Loading retrieval runtime...', flush=True)
     from ragcore.retriever import retrieve, _load_corpus
     from ragcore.llm import prepare_context, generate, SYSTEM_PROMPT, EVIDENCE_PROMPT
@@ -104,6 +106,7 @@ def main():
             if any(u.get('status_code') in (401,402,403,429) for u in usage):
                 stop_batch.set()
         return {'variant': variant, 'qid': case['qid'], 'question': case['question'],
+                'code_revision': revision,
                 'strategy': strategy, 'prompt_version': prompt, 'context': context,
                 'source_map': source_map, 'retrieved_ids': retrieval['retrieved_ids'],
                 'system_prompt': system, 'system_sha256': digest(system), 'context_sha256': digest(context),

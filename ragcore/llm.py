@@ -214,6 +214,8 @@ def generate(question: str, chunks: list[dict], *, prompt_version: str = "baseli
             print("[警告] LLM 未产出正文，抬高预算重试 -> %s" % attempts[-1], file=sys.stderr)
 
     if fallback:
+        if prompt_version == 'evidence':
+            raise EmptyGenerationError('证据回答在全部预算内均被截断，拒绝返回不完整政策。')
         print("[警告] 预算已到上限，返回最后一次被截断的部分回答", file=sys.stderr)
         return fallback
     raise EmptyGenerationError(
