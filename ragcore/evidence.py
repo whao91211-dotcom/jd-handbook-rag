@@ -1,6 +1,6 @@
 """Bounded handbook vocabulary expansion; contains no evaluation IDs or answers."""
 
-STRATEGIES = ('baseline', 'expanded', 'coverage')
+STRATEGIES = ('baseline', 'expanded', 'coverage', 'guarded')
 
 
 def expand_queries(query: str) -> list[str]:
@@ -34,6 +34,22 @@ def fuse_ranks(rank_maps: list[dict[str, int]], constant: int = 60) -> dict[str,
         for iid, rank in ranks.items():
             scores[iid] = scores.get(iid, 0.0) + 1.0 / (constant + rank)
     return scores
+
+
+def scoped_queries(query: str) -> list[str]:
+    """Retain an explicit eligibility scope instead of broadening to all staff."""
+    queries = expand_queries(query)
+    if '试用期' in query and any(w in query for w in ('迟到', '早退')):
+        return [query.strip(), '试用期 迟到 早退 不符合录用条件']
+    return queries
+
+
+def lexical_anchor_order(fused: list[str], lexical: dict[str, int]) -> list[str]:
+    """Protect one strong lexical hit that equal-vote RRF can otherwise suppress."""
+    if not lexical:
+        return fused
+    first = min(lexical, key=lexical.get)
+    return [first] + [iid for iid in fused if iid != first]
 
 
 def select_evidence(fused: list[str], facets: list[list[str]], k: int) -> list[str]:

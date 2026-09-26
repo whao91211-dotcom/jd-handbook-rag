@@ -22,7 +22,7 @@ from __future__ import annotations
 from .config import BM25_TOP_K, DENSE_TOP_K, FINAL_TOP_K, RETRIEVE_MODES, RRF_K
 from .embedder import embed_query
 from .store import get_collection
-from .evidence import STRATEGIES, expand_queries, fuse_ranks, select_evidence
+from .evidence import STRATEGIES, expand_queries, scoped_queries, lexical_anchor_order, fuse_ranks, select_evidence
 
 _corpus = None
 _bm25_cache: tuple | None = None   # (ids_tuple, BM25Okapi, jieba)
@@ -114,7 +114,8 @@ def retrieve(
         rank_maps["dense"] = _dense_ranks(query, n)
     if mode in ("rrf", "bm25"):
         rank_maps["bm25"] = _bm25_ranks(query, ids, docs, bm25_top_k)
-    queries = [query] if strategy == "baseline" else expand_queries(query)
+    queries = ([query] if strategy == "baseline" else
+               scoped_queries(query) if strategy == "guarded" else expand_queries(query))
     query_groups = [rank_maps.copy()]
     for number, supplement in enumerate(queries[1:], 1):
         group = {}
@@ -132,8 +133,11 @@ def retrieve(
     facet_orders = []
     for group in query_groups:
         group_scores = fuse_ranks(list(group.values()), RRF_K)
-        facet_orders.append(sorted(group_scores, key=lambda iid: -group_scores[iid]))
-    top_ids = select_evidence(fused_ids, facet_orders, k) if strategy == "coverage" else fused_ids[:k]
+        order = sorted(group_scores, key=lambda iid: -group_scores[iid])
+        if strategy == 'guarded' and len(facet_orders) > 0:
+            order = lexical_anchor_order(order, group.get('bm25', {}))
+        facet_orders.append(order)
+    top_ids = select_evidence(fused_ids, facet_orders, k) if strategy in ('coverage', 'guarded') else fused_ids[:k]
 
     dense_rank = rank_maps.get("dense", {})
     bm25_rank = rank_maps.get("bm25", {})

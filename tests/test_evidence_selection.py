@@ -23,6 +23,12 @@ class SelectionTests(unittest.TestCase):
     def test_without_supplement_retains_fused_order(self):
         self.assertEqual(self.select(['a','b','c'], [['b','c']], 2), ['a','b'])
 
+    def test_single_channel_first_hit_is_not_buried_by_agreement(self):
+        function = getattr(evidence, 'lexical_anchor_order', None)
+        self.assertIsNotNone(function)
+        self.assertEqual(function(['shared1','shared2','unique'], {'unique':1,'shared2':2}),
+                         ['unique','shared1','shared2'])
+
 
 if __name__ == '__main__':
     unittest.main()

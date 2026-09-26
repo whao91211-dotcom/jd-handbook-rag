@@ -29,6 +29,13 @@ class QueryTests(unittest.TestCase):
         self.assertEqual(self.expand('这个能怎么办？'), ['这个能怎么办？'])
         self.assertEqual(self.expand('  '), [])
 
+    def test_scoped_expansion_retains_probation_condition(self):
+        from ragcore import evidence
+        self.assertTrue(hasattr(evidence, 'scoped_queries'))
+        extra = evidence.scoped_queries('试用期迟到早退几次算不符合录用条件？')[1:]
+        self.assertTrue(extra)
+        self.assertTrue(all('试用期' in q for q in extra))
+
 
 if __name__ == '__main__':
     unittest.main()
