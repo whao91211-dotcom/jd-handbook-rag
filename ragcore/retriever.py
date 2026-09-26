@@ -95,6 +95,8 @@ def retrieve(
         k: 返回块数。
         mode: "rrf" | "dense" | "bm25"（见模块 docstring）。
         bm25_top_k: BM25 侧候选截断数；None = 不截断（旧行为）。
+        strategy: baseline 保持原检索；expanded 多查询融合；coverage 分面选择；
+                  guarded 额外保留查询适用范围及补充查询的词法首位结果。
     """
     if mode not in RETRIEVE_MODES:
         raise ValueError(f"mode 必须是 {RETRIEVE_MODES} 之一，收到 {mode!r}")

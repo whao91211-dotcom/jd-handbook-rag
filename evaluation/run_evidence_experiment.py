@@ -84,7 +84,8 @@ def main():
     completed = set(previous)
     if args.retry_incomplete:
         completed = {key for key, x in previous.items() if not x['error'] and x['usage']
-                     and x['usage'][-1].get('finish_reason') == 'stop'}
+                     and x['usage'][-1].get('finish_reason') == 'stop'
+                     and all(not u.get('error_type') for u in x['usage'])}
     variants = [('A', 'baseline', 'baseline'), ('B', 'expanded', 'baseline'),
                 ('C', 'coverage', 'baseline'), ('D', 'coverage', 'evidence')]
     if args.guarded_only:
