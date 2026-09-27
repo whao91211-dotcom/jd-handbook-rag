@@ -10,7 +10,7 @@
 
 ## Constraints and review focus
 
-- Existing baseline remains accessible. Model, temperature=0.2, final k=8 and 6000-character context limit remain fixed in comparisons.
+- Existing baseline remains accessible. Embedding model, requested generation alias, final k=8 and 6000-character context limit remain fixed. Thinking-mode ablations were added; requested temperature=0.2 is ignored in thinking mode, and provider aliases do not freeze backend weights.
 - No question-specific IDs, gold sources or expected-answer text inside production retrieval rules.
 - Empty/no-topic queries retain original behavior. Expansion is capped at original plus two queries and deduplicated.
 - Dense-only and BM25-only ablations preserve their retrieval paths; rank scores across different queries must be comparable by rank fusion.
@@ -20,13 +20,20 @@
 
 ## Tasks
 
-- [ ] Commit existing evidence-reviewed baseline and diagnosis, leaving user .gitignore change unstaged.
-- [ ] Recall: write tests for query cap, original-query retention, unfamiliar questions, asset-damage vocabulary and payroll facets. Run failing tests; add pure expansion and opt-in multi-query RRF integration; pass tests; commit.
-- [ ] Selection: write tests for retaining distinct facet evidence, no duplicates and k bounds. Run failing tests; implement facet coverage strategy without gold IDs; pass tests; commit.
-- [ ] Generation: preserve baseline prompt; add evidence-oriented prompt/context version and per-request usage sink. Tests cover exact source labels, context budget and usage isolation using a fake API boundary; verify and commit.
-- [ ] Experiment: evaluate recall/selection on frozen36 questions and original35 positive retrieval cases. Generate same-period A baseline/B expanded/C coverage/D coverage+generation variants on36, preserving contexts and all usage. Review outputs, compare metrics and failure/regression cases; commit artifacts and report. Do not claim human-reviewed accuracy without actual review.
-- [ ] Review diff for baseline compatibility, secrets and unnecessary changes. Verify tests and saved result integrity, then push this completed larger batch.
+- [x] Commit existing evidence-reviewed baseline and diagnosis, leaving user .gitignore change unstaged.
+- [x] Recall: write tests for query cap, original-query retention, unfamiliar questions, asset-damage vocabulary and payroll facets. Run failing tests; add pure expansion and opt-in multi-query RRF integration; pass tests; commit.
+- [x] Selection: write tests for retaining distinct facet evidence, no duplicates and k bounds. Run failing tests; implement facet coverage strategy without gold IDs; pass tests; commit.
+- [x] Generation: preserve baseline prompt; add evidence-oriented prompt/context version and per-request usage sink. Tests cover exact source labels, context budget and usage isolation using a fake API boundary; verify and commit.
+- [x] Experiment: evaluate recall/selection on frozen36 questions and original35 positive retrieval cases. Generate same-period A baseline/B expanded/C coverage/D coverage+generation variants on36, preserving contexts and all usage. Review outputs, compare metrics and failure/regression cases; commit artifacts and report. Do not claim human-reviewed accuracy without actual review.
+- [x] Review diff for baseline compatibility, secrets and unnecessary changes. Verify tests and saved result integrity, then push this completed larger batch.
 
 ## Verification commands
 
 Run `python -m unittest discover -s tests -v` using the InternVL environment. Run the experiment scripts against the existing index; ensure every raw result contains variant, question, evidence IDs, context and prompt hashes, answer, error and request usage. Compare complete-gold coverage only on positive cases, not negative related chunks. Do not overwrite frozen baseline_v1 snapshots.
+
+## Completion evidence (2026-09-27)
+
+- Retrieval: guarded full coverage9/9 vs baseline7/9; original35 Recall@3 and @8 unchanged. Actual F/G/H gold input coverage9/9; max context4948 characters.
+- Answer model review: A21/36, E24/36, F28/36, G27/36, H30/36. 180 outputs bound to reviewed hashes. B/C/D retained but ungraded.
+- API-affected runs were resumed and preserved; primary final comparisons have no API errors or unknown usage. Citation semantic scoring and held-out generalization are next-round work, not completed claims.
+- See EVIDENCE_OPTIMIZATION.md and saved summary for latency/token tradeoffs and final verification.

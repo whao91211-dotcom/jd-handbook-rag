@@ -1,0 +1,38 @@
+{
+  "development36/baseline": {
+    "n": 9,
+    "any_at3": 5,
+    "any_at8": 8,
+    "full_at8": 7
+  },
+  "development36/expanded": {
+    "n": 9,
+    "any_at3": 6,
+    "any_at8": 8,
+    "full_at8": 8
+  },
+  "development36/coverage": {
+    "n": 9,
+    "any_at3": 5,
+    "any_at8": 8,
+    "full_at8": 8
+  },
+  "original35/baseline": {
+    "n": 35,
+    "any_at3": 32,
+    "any_at8": 35,
+    "full_at8": 35
+  },
+  "original35/expanded": {
+    "n": 35,
+    "any_at3": 30,
+    "any_at8": 33,
+    "full_at8": 33
+  },
+  "original35/coverage": {
+    "n": 35,
+    "any_at3": 32,
+    "any_at8": 34,
+    "full_at8": 34
+  }
+}

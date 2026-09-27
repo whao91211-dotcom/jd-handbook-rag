@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-27",
+  "reviewer": "Codex model review, not full human gold",
+  "files": {
+    "evaluation/evidence_experiment_2026-09-26/answers.jsonl": {
+      "sha256": "c13c408c0f3c8c66383d90e83dae87087ba145a4eaa2cb236610daab7c20df03",
+      "bytes": 2858183
+    },
+    "evaluation/evidence_experiment_2026-09-26/retrieval.json": {
+      "sha256": "c8114e1f6d40b98f285c85ecd96feafb3ddb9b643e69a5a3363fc0f8bb783ace",
+      "bytes": 130789
+    },
+    "evaluation/evidence_experiment_2026-09-26/retrieval_summary.json": {
+      "sha256": "b67ad708a6d0e42e9480825f93c4aefef0512419467a9c15b333e19c53deaac0",
+      "bytes": 648
+    },
+    "evaluation/guarded_experiment_2026-09-26/answers.jsonl": {
+      "sha256": "97f0eb4a112f0053eab15730714aee072e62eef8e69604bba1fc21bdb302630f",
+      "bytes": 1962069
+    },
+    "evaluation/guarded_experiment_2026-09-26/retrieval.json": {
+      "sha256": "43f832212d926f8ab1c054087667deb9913655b5d9b3f1aa3a972cd4743197dd",
+      "bytes": 86197
+    },
+    "evaluation/guarded_experiment_2026-09-26/retrieval_summary.json": {
+      "sha256": "6924acdc5f90428969287347dbe08c19c5af9fd789d6ced89b338d8410f100dd",
+      "bytes": 431
+    },
+    "evaluation/fast_experiment_2026-09-26/answers.jsonl": {
+      "sha256": "a1ee9d27a49023791f7be13bc6e0424c8b879e52e22272b758001901d160c607",
+      "bytes": 522986
+    },
+    "evaluation/fast_experiment_2026-09-26/retrieval.json": {
+      "sha256": "3f666d090218063b7b13b30f2dcd98c46c8de34e3811f37a593cc4b299b45cc5",
+      "bytes": 86217
+    },
+    "evaluation/fast_experiment_2026-09-26/retrieval_summary.json": {
+      "sha256": "6924acdc5f90428969287347dbe08c19c5af9fd789d6ced89b338d8410f100dd",
+      "bytes": 431
+    },
+    "evaluation/low_experiment_2026-09-26/answers.jsonl": {
+      "sha256": "517603e8257655deebd10131d9a24cd5ce5528e94483196ece8adb5bcaf8a907",
+      "bytes": 641536
+    },
+    "evaluation/low_experiment_2026-09-26/retrieval.json": {
+      "sha256": "1a9eb9fe4e59f5e5c2f9f82be5b1705ce75f7bbce6b723130ffea4a9454690c8",
+      "bytes": 86250
+    },
+    "evaluation/low_experiment_2026-09-26/retrieval_summary.json": {
+      "sha256": "6924acdc5f90428969287347dbe08c19c5af9fd789d6ced89b338d8410f100dd",
+      "bytes": 431
+    },
+    "evaluation/primary_review_notes.json": {
+      "sha256": "3f846972b7cedf5443ac7a6f94bce43d21444903e64d638ea37348f20ba91cb6",
+      "bytes": 22169
+    },
+    "evaluation/primary_review_answer_hashes.json": {
+      "sha256": "9cd0e9cf27de0e1bf38bea4e921dbe9732cc193854bc67a87ea87947a83f52e5",
+      "bytes": 14765
+    }
+  }
+}

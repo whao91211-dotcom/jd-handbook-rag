@@ -14,6 +14,7 @@ def read(path):
 def main():
     OUT.mkdir(exist_ok=True)
     notes = json.loads((ROOT/'evaluation/primary_review_notes.json').read_text(encoding='utf8'))
+    review_hashes = json.loads((ROOT/'evaluation/primary_review_answer_hashes.json').read_text(encoding='utf8'))
     cases = read(ROOT/'evaluation/baseline_v1_2026-09-26/cases.jsonl')
     case_ids = {x['qid'] for x in cases}
     latest, all_rows = {}, []
@@ -38,6 +39,7 @@ def main():
         for row in rows:
             note = notes.get(variant+'/'+row['qid'])
             if note:
+                assert review_hashes[variant+'/'+row['qid']] == hashlib.sha256(row['answer'].encode()).hexdigest(), 'Answer changed after review: '+variant+'/'+row['qid']
                 grade, reason = note
                 assert grade in ('correct','partial','incorrect')
                 counts[grade] += 1

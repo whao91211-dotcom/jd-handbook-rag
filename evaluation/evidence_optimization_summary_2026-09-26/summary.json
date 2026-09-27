@@ -1,0 +1,153 @@
+{
+  "reviewer": "Codex model review; not a full human gold evaluation",
+  "rubric": "baseline_v1_2026-09-26/RUBRIC.md",
+  "dataset": "36 simulated development/regression cases",
+  "A": {
+    "saved_cases": 36,
+    "complete_answers": 35,
+    "error_answers": 0,
+    "grades": {
+      "partial": 13,
+      "correct": 21,
+      "incorrect": 2
+    },
+    "unreviewed": 0,
+    "strict_accuracy": 0.5833333333333334,
+    "first_attempt_complete": 22,
+    "total_application_attempts_latest_runs": 54,
+    "reported_prompt_tokens_latest_runs": 141477,
+    "reported_completion_tokens_latest_runs": 119704,
+    "unknown_usage_attempts": 0,
+    "clean_timing_n": 36,
+    "generation_p50_seconds": 8.037994650003384,
+    "generation_p95_seconds_nearest_rank": 57.45651960000396
+  },
+  "B": {
+    "saved_cases": 36,
+    "complete_answers": 35,
+    "error_answers": 0,
+    "grades": {},
+    "unreviewed": 36,
+    "strict_accuracy": null,
+    "first_attempt_complete": 22,
+    "total_application_attempts_latest_runs": 54,
+    "reported_prompt_tokens_latest_runs": 141832,
+    "reported_completion_tokens_latest_runs": 112778,
+    "unknown_usage_attempts": 0,
+    "clean_timing_n": 36,
+    "generation_p50_seconds": 6.880697450003936,
+    "generation_p95_seconds_nearest_rank": 49.60417289999896
+  },
+  "C": {
+    "saved_cases": 36,
+    "complete_answers": 36,
+    "error_answers": 0,
+    "grades": {},
+    "unreviewed": 36,
+    "strict_accuracy": null,
+    "first_attempt_complete": 23,
+    "total_application_attempts_latest_runs": 56,
+    "reported_prompt_tokens_latest_runs": 132628,
+    "reported_completion_tokens_latest_runs": 112234,
+    "unknown_usage_attempts": 5,
+    "clean_timing_n": 33,
+    "generation_p50_seconds": 6.576745099999243,
+    "generation_p95_seconds_nearest_rank": 50.365125000011176
+  },
+  "D": {
+    "saved_cases": 36,
+    "complete_answers": 35,
+    "error_answers": 1,
+    "grades": {},
+    "unreviewed": 36,
+    "strict_accuracy": null,
+    "first_attempt_complete": 17,
+    "total_application_attempts_latest_runs": 62,
+    "reported_prompt_tokens_latest_runs": 167973,
+    "reported_completion_tokens_latest_runs": 159222,
+    "unknown_usage_attempts": 2,
+    "clean_timing_n": 35,
+    "generation_p50_seconds": 21.891852200002177,
+    "generation_p95_seconds_nearest_rank": 64.98684970001341
+  },
+  "E": {
+    "saved_cases": 36,
+    "complete_answers": 36,
+    "error_answers": 0,
+    "grades": {
+      "correct": 24,
+      "partial": 12
+    },
+    "unreviewed": 0,
+    "strict_accuracy": 0.6666666666666666,
+    "first_attempt_complete": 19,
+    "total_application_attempts_latest_runs": 58,
+    "reported_prompt_tokens_latest_runs": 150199,
+    "reported_completion_tokens_latest_runs": 129787,
+    "unknown_usage_attempts": 0,
+    "clean_timing_n": 36,
+    "generation_p50_seconds": 8.785800050012767,
+    "generation_p95_seconds_nearest_rank": 54.92865479999455
+  },
+  "F": {
+    "saved_cases": 36,
+    "complete_answers": 36,
+    "error_answers": 0,
+    "grades": {
+      "correct": 28,
+      "partial": 8
+    },
+    "unreviewed": 0,
+    "strict_accuracy": 0.7777777777777778,
+    "first_attempt_complete": 18,
+    "total_application_attempts_latest_runs": 64,
+    "reported_prompt_tokens_latest_runs": 180601,
+    "reported_completion_tokens_latest_runs": 170623,
+    "unknown_usage_attempts": 0,
+    "clean_timing_n": 36,
+    "generation_p50_seconds": 14.724784300007741,
+    "generation_p95_seconds_nearest_rank": 74.0174127999926
+  },
+  "G": {
+    "saved_cases": 36,
+    "complete_answers": 36,
+    "error_answers": 0,
+    "grades": {
+      "correct": 27,
+      "partial": 8,
+      "incorrect": 1
+    },
+    "unreviewed": 0,
+    "strict_accuracy": 0.75,
+    "first_attempt_complete": 36,
+    "total_application_attempts_latest_runs": 36,
+    "reported_prompt_tokens_latest_runs": 99438,
+    "reported_completion_tokens_latest_runs": 12416,
+    "unknown_usage_attempts": 0,
+    "clean_timing_n": 36,
+    "generation_p50_seconds": 2.140729349994217,
+    "generation_p95_seconds_nearest_rank": 10.380215999990469
+  },
+  "H": {
+    "saved_cases": 36,
+    "complete_answers": 36,
+    "error_answers": 0,
+    "grades": {
+      "correct": 30,
+      "partial": 6
+    },
+    "unreviewed": 0,
+    "strict_accuracy": 0.8333333333333334,
+    "first_attempt_complete": 18,
+    "total_application_attempts_latest_runs": 58,
+    "reported_prompt_tokens_latest_runs": 162375,
+    "reported_completion_tokens_latest_runs": 133188,
+    "unknown_usage_attempts": 0,
+    "clean_timing_n": 36,
+    "generation_p50_seconds": 14.071212300012121,
+    "generation_p95_seconds_nearest_rank": 51.50461910001468
+  },
+  "all_saved_attempts_reported_tokens": 2243014,
+  "timing_note": "Generation wall time includes application retries and completed or failed outputs; excludes runs with API errors. Retrieval was precomputed; not end-to-end latency.",
+  "cost_note": "Reported response tokens include reasoning inside completion; no monetary price or missing API usage inferred. Superseded failed runs are retained separately."
+}

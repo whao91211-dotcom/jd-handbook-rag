@@ -1,0 +1,5487 @@
+[
+  {
+    "dataset": "development36",
+    "qid": "C-P01",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-82fc10ff7f",
+      "p18-cc5ae09343",
+      "p15-a99dbf1c9b",
+      "p43-54058878ec",
+      "p17-18df625d5a",
+      "p3-1913155f3d",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p15-a99dbf1c9b"
+    ],
+    "queries": [
+      "我刚入职两个月，现在想走，是不是跟主管说一声就能马上离开？"
+    ],
+    "retrieval_seconds": 0.07509520000894554,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P01",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-82fc10ff7f",
+      "p18-cc5ae09343",
+      "p15-a99dbf1c9b",
+      "p43-54058878ec",
+      "p17-18df625d5a",
+      "p3-1913155f3d",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p15-a99dbf1c9b"
+    ],
+    "queries": [
+      "我刚入职两个月，现在想走，是不是跟主管说一声就能马上离开？"
+    ],
+    "retrieval_seconds": 0.05179890000727028,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P01",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-82fc10ff7f",
+      "p18-cc5ae09343",
+      "p15-a99dbf1c9b",
+      "p43-54058878ec",
+      "p17-18df625d5a",
+      "p3-1913155f3d",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p15-a99dbf1c9b"
+    ],
+    "queries": [
+      "我刚入职两个月，现在想走，是不是跟主管说一声就能马上离开？"
+    ],
+    "retrieval_seconds": 0.05825050000566989,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P02",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p22-8f3ddee8c0",
+      "p3-ea5bc5fd17",
+      "p23-27249d61bf",
+      "p18-cc5ae09343",
+      "p30-d8fe59b41b",
+      "p30-c81f9880c1",
+      "p5-8263b6e785",
+      "p22-c42b3d394c"
+    ],
+    "gold_ids": [
+      "p22-c42b3d394c"
+    ],
+    "queries": [
+      "我以前工作十多年，在京东待了八年，生病的话医疗期有几个月？"
+    ],
+    "retrieval_seconds": 0.05260979998274706,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P02",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p22-8f3ddee8c0",
+      "p3-ea5bc5fd17",
+      "p23-27249d61bf",
+      "p18-cc5ae09343",
+      "p30-d8fe59b41b",
+      "p30-c81f9880c1",
+      "p5-8263b6e785",
+      "p22-c42b3d394c"
+    ],
+    "gold_ids": [
+      "p22-c42b3d394c"
+    ],
+    "queries": [
+      "我以前工作十多年，在京东待了八年，生病的话医疗期有几个月？"
+    ],
+    "retrieval_seconds": 0.05339149999781512,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P02",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p22-8f3ddee8c0",
+      "p3-ea5bc5fd17",
+      "p23-27249d61bf",
+      "p18-cc5ae09343",
+      "p30-d8fe59b41b",
+      "p30-c81f9880c1",
+      "p5-8263b6e785",
+      "p22-c42b3d394c"
+    ],
+    "gold_ids": [
+      "p22-c42b3d394c"
+    ],
+    "queries": [
+      "我以前工作十多年，在京东待了八年，生病的话医疗期有几个月？"
+    ],
+    "retrieval_seconds": 0.06008470000233501,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P03",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p43-0f1879984e",
+      "p41-2d2c8ff79a",
+      "p44-b7d4d94080",
+      "p47-eced5c88c6",
+      "p41-97c1a0e032",
+      "p4-b79067ffc6",
+      "p48-246a7c42de",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "queries": [
+      "公司发的电脑被我不小心摔坏了，一定要自己赔吗？"
+    ],
+    "retrieval_seconds": 0.05295949999708682,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P03",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p40-a41581b4e3",
+      "p41-97c1a0e032",
+      "p44-b7d4d94080",
+      "p41-2d2c8ff79a",
+      "p40-c769d87f54",
+      "p46-7e4d5f20c3",
+      "p45-db974bfc73",
+      "p43-1fe92a1be1"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "queries": [
+      "公司发的电脑被我不小心摔坏了，一定要自己赔吗？",
+      "公司资产 公司财产 故意 过失 毁损 追偿",
+      "经济赔偿 经济损失 扣发工资"
+    ],
+    "retrieval_seconds": 0.16647890000604093,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P03",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p43-0f1879984e",
+      "p41-2d2c8ff79a",
+      "p44-b7d4d94080",
+      "p45-db974bfc73",
+      "p40-a41581b4e3",
+      "p46-7e4d5f20c3",
+      "p40-c769d87f54",
+      "p41-97c1a0e032"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "queries": [
+      "公司发的电脑被我不小心摔坏了，一定要自己赔吗？",
+      "公司资产 公司财产 故意 过失 毁损 追偿",
+      "经济赔偿 经济损失 扣发工资"
+    ],
+    "retrieval_seconds": 0.1641918999957852,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P04",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p16-161eb98f4e",
+      "p15-a99dbf1c9b",
+      "p14-1ad6eab8c6",
+      "p34-b3db9e8572",
+      "p17-3912472149",
+      "p15-82fc10ff7f",
+      "p39-66776572f1"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "queries": [
+      "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？"
+    ],
+    "retrieval_seconds": 0.05419400002574548,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P04",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p17-903c410674",
+      "p17-3912472149",
+      "p34-b3db9e8572",
+      "p16-161eb98f4e",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p17-18df625d5a",
+      "p14-4058f096f6"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "queries": [
+      "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.1481107999861706,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P04",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p16-161eb98f4e",
+      "p15-a99dbf1c9b",
+      "p17-903c410674",
+      "p17-3912472149",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p17-18df625d5a"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "queries": [
+      "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.1569080000044778,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P05",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p25-a584b8e997",
+      "p23-2435daf3ec",
+      "p21-5ab774b695",
+      "p15-a99dbf1c9b",
+      "p23-27249d61bf"
+    ],
+    "gold_ids": [
+      "p24-3e46efee64"
+    ],
+    "queries": [
+      "我入职三年多才怀孕，除了法定产假，公司还给多少天？"
+    ],
+    "retrieval_seconds": 0.05267380000441335,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P05",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p25-a584b8e997",
+      "p23-2435daf3ec",
+      "p21-5ab774b695",
+      "p15-a99dbf1c9b",
+      "p23-27249d61bf"
+    ],
+    "gold_ids": [
+      "p24-3e46efee64"
+    ],
+    "queries": [
+      "我入职三年多才怀孕，除了法定产假，公司还给多少天？"
+    ],
+    "retrieval_seconds": 0.056838099990272895,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P05",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p25-a584b8e997",
+      "p23-2435daf3ec",
+      "p21-5ab774b695",
+      "p15-a99dbf1c9b",
+      "p23-27249d61bf"
+    ],
+    "gold_ids": [
+      "p24-3e46efee64"
+    ],
+    "queries": [
+      "我入职三年多才怀孕，除了法定产假，公司还给多少天？"
+    ],
+    "retrieval_seconds": 0.05387679999694228,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P06",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p24-3e46efee64",
+      "p22-3579d5cfe2",
+      "p24-7893cf4f6d",
+      "p23-77b2224c12",
+      "p21-5ab774b695",
+      "p23-27249d61bf",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p30-526ea28baa"
+    ],
+    "queries": [
+      "请了一天事假，那天15块钱餐补还发吗？"
+    ],
+    "retrieval_seconds": 0.05406930000754073,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P06",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p22-3579d5cfe2",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p21-5ab774b695",
+      "p30-526ea28baa",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p30-526ea28baa"
+    ],
+    "queries": [
+      "请了一天事假，那天15块钱餐补还发吗？",
+      "事假 无薪假 薪酬 福利",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "retrieval_seconds": 0.14017209998564795,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P06",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p24-3e46efee64",
+      "p22-3579d5cfe2",
+      "p23-77b2224c12",
+      "p21-88de6db287",
+      "p30-526ea28baa",
+      "p19-c92ec39c2b",
+      "p21-5ab774b695"
+    ],
+    "gold_ids": [
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p30-526ea28baa"
+    ],
+    "queries": [
+      "请了一天事假，那天15块钱餐补还发吗？",
+      "事假 无薪假 薪酬 福利",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "retrieval_seconds": 0.15238659997703508,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P07",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p14-1ad6eab8c6",
+      "p33-a867f06b3c",
+      "p35-e55115a49e",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p17-903c410674",
+      "p29-90e2f16e13",
+      "p15-6a942bbddd"
+    ],
+    "gold_ids": [
+      "p33-a867f06b3c"
+    ],
+    "queries": [
+      "经理岗空出来，公司有规定优先从内部提拔多少人吗？"
+    ],
+    "retrieval_seconds": 0.055275100021390244,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P07",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p14-1ad6eab8c6",
+      "p33-a867f06b3c",
+      "p35-e55115a49e",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p17-903c410674",
+      "p29-90e2f16e13",
+      "p15-6a942bbddd"
+    ],
+    "gold_ids": [
+      "p33-a867f06b3c"
+    ],
+    "queries": [
+      "经理岗空出来，公司有规定优先从内部提拔多少人吗？"
+    ],
+    "retrieval_seconds": 0.056987599993590266,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P07",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p14-1ad6eab8c6",
+      "p33-a867f06b3c",
+      "p35-e55115a49e",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p17-903c410674",
+      "p29-90e2f16e13",
+      "p15-6a942bbddd"
+    ],
+    "gold_ids": [
+      "p33-a867f06b3c"
+    ],
+    "queries": [
+      "经理岗空出来，公司有规定优先从内部提拔多少人吗？"
+    ],
+    "retrieval_seconds": 0.05081479999353178,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P08",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p42-83f9d6df8d",
+      "p43-54058878ec",
+      "p19-afcfc09fb7",
+      "p41-2d2c8ff79a",
+      "p44-51f4c64ab2",
+      "p19-e4323f19a5",
+      "p40-c769d87f54",
+      "p16-cd9e2a0253"
+    ],
+    "gold_ids": [
+      "p42-83f9d6df8d"
+    ],
+    "queries": [
+      "最近30天迟到了两回，会被记过吗？"
+    ],
+    "retrieval_seconds": 0.06128970001009293,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P08",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p41-2d2c8ff79a",
+      "p44-51f4c64ab2",
+      "p40-c769d87f54",
+      "p19-afcfc09fb7",
+      "p41-97c1a0e032",
+      "p40-38513321f3"
+    ],
+    "gold_ids": [
+      "p42-83f9d6df8d"
+    ],
+    "queries": [
+      "最近30天迟到了两回，会被记过吗？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.17382029999862425,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P08",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p42-83f9d6df8d",
+      "p43-54058878ec",
+      "p19-afcfc09fb7",
+      "p41-2d2c8ff79a",
+      "p46-7e4d5f20c3",
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p44-51f4c64ab2"
+    ],
+    "gold_ids": [
+      "p42-83f9d6df8d"
+    ],
+    "queries": [
+      "最近30天迟到了两回，会被记过吗？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.14981859998079017,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N01",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-a99dbf1c9b",
+      "p16-161eb98f4e",
+      "p17-18df625d5a",
+      "p24-bea93ab4d6",
+      "p23-2435daf3ec",
+      "p24-3e46efee64",
+      "p29-d2fd640689",
+      "p21-88de6db287"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "试用期辞职要提前三天，这三天算工作日还是自然日？"
+    ],
+    "retrieval_seconds": 0.05232580000301823,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N01",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-a99dbf1c9b",
+      "p16-161eb98f4e",
+      "p17-18df625d5a",
+      "p24-bea93ab4d6",
+      "p23-2435daf3ec",
+      "p24-3e46efee64",
+      "p29-d2fd640689",
+      "p21-88de6db287"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "试用期辞职要提前三天，这三天算工作日还是自然日？"
+    ],
+    "retrieval_seconds": 0.05154600000241771,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N01",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-a99dbf1c9b",
+      "p16-161eb98f4e",
+      "p17-18df625d5a",
+      "p24-bea93ab4d6",
+      "p23-2435daf3ec",
+      "p24-3e46efee64",
+      "p29-d2fd640689",
+      "p21-88de6db287"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "试用期辞职要提前三天，这三天算工作日还是自然日？"
+    ],
+    "retrieval_seconds": 0.05178249999880791,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N02",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p17-903c410674",
+      "p18-cc5ae09343",
+      "p15-a99dbf1c9b",
+      "p47-6d0d97ead8",
+      "p16-161eb98f4e",
+      "p26-44bfeef242",
+      "p17-18df625d5a",
+      "p34-fb05ac7b83"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "内部转岗的离任审计通常几天能完成？"
+    ],
+    "retrieval_seconds": 0.05771759999333881,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N02",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p17-903c410674",
+      "p17-3912472149",
+      "p18-cc5ae09343",
+      "p17-18df625d5a",
+      "p15-a99dbf1c9b",
+      "p34-b3db9e8572",
+      "p16-161eb98f4e",
+      "p14-4058f096f6"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "内部转岗的离任审计通常几天能完成？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.14552819999516942,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N02",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p17-903c410674",
+      "p18-cc5ae09343",
+      "p15-a99dbf1c9b",
+      "p17-3912472149",
+      "p17-18df625d5a",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p16-161eb98f4e"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "内部转岗的离任审计通常几天能完成？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.15900179999880493,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N03",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p30-526ea28baa",
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p22-3579d5cfe2",
+      "p25-64fe3a97a0",
+      "p19-e4323f19a5",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "工作日餐补每个月几号到账？"
+    ],
+    "retrieval_seconds": 0.05234059999929741,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N03",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p30-526ea28baa",
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p22-3579d5cfe2",
+      "p25-64fe3a97a0",
+      "p19-e4323f19a5",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "工作日餐补每个月几号到账？"
+    ],
+    "retrieval_seconds": 0.05100830001174472,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N03",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p30-526ea28baa",
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p22-3579d5cfe2",
+      "p25-64fe3a97a0",
+      "p19-e4323f19a5",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "工作日餐补每个月几号到账？"
+    ],
+    "retrieval_seconds": 0.04703310001059435,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N04",
+    "kind": "naturalistic_positive",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p50-314299f759",
+      "p50-0b87b65099",
+      "p50-8c19ffbac4",
+      "p47-eced5c88c6",
+      "p49-4740f94d50",
+      "p18-9152394435",
+      "p4-b79067ffc6",
+      "p43-0f1879984e"
+    ],
+    "gold_ids": [
+      "p50-0b87b65099",
+      "p50-8c19ffbac4"
+    ],
+    "queries": [
+      "公司电脑密码要求每隔多少天换一次？"
+    ],
+    "retrieval_seconds": 0.05191109998850152,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N04",
+    "kind": "naturalistic_positive",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p50-314299f759",
+      "p50-0b87b65099",
+      "p50-8c19ffbac4",
+      "p47-eced5c88c6",
+      "p49-4740f94d50",
+      "p18-9152394435",
+      "p4-b79067ffc6",
+      "p43-0f1879984e"
+    ],
+    "gold_ids": [
+      "p50-0b87b65099",
+      "p50-8c19ffbac4"
+    ],
+    "queries": [
+      "公司电脑密码要求每隔多少天换一次？"
+    ],
+    "retrieval_seconds": 0.05125869999756105,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N04",
+    "kind": "naturalistic_positive",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p50-314299f759",
+      "p50-0b87b65099",
+      "p50-8c19ffbac4",
+      "p47-eced5c88c6",
+      "p49-4740f94d50",
+      "p18-9152394435",
+      "p4-b79067ffc6",
+      "p43-0f1879984e"
+    ],
+    "gold_ids": [
+      "p50-0b87b65099",
+      "p50-8c19ffbac4"
+    ],
+    "queries": [
+      "公司电脑密码要求每隔多少天换一次？"
+    ],
+    "retrieval_seconds": 0.06387730001006275,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N05",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p16-161eb98f4e",
+      "p15-82fc10ff7f",
+      "p15-0a1082927d",
+      "p36-08d8beab1c",
+      "p36-d366d34e7a",
+      "p26-d4c5fd8947"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "入职培训考试没过，可以补考几次？"
+    ],
+    "retrieval_seconds": 0.0593386999971699,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N05",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p16-161eb98f4e",
+      "p15-82fc10ff7f",
+      "p15-0a1082927d",
+      "p36-08d8beab1c",
+      "p36-d366d34e7a",
+      "p26-d4c5fd8947"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "入职培训考试没过，可以补考几次？"
+    ],
+    "retrieval_seconds": 0.04989560000831261,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N05",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p16-161eb98f4e",
+      "p15-82fc10ff7f",
+      "p15-0a1082927d",
+      "p36-08d8beab1c",
+      "p36-d366d34e7a",
+      "p26-d4c5fd8947"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "入职培训考试没过，可以补考几次？"
+    ],
+    "retrieval_seconds": 0.054787700006272644,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N06",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p20-a13b1b7d85",
+      "p30-526ea28baa",
+      "p30-c81f9880c1",
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p25-64fe3a97a0",
+      "p40-c769d87f54"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "出差一天能领多少元补助？"
+    ],
+    "retrieval_seconds": 0.05498489999445155,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N06",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p20-a13b1b7d85",
+      "p30-526ea28baa",
+      "p30-c81f9880c1",
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p25-64fe3a97a0",
+      "p40-c769d87f54"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "出差一天能领多少元补助？"
+    ],
+    "retrieval_seconds": 0.05021010001655668,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N06",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p20-a13b1b7d85",
+      "p30-526ea28baa",
+      "p30-c81f9880c1",
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p25-64fe3a97a0",
+      "p40-c769d87f54"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "出差一天能领多少元补助？"
+    ],
+    "retrieval_seconds": 0.06268100001034327,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N07",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p26-44bfeef242",
+      "p28-a1f0b33346",
+      "p13-d0acd34adc",
+      "p41-0042d06121",
+      "p8-e96529a8f2",
+      "p30-d8fe59b41b",
+      "p3-1913155f3d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我们部门这个季度团建费还剩多少钱可以用？"
+    ],
+    "retrieval_seconds": 0.059198300004936755,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N07",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p26-44bfeef242",
+      "p28-a1f0b33346",
+      "p13-d0acd34adc",
+      "p41-0042d06121",
+      "p8-e96529a8f2",
+      "p30-d8fe59b41b",
+      "p3-1913155f3d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我们部门这个季度团建费还剩多少钱可以用？"
+    ],
+    "retrieval_seconds": 0.050013700005365536,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N07",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p26-44bfeef242",
+      "p28-a1f0b33346",
+      "p13-d0acd34adc",
+      "p41-0042d06121",
+      "p8-e96529a8f2",
+      "p30-d8fe59b41b",
+      "p3-1913155f3d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我们部门这个季度团建费还剩多少钱可以用？"
+    ],
+    "retrieval_seconds": 0.06196019999333657,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N08",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p50-0b87b65099",
+      "p47-eced5c88c6",
+      "p43-0f1879984e",
+      "p4-b79067ffc6",
+      "p50-314299f759",
+      "p44-fd23d4dad7",
+      "p44-b7d4d94080",
+      "p41-97c1a0e032"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "公司电脑指定安装的杀毒软件叫什么名字？"
+    ],
+    "retrieval_seconds": 0.06636769999749959,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N08",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p50-0b87b65099",
+      "p47-eced5c88c6",
+      "p43-0f1879984e",
+      "p4-b79067ffc6",
+      "p50-314299f759",
+      "p44-fd23d4dad7",
+      "p44-b7d4d94080",
+      "p41-97c1a0e032"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "公司电脑指定安装的杀毒软件叫什么名字？"
+    ],
+    "retrieval_seconds": 0.051846299989847466,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N08",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p50-0b87b65099",
+      "p47-eced5c88c6",
+      "p43-0f1879984e",
+      "p4-b79067ffc6",
+      "p50-314299f759",
+      "p44-fd23d4dad7",
+      "p44-b7d4d94080",
+      "p41-97c1a0e032"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "公司电脑指定安装的杀毒软件叫什么名字？"
+    ],
+    "retrieval_seconds": 0.0640201999922283,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A01",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-0a1082927d",
+      "p3-ea5bc5fd17",
+      "p23-77b2224c12",
+      "p29-d2fd640689",
+      "p46-0c8bfd37c1",
+      "p9-ceeffd39f5",
+      "p25-64fe3a97a0",
+      "p3-1913155f3d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我这个能请吗？"
+    ],
+    "retrieval_seconds": 0.04939689999446273,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A01",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-0a1082927d",
+      "p3-ea5bc5fd17",
+      "p23-77b2224c12",
+      "p29-d2fd640689",
+      "p46-0c8bfd37c1",
+      "p9-ceeffd39f5",
+      "p25-64fe3a97a0",
+      "p3-1913155f3d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我这个能请吗？"
+    ],
+    "retrieval_seconds": 0.05143870000028983,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A01",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-0a1082927d",
+      "p3-ea5bc5fd17",
+      "p23-77b2224c12",
+      "p29-d2fd640689",
+      "p46-0c8bfd37c1",
+      "p9-ceeffd39f5",
+      "p25-64fe3a97a0",
+      "p3-1913155f3d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我这个能请吗？"
+    ],
+    "retrieval_seconds": 0.04668349999701604,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A02",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p30-526ea28baa",
+      "p29-d2fd640689",
+      "p30-6ab8ae0a44",
+      "p24-7893cf4f6d",
+      "p26-44bfeef242",
+      "p25-64fe3a97a0",
+      "p48-246a7c42de",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "那个补贴我一个月能拿多少？"
+    ],
+    "retrieval_seconds": 0.05763120000483468,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A02",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p30-526ea28baa",
+      "p29-d2fd640689",
+      "p30-6ab8ae0a44",
+      "p24-7893cf4f6d",
+      "p26-44bfeef242",
+      "p25-64fe3a97a0",
+      "p48-246a7c42de",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "那个补贴我一个月能拿多少？"
+    ],
+    "retrieval_seconds": 0.049273100012214854,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A02",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p30-526ea28baa",
+      "p29-d2fd640689",
+      "p30-6ab8ae0a44",
+      "p24-7893cf4f6d",
+      "p26-44bfeef242",
+      "p25-64fe3a97a0",
+      "p48-246a7c42de",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "那个补贴我一个月能拿多少？"
+    ],
+    "retrieval_seconds": 0.05641059999470599,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A03",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p25-64fe3a97a0",
+      "p21-88de6db287",
+      "p25-a584b8e997",
+      "p24-7893cf4f6d",
+      "p24-3e46efee64",
+      "p25-47545b89bc",
+      "p23-77b2224c12",
+      "p22-3579d5cfe2"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请一天假会扣工资和餐补吗？"
+    ],
+    "retrieval_seconds": 0.06334150000475347,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A03",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p24-3e46efee64",
+      "p25-47545b89bc",
+      "p22-3579d5cfe2",
+      "p24-bea93ab4d6",
+      "p23-27249d61bf",
+      "p25-64fe3a97a0",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请一天假会扣工资和餐补吗？",
+      "休假 全薪假 带薪扣减福利假 无薪假",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "retrieval_seconds": 0.16001570000662468,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A03",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p25-64fe3a97a0",
+      "p21-88de6db287",
+      "p25-a584b8e997",
+      "p24-3e46efee64",
+      "p25-47545b89bc",
+      "p30-526ea28baa",
+      "p19-c92ec39c2b",
+      "p22-3579d5cfe2"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请一天假会扣工资和餐补吗？",
+      "休假 全薪假 带薪扣减福利假 无薪假",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "retrieval_seconds": 0.16220709998742677,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A04",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p24-bea93ab4d6",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p21-5ab774b695",
+      "p21-88de6db287",
+      "p30-d8fe59b41b",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我今年到底能休几天年假？"
+    ],
+    "retrieval_seconds": 0.051569700008258224,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A04",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p24-3e46efee64",
+      "p29-d2fd640689"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我今年到底能休几天年假？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.147252099995967,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A04",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p24-bea93ab4d6",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我今年到底能休几天年假？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.15030330000445247,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A05",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p21-88de6db287",
+      "p23-77b2224c12",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p21-5ab774b695",
+      "p6-26357691a1",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "病假请了两个星期，我这月工资还剩多少？"
+    ],
+    "retrieval_seconds": 0.05447149998508394,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A05",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p22-3579d5cfe2",
+      "p22-8f3ddee8c0",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p23-2435daf3ec",
+      "p30-d8fe59b41b",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "病假请了两个星期，我这月工资还剩多少？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.14593679999234155,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A05",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p21-88de6db287",
+      "p23-77b2224c12",
+      "p22-8f3ddee8c0",
+      "p23-2435daf3ec",
+      "p30-d8fe59b41b",
+      "p23-27249d61bf",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "病假请了两个星期，我这月工资还剩多少？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.16126679998706095,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A06",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p31-77990d6c90",
+      "p20-431bc5ac7e",
+      "p31-6dead0b231",
+      "p43-0f1879984e",
+      "p44-b7d4d94080",
+      "p46-0c8bfd37c1",
+      "p19-afcfc09fb7",
+      "p32-f13ba747ab"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "晚上九点下班，打车费公司给报吗？"
+    ],
+    "retrieval_seconds": 0.04916739999316633,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A06",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p31-77990d6c90",
+      "p20-431bc5ac7e",
+      "p31-6dead0b231",
+      "p43-0f1879984e",
+      "p44-b7d4d94080",
+      "p46-0c8bfd37c1",
+      "p19-afcfc09fb7",
+      "p32-f13ba747ab"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "晚上九点下班，打车费公司给报吗？"
+    ],
+    "retrieval_seconds": 0.053572400007396936,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A06",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p31-77990d6c90",
+      "p20-431bc5ac7e",
+      "p31-6dead0b231",
+      "p43-0f1879984e",
+      "p44-b7d4d94080",
+      "p46-0c8bfd37c1",
+      "p19-afcfc09fb7",
+      "p32-f13ba747ab"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "晚上九点下班，打车费公司给报吗？"
+    ],
+    "retrieval_seconds": 0.049930899986065924,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A07",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p25-a584b8e997",
+      "p23-27249d61bf",
+      "p24-7893cf4f6d",
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p29-d2fd640689",
+      "p26-d4c5fd8947"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "生完孩子我能休多少天？"
+    ],
+    "retrieval_seconds": 0.04920360000687651,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A07",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p25-a584b8e997",
+      "p23-27249d61bf",
+      "p24-7893cf4f6d",
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p29-d2fd640689",
+      "p26-d4c5fd8947"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "生完孩子我能休多少天？"
+    ],
+    "retrieval_seconds": 0.05495879999944009,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A07",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p25-a584b8e997",
+      "p23-27249d61bf",
+      "p24-7893cf4f6d",
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p29-d2fd640689",
+      "p26-d4c5fd8947"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "生完孩子我能休多少天？"
+    ],
+    "retrieval_seconds": 0.052214200026355684,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A08",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p18-cc5ae09343",
+      "p17-903c410674",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p7-8c84c7a216",
+      "p17-18df625d5a",
+      "p16-622e53fafe",
+      "p16-cd9e2a0253"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "转岗是不是都要做离任审计？"
+    ],
+    "retrieval_seconds": 0.04427939999732189,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A08",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p17-903c410674",
+      "p18-cc5ae09343",
+      "p17-18df625d5a",
+      "p17-3912472149",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p34-b3db9e8572",
+      "p16-161eb98f4e"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "转岗是不是都要做离任审计？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.14597699997830205,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A08",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p18-cc5ae09343",
+      "p17-903c410674",
+      "p15-6a942bbddd",
+      "p17-3912472149",
+      "p17-18df625d5a",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p15-a99dbf1c9b"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "转岗是不是都要做离任审计？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.1429370999976527,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A09",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p22-8f3ddee8c0",
+      "p30-d8fe59b41b",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p24-3e46efee64",
+      "p21-88de6db287"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "刚转正就有福利年假吗？我能休几天？"
+    ],
+    "retrieval_seconds": 0.058959599991794676,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A09",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p30-d8fe59b41b",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p22-8f3ddee8c0",
+      "p21-88de6db287",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "刚转正就有福利年假吗？我能休几天？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.1489884000038728,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A09",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p22-8f3ddee8c0",
+      "p24-bea93ab4d6",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "刚转正就有福利年假吗？我能休几天？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.1495129000104498,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A10",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p19-afcfc09fb7",
+      "p41-2d2c8ff79a",
+      "p40-c769d87f54",
+      "p43-54058878ec",
+      "p19-c92ec39c2b",
+      "p16-622e53fafe",
+      "p22-f5b350b0d5",
+      "p22-8f3ddee8c0"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "迟到两次是不是就会被开除？"
+    ],
+    "retrieval_seconds": 0.041900699987309054,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A10",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p43-54058878ec",
+      "p41-2d2c8ff79a",
+      "p42-83f9d6df8d",
+      "p40-c769d87f54",
+      "p39-66776572f1",
+      "p40-a41581b4e3",
+      "p19-afcfc09fb7",
+      "p44-51f4c64ab2"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "迟到两次是不是就会被开除？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.13948579999851063,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A10",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p19-afcfc09fb7",
+      "p41-2d2c8ff79a",
+      "p40-c769d87f54",
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p40-a41581b4e3",
+      "p39-66776572f1",
+      "p44-51f4c64ab2"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "迟到两次是不是就会被开除？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.15754470002138987,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A11",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p20-431bc5ac7e",
+      "p20-28e5161ba4",
+      "p31-77990d6c90",
+      "p31-6dead0b231",
+      "p19-e4323f19a5",
+      "p11-0d836f509d",
+      "p29-d2fd640689",
+      "p20-a13b1b7d85"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "周末来公司干了三小时，可以算加班吗？"
+    ],
+    "retrieval_seconds": 0.05679830000735819,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A11",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p20-431bc5ac7e",
+      "p20-28e5161ba4",
+      "p31-77990d6c90",
+      "p31-6dead0b231",
+      "p19-e4323f19a5",
+      "p11-0d836f509d",
+      "p29-d2fd640689",
+      "p20-a13b1b7d85"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "周末来公司干了三小时，可以算加班吗？"
+    ],
+    "retrieval_seconds": 0.050358900014543906,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A11",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p20-431bc5ac7e",
+      "p20-28e5161ba4",
+      "p31-77990d6c90",
+      "p31-6dead0b231",
+      "p19-e4323f19a5",
+      "p11-0d836f509d",
+      "p29-d2fd640689",
+      "p20-a13b1b7d85"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "周末来公司干了三小时，可以算加班吗？"
+    ],
+    "retrieval_seconds": 0.054708999989088625,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A12",
+    "kind": "ambiguous",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p30-526ea28baa",
+      "p25-64fe3a97a0",
+      "p25-a584b8e997",
+      "p24-7893cf4f6d",
+      "p25-47545b89bc",
+      "p22-3579d5cfe2",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我这个月餐补怎么少了？"
+    ],
+    "retrieval_seconds": 0.05634290000307374,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A12",
+    "kind": "ambiguous",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p30-526ea28baa",
+      "p25-64fe3a97a0",
+      "p25-a584b8e997",
+      "p24-7893cf4f6d",
+      "p25-47545b89bc",
+      "p22-3579d5cfe2",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我这个月餐补怎么少了？"
+    ],
+    "retrieval_seconds": 0.06544360000407323,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-A12",
+    "kind": "ambiguous",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p20-28e5161ba4",
+      "p30-526ea28baa",
+      "p25-64fe3a97a0",
+      "p25-a584b8e997",
+      "p24-7893cf4f6d",
+      "p25-47545b89bc",
+      "p22-3579d5cfe2",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "我这个月餐补怎么少了？"
+    ],
+    "retrieval_seconds": 0.05204770001000725,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N09",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p24-bea93ab4d6",
+      "p21-5ab774b695",
+      "p24-3e46efee64",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p19-afcfc09fb7",
+      "p23-77b2224c12",
+      "p25-64fe3a97a0"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请婚假最晚要提前几天提交申请？"
+    ],
+    "retrieval_seconds": 0.06182139998418279,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N09",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p24-bea93ab4d6",
+      "p21-5ab774b695",
+      "p24-3e46efee64",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p19-afcfc09fb7",
+      "p23-77b2224c12",
+      "p25-64fe3a97a0"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请婚假最晚要提前几天提交申请？"
+    ],
+    "retrieval_seconds": 0.06025570002384484,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N09",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p24-bea93ab4d6",
+      "p21-5ab774b695",
+      "p24-3e46efee64",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p19-afcfc09fb7",
+      "p23-77b2224c12",
+      "p25-64fe3a97a0"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请婚假最晚要提前几天提交申请？"
+    ],
+    "retrieval_seconds": 0.05286180000985041,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N10",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p11-0d836f509d",
+      "p41-2d2c8ff79a",
+      "p19-e4323f19a5",
+      "p18-9152394435",
+      "p13-f991984ff3",
+      "p20-28e5161ba4",
+      "p37-5902b8f6e2",
+      "p38-4270231bbc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "员工卡丢了补办要交多少制卡费？"
+    ],
+    "retrieval_seconds": 0.06161679999786429,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N10",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p11-0d836f509d",
+      "p41-2d2c8ff79a",
+      "p19-e4323f19a5",
+      "p18-9152394435",
+      "p13-f991984ff3",
+      "p20-28e5161ba4",
+      "p37-5902b8f6e2",
+      "p38-4270231bbc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "员工卡丢了补办要交多少制卡费？"
+    ],
+    "retrieval_seconds": 0.053256799990776926,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N10",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p11-0d836f509d",
+      "p41-2d2c8ff79a",
+      "p19-e4323f19a5",
+      "p18-9152394435",
+      "p13-f991984ff3",
+      "p20-28e5161ba4",
+      "p37-5902b8f6e2",
+      "p38-4270231bbc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "员工卡丢了补办要交多少制卡费？"
+    ],
+    "retrieval_seconds": 0.05605949999880977,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N11",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p24-bea93ab4d6",
+      "p21-5ab774b695",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p22-8f3ddee8c0",
+      "p30-d8fe59b41b",
+      "p22-3579d5cfe2"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "年假至少要提前几天在系统里提交？"
+    ],
+    "retrieval_seconds": 0.06133939998107962,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N11",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p24-bea93ab4d6",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p22-8f3ddee8c0",
+      "p21-88de6db287",
+      "p24-7893cf4f6d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "年假至少要提前几天在系统里提交？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.15096400000038557,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N11",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p24-bea93ab4d6",
+      "p21-5ab774b695",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p22-8f3ddee8c0"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "年假至少要提前几天在系统里提交？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.1532236999773886,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N12",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p18-cc5ae09343",
+      "p17-18df625d5a",
+      "p15-82fc10ff7f",
+      "p21-88de6db287",
+      "p15-a99dbf1c9b",
+      "p20-a13b1b7d85",
+      "p23-27249d61bf",
+      "p19-afcfc09fb7"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "离职交接办完后几天工资到账？"
+    ],
+    "retrieval_seconds": 0.05632199998944998,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N12",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p18-cc5ae09343",
+      "p15-a99dbf1c9b",
+      "p27-1dfbb46c86",
+      "p20-a13b1b7d85",
+      "p23-27249d61bf",
+      "p17-18df625d5a",
+      "p15-82fc10ff7f"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "离职交接办完后几天工资到账？",
+      "发薪时间 发薪日 薪酬核算周期",
+      "离职工资 交接 结算"
+    ],
+    "retrieval_seconds": 0.18503040002542548,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N12",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p18-cc5ae09343",
+      "p17-18df625d5a",
+      "p15-82fc10ff7f",
+      "p26-44bfeef242",
+      "p27-1dfbb46c86",
+      "p15-a99dbf1c9b",
+      "p20-a13b1b7d85",
+      "p21-88de6db287"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "离职交接办完后几天工资到账？",
+      "发薪时间 发薪日 薪酬核算周期",
+      "离职工资 交接 结算"
+    ],
+    "retrieval_seconds": 0.18530109999119304,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N13",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p36-08d8beab1c",
+      "p36-d366d34e7a",
+      "p16-161eb98f4e",
+      "p37-8b226afe1b",
+      "p35-e55115a49e",
+      "p18-cc5ae09343"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "新员工培训考试考多少分才算通过？"
+    ],
+    "retrieval_seconds": 0.0627542000147514,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N13",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p36-08d8beab1c",
+      "p36-d366d34e7a",
+      "p16-161eb98f4e",
+      "p37-8b226afe1b",
+      "p35-e55115a49e",
+      "p18-cc5ae09343"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "新员工培训考试考多少分才算通过？"
+    ],
+    "retrieval_seconds": 0.05787610000697896,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N13",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p36-08d8beab1c",
+      "p36-d366d34e7a",
+      "p16-161eb98f4e",
+      "p37-8b226afe1b",
+      "p35-e55115a49e",
+      "p18-cc5ae09343"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "新员工培训考试考多少分才算通过？"
+    ],
+    "retrieval_seconds": 0.06297440000344068,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N14",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p21-88de6db287",
+      "p21-5ab774b695",
+      "p22-8f3ddee8c0",
+      "p24-bea93ab4d6",
+      "p23-2435daf3ec"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "公司福利产假要提前几天申请？"
+    ],
+    "retrieval_seconds": 0.060872600006405264,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N14",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p21-88de6db287",
+      "p21-5ab774b695",
+      "p22-8f3ddee8c0",
+      "p24-bea93ab4d6",
+      "p23-2435daf3ec"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "公司福利产假要提前几天申请？"
+    ],
+    "retrieval_seconds": 0.05388999998103827,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N14",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p21-88de6db287",
+      "p21-5ab774b695",
+      "p22-8f3ddee8c0",
+      "p24-bea93ab4d6",
+      "p23-2435daf3ec"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "公司福利产假要提前几天申请？"
+    ],
+    "retrieval_seconds": 0.061792499996954575,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N15",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p41-0042d06121",
+      "p26-44bfeef242",
+      "p30-d8fe59b41b",
+      "p45-db974bfc73",
+      "p38-4270231bbc",
+      "p24-bea93ab4d6",
+      "p24-7893cf4f6d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "这季度没花完的团建费能挪到下季度吗？"
+    ],
+    "retrieval_seconds": 0.055466100020566955,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N15",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p41-0042d06121",
+      "p26-44bfeef242",
+      "p30-d8fe59b41b",
+      "p45-db974bfc73",
+      "p38-4270231bbc",
+      "p24-bea93ab4d6",
+      "p24-7893cf4f6d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "这季度没花完的团建费能挪到下季度吗？"
+    ],
+    "retrieval_seconds": 0.05433509999420494,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N15",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p41-0042d06121",
+      "p26-44bfeef242",
+      "p30-d8fe59b41b",
+      "p45-db974bfc73",
+      "p38-4270231bbc",
+      "p24-bea93ab4d6",
+      "p24-7893cf4f6d"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "这季度没花完的团建费能挪到下季度吗？"
+    ],
+    "retrieval_seconds": 0.05128849999164231,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N16",
+    "kind": "hard_negative",
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p22-8f3ddee8c0",
+      "p21-88de6db287",
+      "p25-47545b89bc",
+      "p24-3e46efee64",
+      "p21-5ab774b695",
+      "p24-7893cf4f6d",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请病假一定要三甲医院开的证明吗？"
+    ],
+    "retrieval_seconds": 0.0571977999934461,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N16",
+    "kind": "hard_negative",
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p22-8f3ddee8c0",
+      "p21-88de6db287",
+      "p22-3579d5cfe2",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p23-2435daf3ec",
+      "p25-47545b89bc",
+      "p30-d8fe59b41b"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请病假一定要三甲医院开的证明吗？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.14274750000913627,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-N16",
+    "kind": "hard_negative",
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p22-8f3ddee8c0",
+      "p21-88de6db287",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p30-d8fe59b41b",
+      "p23-27249d61bf",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [],
+    "queries": [
+      "请病假一定要三甲医院开的证明吗？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.18512139999074861,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "original35",
+    "qid": "P01",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p7-be9ae664fc",
+      "p6-26357691a1",
+      "p5-8263b6e785",
+      "p6-4913ab3280",
+      "p9-ceeffd39f5",
+      "p5-d125330024",
+      "p7-8c84c7a216",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p7-be9ae664fc"
+    ],
+    "queries": [
+      "京东物流子集团是哪一天正式成立的？"
+    ],
+    "retrieval_seconds": 0.06470509999780916,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P01",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p7-be9ae664fc",
+      "p6-26357691a1",
+      "p5-8263b6e785",
+      "p6-4913ab3280",
+      "p9-ceeffd39f5",
+      "p5-d125330024",
+      "p7-8c84c7a216",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p7-be9ae664fc"
+    ],
+    "queries": [
+      "京东物流子集团是哪一天正式成立的？"
+    ],
+    "retrieval_seconds": 0.05324400000972673,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P01",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p7-be9ae664fc",
+      "p6-26357691a1",
+      "p5-8263b6e785",
+      "p6-4913ab3280",
+      "p9-ceeffd39f5",
+      "p5-d125330024",
+      "p7-8c84c7a216",
+      "p3-ea5bc5fd17"
+    ],
+    "gold_ids": [
+      "p7-be9ae664fc"
+    ],
+    "queries": [
+      "京东物流子集团是哪一天正式成立的？"
+    ],
+    "retrieval_seconds": 0.041834000003291294,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P02",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p5-8263b6e785",
+      "p5-d125330024",
+      "p7-be9ae664fc",
+      "p3-1913155f3d",
+      "p6-4913ab3280",
+      "p6-26357691a1",
+      "p8-e96529a8f2",
+      "p9-ceeffd39f5"
+    ],
+    "gold_ids": [
+      "p5-8263b6e785"
+    ],
+    "queries": [
+      "京东2016年市场交易额是多少？"
+    ],
+    "retrieval_seconds": 0.04974469999433495,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P02",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p5-8263b6e785",
+      "p5-d125330024",
+      "p7-be9ae664fc",
+      "p3-1913155f3d",
+      "p6-4913ab3280",
+      "p6-26357691a1",
+      "p8-e96529a8f2",
+      "p9-ceeffd39f5"
+    ],
+    "gold_ids": [
+      "p5-8263b6e785"
+    ],
+    "queries": [
+      "京东2016年市场交易额是多少？"
+    ],
+    "retrieval_seconds": 0.05611309999949299,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P02",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p5-8263b6e785",
+      "p5-d125330024",
+      "p7-be9ae664fc",
+      "p3-1913155f3d",
+      "p6-4913ab3280",
+      "p6-26357691a1",
+      "p8-e96529a8f2",
+      "p9-ceeffd39f5"
+    ],
+    "gold_ids": [
+      "p5-8263b6e785"
+    ],
+    "queries": [
+      "京东2016年市场交易额是多少？"
+    ],
+    "retrieval_seconds": 0.05714400002034381,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P03",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p5-d125330024",
+      "p6-26357691a1",
+      "p3-1913155f3d",
+      "p47-6d0d97ead8",
+      "p5-8263b6e785",
+      "p37-8b226afe1b",
+      "p29-d2fd640689",
+      "p7-be9ae664fc"
+    ],
+    "gold_ids": [
+      "p5-d125330024"
+    ],
+    "queries": [
+      "京东生鲜目前能在多少个城市次日达？"
+    ],
+    "retrieval_seconds": 0.06008759999531321,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P03",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p5-d125330024",
+      "p6-26357691a1",
+      "p3-1913155f3d",
+      "p47-6d0d97ead8",
+      "p5-8263b6e785",
+      "p37-8b226afe1b",
+      "p29-d2fd640689",
+      "p7-be9ae664fc"
+    ],
+    "gold_ids": [
+      "p5-d125330024"
+    ],
+    "queries": [
+      "京东生鲜目前能在多少个城市次日达？"
+    ],
+    "retrieval_seconds": 0.05177009999169968,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P03",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p5-d125330024",
+      "p6-26357691a1",
+      "p3-1913155f3d",
+      "p47-6d0d97ead8",
+      "p5-8263b6e785",
+      "p37-8b226afe1b",
+      "p29-d2fd640689",
+      "p7-be9ae664fc"
+    ],
+    "gold_ids": [
+      "p5-d125330024"
+    ],
+    "queries": [
+      "京东生鲜目前能在多少个城市次日达？"
+    ],
+    "retrieval_seconds": 0.046362900000531226,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P04",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p44-51f4c64ab2",
+      "p10-9aa7c87bda",
+      "p41-2d2c8ff79a",
+      "p10-5052e898cb",
+      "p11-5ed9c253db",
+      "p40-a41581b4e3",
+      "p44-b7d4d94080",
+      "p11-0d836f509d"
+    ],
+    "gold_ids": [
+      "p10-9aa7c87bda"
+    ],
+    "queries": [
+      "公司禁止员工打架或侮辱他人吗？"
+    ],
+    "retrieval_seconds": 0.06505740000284277,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P04",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p44-51f4c64ab2",
+      "p10-9aa7c87bda",
+      "p41-2d2c8ff79a",
+      "p10-5052e898cb",
+      "p11-5ed9c253db",
+      "p40-a41581b4e3",
+      "p44-b7d4d94080",
+      "p11-0d836f509d"
+    ],
+    "gold_ids": [
+      "p10-9aa7c87bda"
+    ],
+    "queries": [
+      "公司禁止员工打架或侮辱他人吗？"
+    ],
+    "retrieval_seconds": 0.06010319999768399,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P04",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p44-51f4c64ab2",
+      "p10-9aa7c87bda",
+      "p41-2d2c8ff79a",
+      "p10-5052e898cb",
+      "p11-5ed9c253db",
+      "p40-a41581b4e3",
+      "p44-b7d4d94080",
+      "p11-0d836f509d"
+    ],
+    "gold_ids": [
+      "p10-9aa7c87bda"
+    ],
+    "queries": [
+      "公司禁止员工打架或侮辱他人吗？"
+    ],
+    "retrieval_seconds": 0.05461359999026172,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P05",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p45-db974bfc73",
+      "p37-5902b8f6e2",
+      "p43-1fe92a1be1",
+      "p11-5ed9c253db",
+      "p42-e83e56f52c",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p10-5052e898cb"
+    ],
+    "gold_ids": [
+      "p10-5052e898cb"
+    ],
+    "queries": [
+      "管理岗位员工没尽到管理职责会怎样？"
+    ],
+    "retrieval_seconds": 0.05697770000551827,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P05",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p45-db974bfc73",
+      "p37-5902b8f6e2",
+      "p43-1fe92a1be1",
+      "p11-5ed9c253db",
+      "p42-e83e56f52c",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p10-5052e898cb"
+    ],
+    "gold_ids": [
+      "p10-5052e898cb"
+    ],
+    "queries": [
+      "管理岗位员工没尽到管理职责会怎样？"
+    ],
+    "retrieval_seconds": 0.052799099998082966,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P05",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p45-db974bfc73",
+      "p37-5902b8f6e2",
+      "p43-1fe92a1be1",
+      "p11-5ed9c253db",
+      "p42-e83e56f52c",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p10-5052e898cb"
+    ],
+    "gold_ids": [
+      "p10-5052e898cb"
+    ],
+    "queries": [
+      "管理岗位员工没尽到管理职责会怎样？"
+    ],
+    "retrieval_seconds": 0.04858380000223406,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P06",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p44-b7d4d94080",
+      "p45-2edc9e7a4d",
+      "p41-97c1a0e032",
+      "p11-5ed9c253db",
+      "p43-0f1879984e",
+      "p13-f991984ff3",
+      "p12-8e382fa32d",
+      "p45-db974bfc73"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "queries": [
+      "弄坏公司配的设备，公司会要我赔吗？"
+    ],
+    "retrieval_seconds": 0.06522930000210181,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P06",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p40-a41581b4e3",
+      "p41-97c1a0e032",
+      "p44-b7d4d94080",
+      "p45-db974bfc73",
+      "p40-c769d87f54",
+      "p46-7e4d5f20c3",
+      "p43-1fe92a1be1",
+      "p42-e83e56f52c"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "queries": [
+      "弄坏公司配的设备，公司会要我赔吗？",
+      "公司资产 公司财产 故意 过失 毁损 追偿",
+      "经济赔偿 经济损失 扣发工资"
+    ],
+    "retrieval_seconds": 0.17819640002562664,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "original35",
+    "qid": "P06",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p44-b7d4d94080",
+      "p45-2edc9e7a4d",
+      "p41-97c1a0e032",
+      "p45-db974bfc73",
+      "p40-a41581b4e3",
+      "p46-7e4d5f20c3",
+      "p40-c769d87f54",
+      "p43-1fe92a1be1"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "queries": [
+      "弄坏公司配的设备，公司会要我赔吗？",
+      "公司资产 公司财产 故意 过失 毁损 追偿",
+      "经济赔偿 经济损失 扣发工资"
+    ],
+    "retrieval_seconds": 0.15982899998198263,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "original35",
+    "qid": "P07",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-a99dbf1c9b",
+      "p17-18df625d5a",
+      "p16-161eb98f4e",
+      "p15-82fc10ff7f",
+      "p18-cc5ae09343",
+      "p15-6a942bbddd",
+      "p20-a13b1b7d85",
+      "p32-f13ba747ab"
+    ],
+    "gold_ids": [
+      "p15-a99dbf1c9b"
+    ],
+    "queries": [
+      "试用期想离职，要提前几天通知公司？"
+    ],
+    "retrieval_seconds": 0.051763700001174584,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P07",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-a99dbf1c9b",
+      "p17-18df625d5a",
+      "p16-161eb98f4e",
+      "p15-82fc10ff7f",
+      "p18-cc5ae09343",
+      "p15-6a942bbddd",
+      "p20-a13b1b7d85",
+      "p32-f13ba747ab"
+    ],
+    "gold_ids": [
+      "p15-a99dbf1c9b"
+    ],
+    "queries": [
+      "试用期想离职，要提前几天通知公司？"
+    ],
+    "retrieval_seconds": 0.05222199999843724,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P07",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-a99dbf1c9b",
+      "p17-18df625d5a",
+      "p16-161eb98f4e",
+      "p15-82fc10ff7f",
+      "p18-cc5ae09343",
+      "p15-6a942bbddd",
+      "p20-a13b1b7d85",
+      "p32-f13ba747ab"
+    ],
+    "gold_ids": [
+      "p15-a99dbf1c9b"
+    ],
+    "queries": [
+      "试用期想离职，要提前几天通知公司？"
+    ],
+    "retrieval_seconds": 0.04750739998416975,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P08",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p16-161eb98f4e",
+      "p15-a99dbf1c9b",
+      "p16-cd9e2a0253",
+      "p46-0c8bfd37c1",
+      "p15-82fc10ff7f",
+      "p15-0a1082927d",
+      "p41-2d2c8ff79a",
+      "p19-afcfc09fb7"
+    ],
+    "gold_ids": [
+      "p16-161eb98f4e"
+    ],
+    "queries": [
+      "试用期迟到早退几次算不符合录用条件？"
+    ],
+    "retrieval_seconds": 0.0626306000049226,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P08",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p41-2d2c8ff79a",
+      "p43-54058878ec",
+      "p40-c769d87f54",
+      "p42-83f9d6df8d",
+      "p44-51f4c64ab2",
+      "p40-38513321f3",
+      "p44-fd23d4dad7",
+      "p46-0c8bfd37c1"
+    ],
+    "gold_ids": [
+      "p16-161eb98f4e"
+    ],
+    "queries": [
+      "试用期迟到早退几次算不符合录用条件？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.18791999999666587,
+    "any_at3": false,
+    "any_at8": false,
+    "full_at8": false
+  },
+  {
+    "dataset": "original35",
+    "qid": "P08",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p16-161eb98f4e",
+      "p15-a99dbf1c9b",
+      "p16-cd9e2a0253",
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p41-2d2c8ff79a"
+    ],
+    "gold_ids": [
+      "p16-161eb98f4e"
+    ],
+    "queries": [
+      "试用期迟到早退几次算不符合录用条件？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.1812799999897834,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P09",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p17-3912472149",
+      "p17-903c410674",
+      "p34-b3db9e8572",
+      "p16-161eb98f4e",
+      "p15-6a942bbddd",
+      "p15-a99dbf1c9b",
+      "p14-1ad6eab8c6",
+      "p44-51f4c64ab2"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "queries": [
+      "员工自己发起调动要满足哪些条件？"
+    ],
+    "retrieval_seconds": 0.061316899984376505,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P09",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p17-903c410674",
+      "p17-3912472149",
+      "p34-b3db9e8572",
+      "p17-18df625d5a",
+      "p16-161eb98f4e",
+      "p15-a99dbf1c9b",
+      "p15-6a942bbddd",
+      "p33-a867f06b3c"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "queries": [
+      "员工自己发起调动要满足哪些条件？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.12361959999543615,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P09",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p17-3912472149",
+      "p17-903c410674",
+      "p34-b3db9e8572",
+      "p17-18df625d5a",
+      "p18-cc5ae09343",
+      "p14-4058f096f6",
+      "p33-a867f06b3c",
+      "p16-161eb98f4e"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "queries": [
+      "员工自己发起调动要满足哪些条件？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "retrieval_seconds": 0.12790799999493174,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P10",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p14-1ad6eab8c6",
+      "p45-2edc9e7a4d",
+      "p16-cd9e2a0253",
+      "p15-a99dbf1c9b",
+      "p15-82fc10ff7f",
+      "p16-161eb98f4e",
+      "p44-fd23d4dad7",
+      "p4-b79067ffc6"
+    ],
+    "gold_ids": [
+      "p14-1ad6eab8c6"
+    ],
+    "queries": [
+      "能录用原公司下级来自己部门做下属吗？"
+    ],
+    "retrieval_seconds": 0.05506070001865737,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P10",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p14-1ad6eab8c6",
+      "p45-2edc9e7a4d",
+      "p16-cd9e2a0253",
+      "p15-a99dbf1c9b",
+      "p15-82fc10ff7f",
+      "p16-161eb98f4e",
+      "p44-fd23d4dad7",
+      "p4-b79067ffc6"
+    ],
+    "gold_ids": [
+      "p14-1ad6eab8c6"
+    ],
+    "queries": [
+      "能录用原公司下级来自己部门做下属吗？"
+    ],
+    "retrieval_seconds": 0.05858749998151325,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P10",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p14-1ad6eab8c6",
+      "p45-2edc9e7a4d",
+      "p16-cd9e2a0253",
+      "p15-a99dbf1c9b",
+      "p15-82fc10ff7f",
+      "p16-161eb98f4e",
+      "p44-fd23d4dad7",
+      "p4-b79067ffc6"
+    ],
+    "gold_ids": [
+      "p14-1ad6eab8c6"
+    ],
+    "queries": [
+      "能录用原公司下级来自己部门做下属吗？"
+    ],
+    "retrieval_seconds": 0.054002300021238625,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P11",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p22-c42b3d394c",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p30-6ab8ae0a44",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b"
+    ],
+    "gold_ids": [
+      "p22-c42b3d394c"
+    ],
+    "queries": [
+      "我累计工龄10年以上、企业工龄8年，医疗期多久？"
+    ],
+    "retrieval_seconds": 0.06574970000656322,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P11",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p22-c42b3d394c",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p30-6ab8ae0a44",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b"
+    ],
+    "gold_ids": [
+      "p22-c42b3d394c"
+    ],
+    "queries": [
+      "我累计工龄10年以上、企业工龄8年，医疗期多久？"
+    ],
+    "retrieval_seconds": 0.06146320002153516,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P11",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p22-c42b3d394c",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p30-6ab8ae0a44",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b"
+    ],
+    "gold_ids": [
+      "p22-c42b3d394c"
+    ],
+    "queries": [
+      "我累计工龄10年以上、企业工龄8年，医疗期多久？"
+    ],
+    "retrieval_seconds": 0.05340119998436421,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P12",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p20-a13b1b7d85",
+      "p17-18df625d5a",
+      "p43-54058878ec",
+      "p15-a99dbf1c9b",
+      "p21-5ab774b695",
+      "p19-afcfc09fb7",
+      "p19-c92ec39c2b",
+      "p42-83f9d6df8d"
+    ],
+    "gold_ids": [
+      "p20-a13b1b7d85"
+    ],
+    "queries": [
+      "连续旷工多少天会被公司解除劳动合同？"
+    ],
+    "retrieval_seconds": 0.054873499990208074,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P12",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p20-a13b1b7d85",
+      "p17-18df625d5a",
+      "p43-54058878ec",
+      "p15-a99dbf1c9b",
+      "p21-5ab774b695",
+      "p19-afcfc09fb7",
+      "p19-c92ec39c2b",
+      "p42-83f9d6df8d"
+    ],
+    "gold_ids": [
+      "p20-a13b1b7d85"
+    ],
+    "queries": [
+      "连续旷工多少天会被公司解除劳动合同？"
+    ],
+    "retrieval_seconds": 0.0571944999974221,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P12",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p20-a13b1b7d85",
+      "p17-18df625d5a",
+      "p43-54058878ec",
+      "p15-a99dbf1c9b",
+      "p21-5ab774b695",
+      "p19-afcfc09fb7",
+      "p19-c92ec39c2b",
+      "p42-83f9d6df8d"
+    ],
+    "gold_ids": [
+      "p20-a13b1b7d85"
+    ],
+    "queries": [
+      "连续旷工多少天会被公司解除劳动合同？"
+    ],
+    "retrieval_seconds": 0.053886700014118105,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P13",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p22-3579d5cfe2",
+      "p30-d8fe59b41b",
+      "p25-a584b8e997"
+    ],
+    "gold_ids": [
+      "p21-88de6db287"
+    ],
+    "queries": [
+      "我今年入职不满一年，病假天数怎么折算？"
+    ],
+    "retrieval_seconds": 0.05967869999585673,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P13",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p22-3579d5cfe2",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p30-c81f9880c1"
+    ],
+    "gold_ids": [
+      "p21-88de6db287"
+    ],
+    "queries": [
+      "我今年入职不满一年，病假天数怎么折算？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.17520510000758804,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P13",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p23-27249d61bf",
+      "p22-3579d5cfe2",
+      "p23-77b2224c12",
+      "p30-d8fe59b41b",
+      "p23-2435daf3ec",
+      "p30-c81f9880c1"
+    ],
+    "gold_ids": [
+      "p21-88de6db287"
+    ],
+    "queries": [
+      "我今年入职不满一年，病假天数怎么折算？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.1494169000070542,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P14",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p24-3e46efee64",
+      "p25-47545b89bc",
+      "p22-8f3ddee8c0"
+    ],
+    "gold_ids": [
+      "p22-3579d5cfe2"
+    ],
+    "queries": [
+      "病假超过5天不到60天工资怎么算？"
+    ],
+    "retrieval_seconds": 0.05026229997747578,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P14",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p22-3579d5cfe2",
+      "p22-8f3ddee8c0",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p25-47545b89bc",
+      "p30-d8fe59b41b"
+    ],
+    "gold_ids": [
+      "p22-3579d5cfe2"
+    ],
+    "queries": [
+      "病假超过5天不到60天工资怎么算？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.16802859999006614,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P14",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p22-8f3ddee8c0",
+      "p23-77b2224c12",
+      "p30-d8fe59b41b",
+      "p23-27249d61bf",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [
+      "p22-3579d5cfe2"
+    ],
+    "queries": [
+      "病假超过5天不到60天工资怎么算？",
+      "病假 薪酬 全薪 半薪 福利病假",
+      "入职 转正 福利病假天数 折算"
+    ],
+    "retrieval_seconds": 0.17073899999377318,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P15",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p24-3e46efee64",
+      "p24-bea93ab4d6",
+      "p22-c42b3d394c",
+      "p24-7893cf4f6d",
+      "p25-64fe3a97a0"
+    ],
+    "gold_ids": [
+      "p23-2435daf3ec"
+    ],
+    "queries": [
+      "社会工龄满15年，每年法定年假有多少天？"
+    ],
+    "retrieval_seconds": 0.050357500003883615,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P15",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p24-3e46efee64",
+      "p24-7893cf4f6d",
+      "p29-d2fd640689"
+    ],
+    "gold_ids": [
+      "p23-2435daf3ec"
+    ],
+    "queries": [
+      "社会工龄满15年，每年法定年假有多少天？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.16376799999852665,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P15",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [
+      "p23-2435daf3ec"
+    ],
+    "queries": [
+      "社会工龄满15年，每年法定年假有多少天？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.16531519999261945,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P16",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p24-bea93ab4d6",
+      "p24-3e46efee64",
+      "p21-88de6db287",
+      "p24-7893cf4f6d"
+    ],
+    "gold_ids": [
+      "p23-77b2224c12"
+    ],
+    "queries": [
+      "P7一年最多能休多少天法定加福利年假？"
+    ],
+    "retrieval_seconds": 0.04953859999659471,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P16",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p30-d8fe59b41b",
+      "p24-bea93ab4d6",
+      "p21-88de6db287",
+      "p24-3e46efee64",
+      "p29-d2fd640689"
+    ],
+    "gold_ids": [
+      "p23-77b2224c12"
+    ],
+    "queries": [
+      "P7一年最多能休多少天法定加福利年假？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.16097910000826232,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P16",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [
+      "p23-77b2224c12"
+    ],
+    "queries": [
+      "P7一年最多能休多少天法定加福利年假？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.16565989999799058,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P17",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p25-a584b8e997",
+      "p24-3e46efee64",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [
+      "p29-d2fd640689"
+    ],
+    "queries": [
+      "入职满三年后怀孕，能享多少天福利产假或陪护假？"
+    ],
+    "retrieval_seconds": 0.05525089998263866,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P17",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p25-a584b8e997",
+      "p24-3e46efee64",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [
+      "p29-d2fd640689"
+    ],
+    "queries": [
+      "入职满三年后怀孕，能享多少天福利产假或陪护假？"
+    ],
+    "retrieval_seconds": 0.05289439999614842,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P17",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p24-7893cf4f6d",
+      "p29-d2fd640689",
+      "p25-a584b8e997",
+      "p24-3e46efee64",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p23-77b2224c12",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [
+      "p29-d2fd640689"
+    ],
+    "queries": [
+      "入职满三年后怀孕，能享多少天福利产假或陪护假？"
+    ],
+    "retrieval_seconds": 0.05826369998976588,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P18",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p30-6ab8ae0a44",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p29-d2fd640689",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p41-0042d06121"
+    ],
+    "gold_ids": [
+      "p30-6ab8ae0a44"
+    ],
+    "queries": [
+      "满几年算大佬，老员工日是哪天？"
+    ],
+    "retrieval_seconds": 0.06199950000154786,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P18",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p30-6ab8ae0a44",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p29-d2fd640689",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p41-0042d06121"
+    ],
+    "gold_ids": [
+      "p30-6ab8ae0a44"
+    ],
+    "queries": [
+      "满几年算大佬，老员工日是哪天？"
+    ],
+    "retrieval_seconds": 0.062056199996732175,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P18",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p30-6ab8ae0a44",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p29-d2fd640689",
+      "p24-bea93ab4d6",
+      "p30-d8fe59b41b",
+      "p41-0042d06121"
+    ],
+    "gold_ids": [
+      "p30-6ab8ae0a44"
+    ],
+    "queries": [
+      "满几年算大佬，老员工日是哪天？"
+    ],
+    "retrieval_seconds": 0.054319399991072714,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P19",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p30-526ea28baa",
+      "p20-28e5161ba4",
+      "p25-64fe3a97a0",
+      "p24-3e46efee64",
+      "p21-88de6db287",
+      "p25-a584b8e997",
+      "p24-7893cf4f6d"
+    ],
+    "gold_ids": [
+      "p30-526ea28baa"
+    ],
+    "queries": [
+      "工作日餐补多少钱，休假会扣吗？"
+    ],
+    "retrieval_seconds": 0.052695399994263425,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P19",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p21-88de6db287",
+      "p24-3e46efee64",
+      "p22-3579d5cfe2",
+      "p30-526ea28baa",
+      "p25-47545b89bc",
+      "p24-bea93ab4d6",
+      "p23-27249d61bf",
+      "p25-64fe3a97a0"
+    ],
+    "gold_ids": [
+      "p30-526ea28baa"
+    ],
+    "queries": [
+      "工作日餐补多少钱，休假会扣吗？",
+      "休假 全薪假 带薪扣减福利假 无薪假",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "retrieval_seconds": 0.12784089997876436,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P19",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p22-3579d5cfe2",
+      "p30-526ea28baa",
+      "p20-28e5161ba4",
+      "p21-88de6db287",
+      "p24-3e46efee64",
+      "p19-c92ec39c2b",
+      "p20-431bc5ac7e",
+      "p25-47545b89bc"
+    ],
+    "gold_ids": [
+      "p30-526ea28baa"
+    ],
+    "queries": [
+      "工作日餐补多少钱，休假会扣吗？",
+      "休假 全薪假 带薪扣减福利假 无薪假",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "retrieval_seconds": 0.1432492000167258,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P20",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p22-8f3ddee8c0",
+      "p24-bea93ab4d6",
+      "p27-1dfbb46c86",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [
+      "p30-d8fe59b41b"
+    ],
+    "queries": [
+      "M3及P7/T7级转正后福利年假怎么算？"
+    ],
+    "retrieval_seconds": 0.055162200005725026,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P20",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p30-d8fe59b41b",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p21-88de6db287",
+      "p22-8f3ddee8c0",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [
+      "p30-d8fe59b41b"
+    ],
+    "queries": [
+      "M3及P7/T7级转正后福利年假怎么算？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.14684359999955632,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P20",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p23-77b2224c12",
+      "p30-d8fe59b41b",
+      "p21-88de6db287",
+      "p23-2435daf3ec",
+      "p24-bea93ab4d6",
+      "p23-27249d61bf",
+      "p22-8f3ddee8c0",
+      "p24-3e46efee64"
+    ],
+    "gold_ids": [
+      "p30-d8fe59b41b"
+    ],
+    "queries": [
+      "M3及P7/T7级转正后福利年假怎么算？",
+      "法定年假 福利年假 社会工龄 年度上限",
+      "福利年假 转正日 折算"
+    ],
+    "retrieval_seconds": 0.128727200004505,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P21",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p31-77990d6c90",
+      "p20-28e5161ba4",
+      "p20-431bc5ac7e",
+      "p31-6dead0b231",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p22-c42b3d394c",
+      "p29-d2fd640689"
+    ],
+    "gold_ids": [
+      "p31-6dead0b231"
+    ],
+    "queries": [
+      "休假日加班累计几小时能享两餐加班餐？"
+    ],
+    "retrieval_seconds": 0.05373600000166334,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P21",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p31-77990d6c90",
+      "p20-28e5161ba4",
+      "p20-431bc5ac7e",
+      "p31-6dead0b231",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p22-c42b3d394c",
+      "p29-d2fd640689"
+    ],
+    "gold_ids": [
+      "p31-6dead0b231"
+    ],
+    "queries": [
+      "休假日加班累计几小时能享两餐加班餐？"
+    ],
+    "retrieval_seconds": 0.050319200003286824,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P21",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p31-77990d6c90",
+      "p20-28e5161ba4",
+      "p20-431bc5ac7e",
+      "p31-6dead0b231",
+      "p23-27249d61bf",
+      "p23-77b2224c12",
+      "p22-c42b3d394c",
+      "p29-d2fd640689"
+    ],
+    "gold_ids": [
+      "p31-6dead0b231"
+    ],
+    "queries": [
+      "休假日加班累计几小时能享两餐加班餐？"
+    ],
+    "retrieval_seconds": 0.05488169999443926,
+    "any_at3": false,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P22",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p20-431bc5ac7e",
+      "p20-28e5161ba4",
+      "p19-e4323f19a5",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf"
+    ],
+    "gold_ids": [
+      "p31-77990d6c90"
+    ],
+    "queries": [
+      "工作日加班到20点后满1小时能领加班餐吗？"
+    ],
+    "retrieval_seconds": 0.07307779998518527,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P22",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p20-431bc5ac7e",
+      "p20-28e5161ba4",
+      "p19-e4323f19a5",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf"
+    ],
+    "gold_ids": [
+      "p31-77990d6c90"
+    ],
+    "queries": [
+      "工作日加班到20点后满1小时能领加班餐吗？"
+    ],
+    "retrieval_seconds": 0.065329400007613,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P22",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p31-6dead0b231",
+      "p31-77990d6c90",
+      "p20-431bc5ac7e",
+      "p20-28e5161ba4",
+      "p19-e4323f19a5",
+      "p23-77b2224c12",
+      "p23-2435daf3ec",
+      "p23-27249d61bf"
+    ],
+    "gold_ids": [
+      "p31-77990d6c90"
+    ],
+    "queries": [
+      "工作日加班到20点后满1小时能领加班餐吗？"
+    ],
+    "retrieval_seconds": 0.06791819998761639,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P23",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p33-a867f06b3c",
+      "p14-1ad6eab8c6",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p16-161eb98f4e",
+      "p40-c769d87f54",
+      "p35-e55115a49e"
+    ],
+    "gold_ids": [
+      "p33-a867f06b3c"
+    ],
+    "queries": [
+      "经理级及以上管理岗位空缺内部提拔要占多少？"
+    ],
+    "retrieval_seconds": 0.05828899997868575,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P23",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p33-a867f06b3c",
+      "p14-1ad6eab8c6",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p16-161eb98f4e",
+      "p40-c769d87f54",
+      "p35-e55115a49e"
+    ],
+    "gold_ids": [
+      "p33-a867f06b3c"
+    ],
+    "queries": [
+      "经理级及以上管理岗位空缺内部提拔要占多少？"
+    ],
+    "retrieval_seconds": 0.05305530002806336,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P23",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p15-6a942bbddd",
+      "p33-a867f06b3c",
+      "p14-1ad6eab8c6",
+      "p34-b3db9e8572",
+      "p14-4058f096f6",
+      "p16-161eb98f4e",
+      "p40-c769d87f54",
+      "p35-e55115a49e"
+    ],
+    "gold_ids": [
+      "p33-a867f06b3c"
+    ],
+    "queries": [
+      "经理级及以上管理岗位空缺内部提拔要占多少？"
+    ],
+    "retrieval_seconds": 0.06320959998993203,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P24",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p34-fb05ac7b83",
+      "p33-a867f06b3c",
+      "p8-e96529a8f2",
+      "p7-8c84c7a216",
+      "p27-1dfbb46c86",
+      "p28-a1f0b33346",
+      "p9-ceeffd39f5",
+      "p6-4913ab3280"
+    ],
+    "gold_ids": [
+      "p34-fb05ac7b83"
+    ],
+    "queries": [
+      "京东的360评估每年做几次，都评哪些内容？"
+    ],
+    "retrieval_seconds": 0.06409400000120513,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P24",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p34-fb05ac7b83",
+      "p33-a867f06b3c",
+      "p8-e96529a8f2",
+      "p7-8c84c7a216",
+      "p27-1dfbb46c86",
+      "p28-a1f0b33346",
+      "p9-ceeffd39f5",
+      "p6-4913ab3280"
+    ],
+    "gold_ids": [
+      "p34-fb05ac7b83"
+    ],
+    "queries": [
+      "京东的360评估每年做几次，都评哪些内容？"
+    ],
+    "retrieval_seconds": 0.05971559998579323,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P24",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p34-fb05ac7b83",
+      "p33-a867f06b3c",
+      "p8-e96529a8f2",
+      "p7-8c84c7a216",
+      "p27-1dfbb46c86",
+      "p28-a1f0b33346",
+      "p9-ceeffd39f5",
+      "p6-4913ab3280"
+    ],
+    "gold_ids": [
+      "p34-fb05ac7b83"
+    ],
+    "queries": [
+      "京东的360评估每年做几次，都评哪些内容？"
+    ],
+    "retrieval_seconds": 0.051584300003014505,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P25",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p34-b3db9e8572",
+      "p17-3912472149",
+      "p17-903c410674",
+      "p23-2435daf3ec",
+      "p38-c9b85989ed",
+      "p35-e55115a49e",
+      "p22-8f3ddee8c0",
+      "p32-2836efc163"
+    ],
+    "gold_ids": [
+      "p34-b3db9e8572"
+    ],
+    "queries": [
+      "内部异动需要满足什么服务年限？"
+    ],
+    "retrieval_seconds": 0.04585269998642616,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P25",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p34-b3db9e8572",
+      "p17-3912472149",
+      "p17-903c410674",
+      "p23-2435daf3ec",
+      "p38-c9b85989ed",
+      "p35-e55115a49e",
+      "p22-8f3ddee8c0",
+      "p32-2836efc163"
+    ],
+    "gold_ids": [
+      "p34-b3db9e8572"
+    ],
+    "queries": [
+      "内部异动需要满足什么服务年限？"
+    ],
+    "retrieval_seconds": 0.043589800014160573,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P25",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p34-b3db9e8572",
+      "p17-3912472149",
+      "p17-903c410674",
+      "p23-2435daf3ec",
+      "p38-c9b85989ed",
+      "p35-e55115a49e",
+      "p22-8f3ddee8c0",
+      "p32-2836efc163"
+    ],
+    "gold_ids": [
+      "p34-b3db9e8572"
+    ],
+    "queries": [
+      "内部异动需要满足什么服务年限？"
+    ],
+    "retrieval_seconds": 0.04731940000783652,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P26",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p19-afcfc09fb7",
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p19-e4323f19a5",
+      "p19-c92ec39c2b",
+      "p44-51f4c64ab2",
+      "p44-fd23d4dad7",
+      "p41-2d2c8ff79a"
+    ],
+    "gold_ids": [
+      "p42-83f9d6df8d"
+    ],
+    "queries": [
+      "连续30天内迟到或早退两次会被记过吗？"
+    ],
+    "retrieval_seconds": 0.05228529998566955,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P26",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p41-2d2c8ff79a",
+      "p40-c769d87f54",
+      "p44-51f4c64ab2",
+      "p44-fd23d4dad7",
+      "p19-afcfc09fb7",
+      "p40-a41581b4e3"
+    ],
+    "gold_ids": [
+      "p42-83f9d6df8d"
+    ],
+    "queries": [
+      "连续30天内迟到或早退两次会被记过吗？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.1435617999813985,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P26",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p19-afcfc09fb7",
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p41-2d2c8ff79a",
+      "p46-7e4d5f20c3",
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p44-51f4c64ab2"
+    ],
+    "gold_ids": [
+      "p42-83f9d6df8d"
+    ],
+    "queries": [
+      "连续30天内迟到或早退两次会被记过吗？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.16416880002361722,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P27",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p38-c9b85989ed",
+      "p23-77b2224c12",
+      "p30-6ab8ae0a44",
+      "p37-5902b8f6e2",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p41-0042d06121"
+    ],
+    "gold_ids": [
+      "p38-c9b85989ed"
+    ],
+    "queries": [
+      "长期服务奖满5年拿的是啥奖？"
+    ],
+    "retrieval_seconds": 0.06261289998656139,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P27",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p38-c9b85989ed",
+      "p23-77b2224c12",
+      "p30-6ab8ae0a44",
+      "p37-5902b8f6e2",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p41-0042d06121"
+    ],
+    "gold_ids": [
+      "p38-c9b85989ed"
+    ],
+    "queries": [
+      "长期服务奖满5年拿的是啥奖？"
+    ],
+    "retrieval_seconds": 0.051240600005257875,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P27",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p38-c9b85989ed",
+      "p23-77b2224c12",
+      "p30-6ab8ae0a44",
+      "p37-5902b8f6e2",
+      "p23-2435daf3ec",
+      "p23-27249d61bf",
+      "p24-bea93ab4d6",
+      "p41-0042d06121"
+    ],
+    "gold_ids": [
+      "p38-c9b85989ed"
+    ],
+    "queries": [
+      "长期服务奖满5年拿的是啥奖？"
+    ],
+    "retrieval_seconds": 0.05759250000119209,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P28",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p41-0042d06121",
+      "p40-c769d87f54",
+      "p40-38513321f3",
+      "p39-66776572f1",
+      "p42-83f9d6df8d",
+      "p42-3b562e40b0",
+      "p43-54058878ec",
+      "p22-3579d5cfe2"
+    ],
+    "gold_ids": [
+      "p41-0042d06121"
+    ],
+    "queries": [
+      "违纪处分对年度资格的影响持续多久？"
+    ],
+    "retrieval_seconds": 0.0545144000207074,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P28",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p41-0042d06121",
+      "p40-c769d87f54",
+      "p40-38513321f3",
+      "p39-66776572f1",
+      "p42-83f9d6df8d",
+      "p42-3b562e40b0",
+      "p43-54058878ec",
+      "p22-3579d5cfe2"
+    ],
+    "gold_ids": [
+      "p41-0042d06121"
+    ],
+    "queries": [
+      "违纪处分对年度资格的影响持续多久？"
+    ],
+    "retrieval_seconds": 0.049560499988729134,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P28",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p41-0042d06121",
+      "p40-c769d87f54",
+      "p40-38513321f3",
+      "p39-66776572f1",
+      "p42-83f9d6df8d",
+      "p42-3b562e40b0",
+      "p43-54058878ec",
+      "p22-3579d5cfe2"
+    ],
+    "gold_ids": [
+      "p41-0042d06121"
+    ],
+    "queries": [
+      "违纪处分对年度资格的影响持续多久？"
+    ],
+    "retrieval_seconds": 0.05384099998627789,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P29",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p19-afcfc09fb7",
+      "p43-54058878ec",
+      "p19-c92ec39c2b",
+      "p16-622e53fafe",
+      "p20-28e5161ba4",
+      "p42-83f9d6df8d",
+      "p44-51f4c64ab2",
+      "p44-fd23d4dad7"
+    ],
+    "gold_ids": [
+      "p43-54058878ec"
+    ],
+    "queries": [
+      "连续30天内迟到或早退几次会被辞退？"
+    ],
+    "retrieval_seconds": 0.053224199975375086,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P29",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p43-54058878ec",
+      "p42-83f9d6df8d",
+      "p41-2d2c8ff79a",
+      "p44-51f4c64ab2",
+      "p44-fd23d4dad7",
+      "p40-c769d87f54",
+      "p19-afcfc09fb7",
+      "p40-a41581b4e3"
+    ],
+    "gold_ids": [
+      "p43-54058878ec"
+    ],
+    "queries": [
+      "连续30天内迟到或早退几次会被辞退？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.16115550001268275,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P29",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p19-afcfc09fb7",
+      "p43-54058878ec",
+      "p19-c92ec39c2b",
+      "p42-83f9d6df8d",
+      "p41-2d2c8ff79a",
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p44-51f4c64ab2"
+    ],
+    "gold_ids": [
+      "p43-54058878ec"
+    ],
+    "queries": [
+      "连续30天内迟到或早退几次会被辞退？",
+      "迟到 早退 连续 纪律处分 记过",
+      "累进式处罚 一般违纪 严重违纪"
+    ],
+    "retrieval_seconds": 0.15218730000196956,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P30",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p41-2d2c8ff79a",
+      "p42-83f9d6df8d",
+      "p39-66776572f1",
+      "p41-97c1a0e032",
+      "p40-38513321f3",
+      "p43-54058878ec"
+    ],
+    "gold_ids": [
+      "p40-c769d87f54"
+    ],
+    "queries": [
+      "六个月内再犯轻微违纪，公司会怎么处分？"
+    ],
+    "retrieval_seconds": 0.05149569999775849,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P30",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p41-2d2c8ff79a",
+      "p42-83f9d6df8d",
+      "p39-66776572f1",
+      "p41-97c1a0e032",
+      "p40-38513321f3",
+      "p43-54058878ec"
+    ],
+    "gold_ids": [
+      "p40-c769d87f54"
+    ],
+    "queries": [
+      "六个月内再犯轻微违纪，公司会怎么处分？"
+    ],
+    "retrieval_seconds": 0.05886309998459183,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P30",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p40-c769d87f54",
+      "p40-a41581b4e3",
+      "p41-2d2c8ff79a",
+      "p42-83f9d6df8d",
+      "p39-66776572f1",
+      "p41-97c1a0e032",
+      "p40-38513321f3",
+      "p43-54058878ec"
+    ],
+    "gold_ids": [
+      "p40-c769d87f54"
+    ],
+    "queries": [
+      "六个月内再犯轻微违纪，公司会怎么处分？"
+    ],
+    "retrieval_seconds": 0.04986930001177825,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P31",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p50-314299f759",
+      "p50-0b87b65099",
+      "p50-8c19ffbac4",
+      "p31-b316f61d29",
+      "p16-161eb98f4e",
+      "p32-f13ba747ab",
+      "p46-0c8bfd37c1",
+      "p15-a99dbf1c9b"
+    ],
+    "gold_ids": [
+      "p50-314299f759"
+    ],
+    "queries": [
+      "邮箱密码过期前多久会发提醒邮件？"
+    ],
+    "retrieval_seconds": 0.04817749999347143,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P31",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p50-314299f759",
+      "p50-0b87b65099",
+      "p50-8c19ffbac4",
+      "p31-b316f61d29",
+      "p16-161eb98f4e",
+      "p32-f13ba747ab",
+      "p46-0c8bfd37c1",
+      "p15-a99dbf1c9b"
+    ],
+    "gold_ids": [
+      "p50-314299f759"
+    ],
+    "queries": [
+      "邮箱密码过期前多久会发提醒邮件？"
+    ],
+    "retrieval_seconds": 0.05016559999785386,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P31",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p50-314299f759",
+      "p50-0b87b65099",
+      "p50-8c19ffbac4",
+      "p31-b316f61d29",
+      "p16-161eb98f4e",
+      "p32-f13ba747ab",
+      "p46-0c8bfd37c1",
+      "p15-a99dbf1c9b"
+    ],
+    "gold_ids": [
+      "p50-314299f759"
+    ],
+    "queries": [
+      "邮箱密码过期前多久会发提醒邮件？"
+    ],
+    "retrieval_seconds": 0.060221899999305606,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P32",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p48-246a7c42de",
+      "p28-a1f0b33346",
+      "p48-34507c5df8",
+      "p26-44bfeef242",
+      "p31-b316f61d29",
+      "p28-9092bac2d7",
+      "p27-1dfbb46c86",
+      "p19-e4323f19a5"
+    ],
+    "gold_ids": [
+      "p48-246a7c42de"
+    ],
+    "queries": [
+      "管理者想看下属考勤和绩效在哪个模块？"
+    ],
+    "retrieval_seconds": 0.05065460002515465,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P32",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p48-246a7c42de",
+      "p28-a1f0b33346",
+      "p48-34507c5df8",
+      "p26-44bfeef242",
+      "p31-b316f61d29",
+      "p28-9092bac2d7",
+      "p27-1dfbb46c86",
+      "p19-e4323f19a5"
+    ],
+    "gold_ids": [
+      "p48-246a7c42de"
+    ],
+    "queries": [
+      "管理者想看下属考勤和绩效在哪个模块？"
+    ],
+    "retrieval_seconds": 0.05858010001247749,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P32",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p48-246a7c42de",
+      "p28-a1f0b33346",
+      "p48-34507c5df8",
+      "p26-44bfeef242",
+      "p31-b316f61d29",
+      "p28-9092bac2d7",
+      "p27-1dfbb46c86",
+      "p19-e4323f19a5"
+    ],
+    "gold_ids": [
+      "p48-246a7c42de"
+    ],
+    "queries": [
+      "管理者想看下属考勤和绩效在哪个模块？"
+    ],
+    "retrieval_seconds": 0.05692129998351447,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P33",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p48-8e3321fd75",
+      "p4-b79067ffc6",
+      "p50-314299f759",
+      "p49-4740f94d50",
+      "p47-6d0d97ead8",
+      "p17-903c410674",
+      "p48-34507c5df8",
+      "p15-82fc10ff7f"
+    ],
+    "gold_ids": [
+      "p48-8e3321fd75"
+    ],
+    "queries": [
+      "登录流程中心后系统会自动跳到哪个页面？"
+    ],
+    "retrieval_seconds": 0.05314089998137206,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P33",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p48-8e3321fd75",
+      "p4-b79067ffc6",
+      "p50-314299f759",
+      "p49-4740f94d50",
+      "p47-6d0d97ead8",
+      "p17-903c410674",
+      "p48-34507c5df8",
+      "p15-82fc10ff7f"
+    ],
+    "gold_ids": [
+      "p48-8e3321fd75"
+    ],
+    "queries": [
+      "登录流程中心后系统会自动跳到哪个页面？"
+    ],
+    "retrieval_seconds": 0.04970740000135265,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P33",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p48-8e3321fd75",
+      "p4-b79067ffc6",
+      "p50-314299f759",
+      "p49-4740f94d50",
+      "p47-6d0d97ead8",
+      "p17-903c410674",
+      "p48-34507c5df8",
+      "p15-82fc10ff7f"
+    ],
+    "gold_ids": [
+      "p48-8e3321fd75"
+    ],
+    "queries": [
+      "登录流程中心后系统会自动跳到哪个页面？"
+    ],
+    "retrieval_seconds": 0.05510830000275746,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P34",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p28-9092bac2d7",
+      "p28-a1f0b33346",
+      "p26-44bfeef242",
+      "p38-c9b85989ed",
+      "p27-1dfbb46c86",
+      "p35-e55115a49e",
+      "p48-246a7c42de",
+      "p31-b316f61d29"
+    ],
+    "gold_ids": [
+      "p28-9092bac2d7"
+    ],
+    "queries": [
+      "个人绩效贡献与部门平均水平相当，属于哪个等级？"
+    ],
+    "retrieval_seconds": 0.05728339997585863,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P34",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p28-9092bac2d7",
+      "p28-a1f0b33346",
+      "p26-44bfeef242",
+      "p38-c9b85989ed",
+      "p27-1dfbb46c86",
+      "p35-e55115a49e",
+      "p48-246a7c42de",
+      "p31-b316f61d29"
+    ],
+    "gold_ids": [
+      "p28-9092bac2d7"
+    ],
+    "queries": [
+      "个人绩效贡献与部门平均水平相当，属于哪个等级？"
+    ],
+    "retrieval_seconds": 0.0518298999813851,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P34",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p28-9092bac2d7",
+      "p28-a1f0b33346",
+      "p26-44bfeef242",
+      "p38-c9b85989ed",
+      "p27-1dfbb46c86",
+      "p35-e55115a49e",
+      "p48-246a7c42de",
+      "p31-b316f61d29"
+    ],
+    "gold_ids": [
+      "p28-9092bac2d7"
+    ],
+    "queries": [
+      "个人绩效贡献与部门平均水平相当，属于哪个等级？"
+    ],
+    "retrieval_seconds": 0.05475969999679364,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P35",
+    "kind": null,
+    "strategy": "baseline",
+    "retrieved_ids": [
+      "p30-c81f9880c1",
+      "p15-82fc10ff7f",
+      "p11-d12d2e6737",
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p23-27249d61bf",
+      "p22-3579d5cfe2",
+      "p20-28e5161ba4"
+    ],
+    "gold_ids": [
+      "p30-c81f9880c1"
+    ],
+    "queries": [
+      "入职后什么时候能享受免费体检？"
+    ],
+    "retrieval_seconds": 0.05636180000146851,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P35",
+    "kind": null,
+    "strategy": "expanded",
+    "retrieved_ids": [
+      "p30-c81f9880c1",
+      "p15-82fc10ff7f",
+      "p11-d12d2e6737",
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p23-27249d61bf",
+      "p22-3579d5cfe2",
+      "p20-28e5161ba4"
+    ],
+    "gold_ids": [
+      "p30-c81f9880c1"
+    ],
+    "queries": [
+      "入职后什么时候能享受免费体检？"
+    ],
+    "retrieval_seconds": 0.04685149999568239,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  },
+  {
+    "dataset": "original35",
+    "qid": "P35",
+    "kind": null,
+    "strategy": "coverage",
+    "retrieved_ids": [
+      "p30-c81f9880c1",
+      "p15-82fc10ff7f",
+      "p11-d12d2e6737",
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p23-27249d61bf",
+      "p22-3579d5cfe2",
+      "p20-28e5161ba4"
+    ],
+    "gold_ids": [
+      "p30-c81f9880c1"
+    ],
+    "queries": [
+      "入职后什么时候能享受免费体检？"
+    ],
+    "retrieval_seconds": 0.053154900000663474,
+    "any_at3": true,
+    "any_at8": true,
+    "full_at8": true
+  }
+]
