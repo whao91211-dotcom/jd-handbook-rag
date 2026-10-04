@@ -12,7 +12,7 @@
 
 ## Global constraints
 
-Preserve baseline/quality/fast. No evaluation labels in runtime. Caps: 3 searches, 2 reads, 8 orchestration calls, 120-second orchestration, 60-second synthesis, 2048 orchestration output tokens, 6000-character evidence. Missing usage stays unknown. No secrets in browser or committed files.
+Preserve baseline/quality/fast. No evaluation labels in runtime. Caps: 3 searches, 2 reads, 8 orchestration calls, 120-second orchestration, 120-second synthesis, 2048 orchestration output tokens, 6000-character evidence. Missing usage stays unknown. No secrets in browser or committed files.
 
 ## Review focus
 

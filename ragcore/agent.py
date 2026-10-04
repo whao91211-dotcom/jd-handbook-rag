@@ -29,7 +29,7 @@ class AgentLimits:
     reads: int = 2
     model_calls: int = 8
     orchestration_seconds: float = 120
-    synthesis_seconds: float = 60
+    synthesis_seconds: float = 120
     output_tokens: int = 2048
 
 
