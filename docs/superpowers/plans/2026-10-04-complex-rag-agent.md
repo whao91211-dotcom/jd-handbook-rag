@@ -27,28 +27,28 @@ Preserve baseline/quality/fast. No evaluation labels in runtime. Caps: 3 searche
 Files: requirements-agent.txt, ragcore/agent.py, tests/test_agent.py.
 Interface: async `collect_evidence(question, *, llm=None, search=None, read=None, limits=None)` returns chunks, trace, usage, status, timings; sync `answer_question(question)` returns the web response shape.
 
-- [ ] Create isolated dependency environment; run original unittest suite and import installed LlamaIndex APIs.
-- [ ] Write offline scripted-LLM tests that expect a second search to add missing evidence, reject a fourth search/third read, reject unknown anchor IDs and preserve evidence on timeout/errors. Run `python -m unittest discover -s tests -p test_agent.py -v` and observe missing-feature failures.
-- [ ] Implement FunctionTool adapters and bounded loop using `achat_with_tools`, `get_tool_calls_from_response`, ChatMessage and tool messages. Final synthesis uses the existing evidence prompt and prepare_context.
-- [ ] Run targeted tests and full `python -m unittest discover -s tests -v`, then commit `feat: add bounded LlamaIndex evidence agent`.
+- [x] Create isolated dependency environment; run original unittest suite and import installed LlamaIndex APIs.
+- [x] Write offline scripted-LLM tests that expect a second search to add missing evidence, reject a fourth search/third read, reject unknown anchor IDs and preserve evidence on timeout/errors. Run `python -m unittest discover -s tests -p test_agent.py -v` and observe missing-feature failures.
+- [x] Implement FunctionTool adapters and bounded loop using `achat_with_tools`, `get_tool_calls_from_response`, ChatMessage and tool messages. Final synthesis uses the existing evidence prompt and prepare_context.
+- [x] Run targeted tests and full `python -m unittest discover -s tests -v`, then commit `feat: add bounded LlamaIndex evidence agent`.
 
 ## Task 2: API, CLI and browser integration
 
 Files: webapp.py, ask.py, web/index.html, web/app.js, tests/test_webapp.py.
 Interface: profile `agent` returns the same answer/sources/usage/metrics fields plus trace and limit status.
 
-- [ ] Add API tests accepting agent mode, retaining sources on failure, mapping final-context sources, and ensuring retrieval-only does not call an agent. Observe failures before integration.
-- [ ] Route agent requests through answer_question; add CLI switch and browser mode/trace details. Preserve existing branches and credential redaction.
-- [ ] Run full unittest suite, CLI help, browser JavaScript syntax and local browser smoke; commit `feat: expose complex-question mode in API CLI and browser`.
+- [x] Add API tests accepting agent mode, retaining sources on failure, mapping final-context sources, and ensuring retrieval-only does not call an agent. Observe failures before integration.
+- [x] Route agent requests through answer_question; add CLI switch and browser mode/trace details. Preserve existing branches and credential redaction.
+- [x] Run full unittest suite, CLI help, browser JavaScript syntax and local browser smoke; commit `feat: expose complex-question mode in API CLI and browser`.
 
 ## Task 3: Paired evaluation, evidence and delivery
 
 Files: evaluation/run_agent_experiment.py, evaluation/complex_cases_v1.jsonl, tests/test_agent_evaluation.py, COMPLEX_RAG_AGENT.md, README.md.
 
-- [ ] Test that evaluation passes only question text to runtime and separates gathered versus final-context coverage; run red test.
-- [ ] Implement serial paired quality/agent runs with revision/corpus hashes, warm-up timing notes, raw attempts, tool traces, final context and manual review templates. No gold labels are sent into the pipeline.
-- [ ] Run small live compatibility and paired development probe; include failures and measured latency/tokens without inventing correctness gains.
-- [ ] Review whole diff, run full tests, update plan checkboxes and report limitations; commit documentation/evaluation batch and push codex/complex-rag-agent.
+- [x] Test that evaluation passes only question text to runtime and separates gathered versus final-context coverage; run red test.
+- [x] Implement serial paired quality/agent runs with revision/corpus hashes, warm-up timing notes, raw attempts, tool traces, final context and manual review templates. No gold labels are sent into the pipeline.
+- [x] Run small live compatibility and paired development probe; include failures and measured latency/tokens without inventing correctness gains.
+- [x] Review whole diff, run full tests, update plan checkboxes and report limitations; commit documentation/evaluation batch and push codex/complex-rag-agent.
 
 ## Execution rulings
 
@@ -56,3 +56,10 @@ Files: evaluation/run_agent_experiment.py, evaluation/complex_cases_v1.jsonl, te
 - Implement inline; no multi-agent implementation dispatch is required.
 - Live browser synthesis exhausted 2048 shared reasoning/output tokens. Reuse existing 2048/4096/8192 retries within one async synthesis deadline; count every attempt. Existing synchronous generate cannot enforce a shared cancellation deadline, so reuse its prompt/context/budgets rather than calling that function.
 - Independent review and real LlamaIndex mock-transport test reproduced overridden max_tokens; set the private per-request model's max_tokens before each attempt. A separate single-worker tool executor prevents asyncio.run shutdown from extending HTTP deadlines. Running local threads cannot be killed; late results are discarded and pending tool work is bounded to one worker. Stage-specific timeout accounting avoids fabricating model requests.
+
+## Delivery verification
+
+- Final runtime verification: 46 unittest cases passed; browser JavaScript syntax and pip dependency checks passed.
+- Live browser verified a complete transfer-policy comparison with citations and an expandable tool trace. Screenshot: ../../screenshots/complex-rag-agent.png.
+- Frozen baseline retrieval Top-8 matches 36/36 old simulated cases; answer-generation regression is not inferred from retrieval regression.
+- The synthesis deadline increased from 60 to 120 seconds after a live ordinary quality request took 63.8 seconds and the agent hit the 60-second deadline. Partial diagnostic runs remain separate from final paired results.
