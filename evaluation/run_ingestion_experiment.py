@@ -101,6 +101,8 @@ def summarize(rows):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT/'evaluation/ingestion_experiment_2026-10-04')
+    parser.add_argument('--datasets', nargs='+', choices=['old36', 'complex6', 'retrieval46'],
+                        default=['old36', 'complex6'])
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     from ragcore import retriever
@@ -112,8 +114,11 @@ def main():
     original = [json.loads(s) for s in (ROOT/'data/chunks.jsonl').read_text(encoding='utf8').splitlines()]
     parents, references = build_parents(original)
     cases = []
-    for name, filename in [('old36', 'baseline_v1_2026-09-26/cases.jsonl'), ('complex6', 'complex_cases_v1.jsonl')]:
-        for line in (ROOT/'evaluation'/filename).read_text(encoding='utf8').splitlines():
+    paths = {'old36': ROOT/'evaluation/baseline_v1_2026-09-26/cases.jsonl',
+             'complex6': ROOT/'evaluation/complex_cases_v1.jsonl',
+             'retrieval46': ROOT/'data/eval/golden.jsonl'}
+    for name in args.datasets:
+        for line in paths[name].read_text(encoding='utf8').splitlines():
             case = json.loads(line)
             case['dataset_group'] = name
             assert all(i in references for i in case['gold_chunk_ids'])
@@ -125,12 +130,15 @@ def main():
         'chunks_sha256': hashlib.sha256((ROOT/'data/chunks.jsonl').read_bytes()).hexdigest(),
         'script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'llama_index_core': __import__('importlib.metadata', fromlist=['version']).version('llama-index-core'),
+        'cases_sha256': {name: hashlib.sha256(paths[name].read_bytes()).hexdigest() for name in args.datasets},
         'embedding_model': 'BAAI/bge-small-zh-v1.5', 'embedding_max_sequence_length': get_model().max_seq_length,
         'note': 'Same extracted text, rebuilt section parents from existing contents; NOT a PDF parsing/OCR comparison. '
                 'Token-based splitter with default tokenizer; BGE uses another tokenizer. '
                 'Reference interval metrics are not answer correctness. Simulated development sets, one retrieval per condition.',
         'variants': {}}
     all_rows = []
+    (args.output/'cases.jsonl').write_text(''.join(json.dumps({k: c[k] for k in
+        ('qid', 'question', 'gold_chunk_ids', 'dataset_group')}, ensure_ascii=False)+'\n' for c in cases), encoding='utf8')
     for variant, size, overlap in [('current', None, None), ('sentence256', 256, 32), ('sentence512', 512, 64)]:
         tick = perf_counter()
         if size is None:
