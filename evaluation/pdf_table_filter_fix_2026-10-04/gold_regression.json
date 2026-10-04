@@ -1,0 +1,22 @@
+{
+  "golden_sha256": "0a6c983c888226656ad8ee13f2d0c730a3265ca0bb523e9f3a0a0020002879f3",
+  "quote_selection_sha256": "10ee19c37abcdacd45b5cdc2927346411f050072200e5b8080f8133ba24f1f63",
+  "script_sha256": "2ddffcffbef25dea0318776b23bb2e715b6eff9052e2e6c94f98b0e9729316aa",
+  "summary": {
+    "pdfplumber": {
+      "unchanged_gold_cases": 34,
+      "unchanged_gold_complete_at8": 34,
+      "original_unique_quote_cases": 26,
+      "original_unique_quotes_at8": 26,
+      "P32_quote_at8": true
+    },
+    "pdfplumber_fixed": {
+      "unchanged_gold_cases": 34,
+      "unchanged_gold_complete_at8": 34,
+      "original_unique_quote_cases": 26,
+      "original_unique_quotes_at8": 26,
+      "P32_quote_at8": true
+    }
+  },
+  "note": "34 unchanged reference-ID cases; changed page-48 P32 scored with its original source quote separately. 26 quote cases use the pre-existing unique quote selection. Development regression, no answer generation."
+}
