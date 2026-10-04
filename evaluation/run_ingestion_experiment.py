@@ -44,6 +44,22 @@ def covered_fraction(reference, hits):
     return covered / (reference['end']-reference['start'])
 
 
+def locate_quote(quote, parents):
+    quote = ''.join(quote.split())
+    if not quote:
+        return None
+    found = []
+    for parent in parents:
+        offsets = [i for i, char in enumerate(parent['content']) if not char.isspace()]
+        normalized = ''.join(parent['content'][i] for i in offsets)
+        start = normalized.find(quote)
+        while start >= 0:
+            found.append({'parent': parent['parent'], 'start': offsets[start],
+                          'end': offsets[start+len(quote)-1]+1})
+            start = normalized.find(quote, start+1)
+    return found[0] if len(found) == 1 else None
+
+
 def make_chunks(parents, chunk_size, overlap):
     from llama_index.core import Document
     from llama_index.core.node_parser import SentenceSplitter
@@ -91,9 +107,14 @@ def summarize(rows):
                 entry = {'n': len(group), 'positive_n': len(positives),
                          'retrieval_seconds_p50': statistics.median(r['seconds'] for r in group),
                          'top8_text_chars_mean': statistics.mean(r['top8_chars'] for r in group)}
-                for stage in ('at3', 'at8', 'context8'):
+                for stage in ('at3', 'at8', 'context8', 'budget6000'):
                     entry[stage] = {metric: statistics.mean(r[stage][metric] for r in positives)
                         for metric in ('reference_char_coverage', 'reference_block_recall', 'all_reference_blocks_covered')}
+                for stage in ('quote_at8', 'quote_budget6000'):
+                    values = [r[stage] for r in group if r[stage] is not None]
+                    entry[stage] = {'matched_n': len(values),
+                        'char_coverage': statistics.mean(values) if values else None,
+                        'fully_covered_n': sum(v >= 1-1e-12 for v in values)}
                 summary[f'{variant}/{strategy}/{dataset}'] = entry
     return summary
 
@@ -103,6 +124,8 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT/'evaluation/ingestion_experiment_2026-10-04')
     parser.add_argument('--datasets', nargs='+', choices=['old36', 'complex6', 'retrieval46'],
                         default=['old36', 'complex6'])
+    parser.add_argument('--candidate-k', type=int, default=32,
+                        help='Retrieve extra candidates for an equal 6000-character context cap')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     from ragcore import retriever
@@ -121,6 +144,7 @@ def main():
         for line in paths[name].read_text(encoding='utf8').splitlines():
             case = json.loads(line)
             case['dataset_group'] = name
+            case['quote_span'] = locate_quote(case.get('evidence_quote', ''), parents)
             assert all(i in references for i in case['gold_chunk_ids'])
             cases.append(case)
     get_model()  # Exclude model cold load from measured ingestion/retrieval.
@@ -131,6 +155,7 @@ def main():
         'script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'llama_index_core': __import__('importlib.metadata', fromlist=['version']).version('llama-index-core'),
         'cases_sha256': {name: hashlib.sha256(paths[name].read_bytes()).hexdigest() for name in args.datasets},
+        'candidate_k': args.candidate_k,
         'embedding_model': 'BAAI/bge-small-zh-v1.5', 'embedding_max_sequence_length': get_model().max_seq_length,
         'note': 'Same extracted text, rebuilt section parents from existing contents; NOT a PDF parsing/OCR comparison. '
                 'Token-based splitter with default tokenizer; BGE uses another tokenizer. '
@@ -138,7 +163,7 @@ def main():
         'variants': {}}
     all_rows = []
     (args.output/'cases.jsonl').write_text(''.join(json.dumps({k: c[k] for k in
-        ('qid', 'question', 'gold_chunk_ids', 'dataset_group')}, ensure_ascii=False)+'\n' for c in cases), encoding='utf8')
+        ('qid', 'question', 'gold_chunk_ids', 'dataset_group', 'quote_span')}, ensure_ascii=False)+'\n' for c in cases), encoding='utf8')
     for variant, size, overlap in [('current', None, None), ('sentence256', 256, 32), ('sentence512', 512, 64)]:
         tick = perf_counter()
         if size is None:
@@ -163,17 +188,25 @@ def main():
             for strategy in ('baseline', 'guarded'):
                 for case in cases:
                     tick = perf_counter()
-                    hits = retriever.retrieve(case['question'], k=8, strategy=strategy)
+                    candidates = retriever.retrieve(case['question'], k=args.candidate_k, strategy=strategy)
                     seconds = perf_counter()-tick
+                    hits = candidates[:8]
                     context, mapping = prepare_context(hits, 'evidence')
                     admitted = [h for h in hits if h['id'] in mapping.values()]
+                    budget_context, budget_mapping = prepare_context(candidates, 'evidence')
+                    budget_hits = [h for h in candidates if h['id'] in budget_mapping.values()]
+                    quote = case['quote_span']
                     all_rows.append({'variant': variant, 'strategy': strategy, 'dataset': case['dataset_group'],
                         'qid': case['qid'], 'question': case['question'], 'seconds': seconds,
                         'hit_ids': [h['id'] for h in hits], 'top8_chars': sum(len(h['text']) for h in hits),
                         'context_chars': len(context), 'context_ids': [h['id'] for h in admitted],
+                        'budget_context_chars': len(budget_context), 'budget_context_ids': [h['id'] for h in budget_hits],
                         'at3': score(case, hits[:3], spans, references),
                         'at8': score(case, hits, spans, references),
-                        'context8': score(case, admitted, spans, references)})
+                        'context8': score(case, admitted, spans, references),
+                        'budget6000': score(case, budget_hits, spans, references),
+                        'quote_at8': covered_fraction(quote, [spans[h['id']] for h in hits]) if quote else None,
+                        'quote_budget6000': covered_fraction(quote, [spans[h['id']] for h in budget_hits]) if quote else None})
         print(json.dumps({'variant': variant, **metadata['variants'][variant]}, ensure_ascii=False), flush=True)
     assert before_ids == sorted(original_collection.get()['ids'])
     metadata['production_index_ids_unchanged'] = True

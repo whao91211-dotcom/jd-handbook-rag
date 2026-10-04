@@ -1,6 +1,6 @@
 import unittest
 
-from evaluation.run_ingestion_experiment import build_parents, covered_fraction
+from evaluation.run_ingestion_experiment import build_parents, covered_fraction, locate_quote
 
 
 class IngestionEvaluationTests(unittest.TestCase):
@@ -13,6 +13,13 @@ class IngestionEvaluationTests(unittest.TestCase):
     def test_other_section_cannot_cover_reference(self):
         self.assertEqual(covered_fraction({'parent': 'a', 'start': 0, 'end': 10},
             [{'parent': 'b', 'start': 0, 'end': 10}]), 0)
+
+    def test_quote_mapping_ignores_whitespace_but_requires_unique_match(self):
+        parent = {'parent': 'a', 'content': '前言。病假\n需要证明。结束。'}
+        span = locate_quote('病假需要证明。', [parent])
+        self.assertEqual(parent['content'][span['start']:span['end']], '病假\n需要证明。')
+        self.assertIsNone(locate_quote('', [parent]))
+        self.assertIsNone(locate_quote('病假需要证明。', [parent, parent]))
 
     def test_reference_offsets_recover_content_without_labels_in_parent(self):
         rows = [{'id': 'old-a', 'chapter': '第一章', 'section': '第一节',
