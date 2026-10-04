@@ -146,6 +146,20 @@ class AgentTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result['sources'][0]['id'], 'a')
         self.assertIsNone(result['metrics']['total_tokens'])
 
+    async def test_truncated_synthesis_retries_and_counts_both_responses(self):
+        attempts = []
+        async def synth(messages):
+            attempts.append(1)
+            return SimpleNamespace(message=SimpleNamespace(content='半截' if len(attempts)==1 else '完整〔来源1〕'),
+                raw={'usage': {'prompt_tokens': 20, 'completion_tokens': 10},
+                     'choices': [{'finish_reason': 'length' if len(attempts)==1 else 'stop'}]})
+        result = await self.agent.answer_question_async('病假',
+            llm=ScriptedLLM([[call('search_handbook', query='病假')], []]),
+            search=lambda q: [chunk('a')], synthesizer=synth)
+        self.assertEqual(result['answer'], '完整〔来源1〕')
+        self.assertEqual(result['metrics']['attempts'], 4)
+        self.assertEqual(result['metrics']['total_tokens'], 90)
+
     async def test_adjacent_reader_uses_source_order(self):
         from pathlib import Path
         import tempfile

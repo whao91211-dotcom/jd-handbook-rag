@@ -214,12 +214,23 @@ async def answer_question_async(question, *, llm=None, synthesizer=None, search=
             messages = [ChatMessage(role='system', content=EVIDENCE_PROMPT),
                         ChatMessage(role='user', content=f'问题：{question}\n\n【参考资料】\n{context}')]
             async def synthesize():
+                from .config import LLM_GEN_ATTEMPTS, LLM_MAX_TOKENS, LLM_MAX_TOKENS_CAP
+                async def attempts(model=None):
+                    for number in range(LLM_GEN_ATTEMPTS):
+                        budget = min(LLM_MAX_TOKENS*(2**number), LLM_MAX_TOKENS_CAP)
+                        response = (await synthesizer(messages) if synthesizer is not None else
+                                    await model.achat(messages, max_tokens=budget))
+                        entry = response_usage(response, 'synthesis', len(result['usage'])+1)
+                        entry['max_tokens'] = budget
+                        result['usage'].append(entry)
+                        if (response.message.content or '').strip() and entry['finish_reason'] != 'length':
+                            return response
+                    return response
                 if synthesizer is not None:
-                    return await synthesizer(messages)
+                    return await attempts()
                 async with configured_llm(limits, synthesis=True) as model:
-                    return await model.achat(messages)
+                    return await attempts(model)
             response = await asyncio.wait_for(synthesize(), timeout=limits.synthesis_seconds)
-            result['usage'].append(response_usage(response, 'synthesis', len(result['usage'])+1))
             answer = (response.message.content or '').strip()
             if not answer or result['usage'][-1]['finish_reason'] == 'length':
                 result['status'] = 'generation_failed'

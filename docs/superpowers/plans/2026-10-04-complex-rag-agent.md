@@ -54,3 +54,4 @@ Files: evaluation/run_agent_experiment.py, evaluation/complex_cases_v1.jsonl, te
 
 - Work in a dedicated feature branch in the existing clean checkout so the configured local index remains available. Do not create an extra worktree or request another approval.
 - Implement inline; no multi-agent implementation dispatch is required.
+- Live browser synthesis exhausted 2048 shared reasoning/output tokens. Reuse existing 2048/4096/8192 retries within one async synthesis deadline; count every attempt. Existing synchronous generate cannot enforce a shared cancellation deadline, so reuse its prompt/context/budgets rather than calling that function.
