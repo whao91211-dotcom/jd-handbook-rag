@@ -1,7 +1,9 @@
 import asyncio
+from contextlib import asynccontextmanager
 import importlib
 import importlib.util
 import unittest
+import time
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -101,6 +103,32 @@ class AgentTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result['status'], 'timeout')
         self.assertEqual([c['id'] for c in result['chunks']], ['a'])
 
+    async def test_tool_timeout_is_not_counted_as_an_extra_model_request(self):
+        def slow(query):
+            time.sleep(.3)
+            return [chunk('late')]
+        result = await self.agent.collect_evidence('病假',
+            llm=ScriptedLLM([[call('search_handbook', query='病假')]]), search=slow,
+            limits=self.agent.AgentLimits(orchestration_seconds=.02))
+        self.assertEqual(result['status'], 'timeout')
+        self.assertEqual(result['trace'][-1]['status'], 'timeout')
+        self.assertEqual(len(result['usage']), 1)
+
+    async def test_sync_entry_does_not_wait_for_timed_out_local_tool(self):
+        from llama_index.core.tools import FunctionTool  # Warm imports outside the measurement.
+        def run():
+            def slow(query):
+                time.sleep(.4)
+                return [chunk('late')]
+            started = time.perf_counter()
+            result = asyncio.run(self.agent.collect_evidence('病假',
+                llm=ScriptedLLM([[call('search_handbook', query='病假')]]), search=slow,
+                limits=self.agent.AgentLimits(orchestration_seconds=.02)))
+            return result, time.perf_counter()-started
+        result, elapsed = await asyncio.to_thread(run)
+        self.assertEqual(result['status'], 'timeout')
+        self.assertLess(elapsed, .2)
+
     async def test_model_prose_without_evidence_is_not_used_as_an_answer(self):
         result = await self.collect([[]])
         self.assertEqual(result['status'], 'no_evidence')
@@ -159,6 +187,29 @@ class AgentTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result['answer'], '完整〔来源1〕')
         self.assertEqual(result['metrics']['attempts'], 4)
         self.assertEqual(result['metrics']['total_tokens'], 90)
+
+    async def test_retry_token_budgets_reach_real_llamaindex_request_transport(self):
+        import httpx
+        import json
+        from llama_index.llms.openai_like import OpenAILike
+        budgets = []
+        def handler(request):
+            budgets.append(json.loads(request.content)['max_tokens'])
+            return httpx.Response(200, json={'id':'test','object':'chat.completion','created':0,'model':'fake',
+                'choices':[{'index':0,'message':{'role':'assistant','content':'规则〔来源1〕'},
+                            'finish_reason':'length' if len(budgets)==1 else 'stop'}],
+                'usage':{'prompt_tokens':20,'completion_tokens':10,'total_tokens':30}})
+        @asynccontextmanager
+        async def model_session(*args, **kwargs):
+            async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+                yield OpenAILike(model='fake', api_key='test', api_base='https://example.test/v1',
+                    is_chat_model=True, is_function_calling_model=True, max_tokens=2048,
+                    async_http_client=client, max_retries=0)
+        with patch.object(self.agent, 'configured_llm', model_session):
+            result = await self.agent.answer_question_async('病假',
+                llm=ScriptedLLM([[call('search_handbook', query='病假')], []]), search=lambda q: [chunk('a')])
+        self.assertEqual(result['status'], 'complete')
+        self.assertEqual(budgets, [2048, 4096])
 
     async def test_adjacent_reader_uses_source_order(self):
         from pathlib import Path

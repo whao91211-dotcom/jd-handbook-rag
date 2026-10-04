@@ -7,13 +7,20 @@ from __future__ import annotations
 
 import asyncio
 from contextlib import asynccontextmanager
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from functools import partial
 import json
 import os
 import re
 from time import perf_counter
 
 from .llm import EVIDENCE_PROMPT, api_ready, env_config, prepare_context
+
+# Separate from asyncio.run's default executor: a cancelled local call must not
+# make the synchronous HTTP response wait for executor shutdown. One worker
+# bounds outstanding local work; Python cannot forcibly stop a running thread.
+_tool_executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix='rag-evidence')
 
 
 @dataclass(frozen=True)
@@ -103,6 +110,7 @@ async def collect_evidence(question, *, llm=None, search=None, read=None, limits
     tool_seconds = 0.0
     status = 'complete'
     stop_reason = 'evidence_ready'
+    active_stage = 'orchestration'
 
     def search_handbook(query: str) -> str:
         """Search handbook raw evidence for a specific issue; retain user eligibility conditions."""
@@ -117,8 +125,9 @@ async def collect_evidence(question, *, llm=None, search=None, read=None, limits
     history = [ChatMessage(role='system', content=SEARCH_PROMPT), ChatMessage(role='user', content=question)]
 
     async def loop():
-        nonlocal status, stop_reason, tool_seconds
+        nonlocal status, stop_reason, tool_seconds, active_stage
         for attempt in range(1, limits.model_calls + 1):
+            active_stage = 'orchestration'
             try:
                 response = await llm.achat_with_tools(tools, chat_history=history, allow_parallel_tool_calls=False)
                 usage.append(response_usage(response, 'orchestration', attempt))
@@ -155,9 +164,11 @@ async def collect_evidence(question, *, llm=None, search=None, read=None, limits
                 tick = perf_counter()
                 entry = {'tool': name, key: args[key], 'status': 'complete'}
                 trace.append(entry)
+                active_stage = 'tool'
                 try:
                     # Run CPU/local I/O outside the event loop so the deadline remains enforceable.
-                    output = await asyncio.to_thread(lookup[name].call, **args)
+                    output = await asyncio.get_running_loop().run_in_executor(
+                        _tool_executor, partial(lookup[name].call, **args))
                     rows = json.loads(output.content)
                     for c in rows:
                         chunks.setdefault(c['id'], c)
@@ -183,7 +194,7 @@ async def collect_evidence(question, *, llm=None, search=None, read=None, limits
         await asyncio.wait_for(loop(), timeout=limits.orchestration_seconds)
     except asyncio.TimeoutError as exc:
         status, stop_reason = 'timeout', 'orchestration_timeout'
-        if trace and 'seconds' not in trace[-1]:
+        if active_stage == 'tool' and trace:
             trace[-1]['status'] = 'timeout'
         else:
             usage.append(error_usage(exc, 'orchestration', len(usage)+1))
@@ -218,6 +229,9 @@ async def answer_question_async(question, *, llm=None, synthesizer=None, search=
                 async def attempts(model=None):
                     for number in range(LLM_GEN_ATTEMPTS):
                         budget = min(LLM_MAX_TOKENS*(2**number), LLM_MAX_TOKENS_CAP)
+                        if model is not None:
+                            # LlamaIndex's model default overrides per-call max_tokens.
+                            model.max_tokens = budget
                         response = (await synthesizer(messages) if synthesizer is not None else
                                     await model.achat(messages, max_tokens=budget))
                         entry = response_usage(response, 'synthesis', len(result['usage'])+1)
