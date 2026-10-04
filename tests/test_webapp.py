@@ -3,7 +3,7 @@ from unittest.mock import patch
 from fastapi.testclient import TestClient
 import webapp
 
-CHUNKS=[{'id':'a','text':'事假属于无薪假。','pages':[23],'path':'休假','rrf':.03}, {'id':'b','text':'后续条款','pages':[21],'path':'总则','rrf':.02}]
+CHUNKS=[{'id':'a','text':'事假属于无薪假。','pages':[23],'page_start':23,'path':'休假','rrf':.03}, {'id':'b','text':'后续条款','pages':[21],'page_start':21,'path':'总则','rrf':.02}]
 class WebTests(unittest.TestCase):
  def setUp(self):
   self.client=TestClient(webapp.app)
@@ -40,3 +40,31 @@ class WebTests(unittest.TestCase):
  def test_health_does_not_expose_credentials(self):
   r=self.client.get('/api/health').json();self.assertEqual(set(r),{'status','api_configured','busy'})
 if __name__=='__main__':unittest.main()
+
+
+class AgentWebTests(unittest.TestCase):
+ def setUp(self):
+  self.client=TestClient(webapp.app)
+ def test_agent_profile_returns_adaptive_result(self):
+  payload={'question':'病假工资和材料','profile':'agent','answer':'规则〔来源1〕',
+   'sources':[{'id':'a','label':'来源1','pages':[21],'path':'休假','text':'规则','in_context':True}],
+   'usage':[],'trace':[{'tool':'search_handbook','query':'病假','status':'complete'}],
+   'status':'complete','message':'','metrics':{'total_tokens':None},'context':'private context','source_map':{'来源1':'a'}}
+  with patch('webapp.api_ready',return_value=True),patch('webapp.agent_answer',create=True,return_value=payload):
+   response=self.client.post('/api/ask',json={'question':'病假工资和材料','profile':'agent'})
+  self.assertEqual(response.status_code,200)
+  result=response.json()
+  self.assertEqual(result['answer'],'规则〔来源1〕')
+  self.assertEqual(result['trace'][0]['query'],'病假')
+  self.assertNotIn('context',result)
+ def test_agent_retrieval_only_never_calls_model(self):
+  with patch('webapp.retrieve',return_value=CHUNKS),patch('webapp.agent_answer',create=True,side_effect=AssertionError('model invoked')):
+   response=self.client.post('/api/ask',json={'question':'病假','profile':'agent','retrieval_only':True})
+  self.assertEqual(response.status_code,200)
+  self.assertEqual(response.json()['status'],'retrieval_only')
+ def test_agent_dependency_failure_is_redacted(self):
+  with patch('webapp.api_ready',return_value=True),patch('webapp.agent_answer',create=True,side_effect=ImportError('secret-api-key')):
+   response=self.client.post('/api/ask',json={'question':'病假','profile':'agent'})
+  self.assertEqual(response.status_code,200)
+  self.assertEqual(response.json()['status'],'agent_unavailable')
+  self.assertNotIn('secret-api-key',response.text)

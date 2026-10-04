@@ -16,7 +16,12 @@ PROFILES = {
     'baseline': ('baseline', 'baseline', 'default'),
     'quality': ('guarded', 'evidence', 'low'),
     'fast': ('guarded', 'evidence', 'disabled'),
+    'agent': ('guarded', 'evidence', 'low'),
 }
+
+def agent_answer(question):
+    from ragcore.agent import answer_question
+    return answer_question(question)
 
 def retrieve(*args, **kwargs):
     # Heavy embedding runtime loads on the first question, not on every request.
@@ -25,7 +30,7 @@ def retrieve(*args, **kwargs):
 
 class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=500)
-    profile: Literal['baseline', 'quality', 'fast'] = 'quality'
+    profile: Literal['baseline', 'quality', 'fast', 'agent'] = 'quality'
     retrieval_only: bool = False
 
     @field_validator('question')
@@ -51,6 +56,21 @@ def ask(request: AskRequest):
 
 def run_question(request):
     start = perf_counter()
+    if request.profile == 'agent' and not request.retrieval_only and api_ready():
+        try:
+            result = dict(agent_answer(request.question))
+            # Raw context belongs in evaluation artifacts, not the public API.
+            result.pop('context', None)
+            result.pop('source_map', None)
+            return result
+        except Exception as exc:
+            missing = isinstance(exc, ImportError)
+            return {'question': request.question, 'profile': 'agent', 'answer': '', 'sources': [],
+                'usage': [], 'trace': [], 'status': 'agent_unavailable' if missing else 'agent_failed',
+                'message': ('复杂问题模式需要项目 Agent 环境，请使用 .venv 启动服务。' if missing else
+                            '复杂问题代理未能启动，请检查模型配置和服务终端。'),
+                'metrics': {'retrieval_seconds': None, 'generation_seconds': None,
+                    'total_seconds': perf_counter()-start, 'total_tokens': None, 'attempts': 0}}
     strategy, prompt, thinking = PROFILES[request.profile]
     result = {'question': request.question, 'profile': request.profile,
               'answer': '', 'sources': [], 'usage': [], 'status': 'complete',

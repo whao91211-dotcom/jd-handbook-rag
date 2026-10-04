@@ -45,8 +45,24 @@ def print_sources(chunks: list[dict]) -> None:
         print(f"   {head}")
 
 
-def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline", prompt_version: str = "baseline", thinking_mode: str = 'default') -> int:
+def answer_once(question: str, top_k: int, use_llm: bool, mode: str = "rrf", strategy: str = "baseline", prompt_version: str = "baseline", thinking_mode: str = 'default', agent: bool = False) -> int:
     print(f"Q: {question}")
+    if agent:
+        if not use_llm:
+            print_sources(retrieve(question, k=8, strategy='guarded'))
+            return 0
+        if not api_ready():
+            print('复杂问题模式需要配置模型接口；可使用 --agent --no-llm 仅查看证据。')
+            return 1
+        from ragcore.agent import answer_question
+        result = answer_question(question)
+        print('A:', result['answer'] or '未得到完整回答')
+        if result['message']:
+            print(result['message'])
+        print_sources(result['sources'])
+        print('检索步骤:', __import__('json').dumps(result['trace'], ensure_ascii=False))
+        print('用量与耗时:', __import__('json').dumps(result['metrics'], ensure_ascii=False))
+        return 0 if result['status'] == 'complete' else 1
     if mode != "rrf":
         print(f"[消融] 检索模式 = {mode}（线上默认为 rrf）")
     print()
@@ -99,6 +115,7 @@ def main() -> int:
     ap.add_argument("question", nargs="?", default=None, help="问题；缺省进入交互模式")
     ap.add_argument("--top-k", type=int, default=FINAL_TOP_K, help=f"送入的块数（默认 {FINAL_TOP_K}）")
     ap.add_argument("--no-llm", action="store_true", help="仅检索，不调用 LLM")
+    ap.add_argument('--agent', action='store_true', help='复杂问题模式：动态补查，最多3次搜索和2次相邻读取')
     ap.add_argument(
         "--mode",
         choices=RETRIEVE_MODES,
@@ -112,7 +129,7 @@ def main() -> int:
 
     use_llm = not args.no_llm
     if args.question:
-        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version, args.thinking_mode)
+        return answer_once(args.question, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version, args.thinking_mode, args.agent)
 
     print("京东员工手册 RAG 问答（交互模式）· exit 退出\n" + HELP)
     while True:
@@ -126,7 +143,7 @@ def main() -> int:
         if q.lower() in ("exit", "quit"):
             print("再见")
             return 0
-        answer_once(q, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version, args.thinking_mode)
+        answer_once(q, args.top_k, use_llm, args.mode, args.strategy, args.prompt_version, args.thinking_mode, args.agent)
     return 0
 
 
