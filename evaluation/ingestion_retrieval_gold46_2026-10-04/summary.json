@@ -1,0 +1,128 @@
+{
+  "current/baseline/retrieval46": {
+    "n": 46,
+    "positive_n": 35,
+    "retrieval_seconds_p50": 0.09005599995725788,
+    "top8_text_chars_mean": 3505.6304347826085,
+    "at3": {
+      "reference_char_coverage": 0.9142857142857143,
+      "reference_block_recall": 0.9142857142857143,
+      "all_reference_blocks_covered": 0.9142857142857143
+    },
+    "at8": {
+      "reference_char_coverage": 1.0,
+      "reference_block_recall": 1.0,
+      "all_reference_blocks_covered": 1
+    },
+    "context8": {
+      "reference_char_coverage": 1.0,
+      "reference_block_recall": 1.0,
+      "all_reference_blocks_covered": 1
+    }
+  },
+  "current/guarded/retrieval46": {
+    "n": 46,
+    "positive_n": 35,
+    "retrieval_seconds_p50": 0.09405939999851398,
+    "top8_text_chars_mean": 3512.695652173913,
+    "at3": {
+      "reference_char_coverage": 0.9142857142857143,
+      "reference_block_recall": 0.9142857142857143,
+      "all_reference_blocks_covered": 0.9142857142857143
+    },
+    "at8": {
+      "reference_char_coverage": 1.0,
+      "reference_block_recall": 1.0,
+      "all_reference_blocks_covered": 1
+    },
+    "context8": {
+      "reference_char_coverage": 1.0,
+      "reference_block_recall": 1.0,
+      "all_reference_blocks_covered": 1
+    }
+  },
+  "sentence256/baseline/retrieval46": {
+    "n": 46,
+    "positive_n": 35,
+    "retrieval_seconds_p50": 0.05682579998392612,
+    "top8_text_chars_mean": 1685.8478260869565,
+    "at3": {
+      "reference_char_coverage": 0.5725760369717285,
+      "reference_block_recall": 0.08571428571428572,
+      "all_reference_blocks_covered": 0.08571428571428572
+    },
+    "at8": {
+      "reference_char_coverage": 0.6850252609836598,
+      "reference_block_recall": 0.14285714285714285,
+      "all_reference_blocks_covered": 0.14285714285714285
+    },
+    "context8": {
+      "reference_char_coverage": 0.6850252609836598,
+      "reference_block_recall": 0.14285714285714285,
+      "all_reference_blocks_covered": 0.14285714285714285
+    }
+  },
+  "sentence256/guarded/retrieval46": {
+    "n": 46,
+    "positive_n": 35,
+    "retrieval_seconds_p50": 0.07497804999002255,
+    "top8_text_chars_mean": 1678.6521739130435,
+    "at3": {
+      "reference_char_coverage": 0.5725760369717285,
+      "reference_block_recall": 0.08571428571428572,
+      "all_reference_blocks_covered": 0.08571428571428572
+    },
+    "at8": {
+      "reference_char_coverage": 0.7155724611948193,
+      "reference_block_recall": 0.14285714285714285,
+      "all_reference_blocks_covered": 0.14285714285714285
+    },
+    "context8": {
+      "reference_char_coverage": 0.7155724611948193,
+      "reference_block_recall": 0.14285714285714285,
+      "all_reference_blocks_covered": 0.14285714285714285
+    }
+  },
+  "sentence512/baseline/retrieval46": {
+    "n": 46,
+    "positive_n": 35,
+    "retrieval_seconds_p50": 0.06405365001410246,
+    "top8_text_chars_mean": 3246.608695652174,
+    "at3": {
+      "reference_char_coverage": 0.7531730934475782,
+      "reference_block_recall": 0.42857142857142855,
+      "all_reference_blocks_covered": 0.42857142857142855
+    },
+    "at8": {
+      "reference_char_coverage": 0.8374470547275332,
+      "reference_block_recall": 0.5142857142857142,
+      "all_reference_blocks_covered": 0.5142857142857142
+    },
+    "context8": {
+      "reference_char_coverage": 0.8374470547275332,
+      "reference_block_recall": 0.5142857142857142,
+      "all_reference_blocks_covered": 0.5142857142857142
+    }
+  },
+  "sentence512/guarded/retrieval46": {
+    "n": 46,
+    "positive_n": 35,
+    "retrieval_seconds_p50": 0.07871339999837801,
+    "top8_text_chars_mean": 3246.1739130434785,
+    "at3": {
+      "reference_char_coverage": 0.7531730934475782,
+      "reference_block_recall": 0.42857142857142855,
+      "all_reference_blocks_covered": 0.42857142857142855
+    },
+    "at8": {
+      "reference_char_coverage": 0.8638800811605596,
+      "reference_block_recall": 0.5142857142857142,
+      "all_reference_blocks_covered": 0.5142857142857142
+    },
+    "context8": {
+      "reference_char_coverage": 0.8638800811605596,
+      "reference_block_recall": 0.5142857142857142,
+      "all_reference_blocks_covered": 0.5142857142857142
+    }
+  }
+}

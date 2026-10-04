@@ -1,0 +1,88 @@
+{"qid": "C-P01", "question": "我刚入职两个月，现在想走，是不是跟主管说一声就能马上离开？", "gold_chunk_ids": ["p15-a99dbf1c9b"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P02", "question": "我以前工作十多年，在京东待了八年，生病的话医疗期有几个月？", "gold_chunk_ids": ["p22-c42b3d394c"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P03", "question": "公司发的电脑被我不小心摔坏了，一定要自己赔吗？", "gold_chunk_ids": ["p11-5ed9c253db"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P04", "question": "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？", "gold_chunk_ids": ["p17-3912472149"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P05", "question": "我入职三年多才怀孕，除了法定产假，公司还给多少天？", "gold_chunk_ids": ["p24-3e46efee64"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P06", "question": "请了一天事假，那天15块钱餐补还发吗？", "gold_chunk_ids": ["p23-2435daf3ec", "p21-88de6db287", "p30-526ea28baa"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P07", "question": "经理岗空出来，公司有规定优先从内部提拔多少人吗？", "gold_chunk_ids": ["p33-a867f06b3c"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-P08", "question": "最近30天迟到了两回，会被记过吗？", "gold_chunk_ids": ["p42-83f9d6df8d"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N01", "question": "试用期辞职要提前三天，这三天算工作日还是自然日？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N02", "question": "内部转岗的离任审计通常几天能完成？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N03", "question": "工作日餐补每个月几号到账？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N04", "question": "公司电脑密码要求每隔多少天换一次？", "gold_chunk_ids": ["p50-0b87b65099", "p50-8c19ffbac4"], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N05", "question": "入职培训考试没过，可以补考几次？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N06", "question": "出差一天能领多少元补助？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N07", "question": "我们部门这个季度团建费还剩多少钱可以用？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N08", "question": "公司电脑指定安装的杀毒软件叫什么名字？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A01", "question": "我这个能请吗？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A02", "question": "那个补贴我一个月能拿多少？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A03", "question": "请一天假会扣工资和餐补吗？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A04", "question": "我今年到底能休几天年假？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A05", "question": "病假请了两个星期，我这月工资还剩多少？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A06", "question": "晚上九点下班，打车费公司给报吗？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A07", "question": "生完孩子我能休多少天？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A08", "question": "转岗是不是都要做离任审计？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A09", "question": "刚转正就有福利年假吗？我能休几天？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A10", "question": "迟到两次是不是就会被开除？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A11", "question": "周末来公司干了三小时，可以算加班吗？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-A12", "question": "我这个月餐补怎么少了？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N09", "question": "请婚假最晚要提前几天提交申请？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N10", "question": "员工卡丢了补办要交多少制卡费？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N11", "question": "年假至少要提前几天在系统里提交？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N12", "question": "离职交接办完后几天工资到账？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N13", "question": "新员工培训考试考多少分才算通过？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N14", "question": "公司福利产假要提前几天申请？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N15", "question": "这季度没花完的团建费能挪到下季度吗？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "C-N16", "question": "请病假一定要三甲医院开的证明吗？", "gold_chunk_ids": [], "dataset_group": "old36", "quote_span": null}
+{"qid": "complex01", "question": "我还在试用期，想请病假，工资和餐补分别怎么处理？申请时需要准备哪些材料？", "gold_chunk_ids": ["p21-88de6db287", "p22-8f3ddee8c0", "p22-3579d5cfe2"], "dataset_group": "complex6", "quote_span": null}
+{"qid": "complex02", "question": "家里出了重大变故，我想连续请40天事假，需要先用完年假和调休吗？请假期间工资和每天的餐补还发吗？", "gold_chunk_ids": ["p23-2435daf3ec", "p21-88de6db287", "p30-526ea28baa"], "dataset_group": "complex6", "quote_span": null}
+{"qid": "complex03", "question": "公司让我换部门，和我自己申请内部竞聘的手续一样吗？都要原领导书面同意、做离任审计吗？调动生效前我听哪个部门安排？", "gold_chunk_ids": ["p17-3912472149", "p17-903c410674"], "dataset_group": "complex6", "quote_span": null}
+{"qid": "complex04", "question": "离职交接完成后，工资是当天结清还是等发薪日？我签过专项培训协议，能直接算出公司会扣多少吗？", "gold_chunk_ids": ["p18-cc5ae09343", "p26-44bfeef242"], "dataset_group": "complex6", "quote_span": null}
+{"qid": "complex05", "question": "我已经转正，职级P7、社会工龄8年，法定年假和福利年假是直接相加吗？去年和今年的假先用哪个，休年假时工资和餐补怎么处理？", "gold_chunk_ids": ["p23-2435daf3ec", "p23-77b2224c12", "p24-bea93ab4d6", "p21-88de6db287", "p30-526ea28baa"], "dataset_group": "complex6", "quote_span": null}
+{"qid": "complex06", "question": "请病假只提交电子病历截图就一定能审批通过吗？应该在哪个软件上传，多久前申请？", "gold_chunk_ids": ["p22-8f3ddee8c0"], "dataset_group": "complex6", "quote_span": null}
+{"qid": "P01", "question": "京东物流子集团是哪一天正式成立的？", "gold_chunk_ids": ["p7-be9ae664fc"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-2", "start": 783, "end": 827}}
+{"qid": "P02", "question": "京东2016年市场交易额是多少？", "gold_chunk_ids": ["p5-8263b6e785"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-1", "start": 19, "end": 46}}
+{"qid": "P03", "question": "京东生鲜目前能在多少个城市次日达？", "gold_chunk_ids": ["p5-d125330024"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-1", "start": 1138, "end": 1163}}
+{"qid": "P04", "question": "公司禁止员工打架或侮辱他人吗？", "gold_chunk_ids": ["p10-9aa7c87bda"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-4", "start": 299, "end": 343}}
+{"qid": "P05", "question": "管理岗位员工没尽到管理职责会怎样？", "gold_chunk_ids": ["p10-5052e898cb"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-4", "start": 678, "end": 772}}
+{"qid": "P06", "question": "弄坏公司配的设备，公司会要我赔吗？", "gold_chunk_ids": ["p11-5ed9c253db"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-6", "start": 159, "end": 185}}
+{"qid": "P07", "question": "试用期想离职，要提前几天通知公司？", "gold_chunk_ids": ["p15-a99dbf1c9b"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-11", "start": 34, "end": 117}}
+{"qid": "P08", "question": "试用期迟到早退几次算不符合录用条件？", "gold_chunk_ids": ["p16-161eb98f4e"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-11", "start": 650, "end": 711}}
+{"qid": "P09", "question": "员工自己发起调动要满足哪些条件？", "gold_chunk_ids": ["p17-3912472149"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P10", "question": "能录用原公司下级来自己部门做下属吗？", "gold_chunk_ids": ["p14-1ad6eab8c6"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-9", "start": 179, "end": 335}}
+{"qid": "P11", "question": "我累计工龄10年以上、企业工龄8年，医疗期多久？", "gold_chunk_ids": ["p22-c42b3d394c"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P12", "question": "连续旷工多少天会被公司解除劳动合同？", "gold_chunk_ids": ["p20-a13b1b7d85"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-15", "start": 992, "end": 1055}}
+{"qid": "P13", "question": "我今年入职不满一年，病假天数怎么折算？", "gold_chunk_ids": ["p21-88de6db287"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P14", "question": "病假超过5天不到60天工资怎么算？", "gold_chunk_ids": ["p22-3579d5cfe2"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-16", "start": 1337, "end": 1410}}
+{"qid": "P15", "question": "社会工龄满15年，每年法定年假有多少天？", "gold_chunk_ids": ["p23-2435daf3ec"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-16", "start": 2222, "end": 2253}}
+{"qid": "P16", "question": "P7一年最多能休多少天法定加福利年假？", "gold_chunk_ids": ["p23-77b2224c12"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-16", "start": 2383, "end": 2486}}
+{"qid": "P17", "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？", "gold_chunk_ids": ["p29-d2fd640689"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P18", "question": "满几年算大佬，老员工日是哪天？", "gold_chunk_ids": ["p30-6ab8ae0a44"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-19", "start": 1535, "end": 1642}}
+{"qid": "P19", "question": "工作日餐补多少钱，休假会扣吗？", "gold_chunk_ids": ["p30-526ea28baa"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P20", "question": "M3及P7/T7级转正后福利年假怎么算？", "gold_chunk_ids": ["p30-d8fe59b41b"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-19", "start": 2711, "end": 2783}}
+{"qid": "P21", "question": "休假日加班累计几小时能享两餐加班餐？", "gold_chunk_ids": ["p31-6dead0b231"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P22", "question": "工作日加班到20点后满1小时能领加班餐吗？", "gold_chunk_ids": ["p31-77990d6c90"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P23", "question": "经理级及以上管理岗位空缺内部提拔要占多少？", "gold_chunk_ids": ["p33-a867f06b3c"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-23", "start": 771, "end": 855}}
+{"qid": "P24", "question": "京东的360评估每年做几次，都评哪些内容？", "gold_chunk_ids": ["p34-fb05ac7b83"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-23", "start": 1208, "end": 1247}}
+{"qid": "P25", "question": "内部异动需要满足什么服务年限？", "gold_chunk_ids": ["p34-b3db9e8572"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-23", "start": 1639, "end": 1688}}
+{"qid": "P26", "question": "连续30天内迟到或早退两次会被记过吗？", "gold_chunk_ids": ["p42-83f9d6df8d"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-27", "start": 3014, "end": 3115}}
+{"qid": "P27", "question": "长期服务奖满5年拿的是啥奖？", "gold_chunk_ids": ["p38-c9b85989ed"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-26", "start": 319, "end": 364}}
+{"qid": "P28", "question": "违纪处分对年度资格的影响持续多久？", "gold_chunk_ids": ["p41-0042d06121"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-27", "start": 1598, "end": 1674}}
+{"qid": "P29", "question": "连续30天内迟到或早退几次会被辞退？", "gold_chunk_ids": ["p43-54058878ec"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-27", "start": 4419, "end": 4445}}
+{"qid": "P30", "question": "六个月内再犯轻微违纪，公司会怎么处分？", "gold_chunk_ids": ["p40-c769d87f54"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-27", "start": 1183, "end": 1251}}
+{"qid": "P31", "question": "邮箱密码过期前多久会发提醒邮件？", "gold_chunk_ids": ["p50-314299f759"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-30", "start": 672, "end": 742}}
+{"qid": "P32", "question": "管理者想看下属考勤和绩效在哪个模块？", "gold_chunk_ids": ["p48-246a7c42de"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P33", "question": "登录流程中心后系统会自动跳到哪个页面？", "gold_chunk_ids": ["p48-8e3321fd75"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-29", "start": 751, "end": 813}}
+{"qid": "P34", "question": "个人绩效贡献与部门平均水平相当，属于哪个等级？", "gold_chunk_ids": ["p28-9092bac2d7"], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "P35", "question": "入职后什么时候能享受免费体检？", "gold_chunk_ids": ["p30-c81f9880c1"], "dataset_group": "retrieval46", "quote_span": {"parent": "section-19", "start": 2534, "end": 2554}}
+{"qid": "N01", "question": "京东集团 2026 年的营收目标是多少？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N02", "question": "员工股票期权的行权价格是多少？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N03", "question": "京东集团目前的市值是多少？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N04", "question": "员工每年可以报销多少额度的健身费用？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N05", "question": "公司是否举办年会？通常在哪里举办？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N06", "question": "员工持股计划的锁定期是多长时间？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N07", "question": "公司对远程办公的天数和审批流程是如何规定的？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N08", "question": "员工子女教育补贴的标准是多少？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N09", "question": "公司内部转岗需要经过几轮面试？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N10", "question": "员工的住房公积金缴存比例是多少？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}
+{"qid": "N11", "question": "公司对员工使用生成式 AI 工具有什么规定？", "gold_chunk_ids": [], "dataset_group": "retrieval46", "quote_span": null}

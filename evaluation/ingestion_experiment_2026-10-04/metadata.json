@@ -1,0 +1,36 @@
+{
+  "code_revision": "c72a0d640c1c926c0f48f976be849d992ac40ea5",
+  "chunks_sha256": "0d59ea02c6ae78f5dda956db7adc0e78acb88f07678eff36d8977efaf7970a12",
+  "script_sha256": "50eb1fe98e2213d767402571338e0e759c849551d26acccd7c2b7a416a2ef119",
+  "llama_index_core": "0.14.25",
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "embedding_max_sequence_length": 512,
+  "note": "Same extracted text, rebuilt section parents from existing contents; NOT a PDF parsing/OCR comparison. Token-based splitter with default tokenizer; BGE uses another tokenizer. Reference interval metrics are not answer correctness. Simulated development sets, one retrieval per condition.",
+  "variants": {
+    "current": {
+      "chunk_size_tokens": null,
+      "overlap_tokens": null,
+      "n_chunks": 125,
+      "build_seconds_warm": null,
+      "char_len_mean": 376.904,
+      "bge_truncated_chunk_n": 18
+    },
+    "sentence256": {
+      "chunk_size_tokens": 256,
+      "overlap_tokens": 32,
+      "n_chunks": 266,
+      "build_seconds_warm": 25.433948400022928,
+      "char_len_mean": 184.22932330827066,
+      "bge_truncated_chunk_n": 0
+    },
+    "sentence512": {
+      "chunk_size_tokens": 512,
+      "overlap_tokens": 64,
+      "n_chunks": 135,
+      "build_seconds_warm": 13.234227600041777,
+      "char_len_mean": 360.6740740740741,
+      "bge_truncated_chunk_n": 2
+    }
+  },
+  "production_index_ids_unchanged": true
+}
