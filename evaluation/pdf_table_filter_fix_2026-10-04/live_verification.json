@@ -1,0 +1,15 @@
+{
+  "status": "retrieval_only",
+  "page48_source_ids": [
+    "p48-8e3321fd75",
+    "p48-ad656e286d",
+    "p47-6d0d97ead8"
+  ],
+  "oa_url_present": true,
+  "ssc_url_present": true,
+  "model_calls": 0,
+  "production_files_sha256": {
+    "pages.jsonl": "07e7ecb1fa4f0ae18d511fc35653c71a44a60edf3cdf7f0ed95a84888ac12dad",
+    "chunks.jsonl": "6689f74c6d50718e48a76d1857128247f336bca005f8c8b655b06b11d74e9301"
+  }
+}
