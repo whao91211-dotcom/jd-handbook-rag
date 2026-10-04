@@ -87,30 +87,49 @@ def _inside_any_bbox(bboxes: list, obj: dict) -> bool:
     return False
 
 
-def extract_page_content(page) -> tuple[str, list]:
-    """提取单页：正文文本（剔除表格区域文字，避免与 Markdown 表格重复）+ 表格列表。"""
+def extract_page_content(page, *, preserve_unrepresented_text: bool = True) -> tuple[str, list]:
+    """仅在表格完整保留区域文字时剔除正文；旧策略可用于消融对照。"""
     text = ""
     tables: list = []
     try:
         found = page.find_tables()
         tables = page.extract_tables() or []
-        if found:
+        if preserve_unrepresented_text:
+            verified_tables, verified_boxes = [], []
+            # 检测区域可能包含未落入任何单元格的文字。按同一个过滤边界核对
+            # 非空白字符及其数量，不能仅凭区域框就从正文删除它们。
+            if len(found) == len(tables):
+                for detected, table in zip(found, tables):
+                    region = page.filter(lambda obj: _inside_any_bbox([detected.bbox], obj))
+                    region_chars = Counter(c for c in (region.extract_text() or '') if not c.isspace())
+                    cell_chars = Counter(c for row in table for cell in row
+                                         for c in str(cell or '') if not c.isspace())
+                    if region_chars and not (region_chars - cell_chars):
+                        verified_tables.append(table)
+                        verified_boxes.append(detected.bbox)
+            tables = verified_tables
+            bboxes = verified_boxes
+        else:
             bboxes = [t.bbox for t in found]
+        if bboxes:
             body = page.filter(lambda obj: not _inside_any_bbox(bboxes, obj))
             text = body.extract_text() or ""
         else:
             text = page.extract_text() or ""
     except Exception as exc:
         print(f"[警告] 第 {page.page_number} 页表格/文本提取失败: {exc}", file=sys.stderr)
+        # 表格处理失败时仍尝试保留整页原文，不返回空页或重复表格。
+        text = page.extract_text() or ""
+        tables = []
     return text, tables
 
 
-def collect_pages(pdf) -> list[dict]:
+def collect_pages(pdf, *, preserve_unrepresented_text: bool = True) -> list[dict]:
     """逐页提取正文文本（剔除表格区域）与表格。"""
     pages = []
     for i, page in enumerate(pdf.pages, start=1):
         try:
-            text, tables = extract_page_content(page)
+            text, tables = extract_page_content(page, preserve_unrepresented_text=preserve_unrepresented_text)
         except Exception as exc:  # 单页失败不阻断整体
             text, tables = "", []
             print(f"[警告] 第 {i} 页提取失败: {exc}", file=sys.stderr)

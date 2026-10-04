@@ -49,6 +49,8 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT/'evaluation/pdf_parser_2026-10-04')
+    parser.add_argument('--compare-table-filter', action='store_true',
+                        help='Also evaluate the fixed loss-preserving table filter against the legacy baseline')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     from ragcore import extract, chunker, retriever
@@ -73,8 +75,14 @@ def main():
     tick = perf_counter()
     with pdfplumber.open(pdf) as source:
         native_page_count = len(source.pages)
-        baseline_raw = extract.collect_pages(source)
+        baseline_raw = extract.collect_pages(source, preserve_unrepresented_text=False)
     baseline_seconds = perf_counter()-tick
+    variants = [('pdfplumber', baseline_raw, baseline_seconds)]
+    if args.compare_table_filter:
+        tick = perf_counter()
+        with pdfplumber.open(pdf) as source:
+            fixed_raw = extract.collect_pages(source)
+        variants.append(('pdfplumber_fixed', fixed_raw, perf_counter()-tick))
     tick = perf_counter()
     documents = PDFReader(return_full_document=False).load_data(pdf)
     reader_seconds = perf_counter()-tick
@@ -86,7 +94,8 @@ def main():
     metadata['pdfreader_label_sequence_matches_physical_pages'] = all(str(d.metadata.get('page_label')) == str(i+1) for i, d in enumerate(documents))
     get_model()  # Model cold load excluded from ingestion and retrieval timing.
     audits, retrievals, summaries = [], [], {}
-    for name, raw, parse_seconds in [('pdfplumber', baseline_raw, baseline_seconds), ('pdfreader', reader_raw, reader_seconds)]:
+    variants.append(('pdfreader', reader_raw, reader_seconds))
+    for name, raw, parse_seconds in variants:
         # Reuse exactly the same existing cleaning and downstream chunk policy.
         pages, removed = extract.strip_frame_noise(raw)
         pages = extract.annotate(pages)
