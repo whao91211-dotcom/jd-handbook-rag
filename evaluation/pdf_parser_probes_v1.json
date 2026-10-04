@@ -1,5 +1,5 @@
 {
-  "note": "Synthetic development probes manually transcribed after viewing 11 rendered physical source pages. Not full-page character gold or a held-out benchmark. Table tuples below diagnose selected row text only; they do not score all cells or merged headers.",
+  "note": "Synthetic development probes transcribed and visually checked by the assistant against 11 rendered physical source pages; no independent user adjudication. Not full-page character gold or a held-out benchmark. Table tuples below diagnose selected row text only; they do not score all cells or merged headers.",
   "pages": [
     {"page": 7, "anchors": ["第二节京东大事记", "1998年6月18日", "2017年4月25日", "第三节企业文化"], "table_tuples": [["1998年6月18日", "刘强东在中关村创业，成立京东多媒体"], ["2004年1月1日", "京东放弃实体店面，进入电子商务行业"], ["2007年7月1日", "京东战略布局自建物流"]]},
     {"page": 17, "anchors": ["第四节调动", "2.1公司单方做出或发起的调动", "2.2员工发起的调动", "3.3由员工发起的调动", "第五节离职"]},
@@ -8,8 +8,8 @@
     {"page": 23, "anchors": ["3.事假", "3.2员工只被允许", "3.3事假属无薪假", "4.年休假", "4.1.2福利年假", "4.4职工已享受当年的年休假"]},
     {"page": 26, "anchors": ["13.审批权限", "13.1审批原则", "13.2休假审批权限", "第五章薪酬福利和绩效管理", "第一节薪酬管理"]},
     {"page": 28, "anchors": ["第二节绩效管理", "2.绩效等级评定", "A+/卓越", "3.绩效考核应用", "4.绩效申诉"]},
-    {"page": 29, "anchors": ["第三节员工福利与关怀", "2.法定福利项目", "3.公司福利项目", "福利项目", "我在京东过大年", "福利产假、福利陪护假"]},
-    {"page": 30, "anchors": ["爱心&救助基金", "司龄奖励", "老员工关怀", "专项福利补贴", "餐费补贴", "全勤补贴", "健康关爱及保障福利", "活动及其他福利", "福利年假"]},
+    {"page": 29, "anchors": ["第三节员工福利与关怀", "2.法定福利项目", "3.公司福利项目", "福利说明", "我在京东过大年", "福利产假、福利陪护假"]},
+    {"page": 30, "anchors": ["爱心&救助基金", "司龄奖励", "老员工关怀", "专项福利补贴", "餐费补贴", "全勤补贴", "健康关爱及保障福利", "活动及其他类福利", "福利年假"]},
     {"page": 31, "anchors": ["加班福利", "团队建设费", "节日福利", "体验提升", "4.福利与关怀沟通", "第六章员工沟通"]},
     {"page": 48, "anchors": ["1.4流程中心", "1.4.1访问地址", "1.4.2主要功能", "1.5人事中心", "1.5.1访问地址", "1.5.2目前具备的功能", "1)首页", "2)待办事务", "6)我的档案"]}
   ],
