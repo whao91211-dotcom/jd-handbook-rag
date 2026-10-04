@@ -1,0 +1,5 @@
+# Install into .venv with --system-site-packages; original conda remains unchanged.
+llama-index-core==0.14.25
+llama-index-llms-openai-like==0.8.1
+llama-index-llms-openai==0.8.2
+openai==2.54.0

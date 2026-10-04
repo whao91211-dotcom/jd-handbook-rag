@@ -1,0 +1,65 @@
+# Complex-question RAG Agent Implementation Plan
+
+> Execute inline with superpowers:executing-plans and test-driven-development. The user explicitly approved implementation of the proposed scope.
+
+**Goal:** Add a bounded LlamaIndex-powered complex-question mode alongside existing RAG modes.
+
+**Architecture:** Existing guarded retrieval becomes a FunctionTool. OpenAILike supplies the tool-calling decisions in a bounded loop; existing evidence generation remains the final synthesis stage.
+
+**Tech Stack:** Python 3.10, LlamaIndex core/OpenAILike, Chroma/BGE/BM25, FastAPI, native browser UI.
+
+**Spec:** ../specs/2026-10-04-complex-rag-agent.md
+
+## Global constraints
+
+Preserve baseline/quality/fast. No evaluation labels in runtime. Caps: 3 searches, 2 reads, 8 orchestration calls, 120-second orchestration, 120-second synthesis, 2048 orchestration output tokens, 6000-character evidence. Missing usage stays unknown. No secrets in browser or committed files.
+
+## Review focus
+
+- Model requests multiple tools in one message: enforce each cap before execution.
+- Sources overflow context: final citations must use only admitted evidence.
+- Repeated or malformed calls: never execute unchecked arguments or arbitrary reads.
+- Timeout or API failure after retrieval: retain evidence, return explicit incomplete status.
+- Missing token counts: never publish partial totals as complete costs.
+
+## Task 1: Bounded agent and dependency compatibility
+
+Files: requirements-agent.txt, ragcore/agent.py, tests/test_agent.py.
+Interface: async `collect_evidence(question, *, llm=None, search=None, read=None, limits=None)` returns chunks, trace, usage, status, timings; sync `answer_question(question)` returns the web response shape.
+
+- [x] Create isolated dependency environment; run original unittest suite and import installed LlamaIndex APIs.
+- [x] Write offline scripted-LLM tests that expect a second search to add missing evidence, reject a fourth search/third read, reject unknown anchor IDs and preserve evidence on timeout/errors. Run `python -m unittest discover -s tests -p test_agent.py -v` and observe missing-feature failures.
+- [x] Implement FunctionTool adapters and bounded loop using `achat_with_tools`, `get_tool_calls_from_response`, ChatMessage and tool messages. Final synthesis uses the existing evidence prompt and prepare_context.
+- [x] Run targeted tests and full `python -m unittest discover -s tests -v`, then commit `feat: add bounded LlamaIndex evidence agent`.
+
+## Task 2: API, CLI and browser integration
+
+Files: webapp.py, ask.py, web/index.html, web/app.js, tests/test_webapp.py.
+Interface: profile `agent` returns the same answer/sources/usage/metrics fields plus trace and limit status.
+
+- [x] Add API tests accepting agent mode, retaining sources on failure, mapping final-context sources, and ensuring retrieval-only does not call an agent. Observe failures before integration.
+- [x] Route agent requests through answer_question; add CLI switch and browser mode/trace details. Preserve existing branches and credential redaction.
+- [x] Run full unittest suite, CLI help, browser JavaScript syntax and local browser smoke; commit `feat: expose complex-question mode in API CLI and browser`.
+
+## Task 3: Paired evaluation, evidence and delivery
+
+Files: evaluation/run_agent_experiment.py, evaluation/complex_cases_v1.jsonl, tests/test_agent_evaluation.py, COMPLEX_RAG_AGENT.md, README.md.
+
+- [x] Test that evaluation passes only question text to runtime and separates gathered versus final-context coverage; run red test.
+- [x] Implement serial paired quality/agent runs with revision/corpus hashes, warm-up timing notes, raw attempts, tool traces, final context and manual review templates. No gold labels are sent into the pipeline.
+- [x] Run small live compatibility and paired development probe; include failures and measured latency/tokens without inventing correctness gains.
+- [x] Review whole diff, run full tests, update plan checkboxes and report limitations; commit documentation/evaluation batch and push codex/complex-rag-agent.
+
+## Execution rulings
+
+- Work in a dedicated feature branch in the existing clean checkout so the configured local index remains available. Do not create an extra worktree or request another approval.
+- Implement inline; no multi-agent implementation dispatch is required.
+- Live browser synthesis exhausted 2048 shared reasoning/output tokens. Reuse existing 2048/4096/8192 retries within one async synthesis deadline; count every attempt. Existing synchronous generate cannot enforce a shared cancellation deadline, so reuse its prompt/context/budgets rather than calling that function.
+- Independent review and real LlamaIndex mock-transport test reproduced overridden max_tokens; set the private per-request model's max_tokens before each attempt. A separate single-worker tool executor prevents asyncio.run shutdown from extending HTTP deadlines. Running local threads cannot be killed; late results are discarded and pending tool work is bounded to one worker. Stage-specific timeout accounting avoids fabricating model requests.
+
+## Delivery verification
+
+- Final runtime verification: 46 unittest cases passed; browser JavaScript syntax and pip dependency checks passed.
+- Live browser verified a complete transfer-policy comparison with citations and an expandable tool trace. Screenshot: ../../screenshots/complex-rag-agent.png.
+- Frozen baseline retrieval Top-8 matches 36/36 old simulated cases; answer-generation regression is not inferred from retrieval regression.
+- The synthesis deadline increased from 60 to 120 seconds after a live ordinary quality request took 63.8 seconds and the agent hit the 60-second deadline. Partial diagnostic runs remain separate from final paired results.

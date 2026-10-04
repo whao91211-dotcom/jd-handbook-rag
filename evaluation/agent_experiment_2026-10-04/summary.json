@@ -1,0 +1,68 @@
+{
+  "profiles": {
+    "agent": {
+      "n": 6,
+      "status_counts": {
+        "complete": 6
+      },
+      "total_seconds_p50": 49.51521384998341,
+      "total_seconds_p95": 73.89769400004297,
+      "known_usage_n": 6,
+      "tokens_mean": 33471.166666666664,
+      "gold_n": 6,
+      "context_full_coverage_n": 5,
+      "gathered_full_coverage_n": 5
+    },
+    "quality": {
+      "n": 6,
+      "status_counts": {
+        "complete": 6
+      },
+      "total_seconds_p50": 46.1439604999905,
+      "total_seconds_p95": 69.04576989996713,
+      "known_usage_n": 6,
+      "tokens_mean": 14910,
+      "gold_n": 6,
+      "context_full_coverage_n": 5,
+      "gathered_full_coverage_n": 5
+    }
+  },
+  "paired_complete_n": 6,
+  "paired_complete_ids": [
+    "complex01",
+    "complex02",
+    "complex03",
+    "complex04",
+    "complex05",
+    "complex06"
+  ],
+  "paired": {
+    "agent": {
+      "n": 6,
+      "status_counts": {
+        "complete": 6
+      },
+      "total_seconds_p50": 49.51521384998341,
+      "total_seconds_p95": 73.89769400004297,
+      "known_usage_n": 6,
+      "tokens_mean": 33471.166666666664,
+      "gold_n": 6,
+      "context_full_coverage_n": 5,
+      "gathered_full_coverage_n": 5
+    },
+    "quality": {
+      "n": 6,
+      "status_counts": {
+        "complete": 6
+      },
+      "total_seconds_p50": 46.1439604999905,
+      "total_seconds_p95": 69.04576989996713,
+      "known_usage_n": 6,
+      "tokens_mean": 14910,
+      "gold_n": 6,
+      "context_full_coverage_n": 5,
+      "gathered_full_coverage_n": 5
+    }
+  },
+  "correctness_note": "No answer correctness score until independent model review or human adjudication. Coverage is not correctness."
+}

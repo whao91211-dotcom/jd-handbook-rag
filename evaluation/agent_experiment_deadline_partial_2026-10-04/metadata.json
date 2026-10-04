@@ -1,0 +1,13 @@
+{
+  "code_revision": "2c0436974d504bcb0276b7b6582cb6e06442ef5d",
+  "corpus_sha256": "0d59ea02c6ae78f5dda956db7adc0e78acb88f07678eff36d8977efaf7970a12",
+  "cases_sha256": "7eb05e774f17df8fdecbab64a5c2e2d8aa2fb74e5121a9cbc9e51676dfbf5715",
+  "runtime_sha256": "644ea5854b5999c72c492c7f55df2b21b3c6a457a16bf67a2db5ea7c7671788d",
+  "configured_model": "deepseek-v4-flash",
+  "profiles": [
+    "quality",
+    "agent"
+  ],
+  "timing_note": "Serial paired requests; warmed retrieval; includes orchestration and synthesis; first LlamaIndex import is warmed separately.",
+  "dataset_note": "Simulated development probes. Gold references checked against local source chunks; not human answer adjudication or held-out real-user benchmark."
+}

@@ -1,0 +1,8 @@
+{
+  "baseline36_top8_exact_matches": 36,
+  "baseline36_n": 36,
+  "original_positive_n": 35,
+  "guarded_any_at3": 32,
+  "guarded_any_at8": 35,
+  "note": "Retrieval regression only; no answer generation or model review."
+}
