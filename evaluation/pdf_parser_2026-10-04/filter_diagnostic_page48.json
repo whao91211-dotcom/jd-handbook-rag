@@ -1,0 +1,23 @@
+{
+  "pdf_sha256": "c27aa66e6446af8637c0757525dc4fca579fd8fc4245d7d9c5c9efc93d789965",
+  "physical_page": 48,
+  "target": "ssc.jd.com",
+  "native_pdfplumber_contains_target": true,
+  "filtered_body_contains_target": false,
+  "extracted_tables_contain_target": false,
+  "found_table_boxes": [
+    [
+      99.17399999999999,
+      515.3499999999999,
+      195.288,
+      581.3499999999999
+    ],
+    [
+      99.17399999999999,
+      603.3729999999999,
+      559.3240000000001,
+      778.656
+    ]
+  ],
+  "note": "Localized diagnostic: content exists before the existing table-region body filter but is absent from both its retained body and extracted table cells. This identifies a current pipeline issue; it is not an isolated full-corpus backend ranking."
+}

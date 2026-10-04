@@ -1,0 +1,16 @@
+{
+  "code_revision": "185244c2eceda656e8394c742bf014c6d8230911",
+  "script_sha256": "e70720f2ddd323a8992a99a41cc09b1843be50c1e5a6bdaa161165b4d3940811",
+  "pdf_sha256": "c27aa66e6446af8637c0757525dc4fca579fd8fc4245d7d9c5c9efc93d789965",
+  "probes_sha256": "e69e8283a6f8265fd3bb51469c30a2bf86f92b3f77daecbada87547f2e1fc079",
+  "versions": {
+    "llama-index-core": "0.14.25",
+    "llama-index-readers-file": "0.7.0",
+    "pypdf": "6.16.2",
+    "pdfplumber": "0.11.10",
+    "pypdfium2": "5.13.0"
+  },
+  "note": "Native text PDF. No OCR/cloud/answer generation. Source visual spot checks, not full transcription. Same cleaning/chunker/BGE/Chroma/BM25/RRF; parser outputs retain their own layout/structured-table differences.",
+  "pdfreader_label_sequence_matches_physical_pages": true,
+  "production_files_and_index_ids_unchanged": true
+}
