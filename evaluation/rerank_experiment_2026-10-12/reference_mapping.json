@@ -1,0 +1,19 @@
+{
+  "original46": [
+    {
+      "qid": "P32",
+      "old_ids": [
+        "p48-246a7c42de"
+      ],
+      "new_ids": [
+        "p48-ad656e286d"
+      ],
+      "gold_pages": [
+        48
+      ],
+      "evidence_quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及汇总信息）、价值观信息、绩效信息",
+      "method": "unique normalized source quote within original source pages"
+    }
+  ],
+  "development36": []
+}

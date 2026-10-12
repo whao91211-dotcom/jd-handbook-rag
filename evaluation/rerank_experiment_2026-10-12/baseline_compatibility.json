@@ -1,0 +1,416 @@
+{
+  "baseline_code_revision": "108f844",
+  "cases_checked": 82,
+  "rows": [
+    {
+      "dataset": "original46",
+      "qid": "P01",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P02",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P03",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P04",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P05",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P06",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P07",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P08",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P09",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P10",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P11",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P12",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P14",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P15",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P16",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P18",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P19",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P21",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P22",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P23",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P24",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P25",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P26",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P27",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P28",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P29",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P30",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P33",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P34",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P35",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N01",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N02",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N03",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N04",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N05",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N06",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N07",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N08",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N09",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N10",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N11",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P02",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P03",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P04",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P05",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P07",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P08",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N02",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N03",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N04",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N05",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N06",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N07",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N08",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A02",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A03",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A04",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A05",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A06",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A07",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A08",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A09",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A10",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A11",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A12",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N09",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N10",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N11",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N13",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N14",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N15",
+      "full_results_identical": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N16",
+      "full_results_identical": true
+    }
+  ]
+}

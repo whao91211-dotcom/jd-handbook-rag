@@ -1,0 +1,9 @@
+{
+  "physical_cores": 12,
+  "device": "cpu",
+  "logical_processors": 16,
+  "timing_note": "No CPU frequency or concurrent application load telemetry recorded",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-1340P",
+  "torch_threads": 4,
+  "dtype": "float32"
+}

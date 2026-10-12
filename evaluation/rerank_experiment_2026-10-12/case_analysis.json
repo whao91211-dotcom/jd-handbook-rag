@@ -1,0 +1,858 @@
+[
+  {
+    "dataset": "original46",
+    "qid": "P06",
+    "question": "弄坏公司配的设备，公司会要我赔吗？",
+    "queries": [
+      "弄坏公司配的设备，公司会要我赔吗？",
+      "公司资产 公司财产 故意 过失 毁损 追偿",
+      "经济赔偿 经济损失 扣发工资"
+    ],
+    "gold_ids": [
+      "p11-5ed9c253db"
+    ],
+    "variants": {
+      "C": {
+        "selected_ids": [
+          "p11-5ed9c253db",
+          "p45-2edc9e7a4d",
+          "p41-97c1a0e032",
+          "p46-7e4d5f20c3",
+          "p44-b7d4d94080",
+          "p41-2d2c8ff79a",
+          "p40-c769d87f54",
+          "p43-0f1879984e"
+        ],
+        "context_ids": [
+          "p11-5ed9c253db",
+          "p45-2edc9e7a4d",
+          "p41-97c1a0e032",
+          "p46-7e4d5f20c3",
+          "p44-b7d4d94080",
+          "p41-2d2c8ff79a",
+          "p40-c769d87f54",
+          "p43-0f1879984e"
+        ],
+        "selection_reasons": {
+          "p11-5ed9c253db": "original_query",
+          "p45-2edc9e7a4d": "original_query",
+          "p41-97c1a0e032": "original_query",
+          "p46-7e4d5f20c3": "supplement:1",
+          "p44-b7d4d94080": "supplement:1",
+          "p41-2d2c8ff79a": "supplement:2",
+          "p40-c769d87f54": "supplement:2",
+          "p43-0f1879984e": "fill"
+        },
+        "metrics": {
+          "ndcg_at3": 1.0,
+          "mrr": 1.0,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p11-5ed9c253db",
+            "final_position": 1,
+            "pool_position": 14,
+            "semantic_position": 1,
+            "score": 0.2844078838825226,
+            "pair_tokens": 268
+          }
+        ]
+      },
+      "A": {
+        "selected_ids": [
+          "p44-b7d4d94080",
+          "p45-2edc9e7a4d",
+          "p41-97c1a0e032",
+          "p11-5ed9c253db",
+          "p45-db974bfc73",
+          "p46-7e4d5f20c3",
+          "p40-c769d87f54",
+          "p40-a41581b4e3"
+        ],
+        "context_ids": [
+          "p44-b7d4d94080",
+          "p45-2edc9e7a4d",
+          "p41-97c1a0e032",
+          "p11-5ed9c253db",
+          "p45-db974bfc73",
+          "p46-7e4d5f20c3",
+          "p40-c769d87f54",
+          "p40-a41581b4e3"
+        ],
+        "selection_reasons": {
+          "p44-b7d4d94080": "original_query",
+          "p45-2edc9e7a4d": "original_query",
+          "p41-97c1a0e032": "original_query",
+          "p11-5ed9c253db": "lexical_anchor:1",
+          "p45-db974bfc73": "supplement:1",
+          "p46-7e4d5f20c3": "lexical_anchor:2",
+          "p40-c769d87f54": "supplement:2",
+          "p40-a41581b4e3": "fill"
+        },
+        "metrics": {
+          "ndcg_at3": 0.0,
+          "mrr": 0.25,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p11-5ed9c253db",
+            "final_position": 4,
+            "pool_position": 14,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          }
+        ]
+      },
+      "B": {
+        "selected_ids": [
+          "p11-5ed9c253db",
+          "p45-2edc9e7a4d",
+          "p41-97c1a0e032",
+          "p46-7e4d5f20c3",
+          "p43-0f1879984e",
+          "p44-b7d4d94080",
+          "p41-2d2c8ff79a",
+          "p10-5052e898cb"
+        ],
+        "context_ids": [
+          "p11-5ed9c253db",
+          "p45-2edc9e7a4d",
+          "p41-97c1a0e032",
+          "p46-7e4d5f20c3",
+          "p43-0f1879984e",
+          "p44-b7d4d94080",
+          "p41-2d2c8ff79a",
+          "p10-5052e898cb"
+        ],
+        "selection_reasons": {
+          "p11-5ed9c253db": "semantic_global",
+          "p45-2edc9e7a4d": "semantic_global",
+          "p41-97c1a0e032": "semantic_global",
+          "p46-7e4d5f20c3": "semantic_global",
+          "p43-0f1879984e": "semantic_global",
+          "p44-b7d4d94080": "semantic_global",
+          "p41-2d2c8ff79a": "semantic_global",
+          "p10-5052e898cb": "semantic_global"
+        },
+        "metrics": {
+          "ndcg_at3": 1.0,
+          "mrr": 1.0,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p11-5ed9c253db",
+            "final_position": 1,
+            "pool_position": 14,
+            "semantic_position": 1,
+            "score": 0.2844078838825226,
+            "pair_tokens": 268
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P04",
+    "question": "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？",
+    "queries": [
+      "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？",
+      "员工发起 公司发起 调动 离任审计",
+      "内部人才流动 原岗位 书面同意"
+    ],
+    "gold_ids": [
+      "p17-3912472149"
+    ],
+    "variants": {
+      "A": {
+        "selected_ids": [
+          "p15-6a942bbddd",
+          "p16-161eb98f4e",
+          "p15-a99dbf1c9b",
+          "p17-903c410674",
+          "p17-3912472149",
+          "p34-b3db9e8572",
+          "p14-4058f096f6",
+          "p33-a867f06b3c"
+        ],
+        "context_ids": [
+          "p15-6a942bbddd",
+          "p16-161eb98f4e",
+          "p15-a99dbf1c9b",
+          "p17-903c410674",
+          "p17-3912472149",
+          "p34-b3db9e8572",
+          "p14-4058f096f6",
+          "p33-a867f06b3c"
+        ],
+        "selection_reasons": {
+          "p15-6a942bbddd": "original_query",
+          "p16-161eb98f4e": "original_query",
+          "p15-a99dbf1c9b": "original_query",
+          "p17-903c410674": "lexical_anchor:1",
+          "p17-3912472149": "supplement:1",
+          "p34-b3db9e8572": "supplement:2",
+          "p14-4058f096f6": "supplement:2",
+          "p33-a867f06b3c": "fill"
+        },
+        "metrics": {
+          "ndcg_at3": 0.0,
+          "mrr": 0.2,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p17-3912472149",
+            "final_position": 5,
+            "pool_position": 2,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          }
+        ]
+      },
+      "B": {
+        "selected_ids": [
+          "p17-903c410674",
+          "p17-3912472149",
+          "p18-9152394435",
+          "p14-4fe055e429",
+          "p14-1ad6eab8c6",
+          "p18-cc5ae09343",
+          "p14-4058f096f6",
+          "p15-6a942bbddd"
+        ],
+        "context_ids": [
+          "p17-903c410674",
+          "p17-3912472149",
+          "p18-9152394435",
+          "p14-4fe055e429",
+          "p14-1ad6eab8c6",
+          "p18-cc5ae09343",
+          "p14-4058f096f6",
+          "p15-6a942bbddd"
+        ],
+        "selection_reasons": {
+          "p17-903c410674": "semantic_global",
+          "p17-3912472149": "semantic_global",
+          "p18-9152394435": "semantic_global",
+          "p14-4fe055e429": "semantic_global",
+          "p14-1ad6eab8c6": "semantic_global",
+          "p18-cc5ae09343": "semantic_global",
+          "p14-4058f096f6": "semantic_global",
+          "p15-6a942bbddd": "semantic_global"
+        },
+        "metrics": {
+          "ndcg_at3": 0.6309297535714575,
+          "mrr": 0.5,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p17-3912472149",
+            "final_position": 2,
+            "pool_position": 2,
+            "semantic_position": 2,
+            "score": -0.02001705765724182,
+            "pair_tokens": 257
+          }
+        ]
+      },
+      "C": {
+        "selected_ids": [
+          "p17-903c410674",
+          "p17-3912472149",
+          "p14-4fe055e429",
+          "p18-9152394435",
+          "p18-cc5ae09343",
+          "p14-1ad6eab8c6",
+          "p14-4058f096f6",
+          "p15-6a942bbddd"
+        ],
+        "context_ids": [
+          "p17-903c410674",
+          "p17-3912472149",
+          "p14-4fe055e429",
+          "p18-9152394435",
+          "p18-cc5ae09343",
+          "p14-1ad6eab8c6",
+          "p14-4058f096f6",
+          "p15-6a942bbddd"
+        ],
+        "selection_reasons": {
+          "p17-903c410674": "original_query",
+          "p17-3912472149": "original_query",
+          "p14-4fe055e429": "original_query",
+          "p18-9152394435": "supplement:1",
+          "p18-cc5ae09343": "supplement:1",
+          "p14-1ad6eab8c6": "supplement:2",
+          "p14-4058f096f6": "supplement:2",
+          "p15-6a942bbddd": "fill"
+        },
+        "metrics": {
+          "ndcg_at3": 0.6309297535714575,
+          "mrr": 0.5,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p17-3912472149",
+            "final_position": 2,
+            "pool_position": 2,
+            "semantic_position": 2,
+            "score": -0.02001705765724182,
+            "pair_tokens": 257
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P06",
+    "question": "请了一天事假，那天15块钱餐补还发吗？",
+    "queries": [
+      "请了一天事假，那天15块钱餐补还发吗？",
+      "事假 无薪假 薪酬 福利",
+      "餐费补贴 实际出勤 休假 扣减"
+    ],
+    "gold_ids": [
+      "p23-2435daf3ec",
+      "p21-88de6db287",
+      "p30-526ea28baa"
+    ],
+    "variants": {
+      "C": {
+        "selected_ids": [
+          "p30-526ea28baa",
+          "p20-28e5161ba4",
+          "p24-3e46efee64",
+          "p21-88de6db287",
+          "p20-a13b1b7d85",
+          "p25-64fe3a97a0",
+          "p24-7893cf4f6d",
+          "p31-77990d6c90"
+        ],
+        "context_ids": [
+          "p30-526ea28baa",
+          "p20-28e5161ba4",
+          "p24-3e46efee64",
+          "p21-88de6db287",
+          "p20-a13b1b7d85",
+          "p25-64fe3a97a0",
+          "p24-7893cf4f6d",
+          "p31-77990d6c90"
+        ],
+        "selection_reasons": {
+          "p30-526ea28baa": "original_query",
+          "p20-28e5161ba4": "original_query",
+          "p24-3e46efee64": "original_query",
+          "p21-88de6db287": "lexical_anchor:1",
+          "p20-a13b1b7d85": "supplement:1",
+          "p25-64fe3a97a0": "supplement:2",
+          "p24-7893cf4f6d": "supplement:2",
+          "p31-77990d6c90": "fill"
+        },
+        "metrics": {
+          "ndcg_at3": 0.46927872602275644,
+          "mrr": 1.0,
+          "recall_at8": 0.6666666666666666,
+          "full_at8": 0.0,
+          "context_full": 0.0
+        },
+        "gold_details": [
+          {
+            "id": "p23-2435daf3ec",
+            "final_position": null,
+            "pool_position": 4,
+            "semantic_position": 15,
+            "score": -2.681253671646118,
+            "pair_tokens": 370
+          },
+          {
+            "id": "p21-88de6db287",
+            "final_position": 4,
+            "pool_position": 3,
+            "semantic_position": 7,
+            "score": -0.8168239593505859,
+            "pair_tokens": 412
+          },
+          {
+            "id": "p30-526ea28baa",
+            "final_position": 1,
+            "pool_position": 7,
+            "semantic_position": 1,
+            "score": 1.0491429567337036,
+            "pair_tokens": 347
+          }
+        ]
+      },
+      "A": {
+        "selected_ids": [
+          "p23-2435daf3ec",
+          "p24-3e46efee64",
+          "p22-3579d5cfe2",
+          "p21-88de6db287",
+          "p23-77b2224c12",
+          "p30-526ea28baa",
+          "p19-c92ec39c2b",
+          "p21-5ab774b695"
+        ],
+        "context_ids": [
+          "p23-2435daf3ec",
+          "p24-3e46efee64",
+          "p22-3579d5cfe2",
+          "p21-88de6db287",
+          "p23-77b2224c12",
+          "p30-526ea28baa",
+          "p19-c92ec39c2b",
+          "p21-5ab774b695"
+        ],
+        "selection_reasons": {
+          "p23-2435daf3ec": "original_query",
+          "p24-3e46efee64": "original_query",
+          "p22-3579d5cfe2": "original_query",
+          "p21-88de6db287": "lexical_anchor:1",
+          "p23-77b2224c12": "supplement:1",
+          "p30-526ea28baa": "lexical_anchor:2",
+          "p19-c92ec39c2b": "supplement:2",
+          "p21-5ab774b695": "fill"
+        },
+        "metrics": {
+          "ndcg_at3": 0.46927872602275644,
+          "mrr": 1.0,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p23-2435daf3ec",
+            "final_position": 1,
+            "pool_position": 4,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          },
+          {
+            "id": "p21-88de6db287",
+            "final_position": 4,
+            "pool_position": 3,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          },
+          {
+            "id": "p30-526ea28baa",
+            "final_position": 6,
+            "pool_position": 7,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          }
+        ]
+      },
+      "B": {
+        "selected_ids": [
+          "p30-526ea28baa",
+          "p20-28e5161ba4",
+          "p20-a13b1b7d85",
+          "p24-3e46efee64",
+          "p25-64fe3a97a0",
+          "p24-7893cf4f6d",
+          "p21-88de6db287",
+          "p31-77990d6c90"
+        ],
+        "context_ids": [
+          "p30-526ea28baa",
+          "p20-28e5161ba4",
+          "p20-a13b1b7d85",
+          "p24-3e46efee64",
+          "p25-64fe3a97a0",
+          "p24-7893cf4f6d",
+          "p21-88de6db287",
+          "p31-77990d6c90"
+        ],
+        "selection_reasons": {
+          "p30-526ea28baa": "semantic_global",
+          "p20-28e5161ba4": "semantic_global",
+          "p20-a13b1b7d85": "semantic_global",
+          "p24-3e46efee64": "semantic_global",
+          "p25-64fe3a97a0": "semantic_global",
+          "p24-7893cf4f6d": "semantic_global",
+          "p21-88de6db287": "semantic_global",
+          "p31-77990d6c90": "semantic_global"
+        },
+        "metrics": {
+          "ndcg_at3": 0.46927872602275644,
+          "mrr": 1.0,
+          "recall_at8": 0.6666666666666666,
+          "full_at8": 0.0,
+          "context_full": 0.0
+        },
+        "gold_details": [
+          {
+            "id": "p23-2435daf3ec",
+            "final_position": null,
+            "pool_position": 4,
+            "semantic_position": 15,
+            "score": -2.681253671646118,
+            "pair_tokens": 370
+          },
+          {
+            "id": "p21-88de6db287",
+            "final_position": 7,
+            "pool_position": 3,
+            "semantic_position": 7,
+            "score": -0.8168239593505859,
+            "pair_tokens": 412
+          },
+          {
+            "id": "p30-526ea28baa",
+            "final_position": 1,
+            "pool_position": 7,
+            "semantic_position": 1,
+            "score": 1.0491429567337036,
+            "pair_tokens": 347
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataset": "original46",
+    "qid": "P01",
+    "question": "京东物流子集团是哪一天正式成立的？",
+    "queries": [
+      "京东物流子集团是哪一天正式成立的？"
+    ],
+    "gold_ids": [
+      "p7-be9ae664fc"
+    ],
+    "variants": {
+      "A": {
+        "selected_ids": [
+          "p7-be9ae664fc",
+          "p6-26357691a1",
+          "p5-8263b6e785",
+          "p6-4913ab3280",
+          "p9-ceeffd39f5",
+          "p5-d125330024",
+          "p7-8c84c7a216",
+          "p3-ea5bc5fd17"
+        ],
+        "context_ids": [
+          "p7-be9ae664fc",
+          "p6-26357691a1",
+          "p5-8263b6e785",
+          "p6-4913ab3280",
+          "p9-ceeffd39f5",
+          "p5-d125330024",
+          "p7-8c84c7a216",
+          "p3-ea5bc5fd17"
+        ],
+        "selection_reasons": {
+          "p7-be9ae664fc": "global_order",
+          "p6-26357691a1": "global_order",
+          "p5-8263b6e785": "global_order",
+          "p6-4913ab3280": "global_order",
+          "p9-ceeffd39f5": "global_order",
+          "p5-d125330024": "global_order",
+          "p7-8c84c7a216": "global_order",
+          "p3-ea5bc5fd17": "global_order"
+        },
+        "metrics": {
+          "ndcg_at3": 1.0,
+          "mrr": 1.0,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p7-be9ae664fc",
+            "final_position": 1,
+            "pool_position": 1,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          }
+        ]
+      },
+      "B": {
+        "selected_ids": [
+          "p6-26357691a1",
+          "p7-be9ae664fc",
+          "p5-8263b6e785",
+          "p3-1913155f3d",
+          "p9-ceeffd39f5",
+          "p6-4913ab3280",
+          "p5-d125330024",
+          "p3-ea5bc5fd17"
+        ],
+        "context_ids": [
+          "p6-26357691a1",
+          "p7-be9ae664fc",
+          "p5-8263b6e785",
+          "p3-1913155f3d",
+          "p9-ceeffd39f5",
+          "p6-4913ab3280",
+          "p5-d125330024",
+          "p3-ea5bc5fd17"
+        ],
+        "selection_reasons": {
+          "p6-26357691a1": "semantic_global",
+          "p7-be9ae664fc": "semantic_global",
+          "p5-8263b6e785": "semantic_global",
+          "p3-1913155f3d": "semantic_global",
+          "p9-ceeffd39f5": "semantic_global",
+          "p6-4913ab3280": "semantic_global",
+          "p5-d125330024": "semantic_global",
+          "p3-ea5bc5fd17": "semantic_global"
+        },
+        "metrics": {
+          "ndcg_at3": 0.6309297535714575,
+          "mrr": 0.5,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p7-be9ae664fc",
+            "final_position": 2,
+            "pool_position": 1,
+            "semantic_position": 2,
+            "score": 8.320660591125488,
+            "pair_tokens": 344
+          }
+        ]
+      },
+      "C": {
+        "selected_ids": [
+          "p6-26357691a1",
+          "p7-be9ae664fc",
+          "p5-8263b6e785",
+          "p3-1913155f3d",
+          "p9-ceeffd39f5",
+          "p6-4913ab3280",
+          "p5-d125330024",
+          "p3-ea5bc5fd17"
+        ],
+        "context_ids": [
+          "p6-26357691a1",
+          "p7-be9ae664fc",
+          "p5-8263b6e785",
+          "p3-1913155f3d",
+          "p9-ceeffd39f5",
+          "p6-4913ab3280",
+          "p5-d125330024",
+          "p3-ea5bc5fd17"
+        ],
+        "selection_reasons": {
+          "p6-26357691a1": "global_order",
+          "p7-be9ae664fc": "global_order",
+          "p5-8263b6e785": "global_order",
+          "p3-1913155f3d": "global_order",
+          "p9-ceeffd39f5": "global_order",
+          "p6-4913ab3280": "global_order",
+          "p5-d125330024": "global_order",
+          "p3-ea5bc5fd17": "global_order"
+        },
+        "metrics": {
+          "ndcg_at3": 0.6309297535714575,
+          "mrr": 0.5,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p7-be9ae664fc",
+            "final_position": 2,
+            "pool_position": 1,
+            "semantic_position": 2,
+            "score": 8.320660591125488,
+            "pair_tokens": 344
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataset": "development36",
+    "qid": "C-P05",
+    "question": "我入职三年多才怀孕，除了法定产假，公司还给多少天？",
+    "queries": [
+      "我入职三年多才怀孕，除了法定产假，公司还给多少天？"
+    ],
+    "gold_ids": [
+      "p24-3e46efee64"
+    ],
+    "variants": {
+      "B": {
+        "selected_ids": [
+          "p29-d2fd640689",
+          "p24-3e46efee64",
+          "p24-7893cf4f6d",
+          "p26-d4c5fd8947",
+          "p25-a584b8e997",
+          "p23-77b2224c12",
+          "p23-2435daf3ec",
+          "p24-bea93ab4d6"
+        ],
+        "context_ids": [
+          "p29-d2fd640689",
+          "p24-3e46efee64",
+          "p24-7893cf4f6d",
+          "p26-d4c5fd8947",
+          "p25-a584b8e997",
+          "p23-77b2224c12",
+          "p23-2435daf3ec",
+          "p24-bea93ab4d6"
+        ],
+        "selection_reasons": {
+          "p29-d2fd640689": "semantic_global",
+          "p24-3e46efee64": "semantic_global",
+          "p24-7893cf4f6d": "semantic_global",
+          "p26-d4c5fd8947": "semantic_global",
+          "p25-a584b8e997": "semantic_global",
+          "p23-77b2224c12": "semantic_global",
+          "p23-2435daf3ec": "semantic_global",
+          "p24-bea93ab4d6": "semantic_global"
+        },
+        "metrics": {
+          "ndcg_at3": 0.6309297535714575,
+          "mrr": 0.5,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p24-3e46efee64",
+            "final_position": 2,
+            "pool_position": 1,
+            "semantic_position": 2,
+            "score": 2.3476052284240723,
+            "pair_tokens": 481
+          }
+        ]
+      },
+      "C": {
+        "selected_ids": [
+          "p29-d2fd640689",
+          "p24-3e46efee64",
+          "p24-7893cf4f6d",
+          "p26-d4c5fd8947",
+          "p25-a584b8e997",
+          "p23-77b2224c12",
+          "p23-2435daf3ec",
+          "p24-bea93ab4d6"
+        ],
+        "context_ids": [
+          "p29-d2fd640689",
+          "p24-3e46efee64",
+          "p24-7893cf4f6d",
+          "p26-d4c5fd8947",
+          "p25-a584b8e997",
+          "p23-77b2224c12",
+          "p23-2435daf3ec",
+          "p24-bea93ab4d6"
+        ],
+        "selection_reasons": {
+          "p29-d2fd640689": "global_order",
+          "p24-3e46efee64": "global_order",
+          "p24-7893cf4f6d": "global_order",
+          "p26-d4c5fd8947": "global_order",
+          "p25-a584b8e997": "global_order",
+          "p23-77b2224c12": "global_order",
+          "p23-2435daf3ec": "global_order",
+          "p24-bea93ab4d6": "global_order"
+        },
+        "metrics": {
+          "ndcg_at3": 0.6309297535714575,
+          "mrr": 0.5,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p24-3e46efee64",
+            "final_position": 2,
+            "pool_position": 1,
+            "semantic_position": 2,
+            "score": 2.3476052284240723,
+            "pair_tokens": 481
+          }
+        ]
+      },
+      "A": {
+        "selected_ids": [
+          "p24-3e46efee64",
+          "p24-7893cf4f6d",
+          "p29-d2fd640689",
+          "p25-a584b8e997",
+          "p23-2435daf3ec",
+          "p21-5ab774b695",
+          "p15-a99dbf1c9b",
+          "p23-27249d61bf"
+        ],
+        "context_ids": [
+          "p24-3e46efee64",
+          "p24-7893cf4f6d",
+          "p29-d2fd640689",
+          "p25-a584b8e997",
+          "p23-2435daf3ec",
+          "p21-5ab774b695",
+          "p15-a99dbf1c9b",
+          "p23-27249d61bf"
+        ],
+        "selection_reasons": {
+          "p24-3e46efee64": "global_order",
+          "p24-7893cf4f6d": "global_order",
+          "p29-d2fd640689": "global_order",
+          "p25-a584b8e997": "global_order",
+          "p23-2435daf3ec": "global_order",
+          "p21-5ab774b695": "global_order",
+          "p15-a99dbf1c9b": "global_order",
+          "p23-27249d61bf": "global_order"
+        },
+        "metrics": {
+          "ndcg_at3": 1.0,
+          "mrr": 1.0,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "gold_details": [
+          {
+            "id": "p24-3e46efee64",
+            "final_position": 1,
+            "pool_position": 1,
+            "semantic_position": null,
+            "score": null,
+            "pair_tokens": null
+          }
+        ]
+      }
+    }
+  }
+]

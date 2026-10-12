@@ -97,6 +97,8 @@ python evaluation/run_rerank_experiment.py
 
 CPU FP32、batch 8、pair上限512 tokens；超过上限时仅模型输入被截断，返回原文保持完整。实验每题每组重复3次，比较当前 guarded、直接重排、保留覆盖规则的重排；结果及复现信息见 [Rerank实验报告](evaluation/rerank_experiment_2026-10-12/REPORT.md)。默认输出目录已有结果时拒绝覆盖，复跑需用 `--output` 指定新目录。46/36题均属于开发/回归集，本轮不测答案正确率。
 
+本轮738次检索全部成功。原始35道正题的 nDCG@3 从0.8262到0.9578，开发9道正题从0.4215到0.6424；但开发题完整证据覆盖从100%降到88.89%，B/C均暂不推荐进入回答实验。CPU重排总检索P50约21–37秒，原方案约0.065–0.086秒。原因与逐题证据见 [实验分析](evaluation/rerank_experiment_2026-10-12/ANALYSIS.md)，离线核验可运行 `python evaluation/verify_rerank_results.py evaluation/rerank_experiment_2026-10-12`。
+
 - 检索支持 dense、BM25 和 RRF 对照。现有 golden set 显示 BM25 更强，后续应先补充真实改写与困难负样本，再决定是否调整融合策略。
 - 回答附页码及章节引用；对辞职、解雇、赔偿、纪律等高风险问题提示核实正式渠道，不代写辞职申请或协议。文档生效日期不等于其当前仍有效。
 - 生成采用自适应输出预算，红队重跑未出现空答案或截断兜底；目前没有独立的端到端人工正确率或引用支持率标注。

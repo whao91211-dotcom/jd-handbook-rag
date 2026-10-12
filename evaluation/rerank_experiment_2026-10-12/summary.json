@@ -1,0 +1,210 @@
+{
+  "development36": {
+    "paired_complete_cases": 36,
+    "unstable_rankings": [],
+    "variants": {
+      "A": {
+        "positive_cases": 9,
+        "successful_runs": 108,
+        "failed_runs": 0,
+        "metrics": {
+          "ndcg_at3": 0.4215149870234983,
+          "mrr": 0.5361111111111111,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "timings": {
+          "recall_seconds": {
+            "p50": 0.06469224998727441,
+            "p95": 0.19804244998667847
+          },
+          "rerank_seconds": {
+            "p50": 0.0,
+            "p95": 0.0
+          },
+          "total_seconds": {
+            "p50": 0.06495954998536035,
+            "p95": 0.19852767000120355
+          }
+        },
+        "truncated_pairs": 0,
+        "scored_pairs": 0
+      },
+      "B": {
+        "positive_cases": 9,
+        "successful_runs": 108,
+        "failed_runs": 0,
+        "metrics": {
+          "ndcg_at3": 0.6424209750983685,
+          "mrr": 0.6666666666666666,
+          "recall_at8": 0.9629629629629629,
+          "full_at8": 0.8888888888888888,
+          "context_full": 0.8888888888888888
+        },
+        "timings": {
+          "recall_seconds": {
+            "p50": 0.062247950001619756,
+            "p95": 0.21173581000766709
+          },
+          "rerank_seconds": {
+            "p50": 21.072811649995856,
+            "p95": 25.987416740004846
+          },
+          "total_seconds": {
+            "p50": 21.162971600002493,
+            "p95": 26.22170171997859
+          }
+        },
+        "truncated_pairs": 12,
+        "scored_pairs": 3741,
+        "delta_vs_A": {
+          "ndcg_at3": 0.22090598807487016,
+          "mrr": 0.13055555555555554,
+          "recall_at8": -0.03703703703703709,
+          "full_at8": -0.11111111111111116,
+          "context_full": -0.11111111111111116
+        }
+      },
+      "C": {
+        "positive_cases": 9,
+        "successful_runs": 108,
+        "failed_runs": 0,
+        "metrics": {
+          "ndcg_at3": 0.6424209750983685,
+          "mrr": 0.6759259259259259,
+          "recall_at8": 0.9629629629629629,
+          "full_at8": 0.8888888888888888,
+          "context_full": 0.8888888888888888
+        },
+        "timings": {
+          "recall_seconds": {
+            "p50": 0.0613119000045117,
+            "p95": 0.2048268299811752
+          },
+          "rerank_seconds": {
+            "p50": 20.737471250002272,
+            "p95": 26.52855092999525
+          },
+          "total_seconds": {
+            "p50": 20.85450234999007,
+            "p95": 26.678764030012825
+          }
+        },
+        "truncated_pairs": 12,
+        "scored_pairs": 3741,
+        "delta_vs_A": {
+          "ndcg_at3": 0.22090598807487016,
+          "mrr": 0.13981481481481484,
+          "recall_at8": -0.03703703703703709,
+          "full_at8": -0.11111111111111116,
+          "context_full": -0.11111111111111116
+        }
+      }
+    }
+  },
+  "original46": {
+    "paired_complete_cases": 46,
+    "unstable_rankings": [],
+    "variants": {
+      "A": {
+        "positive_cases": 35,
+        "successful_runs": 138,
+        "failed_runs": 0,
+        "metrics": {
+          "ndcg_at3": 0.8261859507142915,
+          "mrr": 0.8130952380952381,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "timings": {
+          "recall_seconds": {
+            "p50": 0.08531539999239612,
+            "p95": 0.2573487050118274
+          },
+          "rerank_seconds": {
+            "p50": 0.0,
+            "p95": 0.0
+          },
+          "total_seconds": {
+            "p50": 0.08570804999908432,
+            "p95": 0.2576785350043792
+          }
+        },
+        "truncated_pairs": 0,
+        "scored_pairs": 0
+      },
+      "B": {
+        "positive_cases": 35,
+        "successful_runs": 138,
+        "failed_runs": 0,
+        "metrics": {
+          "ndcg_at3": 0.9578205432653094,
+          "mrr": 0.9428571428571428,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "timings": {
+          "recall_seconds": {
+            "p50": 0.08216705000086222,
+            "p95": 0.2586805399943842
+          },
+          "rerank_seconds": {
+            "p50": 36.65555899999163,
+            "p95": 51.478857765016436
+          },
+          "total_seconds": {
+            "p50": 36.75450349999301,
+            "p95": 51.58191002500535
+          }
+        },
+        "truncated_pairs": 0,
+        "scored_pairs": 4548,
+        "delta_vs_A": {
+          "ndcg_at3": 0.13163459255101795,
+          "mrr": 0.12976190476190474,
+          "recall_at8": 0.0,
+          "full_at8": 0.0,
+          "context_full": 0.0
+        }
+      },
+      "C": {
+        "positive_cases": 35,
+        "successful_runs": 138,
+        "failed_runs": 0,
+        "metrics": {
+          "ndcg_at3": 0.9578205432653094,
+          "mrr": 0.9428571428571428,
+          "recall_at8": 1.0,
+          "full_at8": 1.0,
+          "context_full": 1.0
+        },
+        "timings": {
+          "recall_seconds": {
+            "p50": 0.08562369999708608,
+            "p95": 0.2564570050031762
+          },
+          "rerank_seconds": {
+            "p50": 33.268489449998015,
+            "p95": 51.475621155004774
+          },
+          "total_seconds": {
+            "p50": 33.359791149996454,
+            "p95": 51.7178787049983
+          }
+        },
+        "truncated_pairs": 0,
+        "scored_pairs": 4548,
+        "delta_vs_A": {
+          "ndcg_at3": 0.13163459255101795,
+          "mrr": 0.12976190476190474,
+          "recall_at8": 0.0,
+          "full_at8": 0.0,
+          "context_full": 0.0
+        }
+      }
+    }
+  }
+}

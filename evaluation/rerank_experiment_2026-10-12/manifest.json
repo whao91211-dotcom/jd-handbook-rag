@@ -1,0 +1,39 @@
+{
+  "code_revision": "bc14445d99c2362e0f014a2abd3b5175de30b027",
+  "source_sha256": {
+    "ragcore/retriever.py": "3524b06f6e976bad3079624158183d56b2f81fad7f8a8383d30f7d9da920927e",
+    "ragcore/evidence.py": "474076377aabd8af328874ccf3e9ed5a168de27b4769a2bd5b3cf4a81373192f",
+    "ragcore/reranker.py": "19d692a7b061057fb6813286b37c5eafa39de05851fe0e2a3af0e39198513437",
+    "evaluation/run_rerank_experiment.py": "a01488a0536b14f7645d1bfbd198fe98e284d326b799a25407633bd4e2604f75"
+  },
+  "chunks_sha256": "6689f74c6d50718e48a76d1857128247f336bca005f8c8b655b06b11d74e9301",
+  "chunk_count": 123,
+  "index_embeddings_sha256": "6c43c2f901c224afe366f0f9f648b43fec73520dbf3efd6c99154e784246f5c9",
+  "dataset_sha256": {
+    "original46": "0a6c983c888226656ad8ee13f2d0c730a3265ca0bb523e9f3a0a0020002879f3",
+    "development36": "db8ec69216775913a301c2b2c46f6fe3d17a685ee1aea17301f032cafab53f08"
+  },
+  "model_id": "BAAI/bge-reranker-base",
+  "model_revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "device": "cpu",
+  "dtype": "float32",
+  "batch_size": 8,
+  "max_pair_tokens": 512,
+  "truncation_policy": "longest_first",
+  "cpu_threads": 4,
+  "repeats": 3,
+  "smoke_limit": null,
+  "python": "3.10.0",
+  "versions": {
+    "torch": "2.9.0",
+    "sentence-transformers": "6.0.1",
+    "transformers": "5.16.1",
+    "chromadb": "1.5.9",
+    "rank-bm25": "0.2.2",
+    "jieba": "0.42.1"
+  },
+  "command": "C:\\Users\\wuhao\\Documents\\RAG\\.venv\\Scripts\\python.exe evaluation/run_rerank_experiment.py --data-root C:/Users/wuhao/Documents/RAG/data",
+  "quality_note": "Development/regression sets; no answer generation, judge or user adjudication. Labels never passed to retrieval.",
+  "reranker_cold_load_seconds": 9.741038300009677,
+  "model_dtype": "torch.float32"
+}
