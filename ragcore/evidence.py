@@ -52,26 +52,30 @@ def lexical_anchor_order(fused: list[str], lexical: dict[str, int]) -> list[str]
     return [first] + [iid for iid in fused if iid != first]
 
 
-def select_evidence(fused: list[str], facets: list[list[str]], k: int) -> list[str]:
+def select_evidence(fused: list[str], facets: list[list[str]], k: int, *, reasons: dict | None = None) -> list[str]:
     """Reserve original-query evidence and at most two sources per extra facet."""
     if k <= 0:
         return []
     if len(facets) <= 1:
+        if reasons is not None:
+            reasons.update({iid: 'global_order' for iid in fused[:k]})
         return fused[:k]
     selected = []
     available = set(fused)
 
-    def add(order, limit):
+    def add(order, limit, reason):
         count = 0
         for iid in order:
             if len(selected) >= k or count >= limit:
                 break
             if iid in available and iid not in selected:
                 selected.append(iid)
+                if reasons is not None:
+                    reasons[iid] = reason
                 count += 1
 
-    add(facets[0], min(3, k))
-    for facet in facets[1:]:
-        add(facet, 2)
-    add(fused, k)
+    add(facets[0], min(3, k), 'original_query')
+    for number, facet in enumerate(facets[1:], 1):
+        add(facet, 2, f'supplement:{number}')
+    add(fused, k, 'fill')
     return selected

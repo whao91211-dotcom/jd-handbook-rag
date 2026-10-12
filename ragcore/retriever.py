@@ -19,6 +19,8 @@
 """
 from __future__ import annotations
 
+from time import perf_counter
+
 from .config import BM25_TOP_K, DENSE_TOP_K, FINAL_TOP_K, RETRIEVE_MODES, RRF_K
 from .embedder import embed_query
 from .store import get_collection
@@ -87,6 +89,9 @@ def retrieve(
     mode: str = "rrf",
     bm25_top_k: int | None = BM25_TOP_K,
     strategy: str = "baseline",
+    *,
+    rerank: str = 'none',
+    diagnostics: dict | None = None,
 ) -> list[dict]:
     """返回 Top-k；baseline/expanded按融合分排序，分面策略按证据选择顺序返回。
 
@@ -97,7 +102,16 @@ def retrieve(
         bm25_top_k: BM25 侧候选截断数；None = 不截断（旧行为）。
         strategy: baseline 保持原检索；expanded 多查询融合；coverage 分面选择；
                   guarded 额外保留查询适用范围及补充查询的词法首位结果。
+        rerank: none 保留原行为；global 语义排序；guarded 保留分面及词法保护。
+        diagnostics: 可选逐阶段记录，不包含评测标签；失败不降级成成功结果。
     """
+    started = perf_counter()
+    if diagnostics is not None:
+        diagnostics.clear()
+    if rerank not in ('none', 'global', 'guarded'):
+        raise ValueError('rerank must be none, global or guarded')
+    if rerank != 'none' and k > 40:
+        raise ValueError('Reranking returns at most 40 candidates')
     if mode not in RETRIEVE_MODES:
         raise ValueError(f"mode 必须是 {RETRIEVE_MODES} 之一，收到 {mode!r}")
     if strategy not in STRATEGIES:
@@ -139,7 +153,45 @@ def retrieve(
         if strategy == 'guarded' and len(facet_orders) > 0:
             order = lexical_anchor_order(order, group.get('bm25', {}))
         facet_orders.append(order)
-    top_ids = select_evidence(fused_ids, facet_orders, k) if strategy in ('coverage', 'guarded') else fused_ids[:k]
+    reasons = {}
+    top_ids = select_evidence(fused_ids, facet_orders, k, reasons=reasons) if strategy in ('coverage', 'guarded') else fused_ids[:k]
+    if strategy not in ('coverage', 'guarded'):
+        reasons = {iid: 'global_order' for iid in top_ids}
+    recall_seconds = perf_counter() - started
+    anchors = []
+    if strategy == 'guarded':
+        for group in query_groups[1:]:
+            lexical = group.get('bm25', {})
+            anchors.append(min(lexical, key=lexical.get) if lexical else None)
+    scores, lengths, pool = {}, {}, []
+    rerank_seconds = 0.
+    if rerank != 'none' or diagnostics is not None:
+        from .reranker import candidate_pool, score_candidates, score_order
+        pool = candidate_pool(fused_ids, top_ids, [iid for iid in anchors if iid is not None])
+        if rerank != 'none':
+            positions = {iid: i for i, iid in enumerate(ids)}
+            candidates = [{'id': iid, 'text': docs[positions[iid]]} for iid in pool]
+            tick = perf_counter()
+            scores, lengths = score_candidates(query, candidates)
+            rerank_seconds = perf_counter() - tick
+            ranked = score_order(pool, scores)
+            reasons = {}
+            if rerank == 'global':
+                top_ids = ranked[:k]
+                reasons = {iid: 'semantic_global' for iid in top_ids}
+            else:
+                ranked_facets = []
+                for number, facet in enumerate(facet_orders):
+                    members = set(facet)
+                    order = [iid for iid in ranked if iid in members]
+                    if number > 0 and number <= len(anchors) and anchors[number-1] is not None:
+                        anchor = anchors[number-1]
+                        order = [anchor] + [iid for iid in order if iid != anchor]
+                    ranked_facets.append(order)
+                top_ids = select_evidence(ranked, ranked_facets, k, reasons=reasons)
+    for number, anchor in enumerate(anchors, 1):
+        if anchor in top_ids and reasons.get(anchor) == f'supplement:{number}':
+            reasons[anchor] = f'lexical_anchor:{number}'
 
     dense_rank = rank_maps.get("dense", {})
     bm25_rank = rank_maps.get("bm25", {})
@@ -167,4 +219,13 @@ def retrieve(
                 "candidate_count": len(rrf),
             }
         )
+        if rerank != 'none':
+            results[-1]['rerank_score'] = scores[iid]
+            results[-1]['rerank_method'] = rerank
+    if diagnostics is not None:
+        diagnostics.update(queries=queries, candidate_ids=pool, fused_ids=fused_ids,
+                           facet_orders=facet_orders, lexical_anchors=anchors,
+                           scores=scores, pair_tokens=lengths, selected_ids=top_ids,
+                           selection_reasons=reasons, recall_seconds=recall_seconds,
+                           rerank_seconds=rerank_seconds, total_seconds=perf_counter()-started)
     return results
