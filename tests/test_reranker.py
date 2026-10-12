@@ -61,6 +61,21 @@ class RerankerTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'missing local weights'):
                 module.score_candidates('q', [{'id': 'a', 'text': 'text'}])
 
+    def test_local_snapshot_needs_only_the_downloaded_inference_files(self):
+        module = self.module()
+        required = {'config.json', 'model.safetensors', 'sentencepiece.bpe.model',
+                    'special_tokens_map.json', 'tokenizer.json', 'tokenizer_config.json'}
+        def snapshot(*args, **kwargs):
+            if not kwargs.get('local_files_only') or set(kwargs.get('allow_patterns', [])) != required:
+                raise RuntimeError('Unused repository artifacts requested from incomplete offline snapshot')
+            return 'local-verified-snapshot'
+        model = object()
+        module.get_model.cache_clear()
+        self.addCleanup(module.get_model.cache_clear)
+        with patch('huggingface_hub.snapshot_download', side_effect=snapshot), \
+             patch('sentence_transformers.CrossEncoder', return_value=model):
+            self.assertIs(module.get_model(), model)
+
 
 if __name__ == '__main__':
     unittest.main()

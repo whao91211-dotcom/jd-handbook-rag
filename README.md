@@ -86,6 +86,17 @@ python webapp.py
 
 ## 设计取舍与当前边界
 
+本地语义重排是可选实验能力，默认关闭，网页模式保持原行为。调用 `retrieve(question, strategy='guarded', rerank='global')` 直接重排，或 `rerank='guarded'` 保留分面名额与词法保护；两者使用同一个最多40块的候选池，完整正文与来源元数据保持不变。模型失败会明确报错，不静默降级。
+
+先下载固定版本的推理文件，再运行只做检索的实验（需要项目 `.venv` 环境）：
+
+```powershell
+hf download BAAI/bge-reranker-base config.json model.safetensors sentencepiece.bpe.model special_tokens_map.json tokenizer.json tokenizer_config.json --revision 2cfc18c9415c912f9d8155881c133215df768a70
+python evaluation/run_rerank_experiment.py
+```
+
+CPU FP32、batch 8、pair上限512 tokens；超过上限时仅模型输入被截断，返回原文保持完整。实验每题每组重复3次，比较当前 guarded、直接重排、保留覆盖规则的重排；结果及复现信息见 [Rerank实验报告](evaluation/rerank_experiment_2026-10-12/REPORT.md)。默认输出目录已有结果时拒绝覆盖，复跑需用 `--output` 指定新目录。46/36题均属于开发/回归集，本轮不测答案正确率。
+
 - 检索支持 dense、BM25 和 RRF 对照。现有 golden set 显示 BM25 更强，后续应先补充真实改写与困难负样本，再决定是否调整融合策略。
 - 回答附页码及章节引用；对辞职、解雇、赔偿、纪律等高风险问题提示核实正式渠道，不代写辞职申请或协议。文档生效日期不等于其当前仍有效。
 - 生成采用自适应输出预算，红队重跑未出现空答案或截断兜底；目前没有独立的端到端人工正确率或引用支持率标注。

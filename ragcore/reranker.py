@@ -9,6 +9,8 @@ MODEL_REVISION = '2cfc18c9415c912f9d8155881c133215df768a70'
 BATCH_SIZE = 8
 MAX_LENGTH = 512
 CANDIDATE_LIMIT = 40
+MODEL_FILES = ('config.json', 'model.safetensors', 'sentencepiece.bpe.model',
+               'special_tokens_map.json', 'tokenizer.json', 'tokenizer_config.json')
 
 
 def candidate_pool(fused: list[str], baseline: list[str], anchors: list[str]) -> list[str]:
@@ -38,7 +40,8 @@ def get_model():
     from sentence_transformers import CrossEncoder
     import torch
 
-    path = snapshot_download(MODEL_ID, revision=MODEL_REVISION, local_files_only=True)
+    path = snapshot_download(MODEL_ID, revision=MODEL_REVISION, local_files_only=True,
+                             allow_patterns=list(MODEL_FILES))
     return CrossEncoder(path, device='cpu', local_files_only=True,
                         max_length=MAX_LENGTH, activation_fn=torch.nn.Identity(),
                         model_kwargs={'dtype': torch.float32})
