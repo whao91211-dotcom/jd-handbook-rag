@@ -1,0 +1,27 @@
+{
+  "audit_passed": true,
+  "code_sha256": "4a2dd7afeb1a13c09e58ed65a3039bccc507110ad6d463bd1e8b23009aac3f13",
+  "planned_runs": 8,
+  "recorded_runs": 8,
+  "generation_status": {
+    "complete": 8
+  },
+  "missing_runs": 0,
+  "planned_order_counts": {
+    "DA": 4,
+    "AD": 4
+  },
+  "judges": {
+    "context": {
+      "complete": 8
+    },
+    "faithfulness": {
+      "complete": 8
+    },
+    "correctness": {
+      "complete": 8
+    }
+  },
+  "supplemental_pairs": 4,
+  "note": "Input/schema/formula audit only; model judgments still need source-grounded case review."
+}

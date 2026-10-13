@@ -20,6 +20,60 @@ def close(left, right):
         assert math.isclose(left, right, abs_tol=1e-10), (left, right)
 
 
+def tokens(stored, attempts):
+    assert stored['attempt_count']==len(attempts)
+    for name in ('prompt_tokens','completion_tokens','reasoning_tokens'):
+        known=[a[name] for a in attempts if isinstance(a.get(name),int)]
+        assert stored[name]==sum(known)
+        assert stored[name+'_unknown_attempts']==len(attempts)-len(known)
+
+
+def timing(stored, values):
+    ordered=sorted(values)
+    assert stored['count']==len(values)
+    close(stored['total'],sum(values))
+    close(stored['mean'],statistics.mean(values) if values else None)
+    for name, percentile in (('p50',.5),('p95',.95)):
+        if values:
+            index=(len(values)-1)*percentile
+            lower=int(index)
+            expected=ordered[lower]+(ordered[min(lower+1,len(values)-1)]-ordered[lower])*(index-lower)
+        else: expected=None
+        close(stored[name],expected)
+
+
+def counts(stored, **expected):
+    for name,value in expected.items():
+        assert stored[name]==value, (name,stored[name],value)
+
+
+def rubric_pass(row):
+    return row.get('grade')=='correct' and all(row.get(name) is True for name in
+        ('required_pass','clarification_pass','forbidden_pass'))
+
+
+def validate_scored_sources(row, key, reviews, supplements):
+    fields = {
+        'faithfulness': ('faithfulness','citation_support_rate','claim_count'),
+        'context': ('context_recall','context_precision'),
+        'correctness': ('grade','factual_f1','TP_count','FP_count','FN_count','required_pass',
+            'clarification_pass','forbidden_pass','required_checks','clarification_checks','forbidden_checks')}
+    for kind, names in fields.items():
+        review=reviews[kind].get(key[:3] if kind=='context' else key)
+        if review and review['status']=='complete':
+            for name in names:
+                assert row[name]==review['scores'][name], f'Scored row differs from review: {name}'
+        else:
+            for name in names:
+                assert row.get(name) is None, f'Score without a successful review: {name}'
+    supplement=supplements.get(key)
+    if supplement:
+        close(row['semantic_similarity'],supplement['semantic_similarity'])
+        close(row['bertscore_f1'],supplement['bertscore']['f1'])
+    else:
+        assert row.get('semantic_similarity') is None and row.get('bertscore_f1') is None
+
+
 def verify(folder):
     manifest = json.loads((folder/'manifest.json').read_text(encoding='utf8'))
     args = argparse.Namespace(source_dir=ROOT/'evaluation/guard_fusion_experiment_2026-10-13',
@@ -91,25 +145,85 @@ def verify(folder):
                                                       folder/'answers.jsonl')
     scored = json.loads((folder/'scored_answers.json').read_text(encoding='utf8'))
     summary = json.loads((folder/'summary.json').read_text(encoding='utf8'))
+    assert len(scored)==len({runner.metrics.row_key(r) for r in scored}), 'Duplicate scored keys'
     assert {runner.metrics.row_key(r) for r in scored} == set(answers)
     for row in scored:
         key = runner.metrics.row_key(row)
+        for field,value in answers[key].items():
+            assert row[field]==value, f'Scored original field changed: {field}'
         assert row['positive'] == refs[key[:2]]['positive']
-        for kind in ('context', 'faithfulness', 'correctness'):
-            review = reviews[kind].get(key[:3] if kind=='context' else key)
-            if review and review['status']=='complete':
-                for field, value in review['scores'].items():
-                    assert row[field]==value, f'Scored row differs from review: {field}'
-        supplement = supplements.get(key)
-        if supplement:
-            close(row['semantic_similarity'], supplement['semantic_similarity'])
-            close(row['bertscore_f1'], supplement['bertscore']['f1'])
+        validate_scored_sources(row,key,reviews,supplements)
         expected = .75*row['factual_f1']+.25*row['semantic_similarity'] if row['positive'] and (
             row.get('factual_f1') is not None and row.get('semantic_similarity') is not None) else None
         close(row['answer_correctness'], expected)
     by_key = {runner.metrics.row_key(r):r for r in scored}
+    assert set(summary['datasets'])=={'original46','development36'}
+    assert set(summary['judge'])=={'context','faithfulness','correctness'}
+    assert summary['manifest_sha256']==runner.file_hash(folder/'manifest.json')
+    assert summary['supplemental_records']==len(supplements)
+    assert summary['semantic_manifest']==semantic
+    for kind, records in reviews.items():
+        stored=summary['judge'][kind]
+        planned=len(cases)*(1 if kind=='context' else manifest['repeats'])
+        eligible=len(cases) if kind=='context' else len(complete)
+        completed=sum(r['status']=='complete' for r in records.values())
+        counts(stored,planned=planned,eligible=eligible,recorded=len(records),complete=completed,
+            failed=len(records)-completed,unreviewed_eligible=eligible-len(records),
+            ineligible_generation_runs=planned-eligible)
+        close(stored['completion_rate_all_planned'],completed/planned if planned else None)
+        close(stored['completion_rate_eligible'],completed/eligible if eligible else None)
+        tokens(stored['tokens'],[a for r in records.values() for a in r['attempts']])
+        timing(stored['timing'],[r['judge_seconds'] for r in records.values()])
     for dataset, result in summary['datasets'].items():
+        assert set(result['variants'])=={'A','D'}
+        assert set(result['paired']['positive_metrics'])=={'faithfulness','citation_support_rate','factual_f1',
+            'semantic_similarity','answer_correctness','bertscore_f1'}
+        expected_cases=sum(k[0]==dataset for k in selected)
+        expected_positive=sum(k[0]==dataset and refs[k]['positive'] for k in selected)
+        counts(result,expected_cases=expected_cases,repeats=manifest['repeats'])
+        for variant, stored in result['variants'].items():
+            group=[r for r in scored if r['dataset']==dataset and r['variant']==variant]
+            completed=[r for r in group if r['status']=='complete']
+            reviewed=[r for r in completed if r.get('grade') in ('correct','partial','incorrect')]
+            passed=sum(rubric_pass(r) for r in reviewed)
+            planned=expected_cases*manifest['repeats']
+            counts(stored,planned_runs=planned,recorded=len(group),complete=len(completed),
+                failed=len(group)-len(completed),missing=planned-len(group),grade_denominator=len(reviewed))
+            close(stored['completion_rate'],len(completed)/planned if planned else None)
+            assert stored['grades']=={g:sum(r.get('grade')==g for r in reviewed) for g in ('correct','partial','incorrect')}
+            counts(stored['rubric'],reviewed=len(reviewed),unreviewed=planned-len(reviewed),passed=passed)
+            close(stored['rubric']['reviewed_pass_rate'],passed/len(reviewed) if reviewed else None)
+            close(stored['rubric']['all_case_pass_rate'],passed/planned if planned else None)
+            assert set(stored['by_kind'])=={r['kind'] for r in group}
+            for kind, item in stored['by_kind'].items():
+                subset=[r for r in group if r['kind']==kind]
+                subset_reviewed=[r for r in subset if r['status']=='complete' and r.get('grade')]
+                counts(item,recorded_runs=len(subset),completed=sum(r['status']=='complete' for r in subset),reviewed=len(subset_reviewed))
+                assert item['grades']=={g:sum(r['grade']==g for r in subset_reviewed) for g in ('correct','partial','incorrect')}
+            tokens(stored['tokens'],[a for r in group for a in r['usage_attempts']])
+            timing(stored['generation_timing_all'],[r['generation_seconds'] for r in group if r.get('generation_seconds') is not None])
+            timing(stored['generation_timing_complete'],[r['generation_seconds'] for r in completed if r.get('generation_seconds') is not None])
         evidence = result['context_evaluation']
+        assert set(evidence['variants'])=={'A','D'}
+        assert set(evidence['paired']['metrics'])=={'context_recall','context_precision'}
+        counts(evidence,expected_cases=expected_cases,expected_positive_cases=expected_positive)
+        for variant, stored in evidence['variants'].items():
+            group=[r for key,r in reviews['context'].items() if key[0]==dataset and key[2]==variant]
+            completed=[r for r in group if r['status']=='complete']
+            positive=[r for r in completed if refs[(r['dataset'],r['qid'])]['positive']]
+            counts(stored,planned_questions=expected_cases,recorded=len(group),complete=len(completed),
+                failed=len(group)-len(completed),missing=expected_cases-len(group),
+                planned_positive_questions=expected_positive,positive_complete=len(positive),
+                negative_or_ambiguous_questions=expected_cases-expected_positive)
+            close(stored['completion_rate'],len(completed)/expected_cases if expected_cases else None)
+            assert stored['positive_na_or_unreviewed']=={name:expected_positive-sum(r['scores'].get(name) is not None for r in positive)
+                for name in ('context_recall','context_precision')}
+        context_pairs=[]
+        for key,a in reviews['context'].items():
+            d=reviews['context'].get((key[0],key[1],'D'))
+            if key[0]==dataset and key[2]=='A' and refs[key[:2]]['positive'] and d and a['status']==d['status']=='complete':
+                context_pairs.append((a,d))
+        counts(evidence['paired'],eligible_questions=len(context_pairs),unavailable_positive_questions=expected_positive-len(context_pairs))
         for name, stored in evidence['paired']['metrics'].items():
             pairs = []
             for key, a in reviews['context'].items():
@@ -120,7 +234,15 @@ def verify(folder):
             for index, variant in enumerate(('A','D')):
                 close(stored[variant]['mean'], statistics.mean(p[index] for p in pairs) if pairs else None)
                 assert stored[variant]['question_count']==len(pairs)
+                assert stored[variant]['na_or_unreviewed_positive_questions']==expected_positive-len(pairs)
             close(stored['delta_D_minus_A'], statistics.mean(d-a for a,d in pairs) if pairs else None)
+        generation_pairs=[]
+        for key,a in by_key.items():
+            d=by_key.get((key[0],key[1],'D',key[3]))
+            if key[0]==dataset and key[2]=='A' and d and a['status']==d['status']=='complete':
+                generation_pairs.append((a,d))
+        positive_pairs=[(a,d) for a,d in generation_pairs if a['positive'] and d['positive']]
+        counts(result['paired'],eligible_pairs=len(generation_pairs),eligible_questions=len({a['qid'] for a,d in generation_pairs}),positive_pairs=len(positive_pairs))
         for metric, stored in result['paired']['positive_metrics'].items():
             values = defaultdict(lambda: {'A':[], 'D':[]})
             pairs = 0
@@ -139,6 +261,7 @@ def verify(folder):
             for v in ('A','D'):
                 close(stored[v]['mean'], means[v])
                 assert stored[v]['question_count']==len(values) and stored[v]['paired_run_count']==pairs
+                assert stored[v]['na_pair_count']==len(positive_pairs)-pairs
             close(stored['delta_D_minus_A'], means['D']-means['A'] if values else None)
     report = dict(audit_passed=True, code_sha256=runner.file_hash(__file__),
         planned_runs=len(scheduled), recorded_runs=len(answers),

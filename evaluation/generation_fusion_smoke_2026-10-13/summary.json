@@ -1,0 +1,765 @@
+{
+  "schema_version": "generation-fusion-v1",
+  "custom_metrics": true,
+  "manifest_sha256": "0c232fd2a3b298a9109cdc362c33e13a33fdd1affd6f0608ceb10b43334cef81",
+  "datasets": {
+    "original46": {
+      "expected_cases": 1,
+      "repeats": 1,
+      "variants": {
+        "A": {
+          "planned_runs": 1,
+          "recorded": 1,
+          "complete": 1,
+          "failed": 0,
+          "missing": 0,
+          "completion_rate": 1.0,
+          "tokens": {
+            "attempt_count": 2,
+            "prompt_tokens": 6598,
+            "prompt_tokens_unknown_attempts": 0,
+            "completion_tokens": 5386,
+            "completion_tokens_unknown_attempts": 0,
+            "reasoning_tokens": 4800,
+            "reasoning_tokens_unknown_attempts": 0
+          },
+          "generation_timing_all": {
+            "count": 1,
+            "mean": 33.718190300045535,
+            "p50": 33.718190300045535,
+            "p95": 33.718190300045535,
+            "total": 33.718190300045535
+          },
+          "generation_timing_complete": {
+            "count": 1,
+            "mean": 33.718190300045535,
+            "p50": 33.718190300045535,
+            "p95": 33.718190300045535,
+            "total": 33.718190300045535
+          },
+          "grades": {
+            "correct": 1,
+            "partial": 0,
+            "incorrect": 0
+          },
+          "grade_denominator": 1,
+          "by_kind": {
+            "table": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            }
+          },
+          "rubric": {
+            "reviewed": 1,
+            "unreviewed": 0,
+            "passed": 1,
+            "reviewed_pass_rate": 1.0,
+            "all_case_pass_rate": 1.0
+          }
+        },
+        "D": {
+          "planned_runs": 1,
+          "recorded": 1,
+          "complete": 1,
+          "failed": 0,
+          "missing": 0,
+          "completion_rate": 1.0,
+          "tokens": {
+            "attempt_count": 3,
+            "prompt_tokens": 10272,
+            "prompt_tokens_unknown_attempts": 0,
+            "completion_tokens": 12570,
+            "completion_tokens_unknown_attempts": 0,
+            "reasoning_tokens": 11861,
+            "reasoning_tokens_unknown_attempts": 0
+          },
+          "generation_timing_all": {
+            "count": 1,
+            "mean": 73.38133289996767,
+            "p50": 73.38133289996767,
+            "p95": 73.38133289996767,
+            "total": 73.38133289996767
+          },
+          "generation_timing_complete": {
+            "count": 1,
+            "mean": 73.38133289996767,
+            "p50": 73.38133289996767,
+            "p95": 73.38133289996767,
+            "total": 73.38133289996767
+          },
+          "grades": {
+            "correct": 1,
+            "partial": 0,
+            "incorrect": 0
+          },
+          "grade_denominator": 1,
+          "by_kind": {
+            "table": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            }
+          },
+          "rubric": {
+            "reviewed": 1,
+            "unreviewed": 0,
+            "passed": 1,
+            "reviewed_pass_rate": 1.0,
+            "all_case_pass_rate": 1.0
+          }
+        }
+      },
+      "paired": {
+        "eligible_pairs": 1,
+        "eligible_questions": 1,
+        "positive_pairs": 1,
+        "positive_metrics": {
+          "faithfulness": {
+            "A": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": 0.0
+          },
+          "citation_support_rate": {
+            "A": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": 0.0
+          },
+          "factual_f1": {
+            "A": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": 0.0
+          },
+          "semantic_similarity": {
+            "A": {
+              "mean": 0.9065294861793518,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.9053506851196289,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": -0.0011788010597229004
+          },
+          "answer_correctness": {
+            "A": {
+              "mean": 0.976632371544838,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.9763376712799072,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": -0.0002947002649307251
+          },
+          "bertscore_f1": {
+            "A": {
+              "mean": 0.7761088013648987,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.7898398637771606,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": 0.013731062412261963
+          }
+        }
+      },
+      "note": "Custom auditable metrics; development/regression data; incomplete counterparts excluded from paired quality.",
+      "context_evaluation": {
+        "expected_cases": 1,
+        "expected_positive_cases": 1,
+        "variants": {
+          "A": {
+            "planned_questions": 1,
+            "recorded": 1,
+            "complete": 1,
+            "failed": 0,
+            "missing": 0,
+            "completion_rate": 1.0,
+            "planned_positive_questions": 1,
+            "positive_complete": 1,
+            "negative_or_ambiguous_questions": 0,
+            "positive_na_or_unreviewed": {
+              "context_recall": 0,
+              "context_precision": 0
+            }
+          },
+          "D": {
+            "planned_questions": 1,
+            "recorded": 1,
+            "complete": 1,
+            "failed": 0,
+            "missing": 0,
+            "completion_rate": 1.0,
+            "planned_positive_questions": 1,
+            "positive_complete": 1,
+            "negative_or_ambiguous_questions": 0,
+            "positive_na_or_unreviewed": {
+              "context_recall": 0,
+              "context_precision": 0
+            }
+          }
+        },
+        "paired": {
+          "eligible_questions": 1,
+          "unavailable_positive_questions": 0,
+          "metrics": {
+            "context_recall": {
+              "A": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "D": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "delta_D_minus_A": 0.0
+            },
+            "context_precision": {
+              "A": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "D": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "delta_D_minus_A": 0.0
+            }
+          }
+        },
+        "note": "Independent context reviews; positive A/D question pairs counted once; generation completion and repetitions do not affect evidence metrics."
+      }
+    },
+    "development36": {
+      "expected_cases": 3,
+      "repeats": 1,
+      "variants": {
+        "A": {
+          "planned_runs": 3,
+          "recorded": 3,
+          "complete": 3,
+          "failed": 0,
+          "missing": 0,
+          "completion_rate": 1.0,
+          "tokens": {
+            "attempt_count": 4,
+            "prompt_tokens": 11991,
+            "prompt_tokens_unknown_attempts": 0,
+            "completion_tokens": 7927,
+            "completion_tokens_unknown_attempts": 0,
+            "reasoning_tokens": 6618,
+            "reasoning_tokens_unknown_attempts": 0
+          },
+          "generation_timing_all": {
+            "count": 3,
+            "mean": 16.95137226666945,
+            "p50": 9.866658199985977,
+            "p95": 30.0042014000006,
+            "total": 50.85411680000834
+          },
+          "generation_timing_complete": {
+            "count": 3,
+            "mean": 16.95137226666945,
+            "p50": 9.866658199985977,
+            "p95": 30.0042014000006,
+            "total": 50.85411680000834
+          },
+          "grades": {
+            "correct": 3,
+            "partial": 0,
+            "incorrect": 0
+          },
+          "grade_denominator": 3,
+          "by_kind": {
+            "ambiguous": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            },
+            "hard_negative": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            },
+            "naturalistic_positive": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            }
+          },
+          "rubric": {
+            "reviewed": 3,
+            "unreviewed": 0,
+            "passed": 3,
+            "reviewed_pass_rate": 1.0,
+            "all_case_pass_rate": 1.0
+          }
+        },
+        "D": {
+          "planned_runs": 3,
+          "recorded": 3,
+          "complete": 3,
+          "failed": 0,
+          "missing": 0,
+          "completion_rate": 1.0,
+          "tokens": {
+            "attempt_count": 4,
+            "prompt_tokens": 10789,
+            "prompt_tokens_unknown_attempts": 0,
+            "completion_tokens": 6455,
+            "completion_tokens_unknown_attempts": 0,
+            "reasoning_tokens": 5416,
+            "reasoning_tokens_unknown_attempts": 0
+          },
+          "generation_timing_all": {
+            "count": 3,
+            "mean": 14.880160833340293,
+            "p50": 9.643675600003917,
+            "p95": 27.539784910023442,
+            "total": 44.64048250002088
+          },
+          "generation_timing_complete": {
+            "count": 3,
+            "mean": 14.880160833340293,
+            "p50": 9.643675600003917,
+            "p95": 27.539784910023442,
+            "total": 44.64048250002088
+          },
+          "grades": {
+            "correct": 3,
+            "partial": 0,
+            "incorrect": 0
+          },
+          "grade_denominator": 3,
+          "by_kind": {
+            "ambiguous": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            },
+            "hard_negative": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            },
+            "naturalistic_positive": {
+              "recorded_runs": 1,
+              "completed": 1,
+              "reviewed": 1,
+              "grades": {
+                "correct": 1,
+                "partial": 0,
+                "incorrect": 0
+              }
+            }
+          },
+          "rubric": {
+            "reviewed": 3,
+            "unreviewed": 0,
+            "passed": 3,
+            "reviewed_pass_rate": 1.0,
+            "all_case_pass_rate": 1.0
+          }
+        }
+      },
+      "paired": {
+        "eligible_pairs": 3,
+        "eligible_questions": 3,
+        "positive_pairs": 1,
+        "positive_metrics": {
+          "faithfulness": {
+            "A": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.8888888888888888,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": -0.11111111111111116
+          },
+          "citation_support_rate": {
+            "A": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.8888888888888888,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": -0.11111111111111116
+          },
+          "factual_f1": {
+            "A": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 1.0,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": 0.0
+          },
+          "semantic_similarity": {
+            "A": {
+              "mean": 0.8644212484359741,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.863131046295166,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": -0.0012902021408081055
+          },
+          "answer_correctness": {
+            "A": {
+              "mean": 0.9661053121089935,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.9657827615737915,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": -0.00032255053520202637
+          },
+          "bertscore_f1": {
+            "A": {
+              "mean": 0.7303466200828552,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "D": {
+              "mean": 0.7413904666900635,
+              "question_count": 1,
+              "paired_run_count": 1,
+              "na_pair_count": 0
+            },
+            "delta_D_minus_A": 0.011043846607208252
+          }
+        }
+      },
+      "note": "Custom auditable metrics; development/regression data; incomplete counterparts excluded from paired quality.",
+      "context_evaluation": {
+        "expected_cases": 3,
+        "expected_positive_cases": 1,
+        "variants": {
+          "A": {
+            "planned_questions": 3,
+            "recorded": 3,
+            "complete": 3,
+            "failed": 0,
+            "missing": 0,
+            "completion_rate": 1.0,
+            "planned_positive_questions": 1,
+            "positive_complete": 1,
+            "negative_or_ambiguous_questions": 2,
+            "positive_na_or_unreviewed": {
+              "context_recall": 0,
+              "context_precision": 0
+            }
+          },
+          "D": {
+            "planned_questions": 3,
+            "recorded": 3,
+            "complete": 3,
+            "failed": 0,
+            "missing": 0,
+            "completion_rate": 1.0,
+            "planned_positive_questions": 1,
+            "positive_complete": 1,
+            "negative_or_ambiguous_questions": 2,
+            "positive_na_or_unreviewed": {
+              "context_recall": 0,
+              "context_precision": 0
+            }
+          }
+        },
+        "paired": {
+          "eligible_questions": 1,
+          "unavailable_positive_questions": 0,
+          "metrics": {
+            "context_recall": {
+              "A": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "D": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "delta_D_minus_A": 0.0
+            },
+            "context_precision": {
+              "A": {
+                "mean": 0.6666666666666666,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "D": {
+                "mean": 1.0,
+                "question_count": 1,
+                "na_or_unreviewed_positive_questions": 0
+              },
+              "delta_D_minus_A": 0.33333333333333337
+            }
+          }
+        },
+        "note": "Independent context reviews; positive A/D question pairs counted once; generation completion and repetitions do not affect evidence metrics."
+      }
+    }
+  },
+  "judge": {
+    "context": {
+      "planned": 8,
+      "eligible": 8,
+      "recorded": 8,
+      "complete": 8,
+      "failed": 0,
+      "unreviewed_eligible": 0,
+      "ineligible_generation_runs": 0,
+      "completion_rate_all_planned": 1.0,
+      "completion_rate_eligible": 1.0,
+      "tokens": {
+        "attempt_count": 8,
+        "prompt_tokens": 24594,
+        "prompt_tokens_unknown_attempts": 0,
+        "completion_tokens": 1215,
+        "completion_tokens_unknown_attempts": 0,
+        "reasoning_tokens": 0,
+        "reasoning_tokens_unknown_attempts": 8
+      },
+      "timing": {
+        "count": 8,
+        "mean": 3.011007349996362,
+        "p50": 3.1277670499985106,
+        "p95": 3.759613654963323,
+        "total": 24.088058799970895
+      }
+    },
+    "faithfulness": {
+      "planned": 8,
+      "eligible": 8,
+      "recorded": 8,
+      "complete": 8,
+      "failed": 0,
+      "unreviewed_eligible": 0,
+      "ineligible_generation_runs": 0,
+      "completion_rate_all_planned": 1.0,
+      "completion_rate_eligible": 1.0,
+      "tokens": {
+        "attempt_count": 8,
+        "prompt_tokens": 28536,
+        "prompt_tokens_unknown_attempts": 0,
+        "completion_tokens": 8468,
+        "completion_tokens_unknown_attempts": 0,
+        "reasoning_tokens": 0,
+        "reasoning_tokens_unknown_attempts": 8
+      },
+      "timing": {
+        "count": 8,
+        "mean": 8.574699850003526,
+        "p50": 8.864442399994005,
+        "p95": 12.244888294994597,
+        "total": 68.59759880002821
+      }
+    },
+    "correctness": {
+      "planned": 8,
+      "eligible": 8,
+      "recorded": 8,
+      "complete": 8,
+      "failed": 0,
+      "unreviewed_eligible": 0,
+      "ineligible_generation_runs": 0,
+      "completion_rate_all_planned": 1.0,
+      "completion_rate_eligible": 1.0,
+      "tokens": {
+        "attempt_count": 8,
+        "prompt_tokens": 30772,
+        "prompt_tokens_unknown_attempts": 0,
+        "completion_tokens": 3406,
+        "completion_tokens_unknown_attempts": 0,
+        "reasoning_tokens": 0,
+        "reasoning_tokens_unknown_attempts": 8
+      },
+      "timing": {
+        "count": 8,
+        "mean": 4.610200025002996,
+        "p50": 4.122028150013648,
+        "p95": 7.198077779990853,
+        "total": 36.88160020002397
+      }
+    }
+  },
+  "supplemental_records": 4,
+  "semantic_manifest": {
+    "bert_model_id": "google-bert/bert-base-chinese",
+    "bert_model_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+    "bert_score_version": "0.3.13",
+    "bert_score_hash": "C:\\Users\\wuhao\\.cache\\codex-eval-models\\bert-base-chinese-8f23c25b_L8_no-idf_version=0.3.12(hug_trans=5.16.1)",
+    "num_layers": 8,
+    "idf": false,
+    "rescale_with_baseline": false,
+    "embed_model_id": "BAAI/bge-small-zh-v1.5",
+    "embed_model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "model_files_sha256": {
+      "bert": {
+        "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+        "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+        "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+        "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+        "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      },
+      "bge": {
+        "1_Pooling/config.json": "aaa8861589f80c961a03cc86c7eeaef7605c1676b9ab55329d33a304738769c6",
+        "config.json": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a",
+        "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+        "model.safetensors": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "README.md": "c48a4eeea77f6b1d38b48ec1c5b8d4f86d5550cc43fa345a0db1b2ca1d082369",
+        "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+        "tokenizer_config.json": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+        "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+      }
+    },
+    "answers_sha256": "1383c1c0b5c6839cb1821af5d6273951d6742d7cfaaa9ba39e68b7c9e8fa3152",
+    "reference_sha256": {
+      "original46": "8aa54ea478598c8f90a660d78ac2e27f461dc0a3675c8573d2db9fc40c865c04",
+      "development36": "6a763a1ca586adfc3fdf8d3aec2828e339796f7ba667e36c689269ac9f9a8b3c"
+    },
+    "model_artifact_spec_sha256": "df7a0437eff9adec5eb8963d0477e9c16e5851daa20d304e2549592eec2b5c97",
+    "versions": {
+      "torch": "2.9.0",
+      "transformers": "5.16.1",
+      "sentence-transformers": "6.0.1"
+    },
+    "device": "cpu",
+    "cpu_threads": 4,
+    "batch_size": 8,
+    "scored_pairs": 4,
+    "model_load_seconds": 2.0953535999869928,
+    "scoring_seconds": 21.848014899995178,
+    "scope": "Completed positive cases only; no score inferred for failed or diagnostic cases",
+    "preprocessing": "Remove source markers and collapse whitespace; preserve negation and numbers",
+    "truncation": "Tokenizer/model native limits; full original answers retained in answers.jsonl",
+    "source_sha256": "02696298167861aa0a41fdc01d6d06dbc191112be11f5a9b1472cbf514decf9d",
+    "data_code_hash_normalization": "CRLF to LF only; model file hashes remain raw SHA256"
+  },
+  "notes": [
+    "Generation-only wall time; frozen retrieval is not timed.",
+    "Custom AnswerCorrectness=.75*factualF1+.25*raw local BGE cosine; no official Ragas score.",
+    "Positive metric means weight each question equally after averaging its paired complete repetitions.",
+    "Context Recall/Precision come from independent context reviews once per positive A/D question; answer availability does not change their denominator.",
+    "Unknown usage remains unknown; token totals include failed attempts with reported usage.",
+    "Generator and judge share the DeepSeek model family; correlated errors remain possible.",
+    "Source-grounded Codex reference annotation, separate from human adjudication. Development/regression sets."
+  ]
+}
