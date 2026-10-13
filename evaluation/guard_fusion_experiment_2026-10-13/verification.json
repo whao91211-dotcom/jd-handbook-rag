@@ -1,0 +1,88 @@
+{
+  "successful_runs": 984,
+  "failed_runs": 0,
+  "paired_cases": 82,
+  "run_counts": {
+    "development36": {
+      "A": 108,
+      "B": 108,
+      "C": 108,
+      "D": 108
+    },
+    "original46": {
+      "A": 138,
+      "B": 138,
+      "C": 138,
+      "D": 138
+    }
+  },
+  "candidate_pools_identical": true,
+  "rankings_and_scores_identical_across_repeats": true,
+  "source_content_hashes_match": true,
+  "hash_normalization": "CRLF to LF only; no other byte changes",
+  "pool_and_result_bounds_verified": true,
+  "timing_percentiles_recomputed": true,
+  "context_dropped_chunks": 0,
+  "recomputed_metrics": {
+    "development36": {
+      "A": {
+        "ndcg_at3": 0.4215149870234983,
+        "mrr": 0.5361111111111111,
+        "recall_at8": 1.0,
+        "full_at8": 1.0,
+        "context_full": 1.0
+      },
+      "B": {
+        "ndcg_at3": 0.6424209750983685,
+        "mrr": 0.6666666666666666,
+        "recall_at8": 0.9629629629629629,
+        "full_at8": 0.8888888888888888,
+        "context_full": 0.8888888888888888
+      },
+      "C": {
+        "ndcg_at3": 0.6424209750983685,
+        "mrr": 0.6759259259259259,
+        "recall_at8": 0.9629629629629629,
+        "full_at8": 0.8888888888888888,
+        "context_full": 0.8888888888888888
+      },
+      "D": {
+        "ndcg_at3": 0.6095563538597144,
+        "mrr": 0.6055555555555555,
+        "recall_at8": 1.0,
+        "full_at8": 1.0,
+        "context_full": 1.0
+      }
+    },
+    "original46": {
+      "A": {
+        "ndcg_at3": 0.8261859507142915,
+        "mrr": 0.8130952380952381,
+        "recall_at8": 1.0,
+        "full_at8": 1.0,
+        "context_full": 1.0
+      },
+      "B": {
+        "ndcg_at3": 0.9578205432653094,
+        "mrr": 0.9428571428571428,
+        "recall_at8": 1.0,
+        "full_at8": 1.0,
+        "context_full": 1.0
+      },
+      "C": {
+        "ndcg_at3": 0.9578205432653094,
+        "mrr": 0.9428571428571428,
+        "recall_at8": 1.0,
+        "full_at8": 1.0,
+        "context_full": 1.0
+      },
+      "D": {
+        "ndcg_at3": 0.9081593863265356,
+        "mrr": 0.8914285714285715,
+        "recall_at8": 1.0,
+        "full_at8": 1.0,
+        "context_full": 1.0
+      }
+    }
+  }
+}

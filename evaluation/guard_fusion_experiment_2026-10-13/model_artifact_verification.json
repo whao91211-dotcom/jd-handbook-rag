@@ -1,0 +1,38 @@
+{
+  "source": "Official Hugging Face revision API with blobs=true",
+  "files": [
+    {
+      "verified": true,
+      "file": "config.json",
+      "git_blob_sha1": "ff248a5f7d76e27b10778b3c593c9fba1df4c448"
+    },
+    {
+      "verified": true,
+      "file": "tokenizer_config.json",
+      "git_blob_sha1": "059214673d9d6d2ee319411e2ffec8c024b816d5"
+    },
+    {
+      "verified": true,
+      "file": "special_tokens_map.json",
+      "git_blob_sha1": "68171d1ff68b731a33d119708476692c094a466b"
+    },
+    {
+      "verified": true,
+      "sha256": "ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd",
+      "file": "model.safetensors"
+    },
+    {
+      "verified": true,
+      "sha256": "9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e",
+      "file": "tokenizer.json"
+    },
+    {
+      "verified": true,
+      "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+      "file": "sentencepiece.bpe.model"
+    }
+  ],
+  "model_id": "BAAI/bge-reranker-base",
+  "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "verification_note": "All six local pinned files rehashed after the new experiment; reference hashes preserved from official revision metadata verified in the 2026-10-12 experiment."
+}

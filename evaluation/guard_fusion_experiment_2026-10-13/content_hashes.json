@@ -1,0 +1,11 @@
+{
+  "normalization": "CRLF to LF only; no other byte changes",
+  "measured_code_revision": "34382a9f037e3e62e72b65eff70b0cd02628b8fb",
+  "source_sha256": {
+    "ragcore/retriever.py": "7059cdeaf1d9bd824d2ea13bda73d6a6467fe9c53bdd58f75998c4e2c2689295",
+    "ragcore/evidence.py": "bc0973229fcfe302b6dc3ac0862597b7dcec166958a931f13d4ad2689231a539",
+    "ragcore/reranker.py": "de7c73a5c5e4101a50bbae454768422c98c1d52ee0c4e77447f75733f16c01cf",
+    "evaluation/run_rerank_experiment.py": "c218dfb1134e935656b6c7bd822cda0da2882d82a5e48db4d701bef050882605"
+  },
+  "chunks_sha256": "0344f944ce197b35bcf26c25e530714dc148e96edb835b73eb81f6eb51ebeec5"
+}

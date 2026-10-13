@@ -1,0 +1,500 @@
+{
+  "reference_revision": "8d30fe0",
+  "case_count": 82,
+  "method_comparisons": 246,
+  "scoring": "Frozen original BGE scores reused; real candidate retrieval and complete source dictionaries compared",
+  "checks": [
+    {
+      "dataset": "original46",
+      "qid": "P01",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P02",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P03",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P04",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P05",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P06",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P07",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P08",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P09",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P10",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P11",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P12",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P14",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P15",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P16",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P18",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P19",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P21",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P22",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P23",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P24",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P25",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P26",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P27",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P28",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P29",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P30",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P33",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P34",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "P35",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N01",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N02",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N03",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N04",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N05",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N06",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N07",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N08",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N09",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N10",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "original46",
+      "qid": "N11",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P02",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P03",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P04",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P05",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P07",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P08",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N02",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N03",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N04",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N05",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N06",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N07",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N08",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A02",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A03",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A04",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A05",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A06",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A07",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A08",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A09",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A10",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A11",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A12",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N09",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N10",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N11",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N13",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N14",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N15",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N16",
+      "abc_dictionaries_match": true,
+      "full_orders_verified": true
+    }
+  ]
+}

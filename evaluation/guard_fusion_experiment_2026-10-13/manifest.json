@@ -1,0 +1,50 @@
+{
+  "code_revision": "34382a9f037e3e62e72b65eff70b0cd02628b8fb",
+  "source_sha256": {
+    "ragcore/retriever.py": "5c441a2c8756b57574ee18679a1e4b89b1a10da771b9936b290ef4ab9187a403",
+    "ragcore/evidence.py": "474076377aabd8af328874ccf3e9ed5a168de27b4769a2bd5b3cf4a81373192f",
+    "ragcore/reranker.py": "6b25628c2f1c56b27327cf1bc370547cfdaf5f0925189ba5aac14c2234df842f",
+    "evaluation/run_rerank_experiment.py": "5fe80531307aa603648b9ca78ed0bb7adb7923138ce3d3808d45b9bea6b848c9"
+  },
+  "chunks_sha256": "6689f74c6d50718e48a76d1857128247f336bca005f8c8b655b06b11d74e9301",
+  "chunk_count": 123,
+  "index_embeddings_sha256": "6c43c2f901c224afe366f0f9f648b43fec73520dbf3efd6c99154e784246f5c9",
+  "dataset_sha256": {
+    "original46": "0a6c983c888226656ad8ee13f2d0c730a3265ca0bb523e9f3a0a0020002879f3",
+    "development36": "db8ec69216775913a301c2b2c46f6fe3d17a685ee1aea17301f032cafab53f08"
+  },
+  "model_id": "BAAI/bge-reranker-base",
+  "model_revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+  "device": "cpu",
+  "dtype": "float32",
+  "batch_size": 8,
+  "max_pair_tokens": 512,
+  "truncation_policy": "longest_first",
+  "cpu_threads": 4,
+  "variants": {
+    "A": "none",
+    "B": "global",
+    "C": "guarded",
+    "D": "fusion"
+  },
+  "fusion": {
+    "guard_weight": 0.5,
+    "rank_constant": 60,
+    "guard_order": "select_evidence on complete common pool, k=pool size"
+  },
+  "repeats": 3,
+  "smoke_limit": null,
+  "python": "3.10.0",
+  "versions": {
+    "torch": "2.9.0",
+    "sentence-transformers": "6.0.1",
+    "transformers": "5.16.1",
+    "chromadb": "1.5.9",
+    "rank-bm25": "0.2.2",
+    "jieba": "0.42.1"
+  },
+  "command": "C:\\Users\\wuhao\\Documents\\RAG\\.venv\\Scripts\\python.exe evaluation/run_rerank_experiment.py --include-fusion --data-root C:/Users/wuhao/Documents/RAG/data --output evaluation/guard_fusion_experiment_2026-10-13",
+  "quality_note": "Development/regression sets; no answer generation, judge or user adjudication. Labels never passed to retrieval.",
+  "reranker_cold_load_seconds": 14.707233199995244,
+  "model_dtype": "torch.float32"
+}

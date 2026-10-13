@@ -1,0 +1,15 @@
+{
+  "cpu": "13th Gen Intel(R) Core(TM) i5-1340P",
+  "physical_cores": 12,
+  "logical_processors": 16,
+  "device": "cpu",
+  "torch_threads": 4,
+  "dtype": "float32",
+  "single_runtime_sample": {
+    "time": "2026-10-13T11:30:25.543828+08:00",
+    "cpu_load_percent": 54,
+    "free_physical_memory_kib": 2000180,
+    "total_visible_memory_kib": 16400704
+  },
+  "timing_note": "One read-only load sample only. No continuous frequency, temperature or contention telemetry. Large timing drift across repeats; causal attribution not established."
+}

@@ -1,0 +1,2972 @@
+{
+  "historical_abc_runs_compared": 738,
+  "historical_fields_match": [
+    "candidate_ids",
+    "scores",
+    "pair_tokens",
+    "selected_ids",
+    "context_ids",
+    "metrics"
+  ],
+  "datasets": {
+    "original46": {
+      "positive_cases": 35,
+      "diagnostic_cases": 11,
+      "timings_by_repeat": {
+        "A": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 0.10313904999929946
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 0.04376514999603387
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 0.03974305000156164
+          }
+        ],
+        "B": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 48.390704500008724
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 18.331343199984985
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 18.448443400018732
+          }
+        ],
+        "C": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 49.65547085000435
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 18.588251249995665
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 18.401534849996096
+          }
+        ],
+        "D": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 51.059215150002274
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 18.397591150001972
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 18.472416999997222
+          }
+        ]
+      },
+      "fusion_overhead_ms": {
+        "guard_seconds": {
+          "p50": 0.013999990187585354,
+          "p95": 0.10886998061323538
+        },
+        "fusion_seconds": {
+          "p50": 0.1310499937972054,
+          "p95": 0.24950997903943062
+        }
+      },
+      "cases": [
+        {
+          "qid": "P01",
+          "question": "京东物流子集团是哪一天正式成立的？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p7-be9ae664fc",
+              "guard_rank": 1,
+              "semantic_rank": 2,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 344,
+              "selected_rank": {
+                "A": 1,
+                "B": 2,
+                "C": 2,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P02",
+          "question": "京东2016年市场交易额是多少？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p5-8263b6e785",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 471,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P03",
+          "question": "京东生鲜目前能在多少个城市次日达？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p5-d125330024",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 482,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P04",
+          "question": "公司禁止员工打架或侮辱他人吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p10-9aa7c87bda",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 246,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P05",
+          "question": "管理岗位员工没尽到管理职责会怎样？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.125,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.2,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.07500000000000001,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.6309297535714575,
+            "mrr": -0.3,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p10-5052e898cb",
+              "guard_rank": 8,
+              "semantic_rank": 2,
+              "fusion_score": 0.015417457305502846,
+              "pair_tokens": 312,
+              "selected_rank": {
+                "A": 8,
+                "B": 2,
+                "C": 2,
+                "D": 5
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P06",
+          "question": "弄坏公司配的设备，公司会要我赔吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.25,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.6309297535714575,
+            "mrr": 0.25,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p11-5ed9c253db",
+              "guard_rank": 4,
+              "semantic_rank": 1,
+              "fusion_score": 0.016009221311475412,
+              "pair_tokens": 268,
+              "selected_rank": {
+                "A": 4,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P07",
+          "question": "试用期想离职，要提前几天通知公司？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p15-a99dbf1c9b",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 305,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P08",
+          "question": "试用期迟到早退几次算不符合录用条件？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p16-161eb98f4e",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 253,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P09",
+          "question": "员工自己发起调动要满足哪些条件？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p17-3912472149",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 247,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P10",
+          "question": "能录用原公司下级来自己部门做下属吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p14-1ad6eab8c6",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 281,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P11",
+          "question": "我累计工龄10年以上、企业工龄8年，医疗期多久？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p22-c42b3d394c",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 266,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P12",
+          "question": "连续旷工多少天会被公司解除劳动合同？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p20-a13b1b7d85",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 265,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P13",
+          "question": "我今年入职不满一年，病假天数怎么折算？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p21-88de6db287",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 411,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P14",
+          "question": "病假超过5天不到60天工资怎么算？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p22-3579d5cfe2",
+              "guard_rank": 1,
+              "semantic_rank": 2,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 236,
+              "selected_rank": {
+                "A": 1,
+                "B": 2,
+                "C": 2,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P15",
+          "question": "社会工龄满15年，每年法定年假有多少天？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p23-2435daf3ec",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 369,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P16",
+          "question": "P7一年最多能休多少天法定加福利年假？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p23-77b2224c12",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 273,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P17",
+          "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p29-d2fd640689",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 437,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P18",
+          "question": "满几年算大佬，老员工日是哪天？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p30-6ab8ae0a44",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 414,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P19",
+          "question": "工作日餐补多少钱，休假会扣吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p30-526ea28baa",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 344,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P20",
+          "question": "M3及P7/T7级转正后福利年假怎么算？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p30-d8fe59b41b",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 209,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P21",
+          "question": "休假日加班累计几小时能享两餐加班餐？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.25,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.6309297535714575,
+            "mrr": 0.25,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p31-6dead0b231",
+              "guard_rank": 4,
+              "semantic_rank": 1,
+              "fusion_score": 0.016009221311475412,
+              "pair_tokens": 493,
+              "selected_rank": {
+                "A": 4,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P22",
+          "question": "工作日加班到20点后满1小时能领加班餐吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p31-77990d6c90",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 434,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P23",
+          "question": "经理级及以上管理岗位空缺内部提拔要占多少？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p33-a867f06b3c",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 374,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P24",
+          "question": "京东的360评估每年做几次，都评哪些内容？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p34-fb05ac7b83",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 369,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P25",
+          "question": "内部异动需要满足什么服务年限？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p34-b3db9e8572",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 272,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P26",
+          "question": "连续30天内迟到或早退两次会被记过吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.5,
+              "mrr": 0.3333333333333333,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.5,
+            "mrr": 0.6666666666666667,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p42-83f9d6df8d",
+              "guard_rank": 3,
+              "semantic_rank": 1,
+              "fusion_score": 0.016133229247983348,
+              "pair_tokens": 275,
+              "selected_rank": {
+                "A": 3,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P27",
+          "question": "长期服务奖满5年拿的是啥奖？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p38-c9b85989ed",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 252,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P28",
+          "question": "违纪处分对年度资格的影响持续多久？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p41-0042d06121",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 279,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P29",
+          "question": "连续30天内迟到或早退几次会被辞退？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p43-54058878ec",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 259,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P30",
+          "question": "六个月内再犯轻微违纪，公司会怎么处分？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p40-c769d87f54",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 338,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P31",
+          "question": "邮箱密码过期前多久会发提醒邮件？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p50-314299f759",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 314,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P32",
+          "question": "管理者想看下属考勤和绩效在哪个模块？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p48-ad656e286d",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 268,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P33",
+          "question": "登录流程中心后系统会自动跳到哪个页面？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p48-8e3321fd75",
+              "guard_rank": 1,
+              "semantic_rank": 2,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 235,
+              "selected_rank": {
+                "A": 1,
+                "B": 2,
+                "C": 2,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P34",
+          "question": "个人绩效贡献与部门平均水平相当，属于哪个等级？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p28-9092bac2d7",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 317,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "P35",
+          "question": "入职后什么时候能享受免费体检？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p30-c81f9880c1",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 311,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "development36": {
+      "positive_cases": 9,
+      "diagnostic_cases": 27,
+      "timings_by_repeat": {
+        "A": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 0.09292210001149215
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 0.1026844500011066
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 0.11019334998854902
+          }
+        ],
+        "B": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 39.9225043500046
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 44.50338655000087
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 45.85427564999554
+          }
+        ],
+        "C": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 39.514743000007
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 46.30304275000526
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 46.3670465000032
+          }
+        ],
+        "D": [
+          {
+            "repeat": 1,
+            "total_p50_seconds": 40.73599015000218
+          },
+          {
+            "repeat": 2,
+            "total_p50_seconds": 45.06052179999824
+          },
+          {
+            "repeat": 3,
+            "total_p50_seconds": 46.028594649993465
+          }
+        ]
+      },
+      "fusion_overhead_ms": {
+        "guard_seconds": {
+          "p50": 0.020100007532164454,
+          "p95": 0.14560500421794131
+        },
+        "fusion_seconds": {
+          "p50": 0.2107499894918874,
+          "p95": 0.39165001071523875
+        }
+      },
+      "cases": [
+        {
+          "qid": "C-N04",
+          "question": "公司电脑密码要求每隔多少天换一次？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6934264036172708,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.9197207891481876,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.9197207891481876,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6934264036172708,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.22629438553091674,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p50-0b87b65099",
+              "guard_rank": 2,
+              "semantic_rank": 3,
+              "fusion_score": 0.016001024065540194,
+              "pair_tokens": 391,
+              "selected_rank": {
+                "A": 2,
+                "B": 3,
+                "C": 3,
+                "D": 3
+              }
+            },
+            {
+              "id": "p50-8c19ffbac4",
+              "guard_rank": 3,
+              "semantic_rank": 1,
+              "fusion_score": 0.016133229247983348,
+              "pair_tokens": 233,
+              "selected_rank": {
+                "A": 3,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P01",
+          "question": "我刚入职两个月，现在想走，是不是跟主管说一声就能马上离开？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.25,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 1.0,
+            "mrr": 0.75,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p15-a99dbf1c9b",
+              "guard_rank": 4,
+              "semantic_rank": 2,
+              "fusion_score": 0.015877016129032258,
+              "pair_tokens": 311,
+              "selected_rank": {
+                "A": 4,
+                "B": 2,
+                "C": 2,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P02",
+          "question": "我以前工作十多年，在京东待了八年，生病的话医疗期有几个月？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.125,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.5,
+              "mrr": 0.3333333333333333,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.5,
+              "mrr": 0.3333333333333333,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.25,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.125,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.5,
+            "mrr": -0.08333333333333331,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p22-c42b3d394c",
+              "guard_rank": 8,
+              "semantic_rank": 3,
+              "fusion_score": 0.015289449112978524,
+              "pair_tokens": 268,
+              "selected_rank": {
+                "A": 8,
+                "B": 3,
+                "C": 3,
+                "D": 4
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P03",
+          "question": "公司发的电脑被我不小心摔坏了，一定要自己赔吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.25,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.16666666666666666,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.25,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.2,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": -0.04999999999999999,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.033333333333333354,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p11-5ed9c253db",
+              "guard_rank": 4,
+              "semantic_rank": 6,
+              "fusion_score": 0.015388257575757576,
+              "pair_tokens": 269,
+              "selected_rank": {
+                "A": 4,
+                "B": 6,
+                "C": 4,
+                "D": 5
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P04",
+          "question": "想换到别的部门，要先得到现在领导的同意吗？还有什么条件？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.0,
+              "mrr": 0.2,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.6309297535714575,
+            "mrr": 0.3,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p17-3912472149",
+              "guard_rank": 5,
+              "semantic_rank": 2,
+              "fusion_score": 0.01575682382133995,
+              "pair_tokens": 257,
+              "selected_rank": {
+                "A": 5,
+                "B": 2,
+                "C": 2,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P05",
+          "question": "我入职三年多才怀孕，除了法定产假，公司还给多少天？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.36907024642854247,
+            "mrr": 0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p24-3e46efee64",
+              "guard_rank": 1,
+              "semantic_rank": 2,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 481,
+              "selected_rank": {
+                "A": 1,
+                "B": 2,
+                "C": 2,
+                "D": 1
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P06",
+          "question": "请了一天事假，那天15块钱餐补还发吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.46927872602275644,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 0.46927872602275644,
+              "mrr": 1.0,
+              "recall_at8": 0.6666666666666666,
+              "full_at8": 0.0,
+              "context_full": 0.0
+            },
+            "C": {
+              "ndcg_at3": 0.46927872602275644,
+              "mrr": 1.0,
+              "recall_at8": 0.6666666666666666,
+              "full_at8": 0.0,
+              "context_full": 0.0
+            },
+            "D": {
+              "ndcg_at3": 0.5307212739772434,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.061442547954487,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.061442547954487,
+            "mrr": -0.5,
+            "recall_at8": 0.33333333333333337,
+            "full_at8": 1.0,
+            "context_full": 1.0
+          },
+          "gold_positions": [
+            {
+              "id": "p23-2435daf3ec",
+              "guard_rank": 1,
+              "semantic_rank": 15,
+              "fusion_score": 0.014863387978142076,
+              "pair_tokens": 370,
+              "selected_rank": {
+                "A": 1,
+                "B": null,
+                "C": null,
+                "D": 5
+              }
+            },
+            {
+              "id": "p21-88de6db287",
+              "guard_rank": 4,
+              "semantic_rank": 7,
+              "fusion_score": 0.01527518656716418,
+              "pair_tokens": 412,
+              "selected_rank": {
+                "A": 4,
+                "B": 7,
+                "C": 4,
+                "D": 3
+              }
+            },
+            {
+              "id": "p30-526ea28baa",
+              "guard_rank": 6,
+              "semantic_rank": 1,
+              "fusion_score": 0.015772478887232988,
+              "pair_tokens": 347,
+              "selected_rank": {
+                "A": 6,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P07",
+          "question": "经理岗空出来，公司有规定优先从内部提拔多少人吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 0.6309297535714575,
+              "mrr": 0.5,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": -0.36907024642854247,
+            "mrr": -0.5,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p33-a867f06b3c",
+              "guard_rank": 2,
+              "semantic_rank": 1,
+              "fusion_score": 0.01626123744050767,
+              "pair_tokens": 376,
+              "selected_rank": {
+                "A": 2,
+                "B": 1,
+                "C": 1,
+                "D": 2
+              }
+            }
+          ]
+        },
+        {
+          "qid": "C-P08",
+          "question": "最近30天迟到了两回，会被记过吗？",
+          "metrics": {
+            "A": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "B": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "C": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            },
+            "D": {
+              "ndcg_at3": 1.0,
+              "mrr": 1.0,
+              "recall_at8": 1.0,
+              "full_at8": 1.0,
+              "context_full": 1.0
+            }
+          },
+          "delta_D_vs_A": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "delta_D_vs_B": {
+            "ndcg_at3": 0.0,
+            "mrr": 0.0,
+            "recall_at8": 0.0,
+            "full_at8": 0.0,
+            "context_full": 0.0
+          },
+          "gold_positions": [
+            {
+              "id": "p42-83f9d6df8d",
+              "guard_rank": 1,
+              "semantic_rank": 1,
+              "fusion_score": 0.01639344262295082,
+              "pair_tokens": 272,
+              "selected_rank": {
+                "A": 1,
+                "B": 1,
+                "C": 1,
+                "D": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
