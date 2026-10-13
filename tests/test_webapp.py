@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from fastapi.testclient import TestClient
 import webapp
+from ragcore.llm import prepare_context as real_context
 
 CHUNKS=[{'id':'a','text':'事假属于无薪假。','pages':[23],'page_start':23,'path':'休假','rrf':.03}, {'id':'b','text':'后续条款','pages':[21],'page_start':21,'path':'总则','rrf':.02}]
 class WebTests(unittest.TestCase):
@@ -39,6 +40,45 @@ class WebTests(unittest.TestCase):
    r=self.client.post('/api/ask',json={'question':'事假','profile':'baseline'}).json();self.assertEqual(r['status'],'truncated')
  def test_health_does_not_expose_credentials(self):
   r=self.client.get('/api/health').json();self.assertEqual(set(r),{'status','api_configured','busy'})
+ def test_enhanced_retrieval_defaults_off(self):
+  with patch('webapp.retrieve',return_value=CHUNKS) as retrieve:
+   result=self.client.post('/api/ask',json={'question':'事假','retrieval_only':True}).json()
+  retrieve.assert_called_once_with('事假',k=8,strategy='guarded')
+  self.assertIs(result['enhanced_retrieval'],False)
+ def test_enhanced_evidence_uses_fixed_fusion_without_generation(self):
+  for profile in ('quality','fast'):
+   with self.subTest(profile=profile),patch('webapp.retrieve',return_value=CHUNKS) as retrieve,patch('webapp.generate') as generate:
+    result=self.client.post('/api/ask',json={'question':'事假','profile':profile,'enhanced_retrieval':True,'retrieval_only':True}).json()
+    retrieve.assert_called_once_with('事假',k=8,strategy='guarded',rerank='fusion',guard_weight=.5)
+    generate.assert_not_called()
+    self.assertIs(result['enhanced_retrieval'],True)
+    self.assertEqual([s['id'] for s in result['sources']],['a','b'])
+    self.assertEqual(result['sources'][0]['text'],CHUNKS[0]['text'])
+ def test_enhanced_hits_are_passed_to_generation_in_order(self):
+  ordered=[CHUNKS[1],CHUNKS[0]]
+  for profile,thinking in (('quality','low'),('fast','disabled')):
+   with self.subTest(profile=profile),patch('webapp.retrieve',return_value=ordered) as retrieve,patch('webapp.prepare_context',side_effect=real_context),patch('webapp.generate',return_value='回答') as generate:
+    result=self.client.post('/api/ask',json={'question':'事假','profile':profile,'enhanced_retrieval':True}).json()
+    retrieve.assert_called_once_with('事假',k=8,strategy='guarded',rerank='fusion',guard_weight=.5)
+    self.assertEqual(generate.call_args.args,('事假',ordered))
+    self.assertEqual(generate.call_args.kwargs['prompt_version'],'evidence')
+    self.assertEqual(generate.call_args.kwargs['thinking_mode'],thinking)
+    self.assertEqual(result['status'],'complete')
+    self.assertEqual([(s['id'],s['label']) for s in result['sources']],[('b','来源1'),('a','来源2')])
+ def test_enhancement_cannot_change_baseline_or_agent(self):
+  for profile in ('baseline','agent'):
+   with self.subTest(profile=profile),patch('webapp.retrieve') as retrieve,patch('webapp.agent_answer') as agent:
+    response=self.client.post('/api/ask',json={'question':'事假','profile':profile,'enhanced_retrieval':True})
+    self.assertEqual(response.status_code,422)
+    retrieve.assert_not_called();agent.assert_not_called()
+ def test_enhanced_model_failure_is_explicit_and_releases_lock(self):
+  with patch('webapp.retrieve',side_effect=RuntimeError('secret-path')),patch('webapp.generate') as generate:
+   result=self.client.post('/api/ask',json={'question':'事假','enhanced_retrieval':True}).json()
+  self.assertEqual(result['status'],'retrieval_failed')
+  self.assertIs(result['enhanced_retrieval'],True)
+  self.assertIn('增强检索',result['message']);self.assertNotIn('secret-path',str(result))
+  generate.assert_not_called();self.assertFalse(webapp.pipeline_lock.locked())
+  self.assertEqual(self.client.post('/api/ask',json={'question':'事假','retrieval_only':True}).json()['status'],'retrieval_only')
 if __name__=='__main__':unittest.main()
 
 

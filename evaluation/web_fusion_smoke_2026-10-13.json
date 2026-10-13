@@ -1,0 +1,42 @@
+{
+  "question": "请了一天事假，那天15块钱餐补还发吗？",
+  "enhanced_retrieval": true,
+  "retrieval_only": true,
+  "source_ids": [
+    "p24-3e46efee64",
+    "p30-526ea28baa",
+    "p21-88de6db287",
+    "p22-3579d5cfe2",
+    "p23-2435daf3ec",
+    "p24-7893cf4f6d",
+    "p20-28e5161ba4",
+    "p25-64fe3a97a0"
+  ],
+  "metrics_display": "检索 63.19秒\n生成 —\n服务处理 63.19秒\n浏览器等待 63.21秒\nTokens 未知 / 未调用\n请求尝试 0",
+  "note": "One cold browser request, no answer model call; not a benchmark percentile.",
+  "disabled_request": {
+    "enhanced_retrieval": false,
+    "tag": "优化方案 · 低推理",
+    "source_ids": [
+      "p23-2435daf3ec",
+      "p24-3e46efee64",
+      "p22-3579d5cfe2",
+      "p21-88de6db287",
+      "p23-77b2224c12",
+      "p30-526ea28baa",
+      "p19-c92ec39c2b",
+      "p21-5ab774b695"
+    ],
+    "metrics_display": "检索 0.20秒\n生成 —\n服务处理 0.20秒\n浏览器等待 0.22秒\nTokens 未知 / 未调用\n请求尝试 0"
+  },
+  "browser_checks": [
+    "initially unchecked",
+    "baseline/agent disabled and unchecked",
+    "quality/fast enabled",
+    "busy checkbox locked",
+    "reload resets unchecked",
+    "enhanced history restores checked and tag",
+    "disabled request uses original evidence order",
+    "390px viewport has no horizontal overflow"
+  ]
+}

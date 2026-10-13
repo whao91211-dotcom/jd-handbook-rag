@@ -6,7 +6,7 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from ragcore.llm import api_ready, generate, prepare_context
 
 ROOT = Path(__file__).resolve().parent
@@ -32,6 +32,13 @@ class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=500)
     profile: Literal['baseline', 'quality', 'fast', 'agent'] = 'quality'
     retrieval_only: bool = False
+    enhanced_retrieval: bool = False
+
+    @model_validator(mode='after')
+    def validate_enhancement(self):
+        if self.enhanced_retrieval and self.profile not in ('quality', 'fast'):
+            raise ValueError('增强检索仅支持优化方案和快速方案')
+        return self
 
     @field_validator('question')
     @classmethod
@@ -73,12 +80,16 @@ def run_question(request):
                     'total_seconds': perf_counter()-start, 'total_tokens': None, 'attempts': 0}}
     strategy, prompt, thinking = PROFILES[request.profile]
     result = {'question': request.question, 'profile': request.profile,
+              'enhanced_retrieval': request.enhanced_retrieval,
               'answer': '', 'sources': [], 'usage': [], 'status': 'complete',
               'message': '', 'metrics': {}}
     try:
-        chunks = retrieve(request.question, k=8, strategy=strategy)
+        options = {'rerank': 'fusion', 'guard_weight': .5} if request.enhanced_retrieval else {}
+        chunks = retrieve(request.question, k=8, strategy=strategy, **options)
     except Exception:
-        result.update(status='retrieval_failed', message='检索失败，请检查本地索引是否已构建，并查看服务终端。')
+        message = ('增强检索失败，请检查本地索引和重排模型，或关闭增强检索后重试。'
+                   if request.enhanced_retrieval else '检索失败，请检查本地索引是否已构建，并查看服务终端。')
+        result.update(status='retrieval_failed', message=message)
         result['metrics'] = {'retrieval_seconds': perf_counter()-start, 'generation_seconds': None,
                              'total_seconds': perf_counter()-start, 'total_tokens': None, 'attempts': 0}
         return result
