@@ -1,0 +1,140 @@
+{
+  "reviewer_type": "independent_Codex_source_review",
+  "checked_cases": 46,
+  "checked_qids": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P15",
+    "P16",
+    "P17",
+    "P18",
+    "P19",
+    "P20",
+    "P21",
+    "P22",
+    "P23",
+    "P24",
+    "P25",
+    "P26",
+    "P27",
+    "P28",
+    "P29",
+    "P30",
+    "P31",
+    "P32",
+    "P33",
+    "P34",
+    "P35",
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06",
+    "N07",
+    "N08",
+    "N09",
+    "N10",
+    "N11"
+  ],
+  "reference_sha256_reviewed": "b548f379b8473f4ad94a0f6f7d954dc4b46ce49d21de2afd5959e5980137e7f2",
+  "corpus_sha256": "6689f74c6d50718e48a76d1857128247f336bca005f8c8b655b06b11d74e9301",
+  "scope": "全部46题逐题对照冻结123片段，检查reference_answer、required_points、reference_claims、数值、适用条件、负题拒答范围与schema。未读取新生成答案、调用模型/API或修改参考文件。",
+  "checks": {
+    "schema_and_original_identity": "pass",
+    "positive_labels": "35 positive, 11 negative",
+    "evidence_ids": "all IDs exist in frozen123",
+    "quote_substrings": "all quotes are exact substrings of cited chunks",
+    "P09_P25_tension": "pass: 两题均保留书面同意和人才开放原则的原文边界，不擅定优先级。P09不将12个月自动等同调动成功，P25不将满一年申请等同免手续。",
+    "negative_scope": "pass: 11负题均把不足限制于冻结手册材料；不将未见标准解释为不存在项目，N08/N10保留已有子女关怀、公积金条款。关键词对全123片段检查未见可推翻目标细节缺失的材料。"
+  },
+  "issues": [
+    {
+      "qid": "P17",
+      "severity": "high",
+      "reason": "参考答案和required_points仅按第29页福利概览断言满三年后怀孕可享30/7天，遗漏第24页正文要求的在职期间首个新生儿、休假前4季度绩效无C或C-条件。概览明确指向休假管理正文；遗漏资格可能把不适用人员错误判为适用，并使正确提醒资格的生成回答与参考不一致。",
+      "suggested_fix": "用p24-3e46efee64及p24-7893cf4f6d补齐女/男员工福利资格；在reference_answer、reference_claims及required_points中保留30/7个自然日、产假180天合计上限及例外，并限定为符合首个新生儿和绩效条件。不得因只问天数就把福利资格当无条件。",
+      "source_evidence": [
+        {
+          "evidence_id": "p29-d2fd640689",
+          "quote": "详细规定参见本手册休假管理相 关规定。"
+        },
+        {
+          "evidence_id": "p24-3e46efee64",
+          "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿，则员工可于休完法定产假后享受额外给予的福利产假。"
+        },
+        {
+          "evidence_id": "p24-3e46efee64",
+          "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+        },
+        {
+          "evidence_id": "p24-7893cf4f6d",
+          "quote": "公司补充福利陪产假是指，男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿，则该员工可在享受法定陪护假后，额外增加 7 个自\n然日的福利陪护假。员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+        }
+      ]
+    },
+    {
+      "qid": "P20",
+      "severity": "medium",
+      "reason": "问题询问转正后福利年假如何计算，但required_points强制要求离职时未使用福利年假不予补偿。这一事实虽然有原文支持，却不回答当前问题；把它当核心必答项会惩罚正确说明资格与按转正日折算的简洁回答，reference_claims也会向Context Recall加入无关要求。",
+      "suggested_fix": "删除required_points中的离职未休不予补偿要求，并从本题用于评分的reference_claims中删除该补偿断言；参考答案保留职级/转正资格和按转正日折算即可。若确需评估离职补偿，应另设明确问该事项的题目。",
+      "source_evidence": [
+        {
+          "evidence_id": "p30-d8fe59b41b",
+          "quote": "福利年假按转正日折算当年应享有天数"
+        },
+        {
+          "evidence_id": "p30-d8fe59b41b",
+          "quote": "离职时未使用的福利 年假不予补偿。"
+        }
+      ]
+    },
+    {
+      "qid": "P04",
+      "severity": "low",
+      "reason": "所问行为只有打架或侮辱，required_points及事实断言把欺诈、胁迫、恐吓也并列为要求。附带列举虽由同句原文支持，但不是完成该问题必需内容，可能使只回答禁止打架和侮辱的正确答案被当遗漏。",
+      "suggested_fix": "把required_points限定为禁止打架等扰乱经营/管理秩序的行为及侮辱他人的言行；用于评价覆盖的reference_claims同样按这两个所问行为精简。其他行为可以作为可选补充，不应列为必答。",
+      "source_evidence": [
+        {
+          "evidence_id": "p10-9aa7c87bda",
+          "quote": "公司禁止打架等\n扰乱正常公司经营或管理秩序的行为，以及欺诈、胁迫、恐吓、侮辱他人的言行；"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "这是独立Codex来源复核，未作人工用户裁决。",
+    "引句存在性与事实支持由结构检查加逐题阅读复核完成；不代表现行公司政策或法律核验。"
+  ],
+  "resolutions": [
+    {
+      "qid": "P17",
+      "status": "resolved",
+      "verification": "完整正文两块现支持司龄满三年后怀孕、在职首个新生儿及休假前4季度无C/C-条件；30/7自然日及产假合计180天上限例外保留。答案、claims和required_points均已更新，精确引句逐条匹配当前冻结块。"
+    },
+    {
+      "qid": "P20",
+      "status": "resolved",
+      "verification": "答案、required_points及reference_claims现仅评职级/转正资格与按转正日折算；离职未用不补偿已从评分事实移除。原文支持两项保留规则。"
+    },
+    {
+      "qid": "P04",
+      "status": "resolved",
+      "verification": "required_points及reference_claims已精简为所问打架与侮辱，无强制欺诈/胁迫/恐吓内容；精确引句支持两种禁止行为。"
+    }
+  ],
+  "reviewed_final_sha256": "32e9bde2c3ddb10c66201a146cce0ff71297ab9ecbdbc0d4247f069554908a88",
+  "final_review_status": "all_initial_issues_resolved"
+}

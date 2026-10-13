@@ -1,0 +1,1440 @@
+[
+  {
+    "qid": "P01",
+    "question": "京东物流子集团是哪一天正式成立的？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "京东物流子集团于2017年4月25日正式成立。",
+    "reference_claims": [
+      {
+        "text": "京东物流子集团于2017年4月25日正式成立。",
+        "evidence_ids": [
+          "p7-be9ae664fc"
+        ],
+        "quotes": [
+          "2017年4月25日 | 京东物流子集团正式成立"
+        ]
+      }
+    ],
+    "required_points": [
+      "京东物流子集团于2017年4月25日正式成立。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P02",
+    "question": "京东2016年市场交易额是多少？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "2016年京东集团市场交易额达到9392亿元。",
+    "reference_claims": [
+      {
+        "text": "2016年京东集团市场交易额为9392亿元。",
+        "evidence_ids": [
+          "p5-8263b6e785"
+        ],
+        "quotes": [
+          "2016 年，京东集团市场交易额达到 9392 亿元。"
+        ]
+      }
+    ],
+    "required_points": [
+      "2016年京东集团市场交易额为9392亿元。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把市场交易额改称营收、利润或2026年的交易额。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P03",
+    "question": "京东生鲜目前能在多少个城市次日达？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "按这版手册记载，京东自营生鲜产品已在300余个城市实现次日达；该数字是手册所述时期的情况，不能据此确认现在的覆盖城市数。",
+    "reference_claims": [
+      {
+        "text": "这版手册记载自营生鲜产品已在300余个城市实现次日达。",
+        "evidence_ids": [
+          "p5-d125330024"
+        ],
+        "quotes": [
+          "目前已在 300 余个城市实现自营生鲜产品次日达。"
+        ]
+      }
+    ],
+    "required_points": [
+      "手册记载300余个城市。",
+      "适用自营生鲜产品的次日达。",
+      "把“目前”限定为手册所述时期，不断言当下覆盖数。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将历史手册的300余个城市断言为当前实时覆盖数。",
+      "不得说全部商品或所有城市都可次日达。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P04",
+    "question": "公司禁止员工打架或侮辱他人吗？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "公司禁止打架等扰乱正常经营或管理秩序的行为，也禁止侮辱他人的言行。",
+    "reference_claims": [
+      {
+        "text": "公司禁止打架等扰乱经营或管理秩序的行为，也禁止侮辱他人的言行。",
+        "evidence_ids": [
+          "p10-9aa7c87bda"
+        ],
+        "quotes": [
+          "公司禁止打架等\n扰乱正常公司经营或管理秩序的行为",
+          "侮辱他人的言行；"
+        ]
+      }
+    ],
+    "required_points": [
+      "公司禁止打架等扰乱经营或管理秩序的行为。",
+      "公司禁止侮辱他人的言行。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P05",
+    "question": "管理岗位员工没尽到管理职责会怎样？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "管理岗位员工对所辖业务及人员承担管理责任。未尽管理职责，包括错误管理、疏于管理、监督不力等，将受到纪律处分，甚至解除劳动合同。",
+    "reference_claims": [
+      {
+        "text": "管理岗位员工未尽管理职责，包括错误管理、疏于管理或监督不力，将受到纪律处分，甚至解除劳动合同。",
+        "evidence_ids": [
+          "p10-5052e898cb"
+        ],
+        "quotes": [
+          "未尽管理职责（包括错误的管理行为、疏于管理、监督不力等）将受到纪律处分，\n甚至解除劳动合同。"
+        ]
+      },
+      {
+        "text": "管理岗位员工对所辖业务及人员还应承担监管理责。",
+        "evidence_ids": [
+          "p10-5052e898cb"
+        ],
+        "quotes": [
+          "在任何管理岗位的员工，除应遵守上述基本行为准则外，对于其所辖范围内业务及人员还应承\n担监管理责。"
+        ]
+      }
+    ],
+    "required_points": [
+      "未尽管理职责将受到纪律处分。",
+      "处分可能严重至解除劳动合同。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得断言所有管理失误都必然立即解除劳动合同。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P06",
+    "question": "弄坏公司配的设备，公司会要我赔吗？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "如因故意或过失对公司财产造成毁损，公司可向员工追偿。",
+    "reference_claims": [
+      {
+        "text": "因故意或过失毁损公司财产，公司可向员工追偿。",
+        "evidence_ids": [
+          "p11-5ed9c253db"
+        ],
+        "quotes": [
+          "如因故意或过失对公司财产造成毁损，公司可向员工追偿。"
+        ]
+      }
+    ],
+    "required_points": [
+      "因故意或过失毁损公司财产，公司可向员工追偿。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得忽略故意或过失条件并断言任何设备故障都必须由员工赔偿。",
+      "不得编造全额原价赔偿、扣薪比例或免责金额。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P07",
+    "question": "试用期想离职，要提前几天通知公司？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "需提前3天通知公司，可通过书面形式、邮件方式或系统提报等方式进行，同时员工在试用期离职也必须依照公司的离职流程办理手续。",
+    "reference_claims": [
+      {
+        "text": "试用期离职应提前3天通知公司。",
+        "evidence_ids": [
+          "p15-a99dbf1c9b"
+        ],
+        "quotes": [
+          "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。"
+        ]
+      },
+      {
+        "text": "通知可采用书面、邮件或系统提报等方式，并须依照公司离职流程办理手续。",
+        "evidence_ids": [
+          "p15-a99dbf1c9b"
+        ],
+        "quotes": [
+          "以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。"
+        ]
+      }
+    ],
+    "required_points": [
+      "试用期提前3天通知。",
+      "仍应依公司离职流程办理手续。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得改成30天，或把3天擅自说成3个工作日。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P08",
+    "question": "试用期迟到早退几次算不符合录用条件？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "迟到早退累计达三次（或以上），会被视为不符合录用条件。",
+    "reference_claims": [
+      {
+        "text": "试用期内迟到早退累计三次或以上被视为不符合录用条件。",
+        "evidence_ids": [
+          "p16-161eb98f4e"
+        ],
+        "quotes": [
+          "迟到早退累\n计达三次（或以上），或有旷工现象的；"
+        ]
+      }
+    ],
+    "required_points": [
+      "试用期内迟到早退累计三次或以上被视为不符合录用条件。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将此条件改成仅连续30天内累计三次。",
+      "不得改成迟到三次且早退三次。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P09",
+    "question": "员工自己发起调动要满足哪些条件？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "员工发起的调动，需在原岗位上满足调动制度中规定的期限和绩效要求等；M/P/T/序列须在原岗位服务满 12 个月。同时，必须在征得原部门领导书面同意后方可启动。",
+    "reference_claims": [
+      {
+        "text": "员工发起调动需满足原岗位期限和绩效要求，M/P/T序列须在原岗位服务满12个月。",
+        "evidence_ids": [
+          "p17-3912472149"
+        ],
+        "quotes": [
+          "员工需在原岗位上满足调\n动制度中规定的期限和绩效要求等（M/P/T/序列须在原岗位服务满 12 个月）。"
+        ]
+      },
+      {
+        "text": "员工发起调动须征得原部门领导书面同意，调动还需依流程完成手续。",
+        "evidence_ids": [
+          "p17-3912472149"
+        ],
+        "quotes": [
+          "上述两种类型的调动，均需要根据调动流程完成相关调动手续的办理，其中员工发起的调动，\n必须在征得原部门领导书面同意后方可启动。"
+        ]
+      }
+    ],
+    "required_points": [
+      "员工发起调动需满足原岗位期限和绩效要求，M/P/T序列须在原岗位服务满12个月。",
+      "员工发起调动须征得原部门领导书面同意，调动还需依流程完成手续。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得说满12个月就自动完成调动或无需调动手续。",
+      "人才发展章节另有管理者不得任意限制异动的表述；不得据此擅自认定此处书面同意要求已经取消，也不得据书面同意条款推断管理者可无条件限制员工流动。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P10",
+    "question": "能录用原公司下级来自己部门做下属吗？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "原则上不可以录用自己曾经就职公司的下级到自己所管辖的部门仍然担任自己的下级（包括直接下级和隔级下级）；如有必要录用，必须按照“一拖二”执行细则进行审批，且每个管理者的直接下属中，此类人员最多不超过两个人。",
+    "reference_claims": [
+      {
+        "text": "原则上管理者不能把原公司的下级录用至自己所辖部门继续担任自己的直接或隔级下级。",
+        "evidence_ids": [
+          "p14-1ad6eab8c6"
+        ],
+        "quotes": [
+          "原则上不可以录用自己曾经就职公司的下级到自己所管辖的部门仍\n然担任自己的下级（包括直接下级和隔级下级）"
+        ]
+      },
+      {
+        "text": "确有必要录用时须按“一拖二”细则审批，每位管理者的直接下属中此类人员最多两人。",
+        "evidence_ids": [
+          "p14-1ad6eab8c6"
+        ],
+        "quotes": [
+          "如有必要录用，必须按照“一拖二”执行\n细则进行审批，且每个管理者的直接下属中，此类人员最多不超过两个人。"
+        ]
+      }
+    ],
+    "required_points": [
+      "原则上管理者不能把原公司的下级录用至自己所辖部门继续担任自己的直接或隔级下级。",
+      "确有必要录用时须按“一拖二”细则审批，每位管理者的直接下属中此类人员最多两人。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得说绝对禁止且没有审批例外。",
+      "不得把最多两人扩大为部门里所有曾共事员工总计只能两人。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P11",
+    "question": "我累计工龄10年以上、企业工龄8年，医疗期多久？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "医疗期9个月，按15个月内累计病休时间计算。",
+    "reference_claims": [
+      {
+        "text": "累计工龄10年以上、企业工龄8年对应医疗期9个月，按15个月内累计病休时间计算。",
+        "evidence_ids": [
+          "p22-c42b3d394c"
+        ],
+        "quotes": [
+          "10 年以上 | 5 年以下",
+          "5 年以上10 年以下 | 9 个月 | 15 个月内累计病休时间"
+        ]
+      }
+    ],
+    "required_points": [
+      "累计工龄10年以上、企业工龄8年对应医疗期9个月，按15个月内累计病休时间计算。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把企业工龄8年当作累计社会工龄8年。",
+      "不得将15个月的累计病休统计周期说成医疗期15个月。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P12",
+    "question": "连续旷工多少天会被公司解除劳动合同？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "按手册，连续旷工2天（含）及以上，公司有权立即解除劳动合同且不支付经济补偿。另一个条件是一年内累计旷工3天（含）及以上。",
+    "reference_claims": [
+      {
+        "text": "连续旷工2天含以上，公司有权立即解除劳动合同且不支付经济补偿。",
+        "evidence_ids": [
+          "p20-a13b1b7d85"
+        ],
+        "quotes": [
+          "员工连续旷工2 天（含）及以上，或一年内累计旷工 3 天（含）及以上的，公司有权立即与\n员工解除劳动合同且不支付任何经济补偿。"
+        ]
+      },
+      {
+        "text": "一年内累计旷工3天含以上也是公司有权立即解除劳动合同且不支付经济补偿的条件。",
+        "evidence_ids": [
+          "p20-a13b1b7d85"
+        ],
+        "quotes": [
+          "或一年内累计旷工 3 天（含）及以上的，公司有权立即与\n员工解除劳动合同且不支付任何经济补偿。"
+        ]
+      }
+    ],
+    "required_points": [
+      "连续旷工2天（含）及以上。",
+      "公司有权立即解除劳动合同。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把连续阈值改成3天或2天以上但不含2天。",
+      "不得将公司有权解除描述成任何一次旷工自动解除。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P13",
+    "question": "我今年入职不满一年，病假天数怎么折算？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "当年可享受的全薪福利病假天数=（当年度在本公司正式服务时间/365天）*5天；当年可享受的半薪福利病假天数=（当年度在本公司正式服务时间/365天）*55天。折算后不足0.5天的不予计算，大于0.5天小于1天按0.5天计算。",
+    "reference_claims": [
+      {
+        "text": "当年入职不满一年，全薪福利病假按当年度本公司正式服务时间除365天乘5天折算。",
+        "evidence_ids": [
+          "p21-88de6db287"
+        ],
+        "quotes": [
+          "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+        ]
+      },
+      {
+        "text": "半薪福利病假按当年度本公司正式服务时间除365天乘55天折算。",
+        "evidence_ids": [
+          "p21-88de6db287"
+        ],
+        "quotes": [
+          "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+        ]
+      },
+      {
+        "text": "折算后不足0.5天不计算，大于0.5天且小于1天按0.5天计算。",
+        "evidence_ids": [
+          "p21-88de6db287"
+        ],
+        "quotes": [
+          "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+        ]
+      }
+    ],
+    "required_points": [
+      "当年入职不满一年，全薪福利病假按当年度本公司正式服务时间除365天乘5天折算。",
+      "半薪福利病假按当年度本公司正式服务时间除365天乘55天折算。",
+      "折算后不足0.5天不计算，大于0.5天且小于1天按0.5天计算。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得用55天作为全薪病假或60天作为半薪病假折算基数。",
+      "不得对正好0.5天的边界或大于1天的小数部分编造原文未列出的舍入规则。",
+      "未给服务时间时不要虚构实际可休天数。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P14",
+    "question": "病假超过5天不到60天工资怎么算？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "按手册，每个自然年度内5天以上60天以内的病假按月薪标准的50%发放日薪，不得低于当地最低工资标准的80%，同时扣除相应全勤奖和餐补。如地方法规与手册病假薪酬标准不同，按较高标准执行。",
+    "reference_claims": [
+      {
+        "text": "每自然年度5天以上60天以内病假按月薪标准50%发放日薪。",
+        "evidence_ids": [
+          "p22-3579d5cfe2"
+        ],
+        "quotes": [
+          "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪"
+        ]
+      },
+      {
+        "text": "支付不得低于当地最低工资标准80%，并扣除相应全勤奖和餐补。",
+        "evidence_ids": [
+          "p22-3579d5cfe2"
+        ],
+        "quotes": [
+          "不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+        ]
+      },
+      {
+        "text": "地方法规与手册病假薪酬标准存在差异时按较高标准执行。",
+        "evidence_ids": [
+          "p23-2435daf3ec"
+        ],
+        "quotes": [
+          "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+        ]
+      }
+    ],
+    "required_points": [
+      "每自然年度5天以上60天以内的病假。",
+      "日薪按月薪标准50%发放。",
+      "不低于当地最低工资标准80%。",
+      "扣除相应全勤奖和餐补。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得说所有病假都只发50%。",
+      "不得把最低工资80%的下限改成员工月薪80%。",
+      "不得忽略当地较高标准而声称全国无条件固定50%。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P15",
+    "question": "社会工龄满15年，每年法定年假有多少天？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "社会工龄已满10年不满20年的，每年法定年假标准为10天。",
+    "reference_claims": [
+      {
+        "text": "社会工龄15年属于满10年不满20年，每年法定年假标准为10天。",
+        "evidence_ids": [
+          "p23-2435daf3ec"
+        ],
+        "quotes": [
+          "已满 10 年不满 20 年的，每年法定年假标准为 10 天；"
+        ]
+      }
+    ],
+    "required_points": [
+      "社会工龄15年属于满10年不满20年，每年法定年假标准为10天。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把社会工龄15年映射为15天法定年假。",
+      "不得把法定年假标准自动等同于当年入离职折算后实际可休天数。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P16",
+    "question": "P7一年最多能休多少天法定加福利年假？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "P7属于M3/P7/T7级及以上，当年法定年假和福利年假合计年度上限10天，且福利年假需转正后方享有。",
+    "reference_claims": [
+      {
+        "text": "P7对应手册M3/P7/T7级档，法定年假与福利年假合计年度上限为10天。",
+        "evidence_ids": [
+          "p23-77b2224c12"
+        ],
+        "quotes": [
+          "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天"
+        ]
+      },
+      {
+        "text": "福利年假在转正后才享有。",
+        "evidence_ids": [
+          "p23-77b2224c12"
+        ],
+        "quotes": [
+          "福利年假在转正后方享有。"
+        ]
+      }
+    ],
+    "required_points": [
+      "P7所在档的法定加福利年假合计年度上限10天。",
+      "福利年假需转正后享有。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得说法定年假10天之外再额外给10天福利年假。",
+      "不得由该档上限推断所有更高职级均为10天；手册另列更高档15天、20天。",
+      "不得用这条手册合计上限推断现行法律下法定年假的减损规则。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P17",
+    "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "按完整休假条款，须员工（或男员工配偶）在员工司龄满三年后怀孕，且为员工在职期间首个新生儿；休产假或陪护假前4个季度有C或C-绩效的，不享受相应福利假。符合条件时，女员工在法定产假后可额外享30个自然日福利产假，男员工在法定陪护假后可额外享7个自然日福利陪护假。法定产假与福利产假合计不超过180天，法定产假本身超过180天时以法定产假为准。还需确认首个新生儿及对应休假前4个季度绩效条件。",
+    "reference_claims": [
+      {
+        "text": "福利产假或福利陪护假要求员工司龄满三年后本人或男员工配偶怀孕，且新生儿为员工在职期间首个新生儿。",
+        "evidence_ids": [
+          "p24-3e46efee64",
+          "p24-7893cf4f6d"
+        ],
+        "quotes": [
+          "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿",
+          "公司补充福利陪产假是指，男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+        ]
+      },
+      {
+        "text": "休产假或陪护假前4个季度绩效有C或C-的，不得享有相应福利产假或福利陪护假。",
+        "evidence_ids": [
+          "p24-3e46efee64",
+          "p24-7893cf4f6d"
+        ],
+        "quotes": [
+          "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。",
+          "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+        ]
+      },
+      {
+        "text": "符合条件的女员工在法定产假后额外享30个自然日福利产假。",
+        "evidence_ids": [
+          "p24-3e46efee64"
+        ],
+        "quotes": [
+          "员工可于休完法定产假后享受额外给予的福利产假。\n具体标准为：女员工除享有法定产假外，额外增加 30 个自然日的福利产假"
+        ]
+      },
+      {
+        "text": "符合条件的男员工在法定陪护假后额外享7个自然日福利陪护假。",
+        "evidence_ids": [
+          "p24-7893cf4f6d"
+        ],
+        "quotes": [
+          "则该员工可在享受法定陪护假后，额外增加 7 个自\n然日的福利陪护假。"
+        ]
+      },
+      {
+        "text": "法定产假与福利产假合计不超过180天；若法定产假本身超过180天，以法定产假为准。",
+        "evidence_ids": [
+          "p24-3e46efee64"
+        ],
+        "quotes": [
+          "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+        ]
+      }
+    ],
+    "required_points": [
+      "员工司龄满三年后本人或配偶怀孕，且为员工在职期间首个新生儿。",
+      "休相应产假或陪护假前4个季度有C或C-绩效的，不享对应福利假。",
+      "符合条件时女员工额外30个自然日福利产假，男员工额外7个自然日福利陪护假。",
+      "法定与福利产假合计不超过180天；法定产假本身超过180天时以法定产假为准。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将满三年条件改成孩子出生时才满三年。",
+      "不得以满三年后怀孕这一条件单独断言必然享有福利假，忽略首个新生儿及绩效限制。",
+      "不得将自然日改成工作日。",
+      "不得断言法定产假本身超过180天也被强制缩短到180天。"
+    ],
+    "required_clarifications": [
+      "是否为员工在职期间首个新生儿。",
+      "休相应产假或陪护假前4个季度是否有C或C-绩效。"
+    ],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P18",
+    "question": "满几年算大佬，老员工日是哪天？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "按手册，满5年以上员工称为“大佬”；京东老员工日是每年5月19日。",
+    "reference_claims": [
+      {
+        "text": "满5年以上员工称为“大佬”。",
+        "evidence_ids": [
+          "p30-6ab8ae0a44"
+        ],
+        "quotes": [
+          "满5年以上员工称为“大佬”"
+        ]
+      },
+      {
+        "text": "每年5月19日为京东老员工日。",
+        "evidence_ids": [
+          "p30-6ab8ae0a44"
+        ],
+        "quotes": [
+          "每年5月19日设为京东老员工日"
+        ]
+      }
+    ],
+    "required_points": [
+      "满5年以上员工称为“大佬”。",
+      "每年5月19日为京东老员工日。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得混淆公司司庆6月18日与老员工日5月19日。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P19",
+    "question": "工作日餐补多少钱，休假会扣吗？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "除部分管理岗位外，员工享有正常工作日用餐补贴，标准为15元/工作日；工作日餐补根据实际出勤日核算，员工休假或缺勤会按休假管理相关规定扣减相应餐补。",
+    "reference_claims": [
+      {
+        "text": "除部分管理岗位外，工作日餐补标准为15元/工作日。",
+        "evidence_ids": [
+          "p30-526ea28baa"
+        ],
+        "quotes": [
+          "除部分管理岗位外，员工享有正常工作日用餐补贴",
+          "15元/工作日"
+        ]
+      },
+      {
+        "text": "餐补按实际出勤日核算；休假或缺勤依休假管理相关规定扣减相应餐补。",
+        "evidence_ids": [
+          "p30-526ea28baa"
+        ],
+        "quotes": [
+          "工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。"
+        ]
+      }
+    ],
+    "required_points": [
+      "除部分管理岗位外，工作日餐补标准为15元/工作日。",
+      "餐补按实际出勤日核算；休假或缺勤依休假管理相关规定扣减相应餐补。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得说全部员工都无条件享有15元餐补。",
+      "不得脱离假种规定，笼统宣称任何休假一律扣15元。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P20",
+    "question": "M3及P7/T7级转正后福利年假怎么算？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "M3及P7/T7级别及以上员工通过试用期转正后享有福利年假，按转正日折算当年应享有的天数。",
+    "reference_claims": [
+      {
+        "text": "M3及P7/T7级别及以上员工通过试用期转正后享有福利年假。",
+        "evidence_ids": [
+          "p30-d8fe59b41b"
+        ],
+        "quotes": [
+          "M3 及 P7/T7 级别及以上员工在试用期通过转正后，可享有福利年 假。"
+        ]
+      },
+      {
+        "text": "福利年假按转正日折算当年应享天数。",
+        "evidence_ids": [
+          "p30-d8fe59b41b"
+        ],
+        "quotes": [
+          "福利年假按转正日折算当年应享有天数"
+        ]
+      }
+    ],
+    "required_points": [
+      "M3及P7/T7级别及以上员工通过试用期转正后享有福利年假。",
+      "福利年假按转正日折算当年应享天数。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将福利年假未休不补偿扩大到法定年假。",
+      "不得把按转正日折算改为按入职日折算。",
+      "不得编造未提供转正日期时的实际福利年假天数。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P21",
+    "question": "休假日加班累计几小时能享两餐加班餐？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "专业管理类员工在休假日累计加班满8小时，可享两餐加班餐或加班餐费报销。",
+    "reference_claims": [
+      {
+        "text": "专业管理类员工休假日累计加班满8小时可享两餐加班餐或加班餐费报销。",
+        "evidence_ids": [
+          "p31-6dead0b231"
+        ],
+        "quotes": [
+          "加班餐：专业管理类员工在规定的工作时间以外加班，并满足加班 时间要求后方可享有加班餐。工作日加班至 20:00 以后且加班 满 1 小时，可享一餐加班餐或加班餐费报销。休假日加班午餐/晚餐 需满足累计加班 3 小时享一餐，累计加班 8 小时享两餐加班餐或 加班餐费报销。"
+        ]
+      }
+    ],
+    "required_points": [
+      "休假日累计加班满8小时。",
+      "可享两餐或加班餐费报销。",
+      "适用专业管理类员工。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把3小时的一餐阈值说成两餐阈值。",
+      "不得扩大为所有员工无条件适用。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P22",
+    "question": "工作日加班到20点后满1小时能领加班餐吗？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "专业管理类员工在工作日加班至20:00以后且加班满1小时，可享一餐加班餐或加班餐费报销。",
+    "reference_claims": [
+      {
+        "text": "专业管理类员工工作日加班至20:00以后且加班满1小时，可享一餐加班餐或餐费报销。",
+        "evidence_ids": [
+          "p31-77990d6c90"
+        ],
+        "quotes": [
+          "加班餐：专业管理类员工在规定的工作时间以外加班，并满足加班 时间要求后方可享有加班餐。工作日加班至 20:00 以后且加班 满 1 小时，可享一餐加班餐或加班餐费报销。"
+        ]
+      }
+    ],
+    "required_points": [
+      "专业管理类员工工作日加班至20:00以后且加班满1小时，可享一餐加班餐或餐费报销。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得遗漏20:00以后和加班满1小时的同时满足条件。",
+      "不得说可享两餐或所有员工无条件适用。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P23",
+    "question": "经理级及以上管理岗位空缺内部提拔要占多少？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "针对成熟业务及体系的经理级及以上的管理岗位空缺，坚持内部优先原则，要求80%以上通过内部提拔。",
+    "reference_claims": [
+      {
+        "text": "成熟业务及体系的经理级及以上管理岗位空缺，要求80%以上通过内部提拔。",
+        "evidence_ids": [
+          "p33-a867f06b3c"
+        ],
+        "quotes": [
+          "针对成熟业务及体系的经理级及以上的管理岗位空缺，坚持\n内部优先的原则，要求 80%以上通过内部提拔"
+        ]
+      }
+    ],
+    "required_points": [
+      "成熟业务及体系的经理级及以上管理岗位空缺，要求80%以上通过内部提拔。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将成熟业务及体系条件省略后扩大到全公司所有空缺岗位。",
+      "不得混淆80%内部提拔比例与70%任职资格能力要求。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P24",
+    "question": "京东的360评估每年做几次，都评哪些内容？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "每年开展一次，评估内容包括价值观、领导力、学习敏锐度和专业力。",
+    "reference_claims": [
+      {
+        "text": "京东360评估每年一次。",
+        "evidence_ids": [
+          "p34-fb05ac7b83"
+        ],
+        "quotes": [
+          "京东 360 评估每年开展一次"
+        ]
+      },
+      {
+        "text": "评估内容包括价值观、领导力、学习敏锐度和专业力。",
+        "evidence_ids": [
+          "p34-fb05ac7b83"
+        ],
+        "quotes": [
+          "内容包括价值观、领导力、学习敏锐度和专业力。"
+        ]
+      }
+    ],
+    "required_points": [
+      "京东360评估每年一次。",
+      "评估内容包括价值观、领导力、学习敏锐度和专业力。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P25",
+    "question": "内部异动需要满足什么服务年限？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "内部人才流动条款规定，员工在同一岗位服务满一年即可申请内部异动；现管理者不能以任何形式限制，除非证明会损害公司利益。",
+    "reference_claims": [
+      {
+        "text": "同一岗位服务满一年即可申请内部异动。",
+        "evidence_ids": [
+          "p34-b3db9e8572"
+        ],
+        "quotes": [
+          "员工在同一岗位服务满一年即可申请内部异动"
+        ]
+      },
+      {
+        "text": "现管理者不能以任何形式限制内部异动，除非证明会损害公司利益。",
+        "evidence_ids": [
+          "p34-b3db9e8572"
+        ],
+        "quotes": [
+          "现管理者不能\n以任何形式限制（除非证明会损害公司利益）。"
+        ]
+      }
+    ],
+    "required_points": [
+      "在同一岗位服务满一年即可申请。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把满三年推荐异动或满五年必须换岗当作申请的最低年限。",
+      "满一年可申请不等于自动获准；不得据此擅自取消调动章节所写的领导书面同意及办理手续要求。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P26",
+    "question": "连续30天内迟到或早退两次会被记过吗？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "会。连续30天内迟到或早退二次者属于一般违纪行为，公司将给予其记过处分。",
+    "reference_claims": [
+      {
+        "text": "连续30天内迟到或早退二次属于一般违纪，公司将给予记过处分。",
+        "evidence_ids": [
+          "p42-83f9d6df8d"
+        ],
+        "quotes": [
+          "记过：员工如有一般违纪行为，公司将给予其记过处分，一般违纪行为包括但不限于如下行为：\n违反公司工作纪律、劳动人事纪律、工作态度不端正的，包括但不限于：\n9.1.1 连续30 天内迟到或早退二次者；"
+        ]
+      }
+    ],
+    "required_points": [
+      "连续30天内迟到或早退二次属于一般违纪，公司将给予记过处分。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把二次改成三次或把连续30天改成一年。",
+      "不得说须迟到两次且早退两次。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P27",
+    "question": "长期服务奖满5年拿的是啥奖？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "长期服务达到5年将授予京东银质服务奖。",
+    "reference_claims": [
+      {
+        "text": "长期服务满5年授予京东银质服务奖。",
+        "evidence_ids": [
+          "p38-c9b85989ed"
+        ],
+        "quotes": [
+          "5 年银质服务奖"
+        ]
+      }
+    ],
+    "required_points": [
+      "长期服务满5年授予京东银质服务奖。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将5年奖励说成金质服务奖；金质对应10年。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P28",
+    "question": "违纪处分对年度资格的影响持续多久？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "手册所指年度为违纪处分发生的首月起至第十二个月最后一日止；例如2017年5月1日受处分，影响持续至2018年4月30日。",
+    "reference_claims": [
+      {
+        "text": "违纪处分影响年度资格的“年度”指处分发生首月起至第十二个月最后一日。",
+        "evidence_ids": [
+          "p41-0042d06121"
+        ],
+        "quotes": [
+          "以上年度指违纪处分发生的首月起至第十二个月最后一日止"
+        ]
+      },
+      {
+        "text": "示例：2017年5月1日受处分，影响持续至2018年4月30日。",
+        "evidence_ids": [
+          "p41-0042d06121"
+        ],
+        "quotes": [
+          "例如，2017 年5 月1 日受到\n违纪处分的，则违纪处分的影响持续至 2018年4 月30 日。"
+        ]
+      }
+    ],
+    "required_points": [
+      "违纪处分影响年度资格的“年度”指处分发生首月起至第十二个月最后一日。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得改成处分之日精确起算的365天。",
+      "不得说统一到当年12月31日截止。",
+      "不得把年度资格影响期间扩大为所有处分的全部法律效力或所有绩效影响。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P29",
+    "question": "连续30天内迟到或早退几次会被辞退？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "按手册，连续30天内迟到或早退三次及以上属于严重违纪，公司将对其进行辞退（解除劳动合同）。",
+    "reference_claims": [
+      {
+        "text": "连续30天内迟到或早退三次及以上属于严重违纪，公司将辞退即解除劳动合同。",
+        "evidence_ids": [
+          "p43-54058878ec"
+        ],
+        "quotes": [
+          "辞退(解除劳动合同)：员工如有严重违纪行为，公司将对其进行辞退，严重违纪行为包括但不\n限于如下行为：\n违反公司工作纪律、劳动人事纪律、工作态度不端正的，包括但不限于：\n10.1.1 连续30 天内迟到或早退三次及以上者；"
+        ]
+      }
+    ],
+    "required_points": [
+      "连续30天内迟到或早退三次及以上属于严重违纪，公司将辞退即解除劳动合同。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把阈值说成两次或四次。",
+      "不得把试用期累计三次条款的范围直接混同连续30天。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P30",
+    "question": "六个月内再犯轻微违纪，公司会怎么处分？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "如员工已经发生过一次轻微违纪（不论是否给予过警告处分），在六个月内再次发生轻微违纪的，视为员工一次一般违纪，公司有权给予员工记过处分。",
+    "reference_claims": [
+      {
+        "text": "已有一次轻微违纪，不论是否警告，六个月内再次轻微违纪视为一次一般违纪，公司有权记过。",
+        "evidence_ids": [
+          "p40-c769d87f54"
+        ],
+        "quotes": [
+          "如员工已经发生过一次轻微违纪（不论是否给予过警告处分），在六个月内再次发生轻微违纪的，\n视为员工一次一般违纪，公司有权给予员工记过处分。"
+        ]
+      }
+    ],
+    "required_points": [
+      "已有一次轻微违纪，不论是否警告，六个月内再次轻微违纪视为一次一般违纪，公司有权记过。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将六个月改成十二个月。",
+      "不得要求前次必须已受警告才能适用。",
+      "不得把本题两次轻微违纪直接说成严重违纪、必然辞退。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P31",
+    "question": "邮箱密码过期前多久会发提醒邮件？",
+    "kind": "numeric",
+    "positive": true,
+    "reference_answer": "手册写明：邮箱在密码过期前30天、15天，以及10天一直到0天每天发送一封过期提醒，提示修改邮箱密码。",
+    "reference_claims": [
+      {
+        "text": "邮箱在密码过期前30天、15天及10天一直到0天每天发送一封过期提醒。",
+        "evidence_ids": [
+          "p50-314299f759"
+        ],
+        "quotes": [
+          "邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件"
+        ]
+      }
+    ],
+    "required_points": [
+      "提醒时间包括过期前30天、15天，以及10天一直到0天的每日提醒。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得推断从过期前30天起连续每天提醒。",
+      "不得由提醒时间推断邮箱密码有效期为30天。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P32",
+    "question": "管理者想看下属考勤和绩效在哪个模块？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "在下属信息模块，管理者可查看下属基本信息、考勤信息（包括打卡及汇总信息）、价值观信息、绩效信息。",
+    "reference_claims": [
+      {
+        "text": "管理者在“下属信息”模块查看下属基本信息、考勤（打卡和汇总）、价值观及绩效信息。",
+        "evidence_ids": [
+          "p48-ad656e286d"
+        ],
+        "quotes": [
+          "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+        ]
+      }
+    ],
+    "required_points": [
+      "使用下属信息模块。",
+      "该模块包含下属考勤和绩效信息。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得把查询下属考勤绩效的模块答成只查个人薪酬福利的模块。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P33",
+    "question": "登录流程中心后系统会自动跳到哪个页面？",
+    "kind": "fact",
+    "positive": true,
+    "reference_answer": "根据登录人自动匹配：若有待办则自动进入审批待办；若有未完成申请则进入申请跟踪；若都没有则进入首页。",
+    "reference_claims": [
+      {
+        "text": "登录人有待办则流程中心自动进入审批待办。",
+        "evidence_ids": [
+          "p48-8e3321fd75"
+        ],
+        "quotes": [
+          "若登录人有待办则自动进入审批待办"
+        ]
+      },
+      {
+        "text": "有未完成申请则进入申请跟踪。",
+        "evidence_ids": [
+          "p48-8e3321fd75"
+        ],
+        "quotes": [
+          "若登录人\n有未完成申请则进入申请跟踪"
+        ]
+      },
+      {
+        "text": "两者都没有则进入首页。",
+        "evidence_ids": [
+          "p48-8e3321fd75"
+        ],
+        "quotes": [
+          "若都没有则进入首页。"
+        ]
+      }
+    ],
+    "required_points": [
+      "登录人有待办则流程中心自动进入审批待办。",
+      "有未完成申请则进入申请跟踪。",
+      "两者都没有则进入首页。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得说所有人登录后都进入首页。",
+      "手册没有专门阐明两种条件同时存在时的冲突处理，不得另造额外的优先级规则。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P34",
+    "question": "个人绩效贡献与部门平均水平相当，属于哪个等级？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "属于B/可靠（可靠贡献者）等级。",
+    "reference_claims": [
+      {
+        "text": "个人绩效贡献与部门平均水平相当，对应B/可靠等级。",
+        "evidence_ids": [
+          "p28-9092bac2d7"
+        ],
+        "quotes": [
+          "A/优秀 | B/可靠 | C/需改进",
+          "可靠贡献者： 个人绩效贡献与部 门平均水平相当"
+        ]
+      }
+    ],
+    "required_points": [
+      "个人绩效贡献与部门平均水平相当，对应B/可靠等级。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得将平均水平相当对应到A/优秀或C/需改进。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "P35",
+    "question": "入职后什么时候能享受免费体检？",
+    "kind": "table",
+    "positive": true,
+    "reference_answer": "员工入职次年开始享有每年一次的免费体检。",
+    "reference_claims": [
+      {
+        "text": "员工自入职次年开始享有每年一次免费体检。",
+        "evidence_ids": [
+          "p30-c81f9880c1"
+        ],
+        "quotes": [
+          "员工入职次年开始享有每年一次的免费体检。"
+        ]
+      }
+    ],
+    "required_points": [
+      "员工自入职次年开始享有每年一次免费体检。"
+    ],
+    "expected_behavior": "依据冻结手册直接回答所问事实，保留数字、时间范围、适用人员及必要条件；引用实际输入中支持该事实的证据。不要将这版手册的历史政策自动表述为现行政策。",
+    "forbidden_inferences": [
+      "不得改成入职当天、入职满一年当天或每年两次。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N01",
+    "question": "京东集团 2026 年的营收目标是多少？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "未在本次冻结手册材料中找到京东集团2026年的营收目标，无法据此给出金额。需要查询对应年度的正式经营目标资料。",
+    "reference_claims": [],
+    "required_points": [
+      "明确没有足够依据给出2026年营收目标。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得用2016年市场交易额9392亿元代替2026年营收目标。",
+      "不得将历史收入、交易额或发展愿景外推为2026年目标。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N02",
+    "question": "员工股票期权的行权价格是多少？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料未提供员工股票期权的行权价格，无法据此确定。需要对应授予批次的期权协议或行权条款。",
+    "reference_claims": [],
+    "required_points": [
+      "说明材料不足以确定期权行权价格。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得由有股票/期权授予或收回条款推断固定行权价。",
+      "不得用市场股价、面值或其它公司的价格代替。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N03",
+    "question": "京东集团目前的市值是多少？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料不能确定京东集团当前市值。市值涉及具体时点和证券口径，需查询该时点的可靠市场数据。",
+    "reference_claims": [],
+    "required_points": [
+      "承认材料不足以回答当前市值。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得把历史营收、市场交易额或上市日期换算为当前市值。",
+      "不得编造实时价格、股数或市值。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N04",
+    "question": "员工每年可以报销多少额度的健身费用？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料未提供员工每年健身费用报销额度，无法据此给出金额；可查询相关福利报销制度或向人力资源部确认。",
+    "reference_claims": [],
+    "required_points": [
+      "不提供没有依据的年度健身报销金额。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得将团队建设费150元/人/季度加50元/人/季度当作个人健身报销额度。",
+      "不得因没有额度证据就断言公司禁止健身报销或额度为零。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N05",
+    "question": "公司是否举办年会？通常在哪里举办？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料没有足够信息确认公司是否举办年会及通常举办地点，不能据此给出有无或地点结论；需查询年会通知或活动安排。",
+    "reference_claims": [],
+    "required_points": [
+      "对是否举办和地点两部分均说明证据不足。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得将老员工日聚会、年终评优或迎新大会自动等同于公司年会。",
+      "不得编造固定举办城市、场馆或断言不举办。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N06",
+    "question": "员工持股计划的锁定期是多长时间？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料未提供员工持股计划锁定期限，无法据此确定；需要对应持股计划或授予协议的具体条款。",
+    "reference_claims": [],
+    "required_points": [
+      "说明没有锁定期限依据。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得由纪律处分股票收回条款推断锁定期。",
+      "不得编造一年、三年等期限或声称无锁定期。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N07",
+    "question": "公司对远程办公的天数和审批流程是如何规定的？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料未提供远程办公允许天数及其审批流程，无法据此确定；需查适用部门的远程办公政策。",
+    "reference_claims": [],
+    "required_points": [
+      "对远程办公天数和审批流程均不编造答案。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得把公出出差审批流程直接当作远程办公审批流程。",
+      "不得把禁止私自搭建VPN及远程接入服务解释为公司全面禁止远程办公。",
+      "不得编造每周几天或审批角色。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N08",
+    "question": "员工子女教育补贴的标准是多少？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册有子女关怀及入托、就学优惠福利内容，但没有提供可回答本题的子女教育补贴金额标准，不能据此给出数额；需查具体子女福利政策。",
+    "reference_claims": [
+      {
+        "text": "公司会组织京二代冬夏令营，并为员工子女入托、就学提供多种优惠福利措施。",
+        "evidence_ids": [
+          "p31-77990d6c90"
+        ],
+        "quotes": [
+          "公司会统一组织京二代冬/夏令营，让员工在努力工作的同时，有更 多的时间亲近家庭。公司每年都投入资源，积极与优质教育机构合 作，为员工子女入托、就学提供多种优惠福利措施。"
+        ]
+      }
+    ],
+    "required_points": [
+      "说明不能据材料给出子女教育补贴金额标准。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得把冬夏令营、教育优惠福利或春节子女团聚补贴视为固定教育现金补贴。",
+      "不得因缺乏具体标准而断言公司没有任何子女福利。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N09",
+    "question": "公司内部转岗需要经过几轮面试？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册有内部异动的服务年限及调动要求，但未提供内部转岗面试轮数，无法据此确定；需查目标岗位的内部招聘或竞聘流程。",
+    "reference_claims": [
+      {
+        "text": "同一岗位服务满一年即可申请内部异动。",
+        "evidence_ids": [
+          "p34-b3db9e8572"
+        ],
+        "quotes": [
+          "员工在同一岗位服务满一年即可申请内部异动"
+        ]
+      }
+    ],
+    "required_points": [
+      "说明材料不足以确定面试轮数。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得将服务满一年、三年推荐、五年换岗误读为面试轮数。",
+      "不得编造一轮、两轮或免面试。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N10",
+    "question": "员工的住房公积金缴存比例是多少？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册仅说明公司依国家和当地规定缴纳社保及住房公积金、代扣代缴个人部分，未给出本题所需的具体缴存比例。需要确认工作所在地、适用年份及公司与个人缴存口径，再查询适用政策。",
+    "reference_claims": [
+      {
+        "text": "公司依国家和当地规定缴纳社会保险和住房公积金，个人部分由公司每月从工资中代扣代缴。",
+        "evidence_ids": [
+          "p29-90e2f16e13"
+        ],
+        "quotes": [
+          "公司按照国家和当地法律法规的规定为员工缴纳社会保险和住房公积金，应由员工个人缴\n存的部分，公司每月从员工工资中代扣代缴。"
+        ]
+      }
+    ],
+    "required_points": [
+      "说明材料没有具体住房公积金缴存比例。",
+      "不能用依法缴纳和代扣代缴的条款推断百分比。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得凭常见当地比例编造5%、12%或统一百分比。",
+      "不得因缺少比例就断言公司不缴公积金。"
+    ],
+    "required_clarifications": [
+      "若要进一步确定比例，需要工作所在地、适用年份以及公司或个人缴存口径。"
+    ],
+    "annotation_status": "Codex_source_grounded_v1"
+  },
+  {
+    "qid": "N11",
+    "question": "公司对员工使用生成式 AI 工具有什么规定？",
+    "kind": "negative",
+    "positive": false,
+    "reference_answer": "本次冻结手册材料未提供专门针对员工使用生成式AI工具的规定，无法据此判断具体允许范围或审批要求；需查询适用的最新AI工具政策。一般保密或软件安全条款不能自动当作生成式AI专门规定。",
+    "reference_claims": [],
+    "required_points": [
+      "说明没有足够依据给出生成式AI专门规定。"
+    ],
+    "expected_behavior": "说明本次提供的手册证据不足以确定所问事项，不编造数值、制度或公司是否存在相关安排；可以提示查询对应正式资料。若给出相关条款，须明确其不能回答本题具体细节，并引用实际输入证据。",
+    "forbidden_inferences": [
+      "不得由一般保密和标准软件条款推出禁止所有生成式AI、必须采用某品牌或可以上传公司资料。",
+      "不得断言公司在全部其它政策中也没有生成式AI规定。"
+    ],
+    "required_clarifications": [],
+    "annotation_status": "Codex_source_grounded_v1"
+  }
+]

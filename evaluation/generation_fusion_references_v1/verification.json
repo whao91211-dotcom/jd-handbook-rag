@@ -1,0 +1,15 @@
+{
+  "hash_normalization": "CRLF to LF only; review JSON records raw file hashes before Git normalization",
+  "original46": {
+    "cases": 46,
+    "positive": 35,
+    "claims": 60,
+    "sha256": "8aa54ea478598c8f90a660d78ac2e27f461dc0a3675c8573d2db9fc40c865c04"
+  },
+  "development36": {
+    "cases": 36,
+    "positive": 9,
+    "claims": 55,
+    "sha256": "6a763a1ca586adfc3fdf8d3aec2828e339796f7ba667e36c689269ac9f9a8b3c"
+  }
+}
