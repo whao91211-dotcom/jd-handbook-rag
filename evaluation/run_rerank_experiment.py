@@ -1,4 +1,4 @@
-"""Frozen, retrieval-only A/B/C ablation. Gold is used only after retrieval."""
+"""Frozen retrieval ablation, optionally including full-order fusion D."""
 from __future__ import annotations
 
 import argparse
@@ -19,6 +19,7 @@ from time import perf_counter
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 VARIANTS = {'A': 'none', 'B': 'global', 'C': 'guarded'}
+FUSION_VARIANTS = {**VARIANTS, 'D': 'fusion'}
 METRICS = ('ndcg_at3', 'mrr', 'recall_at8', 'full_at8', 'context_full')
 
 
@@ -94,7 +95,8 @@ def percentile(values, p):
     return ordered[lower] + (ordered[upper]-ordered[lower])*(position-lower)
 
 
-def summarize(rows, repeats):
+def summarize(rows, repeats, variants=None):
+    variants = VARIANTS if variants is None else variants
     summary = {}
     for dataset in sorted({r['dataset'] for r in rows}):
         dataset_rows = [r for r in rows if r['dataset'] == dataset]
@@ -102,14 +104,14 @@ def summarize(rows, repeats):
         unstable = []
         for qid in sorted({r['qid'] for r in dataset_rows}):
             question_rows = [r for r in dataset_rows if r['qid'] == qid]
-            if len(question_rows) == 3*repeats and all(r['status'] == 'complete' for r in question_rows):
+            if len(question_rows) == len(variants)*repeats and all(r['status'] == 'complete' for r in question_rows):
                 paired.append(qid)
-                for variant in VARIANTS:
+                for variant in variants:
                     orders = {tuple(r['selected_ids']) for r in question_rows if r['variant'] == variant}
                     if len(orders) > 1:
                         unstable.append({'qid': qid, 'variant': variant})
         group = {'paired_complete_cases': len(paired), 'unstable_rankings': unstable, 'variants': {}}
-        for variant in VARIANTS:
+        for variant in variants:
             all_rows = [r for r in dataset_rows if r['variant'] == variant]
             successful = [r for r in all_rows if r['status'] == 'complete']
             eligible = [r for r in successful if r['qid'] in paired and r['metrics']]
@@ -118,14 +120,14 @@ def summarize(rows, repeats):
             by_question = {qid: rs for qid, rs in by_question.items() if rs}
             metrics = {m: statistics.mean(statistics.mean(r['metrics'][m] for r in rs)
                                          for rs in by_question.values()) if by_question else None for m in METRICS}
-            timings = {stage: {f'p{p}': percentile([r[stage] for r in successful], p/100) for p in (50, 95)}
-                       for stage in ('recall_seconds', 'rerank_seconds', 'total_seconds')}
+            timings = {stage: {f'p{p}': percentile([r.get(stage, 0.) for r in successful], p/100) for p in (50, 95)}
+                       for stage in ('recall_seconds', 'rerank_seconds', 'total_seconds', 'guard_seconds', 'fusion_seconds')}
             group['variants'][variant] = {'positive_cases': len(by_question), 'successful_runs': len(successful),
                 'failed_runs': len(all_rows)-len(successful), 'metrics': metrics, 'timings': timings,
                 'truncated_pairs': sum(sum(n > 512 for n in r['pair_tokens'].values()) for r in successful),
                 'scored_pairs': sum(len(r['pair_tokens']) for r in successful)}
         baseline = group['variants']['A']['metrics']
-        for variant in ('B', 'C'):
+        for variant in (v for v in variants if v != 'A'):
             current = group['variants'][variant]['metrics']
             group['variants'][variant]['delta_vs_A'] = {m: current[m]-baseline[m] if current[m] is not None and baseline[m] is not None else None for m in METRICS}
         summary[dataset] = group
@@ -133,6 +135,7 @@ def summarize(rows, repeats):
 
 
 def report(summary, rows, manifest):
+    comparisons = [v for v in manifest.get('variants', VARIANTS) if v != 'A']
     lines = ['# Rerank 检索层实验', '',
              '固定当前语料与候选池，比较 A 原 guarded、B 直接语义重排、C 保留分面与词法保护的语义重排。', '',
              '> 46/36 题均为模拟开发或回归数据，存在词面偏强、开发规则过拟合和题集重叠。没有回答生成、模型答案评分或用户裁决，不能据此声称回答正确率或真实用户准确率提升。', '',
@@ -140,6 +143,8 @@ def report(summary, rows, manifest):
              f"重排模型首次加载 {manifest['reranker_cold_load_seconds']:.3f}s；随后全程预热测量，每题每组 {manifest['repeats']} 次，按轮次与题目轮换执行顺序。", '',
              '评分读取原问题与片段全文；超过 512 tokens 的模型输入按 tokenizer 默认 longest-first 截断，返回片段和生成上下文保留全文。长度检查也计入重排耗时。MRR 截止最终返回的 8 块。', '',
              'P50/P95 基于各题全部成功运行，含正题和诊断题；质量指标按配对完成的正题逐题计算，再对重复结果求均值。重排耗时为长度检查与模型预测；总耗时还包括候选构造、排序、选择和诊断，不含上下文构造。', '']
+    if 'D' in comparisons:
+        lines += ['D 对共同候选池独立生成完整 Guard 顺序与完整 BGE 顺序，再按 0.5/(60+Guard名次) + 0.5/(60+BGE名次) 融合，最后取 Top-8。同分沿用 RRF 顺序。Guard 使用原有分面/词法规则遍历全部候选，没有先截断到8再补齐；权重是软偏好，融合结果不强制继承 Guard 名额。', '']
     for dataset, group in summary.items():
         lines += [f'## {dataset}', '', '| 组别 | 正题数 | nDCG@3 | MRR@8 | Recall@8 | 完整覆盖@8 | 预算后完整覆盖 | 总耗时 P50/P95(s) |',
                   '|---|---:|---:|---:|---:|---:|---:|---:|']
@@ -151,7 +156,7 @@ def report(summary, rows, manifest):
             lines.append(f"| {name} | {value['positive_cases']} | " + ' | '.join(formatted) + f' | {time_text} |')
         lines += ['', '| 对照 | ΔnDCG@3 | ΔMRR@8 | ΔRecall@8(百分点) | Δ完整覆盖(百分点) | Δ预算后覆盖(百分点) |',
                   '|---|---:|---:|---:|---:|---:|']
-        for name in ('B', 'C'):
+        for name in comparisons:
             delta = group['variants'][name]['delta_vs_A']
             formatted = ['—' if delta[m] is None else f'{delta[m] * (100 if m in METRICS[2:] else 1):+.4f}' for m in METRICS]
             lines.append(f'| {name} − A | ' + ' | '.join(formatted) + ' |')
@@ -160,9 +165,12 @@ def report(summary, rows, manifest):
             recall, rerank = (value['timings'][s] for s in ('recall_seconds', 'rerank_seconds'))
             time_text = lambda t: '—' if t['p50'] is None else f"{t['p50']:.3f}/{t['p95']:.3f}"
             lines.append(f"| {name} | {time_text(recall)} | {time_text(rerank)} | {value['successful_runs']}/{value['failed_runs']} | {value['truncated_pairs']}/{value['scored_pairs']} |")
+        if 'D' in comparisons:
+            extra = group['variants']['D']['timings']
+            lines += ['', f"D 额外 Guard 完整排序 P50/P95：{time_text(extra['guard_seconds'])}s；融合 P50/P95：{time_text(extra['fusion_seconds'])}s（均包含在总检索耗时内）。"]
         lines += ['', f"配对完成 {group['paired_complete_cases']} 题；重复排名变化 {len(group['unstable_rankings'])} 项。无 gold 题只保存检索候选与来源诊断，不计算拒答率。", '']
         first = {r['qid']: r for r in rows if r['dataset'] == dataset and r['variant'] == 'A' and r['repeat'] == 0 and r['status'] == 'complete'}
-        for name in ('B', 'C'):
+        for name in comparisons:
             changes = []
             for r in rows:
                 base = first.get(r['qid'])
@@ -178,7 +186,7 @@ def report(summary, rows, manifest):
                 lines.append(f"- {r['qid']}：{r['question']}；ΔnDCG@3 {delta['ndcg_at3']:+.4f}，ΔMRR {delta['mrr']:+.4f}，Δ完整覆盖 {delta['full_at8']:+.0f}，Δ预算后覆盖 {delta['context_full']:+.0f}。")
             lines.append('')
     recommendations = []
-    for name in ('B', 'C'):
+    for name in comparisons:
         groups = [g['variants'][name] for g in summary.values()]
         qualifies = all(v['failed_runs'] == 0 and v['delta_vs_A']['full_at8'] is not None and v['delta_vs_A']['full_at8'] >= 0 and v['delta_vs_A']['context_full'] >= 0 for v in groups)
         qualifies = qualifies and all(v['delta_vs_A']['ndcg_at3'] >= 0 and v['delta_vs_A']['mrr'] >= 0 for v in groups) and any(v['delta_vs_A']['ndcg_at3'] > 0 or v['delta_vs_A']['mrr'] > 0 for v in groups)
@@ -192,8 +200,10 @@ def main():
     parser.add_argument('--data-root', type=Path, default=ROOT/'data')
     parser.add_argument('--output', type=Path, default=ROOT/'evaluation/rerank_experiment_2026-10-12')
     parser.add_argument('--repeats', type=int, default=3)
+    parser.add_argument('--include-fusion', action='store_true', help='Add D: equal-weight complete Guard/BGE rank fusion')
     parser.add_argument('--limit', type=int, help='Smoke test only: take the first N cases per dataset')
     args = parser.parse_args()
+    variants = FUSION_VARIANTS if args.include_fusion else VARIANTS
     if args.repeats < 1 or (args.limit is not None and args.limit < 1):
         parser.error('repeats and limit must be positive')
     if args.output.exists() and any(args.output.iterdir()):
@@ -232,6 +242,9 @@ def main():
         'dataset_sha256': {name: digest(path) for name, path in paths.items()}, 'model_id': reranker.MODEL_ID,
         'model_revision': reranker.MODEL_REVISION, 'device': 'cpu', 'dtype': 'float32', 'batch_size': 8,
         'max_pair_tokens': 512, 'truncation_policy': 'longest_first', 'cpu_threads': threads,
+        'variants': variants,
+        'fusion': {'guard_weight': .5, 'rank_constant': config.RRF_K,
+                   'guard_order': 'select_evidence on complete common pool, k=pool size'} if args.include_fusion else None,
         'repeats': args.repeats, 'smoke_limit': args.limit, 'python': platform.python_version(),
         'versions': {p: version(p) for p in ('torch', 'sentence-transformers', 'transformers', 'chromadb', 'rank-bm25', 'jieba')},
         'command': subprocess.list2cmdline([sys.executable, *sys.argv]),
@@ -245,7 +258,7 @@ def main():
         raise ValueError('Expected FP32 model')
     save(args.output/'manifest.json', manifest)
     first_question = next(iter(datasets.values()))[0]['question']
-    for method in VARIANTS.values():
+    for method in variants.values():
         retriever.retrieve(first_question, strategy='guarded', rerank=method)
     rows, expected_pools = [], {}
     run_path = args.output/'runs.jsonl'
@@ -253,7 +266,7 @@ def main():
         for dataset, cases in datasets.items():
             for repeat in range(args.repeats):
                 for number, case in enumerate(cases):
-                    names = list(VARIANTS)
+                    names = list(variants)
                     offset = (repeat+number) % len(names)
                     names = names[offset:] + names[:offset]
                     for name in names:
@@ -264,7 +277,7 @@ def main():
                         tick = perf_counter()
                         try:
                             # Runtime receives the question and switches only. No case object or gold labels.
-                            hits = retriever.retrieve(case['question'], k=8, strategy='guarded', rerank=VARIANTS[name], diagnostics=trace)
+                            hits = retriever.retrieve(case['question'], k=8, strategy='guarded', rerank=variants[name], guard_weight=.5, diagnostics=trace)
                             pool_key = (dataset, case['qid'])
                             expected = expected_pools.setdefault(pool_key, trace['candidate_ids'])
                             if expected != trace['candidate_ids']:
@@ -283,7 +296,7 @@ def main():
                         output.write(json.dumps(row, ensure_ascii=False, allow_nan=False)+'\n')
                         output.flush()
                     print(f'{dataset} repeat {repeat+1}/{args.repeats}: {number+1}/{len(cases)} {case["qid"]}', flush=True)
-    summary = summarize(rows, args.repeats)
+    summary = summarize(rows, args.repeats, variants=variants)
     save(args.output/'summary.json', summary)
     (args.output/'REPORT.md').write_text(report(summary, rows, manifest), encoding='utf8')
     print(json.dumps(summary, ensure_ascii=False, indent=2), flush=True)

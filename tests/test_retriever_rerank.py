@@ -76,6 +76,41 @@ class RetrievalRerankTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 retriever.retrieve(self.question, **kwargs)
 
+    def test_fusion_uses_two_complete_orders_before_final_cut(self):
+        traces = {}
+        with patch.object(reranker, 'score_candidates', side_effect=self.fake_score):
+            for method in ('none', 'global', 'guarded', 'fusion'):
+                traces[method] = {}
+                hits = retriever.retrieve(self.question, strategy='guarded', rerank=method,
+                                          diagnostics=traces[method])
+        d = traces['fusion']
+        self.assertTrue(all(t['candidate_ids'] == d['candidate_ids'] for t in traces.values()))
+        self.assertEqual(len(d['guard_order']), 9)
+        self.assertEqual(d['guard_order'], ['a', 'b', 'c', 'lex', 'pay', 'exit', 'd', 'e', 'f'])
+        self.assertEqual(d['semantic_order'], ['e', 'f', 'd', 'a', 'b', 'c', 'pay', 'exit', 'lex'])
+        self.assertEqual(set(d['fusion_order']), set(d['candidate_ids']))
+        self.assertEqual(d['selected_ids'], d['fusion_order'][:8])
+        self.assertEqual(hits[0]['text'], '原文-' + hits[0]['id'])
+        self.assertEqual(hits[0]['pages'], [1, 2])
+        self.assertEqual(hits[0]['fusion_score'], d['fusion_scores'][hits[0]['id']])
+
+    def test_fusion_weight_endpoints_and_score_failure(self):
+        with patch.object(reranker, 'score_candidates', side_effect=self.fake_score):
+            for weight, key in [(0., 'semantic_order'), (1., 'guard_order')]:
+                trace = {}
+                hits = retriever.retrieve(self.question, strategy='guarded', rerank='fusion',
+                                          guard_weight=weight, diagnostics=trace)
+                self.assertEqual([h['id'] for h in hits], trace[key][:8])
+        with patch.object(reranker, 'score_candidates', side_effect=RuntimeError('failed')):
+            with self.assertRaisesRegex(RuntimeError, 'failed'):
+                retriever.retrieve(self.question, strategy='guarded', rerank='fusion')
+
+    def test_fusion_rejects_missing_guard_strategy_and_bad_weight(self):
+        with self.assertRaises(ValueError):
+            retriever.retrieve(self.question, rerank='fusion')
+        with self.assertRaises(ValueError):
+            retriever.retrieve(self.question, strategy='guarded', rerank='fusion', guard_weight=2.)
+
 
 if __name__ == '__main__':
     unittest.main()

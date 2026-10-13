@@ -91,6 +91,7 @@ def retrieve(
     strategy: str = "baseline",
     *,
     rerank: str = 'none',
+    guard_weight: float = .5,
     diagnostics: dict | None = None,
 ) -> list[dict]:
     """返回 Top-k；baseline/expanded按融合分排序，分面策略按证据选择顺序返回。
@@ -102,14 +103,18 @@ def retrieve(
         bm25_top_k: BM25 侧候选截断数；None = 不截断（旧行为）。
         strategy: baseline 保持原检索；expanded 多查询融合；coverage 分面选择；
                   guarded 额外保留查询适用范围及补充查询的词法首位结果。
-        rerank: none 保留原行为；global 语义排序；guarded 保留分面及词法保护。
+        rerank: none 保留原行为；global 语义排序；guarded 保留分面及词法保护；
+                fusion 融合完整 Guard 和 BGE 排序后再取 Top-k。
+        guard_weight: fusion 中 Guard 的权重，默认0.5；仅适用于 guarded 策略。
         diagnostics: 可选逐阶段记录，不包含评测标签；失败不降级成成功结果。
     """
     started = perf_counter()
     if diagnostics is not None:
         diagnostics.clear()
-    if rerank not in ('none', 'global', 'guarded'):
-        raise ValueError('rerank must be none, global or guarded')
+    if rerank not in ('none', 'global', 'guarded', 'fusion'):
+        raise ValueError('rerank must be none, global, guarded or fusion')
+    if rerank == 'fusion' and (strategy != 'guarded' or not 0 <= guard_weight <= 1):
+        raise ValueError('fusion requires strategy=guarded and guard_weight between 0 and 1')
     if rerank != 'none' and k > 40:
         raise ValueError('Reranking returns at most 40 candidates')
     if mode not in RETRIEVE_MODES:
@@ -165,10 +170,17 @@ def retrieve(
             anchors.append(min(lexical, key=lexical.get) if lexical else None)
     scores, lengths, pool = {}, {}, []
     rerank_seconds = 0.
+    guard_seconds = fusion_seconds = 0.
+    fusion_details = {}
     if rerank != 'none' or diagnostics is not None:
-        from .reranker import candidate_pool, score_candidates, score_order
+        from .reranker import candidate_pool, score_candidates, score_order, fuse_orders
         pool = candidate_pool(fused_ids, top_ids, [iid for iid in anchors if iid is not None])
         if rerank != 'none':
+            if rerank == 'fusion':
+                tick = perf_counter()
+                guard_reasons = {}
+                guard_order = select_evidence(pool, facet_orders, len(pool), reasons=guard_reasons)
+                guard_seconds = perf_counter() - tick
             positions = {iid: i for i, iid in enumerate(ids)}
             candidates = [{'id': iid, 'text': docs[positions[iid]]} for iid in pool]
             tick = perf_counter()
@@ -179,6 +191,18 @@ def retrieve(
             if rerank == 'global':
                 top_ids = ranked[:k]
                 reasons = {iid: 'semantic_global' for iid in top_ids}
+            elif rerank == 'fusion':
+                tick = perf_counter()
+                fusion_order, fusion_scores = fuse_orders(pool, guard_order, ranked, guard_weight, RRF_K)
+                top_ids = fusion_order[:k]
+                reasons = {iid: 'weighted_rank_fusion' for iid in top_ids}
+                fusion_details = dict(guard_order=guard_order, semantic_order=ranked,
+                                      fusion_order=fusion_order, fusion_scores=fusion_scores,
+                                      guard_reasons=guard_reasons, guard_weight=guard_weight,
+                                      fusion_rrf_k=RRF_K,
+                                      guard_ranks={iid: rank for rank, iid in enumerate(guard_order, 1)},
+                                      semantic_ranks={iid: rank for rank, iid in enumerate(ranked, 1)})
+                fusion_seconds = perf_counter() - tick
             else:
                 ranked_facets = []
                 for number, facet in enumerate(facet_orders):
@@ -222,10 +246,16 @@ def retrieve(
         if rerank != 'none':
             results[-1]['rerank_score'] = scores[iid]
             results[-1]['rerank_method'] = rerank
+        if rerank == 'fusion':
+            results[-1]['fusion_score'] = fusion_details['fusion_scores'][iid]
+            results[-1]['guard_rank'] = fusion_details['guard_ranks'][iid]
+            results[-1]['semantic_rank'] = fusion_details['semantic_ranks'][iid]
     if diagnostics is not None:
         diagnostics.update(queries=queries, candidate_ids=pool, fused_ids=fused_ids,
                            facet_orders=facet_orders, lexical_anchors=anchors,
                            scores=scores, pair_tokens=lengths, selected_ids=top_ids,
                            selection_reasons=reasons, recall_seconds=recall_seconds,
-                           rerank_seconds=rerank_seconds, total_seconds=perf_counter()-started)
+                           rerank_seconds=rerank_seconds, guard_seconds=guard_seconds,
+                           fusion_seconds=fusion_seconds, total_seconds=perf_counter()-started,
+                           **fusion_details)
     return results

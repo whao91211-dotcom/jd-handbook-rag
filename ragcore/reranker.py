@@ -33,6 +33,24 @@ def score_order(ids: list[str], scores: dict[str, float]) -> list[str]:
     return sorted(ids, key=lambda iid: -scores[iid])
 
 
+def fuse_orders(pool: list[str], guard: list[str], semantic: list[str],
+                guard_weight: float = .5, constant: int = 60) -> tuple[list[str], dict]:
+    """Fuse two complete permutations; retain the pool's RRF order on ties."""
+    if not math.isfinite(guard_weight) or not 0 <= guard_weight <= 1:
+        raise ValueError('guard_weight must be finite and between 0 and 1')
+    if not math.isfinite(constant) or constant < 0:
+        raise ValueError('Rank fusion constant must be finite and nonnegative')
+    members = set(pool)
+    if len(pool) != len(members) or any(len(order) != len(members) or set(order) != members
+                                       for order in (guard, semantic)):
+        raise ValueError('Both rankings must contain every candidate exactly once')
+    guard_ranks = {iid: rank for rank, iid in enumerate(guard, 1)}
+    semantic_ranks = {iid: rank for rank, iid in enumerate(semantic, 1)}
+    scores = {iid: guard_weight / (constant + guard_ranks[iid]) +
+                   (1 - guard_weight) / (constant + semantic_ranks[iid]) for iid in pool}
+    return score_order(pool, scores), scores
+
+
 @functools.lru_cache(maxsize=1)
 def get_model():
     # Local snapshots only: prepare weights before running any retrieval request.

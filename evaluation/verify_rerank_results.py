@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 import statistics
+import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -11,12 +12,15 @@ from pathlib import Path
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('folder', type=Path)
+    parser.add_argument('--recorded-code', action='store_true', help='Verify historical source from the recorded Git revision')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     folder = args.folder
     rows = [json.loads(line) for line in (folder/'runs.jsonl').read_text(encoding='utf8').splitlines()]
     manifest = json.loads((folder/'manifest.json').read_text(encoding='utf8'))
     summary = json.loads((folder/'summary.json').read_text(encoding='utf8'))
+    variants = manifest.get('variants', {'A': 'none', 'B': 'global', 'C': 'guarded'})
+    assert set(variants) in ({'A', 'B', 'C'}, {'A', 'B', 'C', 'D'})
     assert manifest['repeats'] == 3 and manifest['smoke_limit'] is None
     content_path = folder/'content_hashes.json'
     normalized_hash = lambda data: hashlib.sha256(data.replace(b'\r\n', b'\n')).hexdigest()
@@ -33,14 +37,16 @@ def main():
         content_path.write_text(json.dumps(content, indent=2)+'\n', encoding='utf8')
     content = json.loads(content_path.read_text(encoding='utf8'))
     for name, expected in content['source_sha256'].items():
-        assert normalized_hash((root/name).read_bytes()) == expected, name
+        source = (subprocess.check_output(['git', 'show', f"{manifest['code_revision']}:{name}"], cwd=root)
+                  if args.recorded_code else (root/name).read_bytes())
+        assert normalized_hash(source) == expected, name
     assert normalized_hash((folder/'chunks.jsonl').read_bytes()) == content['chunks_sha256']
     cases = {ds: json.loads((folder/f'{ds}.json').read_text(encoding='utf8')) for ds in summary}
     assert {ds: len(cs) for ds, cs in cases.items()} == {'original46': 46, 'development36': 36}
     expected_keys = {(ds, c['qid'], v, rep) for ds, cs in cases.items()
-                     for c in cs for v in 'ABC' for rep in range(3)}
+                     for c in cs for v in variants for rep in range(3)}
     keys = [(r['dataset'], r['qid'], r['variant'], r['repeat']) for r in rows]
-    assert len(keys) == 738 and len(set(keys)) == 738 and set(keys) == expected_keys
+    assert len(keys) == len(expected_keys) and len(set(keys)) == len(expected_keys) and set(keys) == expected_keys
     groups = defaultdict(list)
     for r in rows:
         assert r['status'] == 'complete', (r['qid'], r.get('error'))
@@ -63,10 +69,30 @@ def main():
             assert order == r['ranked_candidates']
             if r['variant'] == 'B':
                 assert selected == order[:8]
+            if r['variant'] == 'D':
+                guard = r['guard_order']
+                assert len(guard) == len(set(guard)) == len(pool) and set(guard) == set(pool)
+                assert r['semantic_order'] == order
+                expected_guard = []
+                if len(r['facet_orders']) > 1:
+                    for number, facet in enumerate(r['facet_orders']):
+                        remaining = [iid for iid in facet if iid in pool and iid not in expected_guard]
+                        expected_guard.extend(remaining[:3 if number == 0 else 2])
+                expected_guard.extend(iid for iid in pool if iid not in expected_guard)
+                assert guard == expected_guard
+                assert r['guard_ranks'] == {iid: i+1 for i, iid in enumerate(guard)}
+                assert r['semantic_ranks'] == {iid: i+1 for i, iid in enumerate(order)}
+                assert r['guard_weight'] == manifest['fusion']['guard_weight'] == .5
+                assert r['fusion_rrf_k'] == manifest['fusion']['rank_constant'] == 60
+                fused = {iid: .5/(60+guard.index(iid)+1) + .5/(60+order.index(iid)+1) for iid in pool}
+                assert set(r['fusion_scores']) == set(pool)
+                assert all(math.isclose(r['fusion_scores'][iid], value, abs_tol=1e-12) for iid, value in fused.items())
+                assert r['fusion_order'] == sorted(pool, key=lambda iid: -fused[iid])
+                assert selected == r['fusion_order'][:8]
         groups[(r['dataset'], r['qid'])].append(r)
     for records in groups.values():
         assert len({tuple(r['candidate_ids']) for r in records}) == 1
-        for v in 'ABC':
+        for v in variants:
             assert len({tuple(r['selected_ids']) for r in records if r['variant'] == v}) == 1
         scored = [r for r in records if r['variant'] != 'A']
         assert all(r['scores'] == scored[0]['scores'] for r in scored)
@@ -74,7 +100,7 @@ def main():
     recalculated = {}
     for ds in cases:
         recalculated[ds] = {}
-        for v in 'ABC':
+        for v in variants:
             eligible = [r for r in rows if r['dataset'] == ds and r['variant'] == v and r['repeat'] == 0 and r['gold_ids']]
             values = defaultdict(list)
             for r in eligible:
@@ -91,8 +117,8 @@ def main():
             for m, value in recalculated[ds][v].items():
                 assert math.isclose(value, summary[ds]['variants'][v]['metrics'][m], abs_tol=1e-12)
             measured = [r for r in rows if r['dataset'] == ds and r['variant'] == v]
-            for stage in ('recall_seconds', 'rerank_seconds', 'total_seconds'):
-                samples = [r[stage] for r in measured]
+            for stage in summary[ds]['variants'][v]['timings']:
+                samples = [r.get(stage, 0.) for r in measured]
                 timings = summary[ds]['variants'][v]['timings'][stage]
                 assert math.isclose(statistics.median(samples), timings['p50'], abs_tol=1e-12)
                 assert math.isclose(statistics.quantiles(samples, n=100, method='inclusive')[94],

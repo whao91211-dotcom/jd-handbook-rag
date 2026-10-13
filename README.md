@@ -99,6 +99,10 @@ CPU FP32、batch 8、pair上限512 tokens；超过上限时仅模型输入被截
 
 本轮738次检索全部成功。原始35道正题的 nDCG@3 从0.8262到0.9578，开发9道正题从0.4215到0.6424；但开发题完整证据覆盖从100%降到88.89%，B/C均暂不推荐进入回答实验。CPU重排总检索P50约21–37秒，原方案约0.065–0.086秒。原因与逐题证据见 [实验分析](evaluation/rerank_experiment_2026-10-12/ANALYSIS.md)，离线核验可运行 `python evaluation/verify_rerank_results.py evaluation/rerank_experiment_2026-10-12`。
 
+完整双路融合使用 `retrieve(question, strategy='guarded', rerank='fusion', guard_weight=0.5)`：在相同候选池上，Guard 规则和 BGE 模型各自产生完整排序，再按 `0.5/(60+Guard名次) + 0.5/(60+BGE名次)` 融合，最后取8块。同分保留原 RRF 顺序，返回额外的 `fusion_score`、`guard_rank`、`semantic_rank`。软权重不会强制保留所有分面证据，需通过完整覆盖指标验证。
+
+四组复验命令：`python evaluation/run_rerank_experiment.py --include-fusion --output evaluation/guard_fusion_experiment_2026-10-13`。A/B/C/D 每题每组3次，新增记录完整两路顺序、融合分数及 Guard/融合开销；新目录已有结果时同样拒绝覆盖。历史实验核验可加 `--recorded-code`，从 manifest 记录的 Git 版本校验源码，避免将后续实现变更误判为历史数据损坏。
+
 - 检索支持 dense、BM25 和 RRF 对照。现有 golden set 显示 BM25 更强，后续应先补充真实改写与困难负样本，再决定是否调整融合策略。
 - 回答附页码及章节引用；对辞职、解雇、赔偿、纪律等高风险问题提示核实正式渠道，不代写辞职申请或协议。文档生效日期不等于其当前仍有效。
 - 生成采用自适应输出预算，红队重跑未出现空答案或截断兜底；目前没有独立的端到端人工正确率或引用支持率标注。

@@ -64,6 +64,20 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(summary['variants']['A']['positive_cases'], 1)
         self.assertEqual(summary['variants']['A']['successful_runs'], 3)
 
+    def test_four_way_pairing_requires_fusion_success(self):
+        module = self.module()
+        rows = [{'dataset': 'test', 'qid': 'one', 'variant': variant, 'status': 'complete',
+                 'selected_ids': ['a'], 'metrics': dict.fromkeys(module.METRICS, 1.),
+                 'recall_seconds': .1, 'rerank_seconds': .2, 'total_seconds': .3, 'pair_tokens': {}}
+                for variant in ('A', 'B', 'C', 'D')]
+        summary = module.summarize(rows, 1, variants=module.FUSION_VARIANTS)['test']
+        self.assertEqual(summary['paired_complete_cases'], 1)
+        self.assertEqual(summary['variants']['D']['positive_cases'], 1)
+        rows[-1]['status'] = 'failed'
+        summary = module.summarize(rows, 1, variants=module.FUSION_VARIANTS)['test']
+        self.assertEqual(summary['paired_complete_cases'], 0)
+        self.assertEqual(summary['variants']['A']['positive_cases'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()
