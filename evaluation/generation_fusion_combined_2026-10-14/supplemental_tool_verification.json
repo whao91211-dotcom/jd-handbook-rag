@@ -1,0 +1,7 @@
+{
+  "metric_code_mutation_rejected": true,
+  "journal_mutation_rejected": true,
+  "credential_matches": 0,
+  "checked_files": 38,
+  "files_above_100_mb": []
+}

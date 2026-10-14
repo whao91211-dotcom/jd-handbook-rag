@@ -27,8 +27,8 @@
 - [x] Create source-grounded original46/development36 reference answers, factual claims, quotes, forbidden inferences and clarification requirements; independently review and freeze.
 - [x] Implement experiment generation/judge/summary tooling with meaningful failure, isolation, context and pairing tests; review code; commit before full runs.
 - [x] Prepare isolated bert-score dependency and pinned local encoder; verify official artifacts; run actual generator/judge/BERTScore smoke without altering runtime defaults.
-- [ ] Generate492 fresh A/D answers; score admitted contexts once per case/variant and evaluate all complete answers; preserve failures and actual token/latency data.
-- [ ] Independently audit aggregates and reviewed cases; report measured changes/limitations/recommendation; commit, integrate and push verified batch under existing project authorization.
+- [x] Generate492 fresh A/D answers; score admitted contexts once per case/variant and evaluate all complete answers; preserve failures and actual token/latency data.
+- [x] Independently audit aggregates and reviewed cases; report measured changes/limitations/recommendation; commit, integrate and push verified batch under existing project authorization.
 
 ## Review Focus
 
@@ -41,3 +41,7 @@
 ## Approved model change, 2026-10-14
 
 After all 492 generation runs and Pro context/faithfulness reviews were recorded, the user changed subsequent review calls to Flash and restored credits. The new independent correctness journal uses the verified request name deepseek-flash for all 489 successful answers, unchanged references/prompt/formulas, and no old Pro correctness fallback. Original generator records keep deepseek-v4-flash. Provider aliases do not pin internal weights. Offline runner/composer review passed; full-project checks precede the formal Flash run.
+
+## Recorded outcomes
+
+All 492 generations and 489 Flash correctness units were recorded, with failures preserved. Combined formula/source audit passed; report separates all metric models, paired denominators, old Pro costs, source-reviewed regressions and judge limitations. 168 project tests passed before the live Flash run. Independent artifact review passed. Final delivery records the verified batch in Git and integrates it into the configured remote branch; remote HEAD is checked after pushing.

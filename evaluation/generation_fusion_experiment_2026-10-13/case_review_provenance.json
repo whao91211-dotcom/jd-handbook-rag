@@ -1,0 +1,1154 @@
+{
+  "schema_version": "case-review-provenance-v1",
+  "prepared_at_utc": "2026-10-14T02:11:54+00:00",
+  "purpose": "After-the-fact unblinding and provenance of eight qualitative source-review cases; does not replace formal automated scores.",
+  "reviewer_type": "Codex_source_review_synthesis",
+  "source_review_protocol": {
+    "blinded_reports_completed_before_mapping_opened_for_synthesis": true,
+    "reported_mapping_read_during_original_reviews": false,
+    "reported_Pro_reviews_read_during_original_reviews": false,
+    "unblinding_is_per_question_not_global": true,
+    "new_API_or_model_calls_for_synthesis": false,
+    "human_adjudication": false,
+    "formal_scores_overwritten": false,
+    "new_grades_created": false,
+    "review_authorship_limit": "The original46 and development36 reference annotators also performed their respective source reviews. Reviews are independent of Pro automated outputs, not independent of reference authorship.",
+    "blind_limit": "X/Y labels concealed explicit A/D names in review input and mappings were opened later. This is not a double-blind human trial; source ordering, failure clues and shared task history can still provide identity hints."
+  },
+  "sources": {
+    "saved_review_input": {
+      "path": "evaluation/generation_fusion_experiment_2026-10-13/blinded_case_review_inputs.json",
+      "raw_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+      "normalized_lf_sha256": "1ab452bae26a5f47dfedd41af45123f2e78346c0da435842f5989686ae94dd3a",
+      "raw_bytes": 303834,
+      "crlf_count": 2095,
+      "lf_count": 2095
+    },
+    "original_hidden_input": {
+      "path": ".superpowers/generation-eval/blinded_case_review_inputs.json",
+      "raw_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+      "normalized_lf_sha256": "1ab452bae26a5f47dfedd41af45123f2e78346c0da435842f5989686ae94dd3a",
+      "raw_bytes": 303834,
+      "crlf_count": 2095,
+      "lf_count": 2095
+    },
+    "mapping": {
+      "path": "evaluation/generation_fusion_experiment_2026-10-13/blinded_case_review_mapping.json",
+      "raw_sha256": "4f4de03a58935c25f202b5aa864dfa7a4756bff67cd8c5a0a51b4702a5c7e7c6",
+      "normalized_lf_sha256": "d5d7baa0ab783710f892c443b341888c4257b5043d0beac7cebdf0fd58fc6e99",
+      "raw_bytes": 387,
+      "crlf_count": 33,
+      "lf_count": 33
+    },
+    "original_review": {
+      "path": "evaluation/generation_fusion_experiment_2026-10-13/original_cases_review.json",
+      "raw_sha256": "a178f48cdf9850d65b13726fe68d37897e2060a94bc6a00db14a8f2cb3e6ebf9",
+      "normalized_lf_sha256": "78db13a3d232d54ff5de98ab858bbdb4b7f18a542a2094755ecb90db6582c9bd",
+      "raw_bytes": 82489,
+      "crlf_count": 1840,
+      "lf_count": 1840,
+      "recorded_input_raw_sha256_preserved": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211"
+    },
+    "development_review": {
+      "path": "evaluation/generation_fusion_experiment_2026-10-13/development_cases_review.json",
+      "raw_sha256": "180f60f8696a953cd714dba1c6ebc9d2d48b03adc12ba8c5eaae88a93f608734",
+      "normalized_lf_sha256": "e4b651b645da2a50b279df2038971443ee181b8e5e11f41e0f21cdfbbfbebf74",
+      "raw_bytes": 95066,
+      "crlf_count": 1975,
+      "lf_count": 1975,
+      "recorded_input_raw_sha256_preserved": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211"
+    }
+  },
+  "newline_provenance": {
+    "old_report_recorded_raw_CRLF_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+    "current_raw_file_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+    "current_canonical_LF_sha256": "1ab452bae26a5f47dfedd41af45123f2e78346c0da435842f5989686ae94dd3a",
+    "normalization": "Replace CRLF bytes with LF only; no other byte change.",
+    "raw_report_hash_matches_current_CRLF_copy": true,
+    "canonical_LF_roundtrip_to_CRLF_matches_recorded_raw_hash": true,
+    "hidden_and_saved_input_raw_bytes_equal": true,
+    "current_working_copies_use_CRLF": true,
+    "meaning": "Raw CRLF and canonical LF hashes identify different byte representations of identical JSON. Current working copies remain CRLF; canonical LF hash is calculated normalization. Old reports keep the exact raw input hashes recorded when reviewed; they were not rewritten to imply LF bytes were reviewed."
+  },
+  "coverage": {
+    "cases": 8,
+    "records": 48,
+    "successful_answers_reviewed": 47,
+    "failed_not_scored": 1,
+    "saved_review_grade_counts": {
+      "correct": 44,
+      "not_scored": 1,
+      "partial": 3
+    },
+    "not_a_population_accuracy_estimate": true,
+    "sampling_note": "Eight selected diagnostic cases from original46/development36, not a random held-out sample or real-user benchmark. No accuracy ratio is computed from these selected cases."
+  },
+  "findings": {
+    "localized_citation_support": [
+      {
+        "qid": "P17",
+        "variant": "D",
+        "repeats": [
+          0,
+          1
+        ],
+        "core_fact_error": false,
+        "description": "Optional maternity/paternity pay fact is supported in actual input but attached citations omit the direct maternity-pay clause.",
+        "direct_maternity_evidence_label": "来源2",
+        "direct_paternity_evidence_label": "来源4"
+      },
+      {
+        "qid": "P13",
+        "variant": "D",
+        "repeats": [
+          2
+        ],
+        "core_fact_error": false,
+        "description": "Optional designated-hospital re-examination fact is in actual来源5 but the sentence cites来源3, which supports documents rather than that examination action."
+      }
+    ],
+    "extra_policy_qualification": [
+      {
+        "qid": "C-A01",
+        "variant": "A",
+        "repeats": [
+          0,
+          1,
+          2
+        ],
+        "core_clarification_met": true,
+        "saved_source_review_grade": "partial",
+        "missing_conditions": [
+          "First newborn during employment",
+          "C/C- performance in the four quarters before corresponding leave excludes the benefit"
+        ],
+        "actual_input_summary_support_label": "来源4",
+        "actual_input_summary_chunk_id": "p29-d2fd640689",
+        "full_corpus_clauses_not_admitted": [
+          "p24-3e46efee64",
+          "p24-7893cf4f6d"
+        ],
+        "scope": "The ambiguous question only required clarification. Missing conditions concern an unsolicited maternity/paternity assertion, not the required first clarification; actual summary citation is not a wrong label or evidence-faithfulness failure."
+      }
+    ]
+  },
+  "cases": [
+    {
+      "qid": "P13",
+      "dataset": "original46",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blind_mapping": {
+        "A": "X",
+        "D": "Y"
+      },
+      "core_summary": "两种福利病假分别按正式服务时间÷365×5或55折算，保留不足0.5及大于0.5小于1天的原文规则，不虚构个人天数。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "original46",
+          "qid": "P13",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "45a4c99921d16850f998b8a1798601b20510352eea39e918d65d94d1aa00d3a2",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P13",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "407f2833af3c62bc75238e59403e26c7c2c3044c936d2362f2645aff67f50a84",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P13",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "a2c149b310152c46043c4f3a057ffeae011f260d833215263d1bc579b12a6f5b",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P13",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "58cb79bb1a782b9497beb89ea6c2ac85b38854f78e16f53826fafadf033dc1e6",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P13",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "c3832b976304619f98936af3401bd8ff967f51aab914e09d77932982674ddad2",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P13",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "d82f4e3945f8103b408160f98ec9a65deefd611bf59ca72eab83d5d814ccb68f",
+          "core_behavior_met": true,
+          "citation_issue_count": 1,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        }
+      ]
+    },
+    {
+      "qid": "P17",
+      "dataset": "original46",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blind_mapping": {
+        "A": "X",
+        "D": "Y"
+      },
+      "core_summary": "覆盖首个新生儿、前4季度绩效排除、女30/男7自然日、产假合计180上限与法定已超180例外，并询问个人资格。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "d42368892d5eb0f1001e63e6f9347ca576eb59ef2bda7ab6a27a456bfeb2d9b9",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "02a314f3973dcc7c4d29a171365e6aed409fd97d7ad5ddf5cd840330936e58b7",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "7096264096101d57d81596805b404c04f6b92e7ca52525861c56e1f21f78c0cc",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "e5995633956bdabd698c4fba7a3c2edf66e35a4333610724b361281ef0b10aa0",
+          "core_behavior_met": true,
+          "citation_issue_count": 1,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "8c4bda15e8d72b938cebd06ace6d7f93ce2c3676e3545532d3c249cd5deb8b34",
+          "core_behavior_met": true,
+          "citation_issue_count": 1,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "84e8ec465cff72798eb8a031e566574e1d6fc5e2b22c62759acb449e63aac079",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        }
+      ]
+    },
+    {
+      "qid": "P20",
+      "dataset": "original46",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blind_mapping": {
+        "A": "X",
+        "D": "Y"
+      },
+      "core_summary": "说明M3/P7/T7及以上转正后享福利年假并按转正日折算，不把合计上限误作额外额度。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "not_scored",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "7b73dc00a4935fcc716076ac070304888ab0d9e57ad834d2e8d3daf24732c173",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "1e426d4cccdad92c6008482ed737b65823886ebfcf937eaeaba9ba1a99941075",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "f99a613dc18c90418403d4e25a849f2eabe5383957426196e4222ec57f1a5a96",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "failed",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "not_scored",
+          "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "core_behavior_met": null,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "生成失败且没有成功回答，不进行事实或正确性评分。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "2ca5bd8b2ac7efb182ba0e8843460ace99cf0fb6750d9313c639a65990fc1f68",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "42e65b82532109a75ce832dd97755a8385920dc6ea0fae21b9c2d71d0067e5c3",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        }
+      ]
+    },
+    {
+      "qid": "P32",
+      "dataset": "original46",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blind_mapping": {
+        "A": "Y",
+        "D": "X"
+      },
+      "core_summary": "明确下属信息模块，引用ssc.jd.com及考勤/绩效范围。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "original46",
+          "qid": "P32",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "727785c35c63eade31061ae745b17468d165c2ca197efdc8a3635433c65fe546",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P32",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "fcca5ea70e2f96ced54e9e2dc6ca6604fef3dbad20238962e211826e03cda624",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P32",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "ef9feca39e081078c7b9767bfbe157e6345dd3feb6a76e3f1ea862a0ed8f6d8d",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P32",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "ce4cc15d4302cb246e7bbcbfbb75242f12dc61fe93073c27bd5d557a52b62aaf",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P32",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "a8a362d770cd1c8fe0e10143a9a0d019106324b828852c1507aba7758fb6fbe0",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P32",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "original_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "17e9c69573661a2de877bd60e3f59ffaa8e7115ea88b31b7c9c1cdc42681613a",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。"
+        }
+      ]
+    },
+    {
+      "qid": "C-P01",
+      "dataset": "development36",
+      "question": "我刚入职两个月，现在想走，是不是跟主管说一声就能马上离开？",
+      "blind_mapping": {
+        "A": "Y",
+        "D": "X"
+      },
+      "core_summary": "不由入职两个月推定仍在试用期；按合同和转正状态解释通知期及离职流程。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "development36",
+          "qid": "C-P01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "c65758503ee0742995c20ed6afd04089f0ec25d128e84a83146529c35d8d15c7",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "70c82d9e19d59b50e2ac7780b3ff92ad418c5055454887a522650774d3be2d76",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "387d4b6dcf0b5900a2044aee6104acfe0cca4b2319ae9996eba5ae99e1f23d6e",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "4f6b4feee92a47d921ee7ce97f323e10a8b8b9a314b27b30abda3dcc1d1f283b",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "1dd6bc4c13ad5306aa397064207c1965927f4ed92e6b24daeae90b528e5bda87",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "c0ffb549491a4ea0be587145c4ffd39a8a50cef0d0a93522c02a57bdd03bcf7b",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。"
+        }
+      ]
+    },
+    {
+      "qid": "C-P06",
+      "dataset": "development36",
+      "question": "请了一天事假，那天15块钱餐补还发吗？",
+      "blind_mapping": {
+        "A": "X",
+        "D": "Y"
+      },
+      "core_summary": "合并事假无薪、无薪假不付福利、餐补按出勤核算，回答事假当天餐补不发。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "development36",
+          "qid": "C-P06",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "aa813939b9a5954ef3fa2e05391861657aedbdccd430e92e2ebfe0d0f3010105",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P06",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "568eec3ac99ad75d4e83e63c0293482621d9867f26400eeffcb7cb5f3e3a2cfc",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P06",
+          "variant": "A",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "c854626e408c76d67700269401acd47e2e8cc7b019fb7a3760c7b5360d47c45a",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P06",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "a45c11d2ec9f1f4564a1a273e240ac381ce1a411b42703922ee1bb8b6a6856a8",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P06",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "20eda0d1e8988bbe9de16b9e5940a6800d418592f4412a2b37142b60e37997b4",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P06",
+          "variant": "D",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "ad573e235669518ad30cbaf9c6b169430df8690452844997f6f0923b2094f1ee",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。"
+        }
+      ]
+    },
+    {
+      "qid": "C-N01",
+      "dataset": "development36",
+      "question": "试用期辞职要提前三天，这三天算工作日还是自然日？",
+      "blind_mapping": {
+        "A": "Y",
+        "D": "X"
+      },
+      "core_summary": "拒绝臆断三天为工作日或自然日，区分已知通知期与缺失计算口径。",
+      "A_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "development36",
+          "qid": "C-N01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "7d98363d1f08d3d3b27e3656853987c71257d7f71f1bc8bf5f975a8581500753",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "53a8a2c2e003df03c8bf099779994b75a676234fe965467016cd75f8231ae0b9",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "8a030090f5a57e22e8f687cac8368abb34e9c1451644b8b03f313cfac6cfe967",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "e4fcd5e35897e978c1c6f5579db28794803c814d85d5d88d29074245a6b1d32e",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "dbcf636ddcfb761f5a8d53cb61966a26dbf795c6889b24ea347ad0e36c6edcc2",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "be049e95f5f0f22e6cb2979ec2f32362aaa93aa859d7422f94c9ae2b78455de9",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。"
+        }
+      ]
+    },
+    {
+      "qid": "C-A01",
+      "dataset": "development36",
+      "question": "我这个能请吗？",
+      "blind_mapping": {
+        "A": "Y",
+        "D": "X"
+      },
+      "core_summary": "双方均先询问具体假种或事由；A额外扩写产假/陪护假时遗漏完整资格条件，D未作该附加断言。",
+      "A_review_grades": [
+        "partial",
+        "partial",
+        "partial"
+      ],
+      "D_review_grades": [
+        "correct",
+        "correct",
+        "correct"
+      ],
+      "records": [
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "partial",
+          "answer_sha256": "0c2218b52cd8da4aae19cf013c7c3c13784111df3baa17f889e0a6ce8355bf7a",
+          "core_behavior_met": true,
+          "citation_issue_count": 1,
+          "additional_policy_condition_omission": true,
+          "reason": "澄清主方向正确，但主动加入福利产假/陪护假资格表述，仅给满三年后怀孕即可30/7天，遗漏完整手册正文首个新生儿和前4季度C/C-绩效限制。此附加政策不完整可误导适用资格。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "partial",
+          "answer_sha256": "c610f7e5bf4004f8c7c88c945d9e82a33205d7cfd23d943c8aa99b72c81a6e62",
+          "core_behavior_met": true,
+          "citation_issue_count": 1,
+          "additional_policy_condition_omission": true,
+          "reason": "澄清主方向正确，但主动加入福利产假/陪护假资格表述，仅给满三年后怀孕即可30/7天，遗漏完整手册正文首个新生儿和前4季度C/C-绩效限制。此附加政策不完整可误导适用资格。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "original_blind_label": "Y",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "partial",
+          "answer_sha256": "d8012db58b9057589d869c242147618b24340949c54212786990815c6a4157f2",
+          "core_behavior_met": true,
+          "citation_issue_count": 1,
+          "additional_policy_condition_omission": true,
+          "reason": "澄清主方向正确，但主动加入福利产假/陪护假资格表述，仅给满三年后怀孕即可30/7天，遗漏完整手册正文首个新生儿和前4季度C/C-绩效限制。此附加政策不完整可误导适用资格。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 0,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "e7d49e2d4fb6fa59ba2391895349dcad86d0577a3d64acfbb9950f0d9b8e65a0",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "首先承认指代不明并询问具体假别，没有猜测个人假种或判定个人能否休假；附加年假、公假、公益假与手册时期边界有实际来源支持。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 1,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "82ee0532cc975e468a333b48c547fc0faca8167d9c2250aa0f8d8ecb3fd1e3de",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "首先承认指代不明并询问具体假别，没有猜测个人假种或判定个人能否休假；附加年假、公假、公益假与手册时期边界有实际来源支持。"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "original_blind_label": "X",
+          "repeat": 2,
+          "generation_status": "complete",
+          "source_review_file": "development_cases_review.json",
+          "source_review_grade": "correct",
+          "answer_sha256": "e9a8af5d75ae2695ef22e0ddf3d4eeb21a2c78bd42746a3e2ad3c67524bbb093",
+          "core_behavior_met": true,
+          "citation_issue_count": 0,
+          "additional_policy_condition_omission": false,
+          "reason": "首先承认指代不明并询问具体假别，没有猜测个人假种或判定个人能否休假；附加年假、公假、公益假与手册时期边界有实际来源支持。"
+        }
+      ]
+    }
+  ],
+  "protected_file_identity_before": {
+    "ragcore/llm.py": {
+      "raw_sha256": "282275d2276a03ab6b48b9b8b98fb12a1fe8b0d5683fa5016adebe58a251a80a",
+      "normalized_lf_sha256": "8ace1dde860dc0855e69241f17c8d763d49ebd07aa750b5c650d18868a75c35b",
+      "raw_bytes": 11705,
+      "crlf_count": 228,
+      "lf_count": 228
+    },
+    "ragcore/config.py": {
+      "raw_sha256": "6acdaf5a8e732e48ba9b0d3d70fda76501494a56b3ca334585ebc7cbbb24c991",
+      "normalized_lf_sha256": "54bc31c3251a38cd635a0c87b132cdac469e19eafd89c9ee9a2e71aac267c76b",
+      "raw_bytes": 3056,
+      "crlf_count": 60,
+      "lf_count": 60
+    },
+    "evaluation/run_generation_fusion_experiment.py": {
+      "raw_sha256": "70f2710e6e659091b9734d9f4b35dac1f644959888398b34b33a886212f5046d",
+      "normalized_lf_sha256": "70f2710e6e659091b9734d9f4b35dac1f644959888398b34b33a886212f5046d",
+      "raw_bytes": 45685,
+      "crlf_count": 0,
+      "lf_count": 800
+    },
+    "evaluation/generation_metrics.py": {
+      "raw_sha256": "6996f07caf7bc462e0044c0a4f051c67a7443b397c7d530d40420031987e7c7f",
+      "normalized_lf_sha256": "6996f07caf7bc462e0044c0a4f051c67a7443b397c7d530d40420031987e7c7f",
+      "raw_bytes": 14038,
+      "crlf_count": 0,
+      "lf_count": 264
+    },
+    "evaluation/run_generation_semantic_metrics.py": {
+      "raw_sha256": "02696298167861aa0a41fdc01d6d06dbc191112be11f5a9b1472cbf514decf9d",
+      "normalized_lf_sha256": "02696298167861aa0a41fdc01d6d06dbc191112be11f5a9b1472cbf514decf9d",
+      "raw_bytes": 9097,
+      "crlf_count": 0,
+      "lf_count": 168
+    },
+    "evaluation/semantic_model_artifacts_v1.json": {
+      "raw_sha256": "447522b8eb4769da998f730743ab77a8e3a6202d6bf4278ef0b361f2921299ff",
+      "normalized_lf_sha256": "df7a0437eff9adec5eb8963d0477e9c16e5851daa20d304e2549592eec2b5c97",
+      "raw_bytes": 2287,
+      "crlf_count": 33,
+      "lf_count": 33
+    },
+    "evaluation/generation_fusion_references_v1/original46.json": {
+      "raw_sha256": "32e9bde2c3ddb10c66201a146cce0ff71297ab9ecbdbc0d4247f069554908a88",
+      "normalized_lf_sha256": "8aa54ea478598c8f90a660d78ac2e27f461dc0a3675c8573d2db9fc40c865c04",
+      "raw_bytes": 70017,
+      "crlf_count": 1440,
+      "lf_count": 1440
+    },
+    "evaluation/generation_fusion_references_v1/development36.json": {
+      "raw_sha256": "f6cf26dbcd1b2eb2fb11e47ba128b10048f9b0917811fcd4a8d0bf7b6aaa717f",
+      "normalized_lf_sha256": "6a763a1ca586adfc3fdf8d3aec2828e339796f7ba667e36c689269ac9f9a8b3c",
+      "raw_bytes": 63578,
+      "crlf_count": 1300,
+      "lf_count": 1300
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/manifest.json": {
+      "raw_sha256": "2210731ae5ef6304975413d9c7aad8f8eca5877227e32ca2e650ca03942026d8",
+      "normalized_lf_sha256": "1b53ea023f9891296b53ab9c5caf45314855e35d86899b450c1ed39745f2a07c",
+      "raw_bytes": 8173,
+      "crlf_count": 405,
+      "lf_count": 405
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/answers.jsonl": {
+      "raw_sha256": "1df90491aca98660894eace3301fea8f05519a4991f9aefcb7feaad7082cfd14",
+      "normalized_lf_sha256": "c75ba0046d34e20448b37466f502a48dae35d084e24d83a186caed8935d18db8",
+      "raw_bytes": 35112337,
+      "crlf_count": 492,
+      "lf_count": 492
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/context_reviews.jsonl": {
+      "raw_sha256": "56357fe090e03af1821e730f584295a9562059401189880b5c04fa1e1d2f0862",
+      "normalized_lf_sha256": "3cfdc0f201b140f0ccf6e909e554cf5cd47b9e4cc36f8f876a058c1e9ca99ad6",
+      "raw_bytes": 2194521,
+      "crlf_count": 164,
+      "lf_count": 164
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/faithfulness_reviews.jsonl": {
+      "raw_sha256": "a27420449a90f71999eb7a9b67e00229095b383cffc4e819176e92783935241d",
+      "normalized_lf_sha256": "4fa47da11a7b8a98decd2d48c989fb858d9a6018de60801a0ddd141be70c9acd",
+      "raw_bytes": 10209567,
+      "crlf_count": 489,
+      "lf_count": 489
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/correctness_reviews.jsonl": {
+      "raw_sha256": "d58b8b8b17253132960360320ec8af603b172230f9eebec5e0799b378dd81b98",
+      "normalized_lf_sha256": "d4c1f0cd284ff6d01212b4f93a4c52e441716aacd15a2fa08e2c7344f991e028",
+      "raw_bytes": 737211,
+      "crlf_count": 40,
+      "lf_count": 40
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/original_cases_review.json": {
+      "raw_sha256": "a178f48cdf9850d65b13726fe68d37897e2060a94bc6a00db14a8f2cb3e6ebf9",
+      "normalized_lf_sha256": "78db13a3d232d54ff5de98ab858bbdb4b7f18a542a2094755ecb90db6582c9bd",
+      "raw_bytes": 82489,
+      "crlf_count": 1840,
+      "lf_count": 1840
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/development_cases_review.json": {
+      "raw_sha256": "180f60f8696a953cd714dba1c6ebc9d2d48b03adc12ba8c5eaae88a93f608734",
+      "normalized_lf_sha256": "e4b651b645da2a50b279df2038971443ee181b8e5e11f41e0f21cdfbbfbebf74",
+      "raw_bytes": 95066,
+      "crlf_count": 1975,
+      "lf_count": 1975
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/blinded_case_review_inputs.json": {
+      "raw_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+      "normalized_lf_sha256": "1ab452bae26a5f47dfedd41af45123f2e78346c0da435842f5989686ae94dd3a",
+      "raw_bytes": 303834,
+      "crlf_count": 2095,
+      "lf_count": 2095
+    },
+    "evaluation/generation_fusion_experiment_2026-10-13/blinded_case_review_mapping.json": {
+      "raw_sha256": "4f4de03a58935c25f202b5aa864dfa7a4756bff67cd8c5a0a51b4702a5c7e7c6",
+      "normalized_lf_sha256": "d5d7baa0ab783710f892c443b341888c4257b5043d0beac7cebdf0fd58fc6e99",
+      "raw_bytes": 387,
+      "crlf_count": 33,
+      "lf_count": 33
+    }
+  }
+}

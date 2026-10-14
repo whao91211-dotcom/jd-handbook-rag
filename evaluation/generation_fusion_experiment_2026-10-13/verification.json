@@ -1,0 +1,35 @@
+{
+  "audit_passed": true,
+  "code_sha256": "a01cad3f64aac02cf470080597a1e9e9d2ee6dd22ad9c2090c500d87ca970783",
+  "planned_runs": 492,
+  "recorded_runs": 492,
+  "generation_status": {
+    "complete": 489,
+    "failed": 3
+  },
+  "missing_runs": 0,
+  "planned_order_counts": {
+    "DA": 246,
+    "AD": 246
+  },
+  "judges": {
+    "context": {
+      "complete": 164
+    },
+    "faithfulness": {
+      "complete": 473,
+      "failed": 16
+    },
+    "correctness": {
+      "complete": 34,
+      "failed": 6
+    }
+  },
+  "supplemental_pairs": 261,
+  "models_by_metric": {
+    "context": "deepseek-v4-pro",
+    "faithfulness": "deepseek-v4-pro",
+    "correctness": "deepseek-v4-pro"
+  },
+  "note": "Input/schema/formula audit only; model judgments still need source-grounded case review."
+}

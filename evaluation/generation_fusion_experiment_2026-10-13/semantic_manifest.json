@@ -1,0 +1,55 @@
+{
+  "bert_model_id": "google-bert/bert-base-chinese",
+  "bert_model_revision": "8f23c25b06e129b6c986331a13d8d025a92cf0ea",
+  "bert_score_version": "0.3.13",
+  "bert_score_hash": "C:\\Users\\wuhao\\.cache\\codex-eval-models\\bert-base-chinese-8f23c25b_L8_no-idf_version=0.3.12(hug_trans=5.16.1)",
+  "num_layers": 8,
+  "idf": false,
+  "rescale_with_baseline": false,
+  "embed_model_id": "BAAI/bge-small-zh-v1.5",
+  "embed_model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "model_files_sha256": {
+    "bert": {
+      "config.json": "88af762cfb15fa9ce183c84dcbfdc9d635196ba635dfe81f265fdd21d67f4c4c",
+      "model.safetensors": "3404a1ffd8da507042e8161013ba2a4fc49858b4e3f8fbf5ce5724f94883aec3",
+      "tokenizer.json": "55c5edcfb8936895e019b2d8f97dcb547734f25b29f95009155f4c8c15649aae",
+      "tokenizer_config.json": "0f6d13e6f4da6f9e24f22ada6bc3be571123d858d7c0c05a8a7cd55a9c23c2e8",
+      "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    },
+    "bge": {
+      "1_Pooling/config.json": "aaa8861589f80c961a03cc86c7eeaef7605c1676b9ab55329d33a304738769c6",
+      "config.json": "3853a7979202c348751b753e36f579c41d8da7d36af617d3d907e1fc9b441f2a",
+      "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+      "model.safetensors": "354763b9b1357bc9c44f62c6be2276321081ed2567773608c0d0785b61d5a026",
+      "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "README.md": "c48a4eeea77f6b1d38b48ec1c5b8d4f86d5550cc43fa345a0db1b2ca1d082369",
+      "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+      "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "tokenizer.json": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+      "tokenizer_config.json": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+      "vocab.txt": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c"
+    }
+  },
+  "answers_sha256": "c75ba0046d34e20448b37466f502a48dae35d084e24d83a186caed8935d18db8",
+  "reference_sha256": {
+    "original46": "8aa54ea478598c8f90a660d78ac2e27f461dc0a3675c8573d2db9fc40c865c04",
+    "development36": "6a763a1ca586adfc3fdf8d3aec2828e339796f7ba667e36c689269ac9f9a8b3c"
+  },
+  "model_artifact_spec_sha256": "df7a0437eff9adec5eb8963d0477e9c16e5851daa20d304e2549592eec2b5c97",
+  "versions": {
+    "torch": "2.9.0",
+    "transformers": "5.16.1",
+    "sentence-transformers": "6.0.1"
+  },
+  "device": "cpu",
+  "cpu_threads": 4,
+  "batch_size": 8,
+  "scored_pairs": 261,
+  "model_load_seconds": 1.2154318999964744,
+  "scoring_seconds": 225.94903310004156,
+  "scope": "Completed positive cases only; no score inferred for failed or diagnostic cases",
+  "preprocessing": "Remove source markers and collapse whitespace; preserve negation and numbers",
+  "truncation": "Tokenizer/model native limits; full original answers retained in answers.jsonl",
+  "source_sha256": "02696298167861aa0a41fdc01d6d06dbc191112be11f5a9b1472cbf514decf9d",
+  "data_code_hash_normalization": "CRLF to LF only; model file hashes remain raw SHA256"
+}

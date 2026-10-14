@@ -1,0 +1,1206 @@
+{
+  "reviewer_type": "Codex_source_diagnostic_review",
+  "selection": "Post-hoc selection by saved Pro faithfulness scores; A/D identities known before source review. Not blinded.",
+  "scope_note": "本复核按自动分数事后选例，审查前已知A/D身份，非盲审。Codex来源诊断，不是人类裁定/用户金标；不覆盖正式自动分数，不生成修正分数，不使用旧Pro正确性grade作主结论。极值选例有选择偏差，不能代表总体收益。",
+  "input_hash_normalization": "CRLF to LF only",
+  "input_file_sha256": {
+    "evaluation/generation_fusion_experiment_2026-10-13/manifest.json": "1b53ea023f9891296b53ab9c5caf45314855e35d86899b450c1ed39745f2a07c",
+    "evaluation/generation_fusion_experiment_2026-10-13/answers.jsonl": "c75ba0046d34e20448b37466f502a48dae35d084e24d83a186caed8935d18db8",
+    "evaluation/generation_fusion_experiment_2026-10-13/scored_answers.json": "d22ea64759dcee0eb8ef2fd9fab428daf528f8a6a3f9d9d42b3dd5e52347ebad",
+    "evaluation/generation_fusion_experiment_2026-10-13/faithfulness_reviews.jsonl": "4fa47da11a7b8a98decd2d48c989fb858d9a6018de60801a0ddd141be70c9acd"
+  },
+  "corpus_sha256": "0344f944ce197b35bcf26c25e530714dc148e96edb835b73eb81f6eb51ebeec5",
+  "selection_population": {
+    "eligible_positive_questions": 43,
+    "eligible_successful_paired_repeats": 119,
+    "missing_or_failed_generations_or_Pro_reviews": "excluded from this case-selection pairing; no inferred zero/perfect value"
+  },
+  "cases": [
+    {
+      "dataset": "development36",
+      "qid": "C-P08",
+      "paired_scores": [
+        {
+          "repeat": 0,
+          "A": 0.6363636363636364,
+          "D": 1.0,
+          "delta_D_minus_A": 0.36363636363636365
+        },
+        {
+          "repeat": 1,
+          "A": 1.0,
+          "D": 1.0,
+          "delta_D_minus_A": 0.0
+        },
+        {
+          "repeat": 2,
+          "A": 0.8333333333333334,
+          "D": 1.0,
+          "delta_D_minus_A": 0.16666666666666663
+        }
+      ],
+      "mean_delta_D_minus_A": 0.17676767676767677,
+      "selection": "largest_positive_delta",
+      "question": "最近30天迟到了两回，会被记过吗？",
+      "repeats": [
+        0,
+        1,
+        2
+      ],
+      "mean_A": 0.8232323232323232,
+      "mean_D": 1.0,
+      "mean_delta_percentage_points": 17.67676767676768,
+      "automatic_repeat_details": [
+        {
+          "variant": "A",
+          "repeat": 0,
+          "faithfulness": 0.6363636363636364,
+          "citation_support_rate": 0.6363636363636364,
+          "claim_count": 11,
+          "supported_claim_count": 7,
+          "non_supported_claims": [
+            {
+              "index": 8,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源3"
+              ],
+              "claim": "两次迟到是否都满足“晚于规定时间15分钟（含）内到岗”的迟到定义；若超过15分钟或涉及未打卡等，资料未明确如何归类",
+              "evidence_labels": [],
+              "reason": "答案声称“若超过15分钟或涉及未打卡等，资料未明确如何归类”，但来源3仅定义了迟到、早退和未打卡，并未说明超过15分钟或未打卡的归类，也未明确表示资料未明确。该声明属于对资料缺失的断言，但未提供证据支持资料确实未明确，且引用来源3不能支持该断言。",
+              "support": "unsupported"
+            },
+            {
+              "index": 9,
+              "citation_supported": false,
+              "cited_labels": [],
+              "claim": "两次是否确实落在同一“连续30天”计算窗口内，以及该窗口如何起算，资料未明确",
+              "evidence_labels": [],
+              "reason": "答案声称资料未明确连续30天窗口的起算方式，但提供的上下文中没有关于窗口起算的规定，也没有证据表明资料确实未明确。该声明属于对资料缺失的断言，未提供证据支持。",
+              "support": "unsupported"
+            },
+            {
+              "index": 10,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源5",
+                "来源6"
+              ],
+              "claim": "是否存在部门/条线奖惩细则、此前六或十二个月内是否有其他轻微/一般违纪累进记录",
+              "evidence_labels": [],
+              "reason": "答案提出需要确认是否存在部门细则和累进记录，但这是澄清问题而非事实声明，不构成制度事实。",
+              "support": "unsupported"
+            },
+            {
+              "index": 11,
+              "citation_supported": false,
+              "cited_labels": [],
+              "claim": "最终是否记过，建议向HR或负责考勤/纪律处分的部门核实",
+              "evidence_labels": [],
+              "reason": "这是建议性陈述，不是制度事实。",
+              "support": "unsupported"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 0,
+          "faithfulness": 1.0,
+          "citation_support_rate": 1.0,
+          "claim_count": 6,
+          "supported_claim_count": 6,
+          "non_supported_claims": []
+        },
+        {
+          "variant": "A",
+          "repeat": 1,
+          "faithfulness": 1.0,
+          "citation_support_rate": 1.0,
+          "claim_count": 7,
+          "supported_claim_count": 7,
+          "non_supported_claims": []
+        },
+        {
+          "variant": "D",
+          "repeat": 1,
+          "faithfulness": 1.0,
+          "citation_support_rate": 1.0,
+          "claim_count": 7,
+          "supported_claim_count": 7,
+          "non_supported_claims": []
+        },
+        {
+          "variant": "A",
+          "repeat": 2,
+          "faithfulness": 0.8333333333333334,
+          "citation_support_rate": 0.8333333333333334,
+          "claim_count": 12,
+          "supported_claim_count": 10,
+          "non_supported_claims": [
+            {
+              "index": 11,
+              "citation_supported": false,
+              "cited_labels": [],
+              "claim": "超过15分钟如何定性，提供的参考资料未明确",
+              "evidence_labels": [],
+              "reason": "答案声称超过15分钟的定性未明确，但提供的资料中未涉及超过15分钟的情况，也未明确说明该情况未规定，因此该声明缺乏证据支持。",
+              "support": "unsupported"
+            },
+            {
+              "index": 12,
+              "citation_supported": false,
+              "cited_labels": [],
+              "claim": "提供的资料未给出生效日期，无法确认是否现行最新版本",
+              "evidence_labels": [],
+              "reason": "答案声称资料未给出生效日期，但提供的上下文中没有关于生效日期的信息，也没有明确说明未提供生效日期，因此该声明缺乏证据支持。",
+              "support": "unsupported"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 2,
+          "faithfulness": 1.0,
+          "citation_support_rate": 1.0,
+          "claim_count": 7,
+          "supported_claim_count": 7,
+          "non_supported_claims": []
+        }
+      ],
+      "input_identity": [
+        {
+          "variant": "A",
+          "repeat": 0,
+          "raw_answer_sha256": "90ccf2616682a18b1a0e3ca992c06f1e5c2437a352d1d44dc70cce822fb6055b",
+          "generator_answer_value_sha256": "1e84af45328645b4465cc37ef8250360c49a828115fdc354142aef684ab6eb4e",
+          "context_sha256": "79e06a184755008295ed8c33894251d5a2c79fc30183fbf0e8743057afc01b93",
+          "judge_input_sha256": "3190a4355e79ea1528d244f94d1077bfedc078ccdd9efafb17a704c3014ad4fe",
+          "judge_messages_sha256": "574bb2156acf3d08f4c48182c91bf4e44d5d5c90bd3f252d671fc3b070ee8064",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p42-83f9d6df8d"
+            },
+            {
+              "label": "来源2",
+              "id": "p43-54058878ec"
+            },
+            {
+              "label": "来源3",
+              "id": "p19-afcfc09fb7"
+            },
+            {
+              "label": "来源4",
+              "id": "p41-2d2c8ff79a"
+            },
+            {
+              "label": "来源5",
+              "id": "p46-7e4d5f20c3"
+            },
+            {
+              "label": "来源6",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-a41581b4e3"
+            },
+            {
+              "label": "来源8",
+              "id": "p44-51f4c64ab2"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 0,
+          "raw_answer_sha256": "f640ebc5154859058530a881508de08fbb3f54ecb4f115b4d2aacefe3c9ae42d",
+          "generator_answer_value_sha256": "574001bf44a2b4a947b9d92f02d7c85ee9555e3234f4cb5cd4b6d083a0c54de1",
+          "context_sha256": "550342e819184badd096a80db33b7289b5b5bf9f310a43a4feed0b05ea296e4d",
+          "judge_input_sha256": "029a699512967ea4701315ffff191debb01956881a7a5e0b277526885f51f1d2",
+          "judge_messages_sha256": "bb6122689abc5c98cdc761c800e641ce540617bd01008a352e551f37b6f18a94",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p42-83f9d6df8d"
+            },
+            {
+              "label": "来源2",
+              "id": "p43-54058878ec"
+            },
+            {
+              "label": "来源3",
+              "id": "p41-2d2c8ff79a"
+            },
+            {
+              "label": "来源4",
+              "id": "p19-afcfc09fb7"
+            },
+            {
+              "label": "来源5",
+              "id": "p46-7e4d5f20c3"
+            },
+            {
+              "label": "来源6",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源7",
+              "id": "p44-51f4c64ab2"
+            },
+            {
+              "label": "来源8",
+              "id": "p19-e4323f19a5"
+            }
+          ]
+        },
+        {
+          "variant": "A",
+          "repeat": 1,
+          "raw_answer_sha256": "8906713e2ee6ebab7e3712dbac36c05b975af32c57dd876e80b9f71b2e74e334",
+          "generator_answer_value_sha256": "fc388ac6b22b48c87c17a51ddc9ff511146f73283ffe4a1101768def91b5fb3f",
+          "context_sha256": "79e06a184755008295ed8c33894251d5a2c79fc30183fbf0e8743057afc01b93",
+          "judge_input_sha256": "e5dc469d20e56c174acc3c44c81e01c31fcc1e98dff14340fc48b33b45438c37",
+          "judge_messages_sha256": "76e391351282d4aab44e52ffb4151ce20aa9e12098f48640b482979c9b776e02",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p42-83f9d6df8d"
+            },
+            {
+              "label": "来源2",
+              "id": "p43-54058878ec"
+            },
+            {
+              "label": "来源3",
+              "id": "p19-afcfc09fb7"
+            },
+            {
+              "label": "来源4",
+              "id": "p41-2d2c8ff79a"
+            },
+            {
+              "label": "来源5",
+              "id": "p46-7e4d5f20c3"
+            },
+            {
+              "label": "来源6",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-a41581b4e3"
+            },
+            {
+              "label": "来源8",
+              "id": "p44-51f4c64ab2"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 1,
+          "raw_answer_sha256": "2ff2177e8e24b090ebf08a8793833aa3250d19e8e48c39bbb850998303f78a78",
+          "generator_answer_value_sha256": "9ca0708b42783ab1b095fef3f569ccc1aabb557e14552e44984566aea90a4bbd",
+          "context_sha256": "550342e819184badd096a80db33b7289b5b5bf9f310a43a4feed0b05ea296e4d",
+          "judge_input_sha256": "4b09cfe3b107c601ca84703cc213a25f69b9d00f7c8a9b23868d9b0d658ff2e4",
+          "judge_messages_sha256": "deb8690687bad0b3dbb1498c9cc56bbedacc786d504328878169107003582f9e",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p42-83f9d6df8d"
+            },
+            {
+              "label": "来源2",
+              "id": "p43-54058878ec"
+            },
+            {
+              "label": "来源3",
+              "id": "p41-2d2c8ff79a"
+            },
+            {
+              "label": "来源4",
+              "id": "p19-afcfc09fb7"
+            },
+            {
+              "label": "来源5",
+              "id": "p46-7e4d5f20c3"
+            },
+            {
+              "label": "来源6",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源7",
+              "id": "p44-51f4c64ab2"
+            },
+            {
+              "label": "来源8",
+              "id": "p19-e4323f19a5"
+            }
+          ]
+        },
+        {
+          "variant": "A",
+          "repeat": 2,
+          "raw_answer_sha256": "787a1c4c2263c42ef4c5de98b81f0b8c5d99084f89658230f2b46dd09b47a2af",
+          "generator_answer_value_sha256": "b258c1f3488945daf0fb3281a2d19fee53df4c0ca22a4c8fa739fef4df2c527c",
+          "context_sha256": "79e06a184755008295ed8c33894251d5a2c79fc30183fbf0e8743057afc01b93",
+          "judge_input_sha256": "4a5c0126331397a8f1b380ce2917e035bd7e695f517bdd4f1a591bcfa4678fad",
+          "judge_messages_sha256": "f7b239b7af5345fac839c89ffca773ccf5688178923227f8acdccc264e89214b",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p42-83f9d6df8d"
+            },
+            {
+              "label": "来源2",
+              "id": "p43-54058878ec"
+            },
+            {
+              "label": "来源3",
+              "id": "p19-afcfc09fb7"
+            },
+            {
+              "label": "来源4",
+              "id": "p41-2d2c8ff79a"
+            },
+            {
+              "label": "来源5",
+              "id": "p46-7e4d5f20c3"
+            },
+            {
+              "label": "来源6",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-a41581b4e3"
+            },
+            {
+              "label": "来源8",
+              "id": "p44-51f4c64ab2"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 2,
+          "raw_answer_sha256": "922ae1c22ec23314e48b2c0595d47548d480415b023c46a7afc0d85264359a6d",
+          "generator_answer_value_sha256": "61ed3ce0d3be243010a740bf6cc37f06557f7c182375099bae019eaeb5e18add",
+          "context_sha256": "550342e819184badd096a80db33b7289b5b5bf9f310a43a4feed0b05ea296e4d",
+          "judge_input_sha256": "b8ebd7cb497f8dbb5832e0c28bf6541d88c637c8ca2ced6b1103e9d6638bcce2",
+          "judge_messages_sha256": "85203817ce97b642407bd88a4738135792141f5977aa7a5255f2b55f7dd96fb9",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p42-83f9d6df8d"
+            },
+            {
+              "label": "来源2",
+              "id": "p43-54058878ec"
+            },
+            {
+              "label": "来源3",
+              "id": "p41-2d2c8ff79a"
+            },
+            {
+              "label": "来源4",
+              "id": "p19-afcfc09fb7"
+            },
+            {
+              "label": "来源5",
+              "id": "p46-7e4d5f20c3"
+            },
+            {
+              "label": "来源6",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源7",
+              "id": "p44-51f4c64ab2"
+            },
+            {
+              "label": "来源8",
+              "id": "p19-e4323f19a5"
+            }
+          ]
+        }
+      ],
+      "D_context_added_ids": [
+        "p19-e4323f19a5"
+      ],
+      "D_context_removed_ids": [
+        "p40-a41581b4e3"
+      ],
+      "agreement_with_automatic_gap": "不同意把+17.68个百分点直接解释为可靠事实改善：D确有可验证的考勤来源补充，但事实抽取、澄清和局部未知的评分口径不一致。",
+      "findings": [
+        {
+          "topic": "两组核心政策均支持",
+          "source_diagnosis": "六份回答均正确保留连续30天、迟到或早退二次、一般违纪对应记过；没有从来源证明D比A多答对核心规则。",
+          "source_evidence": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "source_label": "来源1",
+              "chunk_id": "p42-83f9d6df8d",
+              "quote": "9. 记过：员工如有一般违纪行为，公司将给予其记过处分，一般违纪行为包括但不限于如下行为：\n违反公司工作纪律、劳动人事纪律、工作态度不端正的，包括但不限于：\n9.1.1 连续30 天内迟到或早退二次者；"
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源1",
+              "chunk_id": "p42-83f9d6df8d",
+              "quote": "9.1.1 连续30 天内迟到或早退二次者；"
+            }
+          ],
+          "answer_excerpts": [],
+          "automatic_review_items": []
+        },
+        {
+          "topic": "D新增一般考勤定义",
+          "source_diagnosis": "D新增p19-e4323f19a5，包含考勤以系统记录为准及一般迟到/早退定义；D repeat0据此指出与15分钟表述不同，属于可验证的上下文补充。但这不证明整个+17.68pp来自事实变好。",
+          "source_evidence": [
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源8",
+              "chunk_id": "p19-e4323f19a5",
+              "quote": "考勤记录以公司考勤系统\n记录的数据为准。"
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源8",
+              "chunk_id": "p19-e4323f19a5",
+              "quote": "员工未在公司要求的上/下班时间到岗/离岗，即构成迟到/早退。"
+            },
+            {
+              "variant": "A",
+              "repeat": 0,
+              "source_label": "来源3",
+              "chunk_id": "p19-afcfc09fb7",
+              "quote": "2.1 迟到：晚于规定时间 15 分钟（含）内到岗，为迟到。"
+            }
+          ],
+          "answer_excerpts": [],
+          "automatic_review_items": []
+        },
+        {
+          "topic": "A repeat0误把澄清和建议当不支持事实",
+          "source_diagnosis": "Pro把询问部门细则/既往记录以及建议HR核实也算进11项事实分母，分别判unsupported。它自己说明这些不是制度事实；D repeat0/1的同类核实请求却未抽取。不能将此差别解释为A制造了两条错误政策。",
+          "source_evidence": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "source_label": "来源6",
+              "chunk_id": "p40-c769d87f54",
+              "quote": "如员工已经发生过一次轻微违纪（不论是否给予过警告处分），在六个月内再次发生轻微违纪的，\n视为员工一次一般违纪，公司有权给予员工记过处分。"
+            }
+          ],
+          "answer_excerpts": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "quote": "是否存在部门/条线奖惩细则、此前六或十二个月内是否有其他轻微/一般违纪累进记录"
+            },
+            {
+              "variant": "A",
+              "repeat": 0,
+              "quote": "最终是否记过，建议向HR或负责考勤/纪律处分的部门核实。"
+            }
+          ],
+          "automatic_review_items": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "claim_indices": [
+                10,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "topic": "局部资料未明确的评分不一致",
+          "source_diagnosis": "A repeat2超过15分钟的定性、未给手册生效日期两项被判unsupported；提供的A上下文确实未给超过15分钟明确分类规则或手册生效日期。范围性“提供资料未明确”应与“全手册无制度”分开。D repeat2也含资料边界/核实说明，却未按相同标准计入。现有自动分差难以据此支持。",
+          "source_evidence": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "source_label": "来源3",
+              "chunk_id": "p19-afcfc09fb7",
+              "quote": "2.1 迟到：晚于规定时间 15 分钟（含）内到岗，为迟到。"
+            }
+          ],
+          "answer_excerpts": [
+            {
+              "variant": "A",
+              "repeat": 2,
+              "quote": "超过15分钟如何定性，提供的参考资料未明确。"
+            },
+            {
+              "variant": "A",
+              "repeat": 2,
+              "quote": "提供的资料未给出生效日期，无法确认是否现行最新版本"
+            }
+          ],
+          "automatic_review_items": [
+            {
+              "variant": "A",
+              "repeat": 2,
+              "claim_indices": [
+                11,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "topic": "两组均有过宽的未打卡未知断言",
+          "source_diagnosis": "A repeat0称涉及未打卡时资料未明确如何归类，D repeat2称涉及未打卡、旷工时未明确处分；实际输入都有未打卡认定、未说明可视为旷工及六次未打卡的严重违纪规则。D repeat2还有连续旷工阈值。可以核实个人情形，但不能笼统说这些类型未定义。Pro只惩罚A的混合语句，D此项未抽取，故D=1.0不能理解为每句均被充分验证。",
+          "source_evidence": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "source_label": "来源3",
+              "chunk_id": "p19-afcfc09fb7",
+              "quote": "未打卡：员工没有在考勤系统亲自打卡，视为未打卡。员工须在当月考勤周期内及时提交未\n打卡说明，未提交合理的未打卡原因说明或/和相关支持性材料的，视为旷工。"
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源4",
+              "chunk_id": "p19-afcfc09fb7",
+              "quote": "员工考勤周期内累计 6 次（含）以上未打卡且无法说明合理原因或无法提供支持材料视为员\n工严重违反公司的规章制度，公司有权立即与员工解除劳动合同且不支付经济补偿。"
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源2",
+              "chunk_id": "p43-54058878ec",
+              "quote": "连续旷工 2 天（含）及以上，或一年内累计旷工 3 天（含）及以上的；"
+            }
+          ],
+          "answer_excerpts": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "quote": "若超过15分钟或涉及未打卡等，资料未明确如何归类"
+            },
+            {
+              "variant": "D",
+              "repeat": 2,
+              "quote": "若超过该范围或涉及未打卡、旷工，资料未明确其对应处分，需核实。"
+            }
+          ],
+          "automatic_review_items": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "claim_indices": [
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P23",
+      "paired_scores": [
+        {
+          "repeat": 0,
+          "A": 0.8571428571428571,
+          "D": 0.5714285714285714,
+          "delta_D_minus_A": -0.2857142857142857
+        },
+        {
+          "repeat": 1,
+          "A": 0.75,
+          "D": 0.6666666666666666,
+          "delta_D_minus_A": -0.08333333333333337
+        },
+        {
+          "repeat": 2,
+          "A": 1.0,
+          "D": 0.8,
+          "delta_D_minus_A": -0.19999999999999996
+        }
+      ],
+      "mean_delta_D_minus_A": -0.18968253968253967,
+      "selection": "largest_negative_delta",
+      "question": "经理级及以上管理岗位空缺内部提拔要占多少？",
+      "repeats": [
+        0,
+        1,
+        2
+      ],
+      "mean_A": 0.8690476190476191,
+      "mean_D": 0.6793650793650794,
+      "mean_delta_percentage_points": -18.96825396825397,
+      "automatic_repeat_details": [
+        {
+          "variant": "A",
+          "repeat": 0,
+          "faithfulness": 0.8571428571428571,
+          "citation_support_rate": 0.8571428571428571,
+          "claim_count": 7,
+          "supported_claim_count": 6,
+          "non_supported_claims": [
+            {
+              "index": 7,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源2"
+              ],
+              "claim": "“成熟业务及体系”的具体判定标准、具体岗位是否属于该适用范围，提供的参考资料未明确。",
+              "evidence_labels": [],
+              "reason": "答案声称参考资料未明确该判定标准，但来源2并未提及判定标准，也未明确说明未提供，因此该声明缺乏证据支持。",
+              "support": "unsupported"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 0,
+          "faithfulness": 0.5714285714285714,
+          "citation_support_rate": 0.5714285714285714,
+          "claim_count": 7,
+          "supported_claim_count": 4,
+          "non_supported_claims": [
+            {
+              "index": 5,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源1"
+              ],
+              "claim": "该70%以上任职资格导向不等同于“内部提拔占比80%以上”的额度或额外名额。",
+              "evidence_labels": [],
+              "reason": "答案中该句是对两个数字关系的解释性说明，但来源1并未明确说明两者不等同，属于答案的推断，无直接证据支持。",
+              "support": "unsupported"
+            },
+            {
+              "index": 6,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源1"
+              ],
+              "claim": "若岗位不属于“成熟业务及体系”，是否同样适用80%以上内部提拔要求，提供的参考资料未明确。",
+              "evidence_labels": [],
+              "reason": "来源1仅提及“成熟业务及体系”的岗位，未涉及其他岗位，因此该范围性说明本身不是制度事实，且无证据支持其作为事实声明。",
+              "support": "unsupported"
+            },
+            {
+              "index": 7,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源1"
+              ],
+              "claim": "具体到某一岗位空缺如何认定、如何统计内部提拔比例及是否存在例外审批，提供的参考资料未明确。",
+              "evidence_labels": [],
+              "reason": "来源1未提供这些细节，该句是范围性说明，不是制度事实，且无证据支持。",
+              "support": "unsupported"
+            }
+          ]
+        },
+        {
+          "variant": "A",
+          "repeat": 1,
+          "faithfulness": 0.75,
+          "citation_support_rate": 0.75,
+          "claim_count": 4,
+          "supported_claim_count": 3,
+          "non_supported_claims": [
+            {
+              "index": 4,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源2"
+              ],
+              "claim": "该'80%以上'是否适用于非成熟业务、非成熟体系，或具体某一次岗位空缺，提供的参考资料未明确",
+              "evidence_labels": [],
+              "reason": "答案声称参考资料未明确该比例是否适用于非成熟业务等，但来源2仅提及成熟业务及体系，未提供关于非成熟业务或具体岗位空缺的信息，因此该声明缺乏证据支持。",
+              "support": "unsupported"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 1,
+          "faithfulness": 0.6666666666666666,
+          "citation_support_rate": 0.6666666666666666,
+          "claim_count": 6,
+          "supported_claim_count": 4,
+          "non_supported_claims": [
+            {
+              "index": 5,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源1"
+              ],
+              "claim": "该岗位空缺是否属于“成熟业务及体系”仍需确认。",
+              "evidence_labels": [],
+              "reason": "答案将此作为待确认事项，但来源1并未提供判断该岗位是否属于成熟业务及体系的具体标准，因此该声明缺乏证据支持。",
+              "support": "unsupported"
+            },
+            {
+              "index": 6,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源1"
+              ],
+              "claim": "“经理级及以上”的具体职级认定，以及是否存在其他专项任命或竞聘制度，提供的参考资料未明确。",
+              "evidence_labels": [],
+              "reason": "答案声称参考资料未明确这些内容，但来源1未涉及具体职级认定或其他专项制度，且其他来源也未提供相关信息，因此该声明缺乏证据支持。",
+              "support": "unsupported"
+            }
+          ]
+        },
+        {
+          "variant": "A",
+          "repeat": 2,
+          "faithfulness": 1.0,
+          "citation_support_rate": 1.0,
+          "claim_count": 3,
+          "supported_claim_count": 3,
+          "non_supported_claims": []
+        },
+        {
+          "variant": "D",
+          "repeat": 2,
+          "faithfulness": 0.8,
+          "citation_support_rate": 0.8,
+          "claim_count": 5,
+          "supported_claim_count": 4,
+          "non_supported_claims": [
+            {
+              "index": 5,
+              "citation_supported": false,
+              "cited_labels": [
+                "来源1"
+              ],
+              "claim": "若岗位空缺不属于成熟业务及体系，提供的参考资料未明确对应内部提拔比例",
+              "evidence_labels": [],
+              "reason": "答案声称'若不属于成熟业务及体系，参考资料未明确对应内部提拔比例'，但来源1仅规定了成熟业务及体系的情况，未提及非成熟业务及体系的比例，也未明确说明未规定，因此该声明缺乏直接证据支持。",
+              "support": "unsupported"
+            }
+          ]
+        }
+      ],
+      "input_identity": [
+        {
+          "variant": "A",
+          "repeat": 0,
+          "raw_answer_sha256": "50570f7637077935787b2245da9bb12a3caeacce6f9754382b8b2d99d44d99e9",
+          "generator_answer_value_sha256": "a9f4346c806989c1666616a80385298906cf049e763039f877dc72529436d3c7",
+          "context_sha256": "0c6735cc2e8c66b55f3732790028fb7591c96f5b58583aa1514d8791b6a5dc91",
+          "judge_input_sha256": "0a68ddf191a4d655ea7bc4bfaed7c503f60a05d0d206a0d1213aad436d9357de",
+          "judge_messages_sha256": "e3102f0e6ced0b187140db1b5232e20ee82dc70014ae838def19f4bc43cf56bc",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p15-6a942bbddd"
+            },
+            {
+              "label": "来源2",
+              "id": "p33-a867f06b3c"
+            },
+            {
+              "label": "来源3",
+              "id": "p14-1ad6eab8c6"
+            },
+            {
+              "label": "来源4",
+              "id": "p34-b3db9e8572"
+            },
+            {
+              "label": "来源5",
+              "id": "p14-4058f096f6"
+            },
+            {
+              "label": "来源6",
+              "id": "p16-161eb98f4e"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源8",
+              "id": "p15-a99dbf1c9b"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 0,
+          "raw_answer_sha256": "d6d65d03b8c553ee63775cc40b1925906edbb33d2a04a7b990d8a6c415982602",
+          "generator_answer_value_sha256": "3304e282bd8e582944dd56e894b0c357bdb9db20673892df796a85a9cc80d534",
+          "context_sha256": "c0d764cb5c400005ef8d6037688a98ff3629eb74bff6537ef5e40a9fba395bf0",
+          "judge_input_sha256": "cae2e2ddbf1b4dc6c749c5aa6ae64f80ab610f8ad6ef1696b90e18b45039a973",
+          "judge_messages_sha256": "167ae937d7b6285c15bfe28d25f0df9fb8a1fefcb47c22d007b8162082d2567c",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p33-a867f06b3c"
+            },
+            {
+              "label": "来源2",
+              "id": "p14-1ad6eab8c6"
+            },
+            {
+              "label": "来源3",
+              "id": "p34-b3db9e8572"
+            },
+            {
+              "label": "来源4",
+              "id": "p15-6a942bbddd"
+            },
+            {
+              "label": "来源5",
+              "id": "p35-e55115a49e"
+            },
+            {
+              "label": "来源6",
+              "id": "p47-6d0d97ead8"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源8",
+              "id": "p14-4fe055e429"
+            }
+          ]
+        },
+        {
+          "variant": "A",
+          "repeat": 1,
+          "raw_answer_sha256": "65d3796f5f230a7eb5635ebd311a6b81545902d5c2241cfaa4fc169ec747a8f5",
+          "generator_answer_value_sha256": "b6fe58f897d1c39f39a210ebd4c0604875a53941d138a1235d623575bfeb412e",
+          "context_sha256": "0c6735cc2e8c66b55f3732790028fb7591c96f5b58583aa1514d8791b6a5dc91",
+          "judge_input_sha256": "1f7dbb45d15fe768168930c8adfc931b269330772fcad741437d63366a788491",
+          "judge_messages_sha256": "fdccf800cf4a227500114dd1a87d92d778810e35ff621fdd761941b1620aee5b",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p15-6a942bbddd"
+            },
+            {
+              "label": "来源2",
+              "id": "p33-a867f06b3c"
+            },
+            {
+              "label": "来源3",
+              "id": "p14-1ad6eab8c6"
+            },
+            {
+              "label": "来源4",
+              "id": "p34-b3db9e8572"
+            },
+            {
+              "label": "来源5",
+              "id": "p14-4058f096f6"
+            },
+            {
+              "label": "来源6",
+              "id": "p16-161eb98f4e"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源8",
+              "id": "p15-a99dbf1c9b"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 1,
+          "raw_answer_sha256": "7642c05f01881ad2942c9b45e81ca3b23a89b70805829bb4e8b26055a3dcc0e6",
+          "generator_answer_value_sha256": "47064cee1db53e87b815de92d878c4967751fed44e9fb5271e15fceb50a5fbef",
+          "context_sha256": "c0d764cb5c400005ef8d6037688a98ff3629eb74bff6537ef5e40a9fba395bf0",
+          "judge_input_sha256": "e979f02e07b0bbec51bfe62efa806f43eb2493d1592913c22d0bc2cd005c113e",
+          "judge_messages_sha256": "d2725b4f195a0c205da38757192ddcfa11374cceca45551b23e01ffeccc7e55d",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p33-a867f06b3c"
+            },
+            {
+              "label": "来源2",
+              "id": "p14-1ad6eab8c6"
+            },
+            {
+              "label": "来源3",
+              "id": "p34-b3db9e8572"
+            },
+            {
+              "label": "来源4",
+              "id": "p15-6a942bbddd"
+            },
+            {
+              "label": "来源5",
+              "id": "p35-e55115a49e"
+            },
+            {
+              "label": "来源6",
+              "id": "p47-6d0d97ead8"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源8",
+              "id": "p14-4fe055e429"
+            }
+          ]
+        },
+        {
+          "variant": "A",
+          "repeat": 2,
+          "raw_answer_sha256": "824f76ae8d3afd6b3cea74c0cefc849d1bac1177778c7bdf9124303a27d7a64d",
+          "generator_answer_value_sha256": "1b4f864352271761e90d669b004324262138fcc959c9e21fef4e724309d8430d",
+          "context_sha256": "0c6735cc2e8c66b55f3732790028fb7591c96f5b58583aa1514d8791b6a5dc91",
+          "judge_input_sha256": "c374c753d690eacf04f8cad0c7ba88d80157e3fa8768eb6bd3181d6d1dd21dc2",
+          "judge_messages_sha256": "27a99cc0fb4c2ff36974b407f05a584aa1b9962d0a16d1c740c90a47b3fc27fc",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p15-6a942bbddd"
+            },
+            {
+              "label": "来源2",
+              "id": "p33-a867f06b3c"
+            },
+            {
+              "label": "来源3",
+              "id": "p14-1ad6eab8c6"
+            },
+            {
+              "label": "来源4",
+              "id": "p34-b3db9e8572"
+            },
+            {
+              "label": "来源5",
+              "id": "p14-4058f096f6"
+            },
+            {
+              "label": "来源6",
+              "id": "p16-161eb98f4e"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源8",
+              "id": "p15-a99dbf1c9b"
+            }
+          ]
+        },
+        {
+          "variant": "D",
+          "repeat": 2,
+          "raw_answer_sha256": "64081669ccd9667a18cdacb333cc45bf9cef8cf8043eb55768de1ec40af17f2e",
+          "generator_answer_value_sha256": "cebdab5b54e5ca19bf886045208ab8c44c3580ac2a8b1b4d7d0d259ac1620d3f",
+          "context_sha256": "c0d764cb5c400005ef8d6037688a98ff3629eb74bff6537ef5e40a9fba395bf0",
+          "judge_input_sha256": "3d67bf0c8b80f2964a74c624577154f7239ffad0defae87ee7bac8160523e69f",
+          "judge_messages_sha256": "94e6196f331c82e08e1a27c149c864631ca259213fd32fdb854b4654028d447b",
+          "admitted_sources": [
+            {
+              "label": "来源1",
+              "id": "p33-a867f06b3c"
+            },
+            {
+              "label": "来源2",
+              "id": "p14-1ad6eab8c6"
+            },
+            {
+              "label": "来源3",
+              "id": "p34-b3db9e8572"
+            },
+            {
+              "label": "来源4",
+              "id": "p15-6a942bbddd"
+            },
+            {
+              "label": "来源5",
+              "id": "p35-e55115a49e"
+            },
+            {
+              "label": "来源6",
+              "id": "p47-6d0d97ead8"
+            },
+            {
+              "label": "来源7",
+              "id": "p40-c769d87f54"
+            },
+            {
+              "label": "来源8",
+              "id": "p14-4fe055e429"
+            }
+          ]
+        }
+      ],
+      "D_context_added_ids": [
+        "p14-4fe055e429",
+        "p35-e55115a49e",
+        "p47-6d0d97ead8"
+      ],
+      "D_context_removed_ids": [
+        "p14-4058f096f6",
+        "p15-a99dbf1c9b",
+        "p16-161eb98f4e"
+      ],
+      "agreement_with_automatic_gap": "不同意把−18.97个百分点直接解释为可靠整体退化：两组核心答案均引用同一政策；D存在一处附加未知表述过宽，但极值差还混入抽取和语义判分不一致。",
+      "findings": [
+        {
+          "topic": "相同核心来源与比例",
+          "source_diagnosis": "A来源2和D来源1都是p33-a867f06b3c；六份回答均保留成熟业务及体系、经理级及以上空缺和80%以上内部提拔，不存在该核心事实的召回缺口。",
+          "source_evidence": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "source_label": "来源2",
+              "chunk_id": "p33-a867f06b3c",
+              "quote": "针对成熟业务及体系的经理级及以上的管理岗位空缺，坚持\n内部优先的原则，要求 80%以上通过内部提拔"
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源1",
+              "chunk_id": "p33-a867f06b3c",
+              "quote": "针对成熟业务及体系的经理级及以上的管理岗位空缺，坚持\n内部优先的原则，要求 80%以上通过内部提拔"
+            }
+          ],
+          "answer_excerpts": [],
+          "automatic_review_items": []
+        },
+        {
+          "topic": "70%与80%区分被不一致判分",
+          "source_diagnosis": "原文70%修饰能力达到任职资格、80%修饰内部提拔占比。A repeat0同义解释被支持，D repeat0说二者不等同却判unsupported，仅因原文没有逐字写“不等同”。从句法和对象可支持这一区分；“额外名额”不是新给定数量或政策，不能据此制造明显退化结论。",
+          "source_evidence": [
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源1",
+              "chunk_id": "p33-a867f06b3c",
+              "quote": "能力达到目标管理岗位任职资格要求 70%以上的内部员工，尤其是年轻员\n工，大胆地予以提拔和任用；针对成熟业务及体系的经理级及以上的管理岗位空缺，坚持\n内部优先的原则，要求 80%以上通过内部提拔"
+            }
+          ],
+          "answer_excerpts": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "quote": "该 **70%** 是能力资格要求，不是内部提拔比例。"
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "quote": "但这是任职资格导向，不等同于“内部提拔占比80%以上”的额度或额外名额。"
+            }
+          ],
+          "automatic_review_items": [
+            {
+              "variant": "A",
+              "repeat": 0,
+              "claim_indices": [
+                6
+              ]
+            },
+            {
+              "variant": "D",
+              "repeat": 0,
+              "claim_indices": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "topic": "询问范围与说明未知被当错误事实",
+          "source_diagnosis": "D repeat1询问岗位是否成熟被判unsupported，而这只是将原文适用条件落实到个人岗位；各重复对非成熟业务比例、统计口径未明的说明也被作为错误政策计入。A repeat2含同样具体岗位/级别需核实说明，但Pro只抽3项事实并给1.0；D repeat2抽5项、含边界未知并给0.8。此差异更能定位评审单位不一致，而不能证明D核心政策更错。",
+          "source_evidence": [
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源1",
+              "chunk_id": "p33-a867f06b3c",
+              "quote": "针对成熟业务及体系的经理级及以上的管理岗位空缺，坚持\n内部优先的原则，要求 80%以上通过内部提拔"
+            }
+          ],
+          "answer_excerpts": [
+            {
+              "variant": "D",
+              "repeat": 1,
+              "quote": "该岗位空缺是否属于“成熟业务及体系”"
+            },
+            {
+              "variant": "A",
+              "repeat": 2,
+              "quote": "该比例是否适用于你所在的具体岗位空缺，取决于其是否属于“成熟业务及体系”以及岗位级别如何界定；如不属于该范围或级别边界不清，建议向HR或负责部门核实"
+            },
+            {
+              "variant": "D",
+              "repeat": 2,
+              "quote": "若不属于，提供的参考资料未明确对应内部提拔比例"
+            }
+          ],
+          "automatic_review_items": [
+            {
+              "variant": "D",
+              "repeat": 1,
+              "claim_indices": [
+                5
+              ]
+            },
+            {
+              "variant": "D",
+              "repeat": 2,
+              "claim_indices": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "topic": "D repeat1有真实过宽未知表述",
+          "source_diagnosis": "D repeat1称是否存在其他专项任命或竞聘制度未明确，但实际D来源5已明确内部竞聘渠道并指向《京东集团内部竞聘管理制度》。具体职级、专项任命细节仍可能未知，却不应把竞聘制度是否存在也笼统列为未知；其引用未指向来源5。这是可验证的局部遗漏/边界错误，不能扩展为全题-18.97pp的准确率退化。",
+          "source_evidence": [
+            {
+              "variant": "D",
+              "repeat": 0,
+              "source_label": "来源5",
+              "chunk_id": "p35-e55115a49e",
+              "quote": "内部竞聘：公司提供内部竞聘渠道，为内部优秀人才提供更加广阔、公开透明的职业发展机\n会，鼓励员工根据组织的需求与个人的发展意愿积极参加内部竞聘，员工可通过竞聘实现个\n人晋升与发展，具体内容请参考《京东集团内部竞聘管理制度》。"
+            }
+          ],
+          "answer_excerpts": [
+            {
+              "variant": "D",
+              "repeat": 1,
+              "quote": "“经理级及以上”的具体职级认定，以及是否存在其他专项任命或竞聘制度，提供的参考资料未明确；建议向HR或负责部门核实。"
+            }
+          ],
+          "automatic_review_items": [
+            {
+              "variant": "D",
+              "repeat": 1,
+              "claim_indices": [
+                6
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "两个极值均不能可靠地作为事实质量改善/退化实例；它们首先说明事实抽取、澄清/建议排除和范围性未知判断不一致。仍能定位实际D新增考勤来源与D附加竞聘未知过宽表述，但不以此改分或改变已冻结评分规则。"
+}

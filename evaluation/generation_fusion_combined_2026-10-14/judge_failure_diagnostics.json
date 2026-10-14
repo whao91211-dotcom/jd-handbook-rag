@@ -1,0 +1,1187 @@
+{
+  "scope": "Offline schema/logic diagnostics only; no model calls, response repair or score replacement.",
+  "metrics_code_sha256": "6996f07caf7bc462e0044c0a4f051c67a7443b397c7d530d40420031987e7c7f",
+  "sources": {
+    "evaluation/generation_fusion_experiment_2026-10-13/manifest.json": "1b53ea023f9891296b53ab9c5caf45314855e35d86899b450c1ed39745f2a07c",
+    "evaluation/generation_fusion_experiment_2026-10-13/answers.jsonl": "c75ba0046d34e20448b37466f502a48dae35d084e24d83a186caed8935d18db8",
+    "evaluation/generation_fusion_experiment_2026-10-13/context_reviews.jsonl": "3cfdc0f201b140f0ccf6e909e554cf5cd47b9e4cc36f8f876a058c1e9ca99ad6",
+    "evaluation/generation_fusion_experiment_2026-10-13/faithfulness_reviews.jsonl": "4fa47da11a7b8a98decd2d48c989fb858d9a6018de60801a0ddd141be70c9acd",
+    "evaluation/generation_fusion_experiment_2026-10-13/supplemental_metrics.jsonl": "15726f613d9a8d0b7a83ad70336782c0f68f020db0c7fdca48e057f18cdb17cb",
+    "evaluation/generation_fusion_experiment_2026-10-13/semantic_manifest.json": "408224f1bc77f1c0fad13df4962d85a92b048db61192959e08e556f5011ce63d",
+    "evaluation/generation_fusion_correctness_flash_2026-10-14/manifest.json": "c434c20ffa7d8d173c92cd06ebeec7eeca242109ddab638e60bcaff5ee353e4d",
+    "evaluation/generation_fusion_correctness_flash_2026-10-14/parent_manifest.json": "1b53ea023f9891296b53ab9c5caf45314855e35d86899b450c1ed39745f2a07c",
+    "evaluation/generation_fusion_experiment_2026-10-13/correctness_reviews.jsonl": "d4c1f0cd284ff6d01212b4f93a4c52e441716aacd15a2fa08e2c7344f991e028",
+    "evaluation/generation_fusion_correctness_flash_2026-10-14/correctness_reviews.jsonl": "8178ea4fbf2e7d9756604b5a59caabd64ce29468bf5f021ec6ec40e6927fc43b",
+    "evaluation/generation_fusion_correctness_flash_2026-10-14/review_status.json": "b8ce1b9924206c799e7a24950a82ce94269b3c79feb9459de73a34e2899d2f8b"
+  },
+  "judges": {
+    "context": {
+      "record_status": {
+        "complete": 164
+      },
+      "terminal_failure_reasons": {},
+      "failed_attempt_reasons": {},
+      "failed_attempts": []
+    },
+    "faithfulness": {
+      "record_status": {
+        "complete": 473,
+        "failed": 16
+      },
+      "terminal_failure_reasons": {
+        "Supported citation must cite supporting evidence": 8,
+        "Supported/contradicted claims require evidence": 5,
+        "API/transport error: APIStatusError; HTTP 402": 3
+      },
+      "failed_attempt_reasons": {
+        "Supported citation must cite supporting evidence": 18,
+        "Supported/contradicted claims require evidence": 13,
+        "API/transport error: APIStatusError; HTTP 402": 3
+      },
+      "failed_attempts": [
+        {
+          "dataset": "original46",
+          "qid": "P14",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P14",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P14",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P16",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P16",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A02",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A05",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A05",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A08",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A08",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P04",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "API/transport error: APIStatusError; HTTP 402"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A12",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "API/transport error: APIStatusError; HTTP 402"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P06",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "API/transport error: APIStatusError; HTTP 402"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P14",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P17",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P34",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P34",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A03",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A03",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N16",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N16",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A12",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A12",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P14",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P14",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P20",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "Supported citation must cite supporting evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-P05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N06",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A09",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "Supported/contradicted claims require evidence"
+        }
+      ]
+    },
+    "correctness": {
+      "record_status": {
+        "complete": 452,
+        "failed": 37
+      },
+      "terminal_failure_reasons": {
+        "forbidden_checks must contain exactly 2 booleans": 35,
+        "forbidden_checks must contain exactly 3 booleans": 2
+      },
+      "failed_attempt_reasons": {
+        "forbidden_checks must contain exactly 2 booleans": 83,
+        "forbidden_checks must contain exactly 3 booleans": 7,
+        "FN must be a list of nonempty strings": 1
+      },
+      "failed_attempts": [
+        {
+          "dataset": "original46",
+          "qid": "P08",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P08",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P25",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P29",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N01",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N02",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N02",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N02",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N02",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A02",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A02",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A02",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A02",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 0,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N13",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 0,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N07",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N07",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N11",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N11",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N05",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N13",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N13",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 1,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N13",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 1,
+          "attempt": 1,
+          "reason": "FN must be a list of nonempty strings"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P06",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P06",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P08",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P08",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P22",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P22",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P29",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P29",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "P28",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N01",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N02",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N02",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N03",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N04",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N05",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N06",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "original46",
+          "qid": "N09",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N05",
+          "variant": "D",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "D",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-A01",
+          "variant": "A",
+          "status": "failed",
+          "repeat": 2,
+          "attempt": 2,
+          "reason": "forbidden_checks must contain exactly 2 booleans"
+        },
+        {
+          "dataset": "development36",
+          "qid": "C-N13",
+          "variant": "A",
+          "status": "complete",
+          "repeat": 2,
+          "attempt": 1,
+          "reason": "forbidden_checks must contain exactly 3 booleans"
+        }
+      ]
+    }
+  }
+}

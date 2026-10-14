@@ -1,0 +1,1286 @@
+{
+  "schema_version": "flash-borderline-source-diagnosis-v1",
+  "created_at_utc": "2026-10-14T02:23:38+00:00",
+  "reviewer_type": "Codex_posthoc_source_diagnosis",
+  "scope": {
+    "questions": [
+      "P31",
+      "C-N12"
+    ],
+    "answer_records": 12,
+    "generation_complete": 12,
+    "Flash_review_complete": 12,
+    "Flash_model": "deepseek-flash",
+    "protocol": "Known A/D identities, post-hoc selected cases, non-blind and not human adjudication. No API/model calls, no formal score changes.",
+    "reference_author_limit": "This reviewer participated in original46 reference annotation and development-reference review before generation. This is not an independent human gold adjudication.",
+    "grade_scope": "Original Flash grades retained verbatim; diagnostic assessment is not a replacement scoring pass.",
+    "selection_note": "Two cases chosen after viewing grading anomalies; do not convert them to overall accuracy, bias rates or fusion performance gains."
+  },
+  "input_file_normalized_sha256": {
+    "evaluation/generation_fusion_experiment_2026-10-13/answers.jsonl": "c75ba0046d34e20448b37466f502a48dae35d084e24d83a186caed8935d18db8",
+    "evaluation/generation_fusion_experiment_2026-10-13/manifest.json": "1b53ea023f9891296b53ab9c5caf45314855e35d86899b450c1ed39745f2a07c",
+    "evaluation/generation_fusion_experiment_2026-10-13/context_reviews.jsonl": "3cfdc0f201b140f0ccf6e909e554cf5cd47b9e4cc36f8f876a058c1e9ca99ad6",
+    "evaluation/generation_fusion_experiment_2026-10-13/faithfulness_reviews.jsonl": "4fa47da11a7b8a98decd2d48c989fb858d9a6018de60801a0ddd141be70c9acd",
+    "evaluation/generation_fusion_experiment_2026-10-13/correctness_reviews.jsonl": "d4c1f0cd284ff6d01212b4f93a4c52e441716aacd15a2fa08e2c7344f991e028",
+    "evaluation/generation_fusion_experiment_2026-10-13/original_cases_review.json": "78db13a3d232d54ff5de98ab858bbdb4b7f18a542a2094755ecb90db6582c9bd",
+    "evaluation/generation_fusion_experiment_2026-10-13/development_cases_review.json": "e4b651b645da2a50b279df2038971443ee181b8e5e11f41e0f21cdfbbfbebf74",
+    "evaluation/generation_fusion_correctness_flash_2026-10-14/correctness_reviews.jsonl": "8178ea4fbf2e7d9756604b5a59caabd64ce29468bf5f021ec6ec40e6927fc43b",
+    "evaluation/generation_fusion_correctness_flash_2026-10-14/manifest.json": "c434c20ffa7d8d173c92cd06ebeec7eeca242109ddab638e60bcaff5ee353e4d",
+    "evaluation/guard_fusion_experiment_2026-10-13/runs.jsonl": "d02486dbd781c801f69413f5d2b587cb8adae7f8d86df3f725c4680ceb97988d",
+    "evaluation/guard_fusion_experiment_2026-10-13/chunks.jsonl": "0344f944ce197b35bcf26c25e530714dc148e96edb835b73eb81f6eb51ebeec5",
+    "evaluation/generation_fusion_references_v1/original46.json": "8aa54ea478598c8f90a660d78ac2e27f461dc0a3675c8573d2db9fc40c865c04",
+    "evaluation/generation_fusion_references_v1/development36.json": "6a763a1ca586adfc3fdf8d3aec2828e339796f7ba667e36c689269ac9f9a8b3c",
+    "evaluation/generation_fusion_combined_2026-10-14/summary.json": "7de7b2d25769c4dd30cd6e4dcfb64713eb8f245217a8069c6354b29051138ec0",
+    "evaluation/generation_fusion_combined_2026-10-14/scored_answers.json": "3e69a2a9b215eec7d6c8e81bbc497e9d3a434001972f3c6da2636aa9d73017c7",
+    "ragcore/llm.py": "8ace1dde860dc0855e69241f17c8d763d49ebd07aa750b5c650d18868a75c35b",
+    "ragcore/config.py": "54bc31c3251a38cd635a0c87b132cdac469e19eafd89c9ee9a2e71aac267c76b",
+    "evaluation/run_generation_fusion_experiment.py": "70f2710e6e659091b9734d9f4b35dac1f644959888398b34b33a886212f5046d",
+    "evaluation/generation_metrics.py": "6996f07caf7bc462e0044c0a4f051c67a7443b397c7d530d40420031987e7c7f",
+    "evaluation/run_generation_semantic_metrics.py": "02696298167861aa0a41fdc01d6d06dbc191112be11f5a9b1472cbf514decf9d",
+    "evaluation/semantic_model_artifacts_v1.json": "df7a0437eff9adec5eb8963d0477e9c16e5851daa20d304e2549592eec2b5c97"
+  },
+  "reference_rules": {
+    "P31": {
+      "reference_answer": "手册写明：邮箱在密码过期前30天、15天，以及10天一直到0天每天发送一封过期提醒，提示修改邮箱密码。",
+      "required_points": [
+        "提醒时间包括过期前30天、15天，以及10天一直到0天的每日提醒。"
+      ],
+      "forbidden_inferences": [
+        "不得推断从过期前30天起连续每天提醒。",
+        "不得由提醒时间推断邮箱密码有效期为30天。"
+      ]
+    },
+    "C-N12": {
+      "reference_answer": "按这版手册，离职工资在离职交接结束后结算，并在公司发薪日发放；手册载明发薪日为每月最后一个工作日。没有规定交接后固定几天到账，因此不能给统一间隔天数，实际结算与当前适用安排请向薪酬人员核实。",
+      "required_points": [
+        "交接结束后结算，在公司发薪日发放",
+        "发薪日为每月最后一个工作日",
+        "无固定交接到到账间隔，不确认旧版现行有效"
+      ],
+      "forbidden_inferences": [
+        "交接后固定N天到账",
+        "手册完全没有发薪日期",
+        "保证该版本当前仍有效"
+      ]
+    }
+  },
+  "findings": {
+    "P31": {
+      "Flash_grades": {
+        "A": [
+          "correct",
+          "correct",
+          "correct"
+        ],
+        "D": [
+          "partial",
+          "correct",
+          "partial"
+        ]
+      },
+      "diagnosis": "D/r0 conditional mail@jd.com scope and D/r2 near-verbatim schedule wording do not establish an omitted or false core fact. Both partial grades are disputed source-review judgements, not corrected official results.",
+      "same_wording_context": "All six answers include source-near 30/15/10-to0 daily schedule. A all three and D/r1 were graded correct; D/r2 possible-ambiguity finding is not consistently applied.",
+      "cause_classification": "possible_judge_style_and_ambiguity_bias",
+      "not_proven": "No quantified population judge-bias rate or total D-versus-A correction is inferred."
+    },
+    "C-N12": {
+      "Flash_grades": {
+        "A": [
+          "correct",
+          "correct",
+          "correct"
+        ],
+        "D": [
+          "partial",
+          "partial",
+          "partial"
+        ]
+      },
+      "diagnosis": "D omitted a real required corpus fact but never received its evidence; A admitted and combined both clauses. Relative-reference partial has factual basis. D scoped lack-of-detail statement can remain faithful to actual input.",
+      "payday_unique_chunk": "p26-44bfeef242",
+      "full_corpus_chunks_checked": 123,
+      "full_corpus_payday_specific_rule_ids": [
+        "p26-44bfeef242"
+      ],
+      "common_candidate_pool_equal": true,
+      "evidence_selection": {
+        "A": {
+          "candidate_count": 40,
+          "payday_chunk_in_common_pool": true,
+          "candidate_pool_position": 12,
+          "ranked_candidate_position": 12,
+          "selected_position": 4,
+          "admitted_position": 4,
+          "selected_count": 8,
+          "admitted_count": 8,
+          "context_chars": 3859,
+          "context_budget": 6000,
+          "selected_not_admitted": []
+        },
+        "D": {
+          "candidate_count": 40,
+          "payday_chunk_in_common_pool": true,
+          "candidate_pool_position": 12,
+          "ranked_candidate_position": 21,
+          "selected_position": null,
+          "admitted_position": null,
+          "selected_count": 8,
+          "admitted_count": 8,
+          "context_chars": 3470,
+          "context_budget": 6000,
+          "selected_not_admitted": []
+        }
+      },
+      "cause_classification": "final_selection_omission_not_candidate_recall_or_6000_char_drop",
+      "not_proven": "Frozen-case diagnostics do not establish aggregate fusion loss or production generator failure."
+    }
+  },
+  "answers": [
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "variant": "A",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "10e238f5bd770ee6be40d02846329f57cd17a069750231aec07cebbabd121729",
+      "context_sha256": "c9a35938bbc6e901cd14139db811df5cc89beb73585904a5ae39db08b035f3d1",
+      "context_chars": 3859,
+      "selected_ids": [
+        "p18-cc5ae09343",
+        "p17-18df625d5a",
+        "p15-82fc10ff7f",
+        "p26-44bfeef242",
+        "p27-1dfbb46c86",
+        "p15-a99dbf1c9b",
+        "p20-a13b1b7d85",
+        "p21-88de6db287"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p18-cc5ae09343",
+          "label": "来源1"
+        },
+        {
+          "id": "p17-18df625d5a",
+          "label": "来源2"
+        },
+        {
+          "id": "p15-82fc10ff7f",
+          "label": "来源3"
+        },
+        {
+          "id": "p26-44bfeef242",
+          "label": "来源4"
+        },
+        {
+          "id": "p27-1dfbb46c86",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p20-a13b1b7d85",
+          "label": "来源7"
+        },
+        {
+          "id": "p21-88de6db287",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true,
+          true,
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false,
+          false
+        ],
+        "reason": "回答正确合并了来源1和来源4的规则：离职工资在交接结束后结算并在公司发薪日发放，发薪日为每月最后一个工作日；同时明确拒绝给出固定天数，并提示需向HR确认具体日期及是否顺延。未出现禁止推断，核心事实完整。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "dd4bf021cfa69f6d9d6dd41373b8a9cd9ac9bed25c845dacfbba1efbc8618652"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "来源1支持交接后结算及发薪日发放，来源4直接支持每月最后一个工作日。",
+        "verified_reference_omission": false,
+        "omitted_core_facts": [],
+        "cause": "both_required_evidence_blocks_admitted_and_combined",
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "A三个重复均正确把两条不同章节证据合并，并拒绝固定交接到账天数，没有把最近或下一个发薪日顺延规则编造为定论。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p18-cc5ae09343",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。"
+        },
+        {
+          "chunk_id": "p26-44bfeef242",
+          "label": "来源4",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "发薪日为每月最后一个工作日。"
+        }
+      ]
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "variant": "A",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "d819f1932b31b748a2bb630b8196845a4f8b1433670a56bf75a3ecee8673bf43",
+      "context_sha256": "c9a35938bbc6e901cd14139db811df5cc89beb73585904a5ae39db08b035f3d1",
+      "context_chars": 3859,
+      "selected_ids": [
+        "p18-cc5ae09343",
+        "p17-18df625d5a",
+        "p15-82fc10ff7f",
+        "p26-44bfeef242",
+        "p27-1dfbb46c86",
+        "p15-a99dbf1c9b",
+        "p20-a13b1b7d85",
+        "p21-88de6db287"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p18-cc5ae09343",
+          "label": "来源1"
+        },
+        {
+          "id": "p17-18df625d5a",
+          "label": "来源2"
+        },
+        {
+          "id": "p15-82fc10ff7f",
+          "label": "来源3"
+        },
+        {
+          "id": "p26-44bfeef242",
+          "label": "来源4"
+        },
+        {
+          "id": "p27-1dfbb46c86",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p20-a13b1b7d85",
+          "label": "来源7"
+        },
+        {
+          "id": "p21-88de6db287",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true,
+          true,
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false,
+          false
+        ],
+        "reason": "答案正确合并了来源1的离职工资结算与发薪日发放规则和来源4的每月最后一个工作日发薪规则，明确拒绝给出固定天数，并提示向HR或薪酬部门核实，符合预期行为；未出现禁止推断。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "88ee022b7f2f50d3ff6de8142847bb09cf2495f13a09f3707194028653e51764"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "来源1支持交接后结算及发薪日发放，来源4直接支持每月最后一个工作日。",
+        "verified_reference_omission": false,
+        "omitted_core_facts": [],
+        "cause": "both_required_evidence_blocks_admitted_and_combined",
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "A三个重复均正确把两条不同章节证据合并，并拒绝固定交接到账天数，没有把最近或下一个发薪日顺延规则编造为定论。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p18-cc5ae09343",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。"
+        },
+        {
+          "chunk_id": "p26-44bfeef242",
+          "label": "来源4",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "发薪日为每月最后一个工作日。"
+        }
+      ]
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "variant": "A",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "58c53f785db536a62b6c8a4245ec3d32776a1b899d3b7c324fc7d7cc6b065428",
+      "context_sha256": "c9a35938bbc6e901cd14139db811df5cc89beb73585904a5ae39db08b035f3d1",
+      "context_chars": 3859,
+      "selected_ids": [
+        "p18-cc5ae09343",
+        "p17-18df625d5a",
+        "p15-82fc10ff7f",
+        "p26-44bfeef242",
+        "p27-1dfbb46c86",
+        "p15-a99dbf1c9b",
+        "p20-a13b1b7d85",
+        "p21-88de6db287"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p18-cc5ae09343",
+          "label": "来源1"
+        },
+        {
+          "id": "p17-18df625d5a",
+          "label": "来源2"
+        },
+        {
+          "id": "p15-82fc10ff7f",
+          "label": "来源3"
+        },
+        {
+          "id": "p26-44bfeef242",
+          "label": "来源4"
+        },
+        {
+          "id": "p27-1dfbb46c86",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p20-a13b1b7d85",
+          "label": "来源7"
+        },
+        {
+          "id": "p21-88de6db287",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true,
+          true,
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false,
+          false
+        ],
+        "reason": "回答正确合并了来源1和来源4的规则：离职工资在交接结束后结算并在公司发薪日发放，发薪日为每月最后一个工作日；同时明确没有固定天数，不能给出统一间隔，并建议向HR或薪酬部门核实。未出现禁止推断，核心要点齐全。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "d437a5f10a0ff24583c4bde20407e0b20ffc42b890910f111edfeb1864f14094"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "来源1支持交接后结算及发薪日发放，来源4直接支持每月最后一个工作日。",
+        "verified_reference_omission": false,
+        "omitted_core_facts": [],
+        "cause": "both_required_evidence_blocks_admitted_and_combined",
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "A三个重复均正确把两条不同章节证据合并，并拒绝固定交接到账天数，没有把最近或下一个发薪日顺延规则编造为定论。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p18-cc5ae09343",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。"
+        },
+        {
+          "chunk_id": "p26-44bfeef242",
+          "label": "来源4",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "发薪日为每月最后一个工作日。"
+        }
+      ]
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "variant": "D",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "54c3d86a07372543a6cd9ab3ace9cf10df092b6c0501cf2d3aead9fcbdd5eb19",
+      "context_sha256": "6ecbe97196e66d6a5ff59f574c3ff5c3018d8a8229e823ac730caa3d477f7b4e",
+      "context_chars": 3470,
+      "selected_ids": [
+        "p18-cc5ae09343",
+        "p20-a13b1b7d85",
+        "p15-82fc10ff7f",
+        "p21-88de6db287",
+        "p17-18df625d5a",
+        "p15-a99dbf1c9b",
+        "p19-afcfc09fb7",
+        "p19-c92ec39c2b"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p18-cc5ae09343",
+          "label": "来源1"
+        },
+        {
+          "id": "p20-a13b1b7d85",
+          "label": "来源2"
+        },
+        {
+          "id": "p15-82fc10ff7f",
+          "label": "来源3"
+        },
+        {
+          "id": "p21-88de6db287",
+          "label": "来源4"
+        },
+        {
+          "id": "p17-18df625d5a",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p19-afcfc09fb7",
+          "label": "来源7"
+        },
+        {
+          "id": "p19-c92ec39c2b",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "partial",
+        "FP": [],
+        "FN": [
+          "手册载明发薪日为每月最后一个工作日"
+        ],
+        "required_checks": [
+          true,
+          false,
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false,
+          false
+        ],
+        "reason": "答案正确合并了离职工资结算与发薪日发放规则，并拒绝给出固定天数，但遗漏了参考中明确的手册发薪日为每月最后一个工作日这一核心事实，因此判为部分正确。",
+        "factual_f1": 0.8571428571428571,
+        "final_raw_response_sha256": "9fb6d38bc8049de279596a180d6c2b9d97b475d03ab78d54abc369a9ff259eb2"
+      },
+      "assessment": {
+        "reference_core_facts_met": false,
+        "actual_context_support": "已给的结算后在发薪日发放规则有来源1支持；“提供的参考资料未明确日期”仅指该组输入，不能外推为完整手册缺失。",
+        "verified_reference_omission": true,
+        "omitted_core_facts": [
+          "发薪日为每月最后一个工作日"
+        ],
+        "cause": "final_evidence_selection_not_context_budget",
+        "grade_diagnosis": "partial_has_verifiable_reference_basis_but_not_a_faithfulness_failure",
+        "not_a_replacement_score": true,
+        "specific_reason": "D三个重复均遗漏冻结参考明确要求的发薪日规则，但该块未被D选中或送入生成输入；不是生成模型拿到了此块后不使用，也不是凭空否认整本语料。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p18-cc5ae09343",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。"
+        },
+        {
+          "chunk_id": "p26-44bfeef242",
+          "label": null,
+          "admitted": false,
+          "scope": "full_frozen_corpus_only",
+          "quote": "发薪日为每月最后一个工作日。"
+        }
+      ]
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "variant": "D",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "bd82702554f2af5674553047518b5dd8fc3a1f38bc6f374c59f1034a573604b2",
+      "context_sha256": "6ecbe97196e66d6a5ff59f574c3ff5c3018d8a8229e823ac730caa3d477f7b4e",
+      "context_chars": 3470,
+      "selected_ids": [
+        "p18-cc5ae09343",
+        "p20-a13b1b7d85",
+        "p15-82fc10ff7f",
+        "p21-88de6db287",
+        "p17-18df625d5a",
+        "p15-a99dbf1c9b",
+        "p19-afcfc09fb7",
+        "p19-c92ec39c2b"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p18-cc5ae09343",
+          "label": "来源1"
+        },
+        {
+          "id": "p20-a13b1b7d85",
+          "label": "来源2"
+        },
+        {
+          "id": "p15-82fc10ff7f",
+          "label": "来源3"
+        },
+        {
+          "id": "p21-88de6db287",
+          "label": "来源4"
+        },
+        {
+          "id": "p17-18df625d5a",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p19-afcfc09fb7",
+          "label": "来源7"
+        },
+        {
+          "id": "p19-c92ec39c2b",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "partial",
+        "FP": [],
+        "FN": [
+          "手册载明发薪日为每月最后一个工作日"
+        ],
+        "required_checks": [
+          true,
+          false,
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false,
+          false
+        ],
+        "reason": "答案正确合并了离职结算与发薪日发放规则，并拒绝固定天数推断，但遗漏了参考中明确载明的“发薪日为每月最后一个工作日”这一核心事实，因此判为部分正确。",
+        "factual_f1": 0.8888888888888888,
+        "final_raw_response_sha256": "8a86d9128bb28b5d250be106c65f0c1264ff12c0dace3a28f707ec21f63d5e3e"
+      },
+      "assessment": {
+        "reference_core_facts_met": false,
+        "actual_context_support": "已给的结算后在发薪日发放规则有来源1支持；“提供的参考资料未明确日期”仅指该组输入，不能外推为完整手册缺失。",
+        "verified_reference_omission": true,
+        "omitted_core_facts": [
+          "发薪日为每月最后一个工作日"
+        ],
+        "cause": "final_evidence_selection_not_context_budget",
+        "grade_diagnosis": "partial_has_verifiable_reference_basis_but_not_a_faithfulness_failure",
+        "not_a_replacement_score": true,
+        "specific_reason": "D三个重复均遗漏冻结参考明确要求的发薪日规则，但该块未被D选中或送入生成输入；不是生成模型拿到了此块后不使用，也不是凭空否认整本语料。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p18-cc5ae09343",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。"
+        },
+        {
+          "chunk_id": "p26-44bfeef242",
+          "label": null,
+          "admitted": false,
+          "scope": "full_frozen_corpus_only",
+          "quote": "发薪日为每月最后一个工作日。"
+        }
+      ]
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N12",
+      "variant": "D",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "166087c471a5fdd9a2403957f561b7c82ad8a26d30dbf36cbfd6b1aa6ab84c7d",
+      "context_sha256": "6ecbe97196e66d6a5ff59f574c3ff5c3018d8a8229e823ac730caa3d477f7b4e",
+      "context_chars": 3470,
+      "selected_ids": [
+        "p18-cc5ae09343",
+        "p20-a13b1b7d85",
+        "p15-82fc10ff7f",
+        "p21-88de6db287",
+        "p17-18df625d5a",
+        "p15-a99dbf1c9b",
+        "p19-afcfc09fb7",
+        "p19-c92ec39c2b"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p18-cc5ae09343",
+          "label": "来源1"
+        },
+        {
+          "id": "p20-a13b1b7d85",
+          "label": "来源2"
+        },
+        {
+          "id": "p15-82fc10ff7f",
+          "label": "来源3"
+        },
+        {
+          "id": "p21-88de6db287",
+          "label": "来源4"
+        },
+        {
+          "id": "p17-18df625d5a",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p19-afcfc09fb7",
+          "label": "来源7"
+        },
+        {
+          "id": "p19-c92ec39c2b",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "partial",
+        "FP": [],
+        "FN": [
+          "手册载明发薪日为每月最后一个工作日"
+        ],
+        "required_checks": [
+          true,
+          false,
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false,
+          false
+        ],
+        "reason": "答案正确合并了离职工资结算与发薪日发放规则，并拒绝固定天数推断，但遗漏了参考中明确载明的“发薪日为每月最后一个工作日”这一核心事实，因此部分正确。",
+        "factual_f1": 0.8571428571428571,
+        "final_raw_response_sha256": "37a3a4d2da1981b5b31be878e8d511e8e5987768f4118ef788f773650d341bf2"
+      },
+      "assessment": {
+        "reference_core_facts_met": false,
+        "actual_context_support": "已给的结算后在发薪日发放规则有来源1支持；“提供的参考资料未明确日期”仅指该组输入，不能外推为完整手册缺失。",
+        "verified_reference_omission": true,
+        "omitted_core_facts": [
+          "发薪日为每月最后一个工作日"
+        ],
+        "cause": "final_evidence_selection_not_context_budget",
+        "grade_diagnosis": "partial_has_verifiable_reference_basis_but_not_a_faithfulness_failure",
+        "not_a_replacement_score": true,
+        "specific_reason": "D三个重复均遗漏冻结参考明确要求的发薪日规则，但该块未被D选中或送入生成输入；不是生成模型拿到了此块后不使用，也不是凭空否认整本语料。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p18-cc5ae09343",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。"
+        },
+        {
+          "chunk_id": "p26-44bfeef242",
+          "label": null,
+          "admitted": false,
+          "scope": "full_frozen_corpus_only",
+          "quote": "发薪日为每月最后一个工作日。"
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "variant": "A",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "8ee8f18b088db4fbe341dea3da59aa3e75c0eec3c00bfdc243ed876993d6d094",
+      "context_sha256": "a8a099f01b7fcd80cfd0ab8c5046340fedae22a22cd2bbfac35dc4bfebc7320c",
+      "context_chars": 3856,
+      "selected_ids": [
+        "p50-314299f759",
+        "p50-0b87b65099",
+        "p50-8c19ffbac4",
+        "p31-b316f61d29",
+        "p16-161eb98f4e",
+        "p32-f13ba747ab",
+        "p46-0c8bfd37c1",
+        "p15-a99dbf1c9b"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p50-314299f759",
+          "label": "来源1"
+        },
+        {
+          "id": "p50-0b87b65099",
+          "label": "来源2"
+        },
+        {
+          "id": "p50-8c19ffbac4",
+          "label": "来源3"
+        },
+        {
+          "id": "p31-b316f61d29",
+          "label": "来源4"
+        },
+        {
+          "id": "p16-161eb98f4e",
+          "label": "来源5"
+        },
+        {
+          "id": "p32-f13ba747ab",
+          "label": "来源6"
+        },
+        {
+          "id": "p46-0c8bfd37c1",
+          "label": "来源7"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false
+        ],
+        "reason": "回答准确复述了参考手册中关于提醒时间的核心事实（过期前30天、15天、10天一直到0天每天发送），并补充了来源支持的过期后登录、90天修改周期及开机密码同步等细节，未出现禁止推断（未推断连续每天提醒或30天有效期），核心事实完整。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "c93bc5af73e59b29b4e9ec715c5c90777ae0fa983963f34442254639053c7fb2"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "Core reminder wording directly supported by actual source1.",
+        "clear_unsupported_continuous_30_day_inference_found": false,
+        "omitted_core_facts": [],
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "原裁判correct与实际来源和参考一致，使用相同或近同原文安排，为D/r2降级争议提供对照。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p50-314299f759",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "mail@jd.com 邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件，提醒用户修改邮箱密码。"
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "variant": "A",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "5486b555bd94713aa3bf7be653335ddd7e4f43dc44d4ef1d35422b519280c547",
+      "context_sha256": "a8a099f01b7fcd80cfd0ab8c5046340fedae22a22cd2bbfac35dc4bfebc7320c",
+      "context_chars": 3856,
+      "selected_ids": [
+        "p50-314299f759",
+        "p50-0b87b65099",
+        "p50-8c19ffbac4",
+        "p31-b316f61d29",
+        "p16-161eb98f4e",
+        "p32-f13ba747ab",
+        "p46-0c8bfd37c1",
+        "p15-a99dbf1c9b"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p50-314299f759",
+          "label": "来源1"
+        },
+        {
+          "id": "p50-0b87b65099",
+          "label": "来源2"
+        },
+        {
+          "id": "p50-8c19ffbac4",
+          "label": "来源3"
+        },
+        {
+          "id": "p31-b316f61d29",
+          "label": "来源4"
+        },
+        {
+          "id": "p16-161eb98f4e",
+          "label": "来源5"
+        },
+        {
+          "id": "p32-f13ba747ab",
+          "label": "来源6"
+        },
+        {
+          "id": "p46-0c8bfd37c1",
+          "label": "来源7"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false
+        ],
+        "reason": "回答准确复述了手册中关于提醒时间的核心事实（过期前30天、15天、10天到0天每天发送），并补充了过期后登录跳转、90天修改要求等来源支持的相关细节。未推断连续每天提醒或邮箱密码有效期为30天，符合禁止推断要求。核心事实完整，无遗漏或错误。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "8bf31c3b856affc66d9aae232a3bcf7c11d721b2e0955b0bc5bcbeee5b94bfa9"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "Core reminder wording directly supported by actual source1.",
+        "clear_unsupported_continuous_30_day_inference_found": false,
+        "omitted_core_facts": [],
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "原裁判correct与实际来源和参考一致，使用相同或近同原文安排，为D/r2降级争议提供对照。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p50-314299f759",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "mail@jd.com 邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件，提醒用户修改邮箱密码。"
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "variant": "A",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "18a2a94755e5ab6c51b91e3559392a1ff8710c37bd699771898c86524b63ea9e",
+      "context_sha256": "a8a099f01b7fcd80cfd0ab8c5046340fedae22a22cd2bbfac35dc4bfebc7320c",
+      "context_chars": 3856,
+      "selected_ids": [
+        "p50-314299f759",
+        "p50-0b87b65099",
+        "p50-8c19ffbac4",
+        "p31-b316f61d29",
+        "p16-161eb98f4e",
+        "p32-f13ba747ab",
+        "p46-0c8bfd37c1",
+        "p15-a99dbf1c9b"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p50-314299f759",
+          "label": "来源1"
+        },
+        {
+          "id": "p50-0b87b65099",
+          "label": "来源2"
+        },
+        {
+          "id": "p50-8c19ffbac4",
+          "label": "来源3"
+        },
+        {
+          "id": "p31-b316f61d29",
+          "label": "来源4"
+        },
+        {
+          "id": "p16-161eb98f4e",
+          "label": "来源5"
+        },
+        {
+          "id": "p32-f13ba747ab",
+          "label": "来源6"
+        },
+        {
+          "id": "p46-0c8bfd37c1",
+          "label": "来源7"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false
+        ],
+        "reason": "回答准确复述了参考手册中关于邮箱密码过期提醒的核心事实：过期前30天、15天、10天一直到0天每天发送提醒，并补充了来源支持的过期后登录、90天修改周期及开机密码同步等细节。未出现禁止推断（如从30天起连续每天提醒或推断密码有效期为30天），核心必要事实完整，故判correct。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "d477fce60b1968a0b4054fccfbcbc9e1d7c8bdb326026bf3512d4126dbb1b3fe"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "Core reminder wording directly supported by actual source1.",
+        "clear_unsupported_continuous_30_day_inference_found": false,
+        "omitted_core_facts": [],
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "原裁判correct与实际来源和参考一致，使用相同或近同原文安排，为D/r2降级争议提供对照。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p50-314299f759",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "mail@jd.com 邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件，提醒用户修改邮箱密码。"
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "variant": "D",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "0e9fe6105b5838a9a40a536ed974dfe93d56794287146846f497067c212555eb",
+      "context_sha256": "7554f6d8e344fd774794a95cb571eb55b227c0ccb815cbd6983d50b0f14c73f9",
+      "context_chars": 4050,
+      "selected_ids": [
+        "p50-314299f759",
+        "p50-0b87b65099",
+        "p50-8c19ffbac4",
+        "p46-0c8bfd37c1",
+        "p16-161eb98f4e",
+        "p15-a99dbf1c9b",
+        "p32-f13ba747ab",
+        "p49-e6d54f3307"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p50-314299f759",
+          "label": "来源1"
+        },
+        {
+          "id": "p50-0b87b65099",
+          "label": "来源2"
+        },
+        {
+          "id": "p50-8c19ffbac4",
+          "label": "来源3"
+        },
+        {
+          "id": "p46-0c8bfd37c1",
+          "label": "来源4"
+        },
+        {
+          "id": "p16-161eb98f4e",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p32-f13ba747ab",
+          "label": "来源7"
+        },
+        {
+          "id": "p49-e6d54f3307",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "partial",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false
+        ],
+        "reason": "答案正确引用了手册中关于提醒时间的核心事实，并补充了密码有效期和过期后处理等来源支持的相关细节。但答案开头将规则限定为“若指公司 mail@jd.com 邮箱”，而问题未指定邮箱类型，手册原文也直接以“mail@jd.com 邮箱”为主语，该限定虽不构成事实错误，但使回答未直接、无条件地回应问题，因此评为部分正确。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "6d6219e24197e0130fb6d8016ced29cbb85b17a02296f9119ba4c1042d58c04a"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "Core reminder wording directly supported by actual source1.",
+        "clear_unsupported_continuous_30_day_inference_found": false,
+        "omitted_core_facts": [],
+        "grade_diagnosis": "disputed_partial_downgrade_not_a_verified_fact_error",
+        "not_a_replacement_score": true,
+        "specific_reason": "“若指公司mail@jd.com邮箱”保留了来源主语的适用范围；答案正文实际给出完整提醒安排。原裁判承认不构成事实错误、FP/FN为空且所有规则检查通过，却因没有无条件作答判partial，未见冻结规则要求这种口吻。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p50-314299f759",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "mail@jd.com 邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件，提醒用户修改邮箱密码。"
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "variant": "D",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "4f5f020c9a7a67e96d2dda7b99c083ebd54e2014078e9bb14739c937ab94efb1",
+      "context_sha256": "7554f6d8e344fd774794a95cb571eb55b227c0ccb815cbd6983d50b0f14c73f9",
+      "context_chars": 4050,
+      "selected_ids": [
+        "p50-314299f759",
+        "p50-0b87b65099",
+        "p50-8c19ffbac4",
+        "p46-0c8bfd37c1",
+        "p16-161eb98f4e",
+        "p15-a99dbf1c9b",
+        "p32-f13ba747ab",
+        "p49-e6d54f3307"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p50-314299f759",
+          "label": "来源1"
+        },
+        {
+          "id": "p50-0b87b65099",
+          "label": "来源2"
+        },
+        {
+          "id": "p50-8c19ffbac4",
+          "label": "来源3"
+        },
+        {
+          "id": "p46-0c8bfd37c1",
+          "label": "来源4"
+        },
+        {
+          "id": "p16-161eb98f4e",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p32-f13ba747ab",
+          "label": "来源7"
+        },
+        {
+          "id": "p49-e6d54f3307",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "correct",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true
+        ],
+        "forbidden_checks": [
+          false,
+          false
+        ],
+        "reason": "回答准确复述了参考手册中关于邮箱密码过期提醒的核心事实：过期前30天、15天、10天一直到0天每天发送提醒邮件，并补充了来源支持的过期后登录跳转及90天修改密码等细节，未出现禁止推断（如连续每天提醒或30天有效期），核心事实完整且无错误。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "764e29c0ed32e896bdac1b010b88816562c48fa6cbf4ad83433aa6ab26a34342"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "Core reminder wording directly supported by actual source1.",
+        "clear_unsupported_continuous_30_day_inference_found": false,
+        "omitted_core_facts": [],
+        "grade_diagnosis": "source_consistent_correct_grade",
+        "not_a_replacement_score": true,
+        "specific_reason": "原裁判correct与实际来源和参考一致，使用相同或近同原文安排，为D/r2降级争议提供对照。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p50-314299f759",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "mail@jd.com 邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件，提醒用户修改邮箱密码。"
+        }
+      ]
+    },
+    {
+      "dataset": "original46",
+      "qid": "P31",
+      "variant": "D",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_utf8_sha256": "ce119f842306fcbbe8b8f82a494b7c9756054ad684c103c6fb1ee581994fbd61",
+      "context_sha256": "7554f6d8e344fd774794a95cb571eb55b227c0ccb815cbd6983d50b0f14c73f9",
+      "context_chars": 4050,
+      "selected_ids": [
+        "p50-314299f759",
+        "p50-0b87b65099",
+        "p50-8c19ffbac4",
+        "p46-0c8bfd37c1",
+        "p16-161eb98f4e",
+        "p15-a99dbf1c9b",
+        "p32-f13ba747ab",
+        "p49-e6d54f3307"
+      ],
+      "admitted_sources": [
+        {
+          "id": "p50-314299f759",
+          "label": "来源1"
+        },
+        {
+          "id": "p50-0b87b65099",
+          "label": "来源2"
+        },
+        {
+          "id": "p50-8c19ffbac4",
+          "label": "来源3"
+        },
+        {
+          "id": "p46-0c8bfd37c1",
+          "label": "来源4"
+        },
+        {
+          "id": "p16-161eb98f4e",
+          "label": "来源5"
+        },
+        {
+          "id": "p15-a99dbf1c9b",
+          "label": "来源6"
+        },
+        {
+          "id": "p32-f13ba747ab",
+          "label": "来源7"
+        },
+        {
+          "id": "p49-e6d54f3307",
+          "label": "来源8"
+        }
+      ],
+      "Flash_review": {
+        "model": "deepseek-flash",
+        "status": "complete",
+        "grade": "partial",
+        "FP": [],
+        "FN": [],
+        "required_checks": [
+          true
+        ],
+        "forbidden_checks": [
+          true,
+          false
+        ],
+        "reason": "答案正确复述了提醒时间点（30天、15天、10天到0天每天），并补充了90天修改密码的规则，核心事实正确。但答案开头表述为“30天、15天、10天一直到0天每天发送”，可能被理解为从30天起连续每天发送，而原文是30天、15天、10天到0天每天，中间并非连续；这属于禁止推断中的“从过期前30天起连续每天提醒”，因此存在轻微歧义，判为partial。",
+        "factual_f1": 1.0,
+        "final_raw_response_sha256": "6d2dea0e5d0ff589d28ed3529bc4751bc15639006b760b98e9bd545e958c74bb"
+      },
+      "assessment": {
+        "reference_core_facts_met": true,
+        "actual_context_support": "Core reminder wording directly supported by actual source1.",
+        "clear_unsupported_continuous_30_day_inference_found": false,
+        "omitted_core_facts": [],
+        "grade_diagnosis": "disputed_partial_downgrade_not_a_verified_fact_error",
+        "not_a_replacement_score": true,
+        "specific_reason": "按来源原文复述30/15/10一直到0每天，并没有明确说从30天前开始连续逐日通知。原裁判以可能被理解为连续30天触发禁止推断，但A三个重复及D/r1使用近同来源措辞均通过；存在判定尺度不一致。可用更明确断句改善可读性，但不能把来源本身的措辞直接证明为生成事实错误。"
+      },
+      "evidence": [
+        {
+          "chunk_id": "p50-314299f759",
+          "label": "来源1",
+          "admitted": true,
+          "scope": "actual_input",
+          "quote": "mail@jd.com 邮箱会在密码过期前 30 天、15 天、10 天一直到 0 天每天发送一封\n通知密码过期邮件，提醒用户修改邮箱密码。"
+        }
+      ]
+    }
+  ]
+}

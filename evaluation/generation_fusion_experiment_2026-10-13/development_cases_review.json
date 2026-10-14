@@ -1,0 +1,1975 @@
+{
+  "reviewer_type": "independent_Codex_source_review",
+  "reviewed_input_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+  "blind_review": true,
+  "mapping_read": false,
+  "Pro_reviews_read": false,
+  "formal_scores_overwritten": false,
+  "adjudication_note": "Codex依据来源进行的独立定性复核；不是用户人工金标，不覆盖正式自动评分。只评此四题各盲组3次回答，不能代表全集准确率。",
+  "scope": "Actual input contexts used for citation/source support; frozen corpus checked for policy correctness and omitted qualifications. Known rules and absent detail kept separate.",
+  "reviewed_cases": [
+    "C-P06",
+    "C-P01",
+    "C-N01",
+    "C-A01"
+  ],
+  "reviewed_answers": 24,
+  "grade_counts": {
+    "X": {
+      "correct": 12,
+      "partial": 0,
+      "incorrect": 0,
+      "not_scored": 0
+    },
+    "Y": {
+      "correct": 9,
+      "partial": 3,
+      "incorrect": 0,
+      "not_scored": 0
+    }
+  },
+  "reviews": [
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "blind_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "aa813939b9a5954ef3fa2e05391861657aedbdccd430e92e2ebfe0d0f3010105",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。",
+      "factual_checks": [
+        {
+          "finding": "事假明确为无薪假",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "3.3 事假属无薪假。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "无薪假不支付请假期间薪酬福利",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p21-88de6db287",
+              "quote": "1.6.3 无薪假：不支付请假期间的薪酬、福利。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "餐补15元/工作日，除部分管理岗位外按实际出勤及休假规定核算",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p30-526ea28baa",
+              "quote": "除部分管理岗位外，员工享有正常工作日用餐补贴，工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。详细规定参加《京东集团员工福利补贴管理规定》 | 15元/工作日 |",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "无决定个人天数的强制澄清，本题已给一天事假"
+        ],
+        "met": true,
+        "observed": "回答保留餐补适用员工范围，必要时询问当天是否正常工作日/实际请假记录；不把补充核实作为拒答。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 3,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "三项必要事实均有正确实际标签支持；结论由这三项组合成立。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "blind_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "568eec3ac99ad75d4e83e63c0293482621d9867f26400eeffcb7cb5f3e3a2cfc",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。",
+      "factual_checks": [
+        {
+          "finding": "事假明确为无薪假",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "3.3 事假属无薪假。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "无薪假不支付请假期间薪酬福利",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p21-88de6db287",
+              "quote": "1.6.3 无薪假：不支付请假期间的薪酬、福利。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "餐补15元/工作日，除部分管理岗位外按实际出勤及休假规定核算",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p30-526ea28baa",
+              "quote": "除部分管理岗位外，员工享有正常工作日用餐补贴，工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。详细规定参加《京东集团员工福利补贴管理规定》 | 15元/工作日 |",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "无决定个人天数的强制澄清，本题已给一天事假"
+        ],
+        "met": true,
+        "observed": "回答保留餐补适用员工范围，必要时询问当天是否正常工作日/实际请假记录；不把补充核实作为拒答。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 6,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "三项必要事实均有正确实际标签支持；结论由这三项组合成立。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "blind_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "c854626e408c76d67700269401acd47e2e8cc7b019fb7a3760c7b5360d47c45a",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。",
+      "factual_checks": [
+        {
+          "finding": "事假明确为无薪假",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "3.3 事假属无薪假。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "无薪假不支付请假期间薪酬福利",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p21-88de6db287",
+              "quote": "1.6.3 无薪假：不支付请假期间的薪酬、福利。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "餐补15元/工作日，除部分管理岗位外按实际出勤及休假规定核算",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p30-526ea28baa",
+              "quote": "除部分管理岗位外，员工享有正常工作日用餐补贴，工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。详细规定参加《京东集团员工福利补贴管理规定》 | 15元/工作日 |",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "无决定个人天数的强制澄清，本题已给一天事假"
+        ],
+        "met": true,
+        "observed": "回答保留餐补适用员工范围，必要时询问当天是否正常工作日/实际请假记录；不把补充核实作为拒答。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 5,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "三项必要事实均有正确实际标签支持；结论由这三项组合成立。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "blind_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "a45c11d2ec9f1f4564a1a273e240ac381ce1a411b42703922ee1bb8b6a6856a8",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。",
+      "factual_checks": [
+        {
+          "finding": "事假明确为无薪假",
+          "evidence": [
+            {
+              "source_label": "来源5",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "3.3 事假属无薪假。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "无薪假不支付请假期间薪酬福利",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p21-88de6db287",
+              "quote": "1.6.3 无薪假：不支付请假期间的薪酬、福利。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "餐补15元/工作日，除部分管理岗位外按实际出勤及休假规定核算",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p30-526ea28baa",
+              "quote": "除部分管理岗位外，员工享有正常工作日用餐补贴，工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。详细规定参加《京东集团员工福利补贴管理规定》 | 15元/工作日 |",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "无决定个人天数的强制澄清，本题已给一天事假"
+        ],
+        "met": true,
+        "observed": "回答保留餐补适用员工范围，必要时询问当天是否正常工作日/实际请假记录；不把补充核实作为拒答。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 8,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "三项必要事实均有正确实际标签支持；结论由这三项组合成立。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "blind_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "20eda0d1e8988bbe9de16b9e5940a6800d418592f4412a2b37142b60e37997b4",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。",
+      "factual_checks": [
+        {
+          "finding": "事假明确为无薪假",
+          "evidence": [
+            {
+              "source_label": "来源5",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "3.3 事假属无薪假。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "无薪假不支付请假期间薪酬福利",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p21-88de6db287",
+              "quote": "1.6.3 无薪假：不支付请假期间的薪酬、福利。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "餐补15元/工作日，除部分管理岗位外按实际出勤及休假规定核算",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p30-526ea28baa",
+              "quote": "除部分管理岗位外，员工享有正常工作日用餐补贴，工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。详细规定参加《京东集团员工福利补贴管理规定》 | 15元/工作日 |",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "无决定个人天数的强制澄清，本题已给一天事假"
+        ],
+        "met": true,
+        "observed": "回答保留餐补适用员工范围，必要时询问当天是否正常工作日/实际请假记录；不把补充核实作为拒答。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 4,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "三项必要事实均有正确实际标签支持；结论由这三项组合成立。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P06",
+      "blind_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "ad573e235669518ad30cbaf9c6b169430df8690452844997f6f0923b2094f1ee",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "完整回答不发15元餐补，并合并事假无薪、无薪假不支付福利、15元/工作日按出勤核算三处事实；适用岗位及工作日条件保留。",
+      "factual_checks": [
+        {
+          "finding": "事假明确为无薪假",
+          "evidence": [
+            {
+              "source_label": "来源5",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "3.3 事假属无薪假。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "无薪假不支付请假期间薪酬福利",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p21-88de6db287",
+              "quote": "1.6.3 无薪假：不支付请假期间的薪酬、福利。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "餐补15元/工作日，除部分管理岗位外按实际出勤及休假规定核算",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p30-526ea28baa",
+              "quote": "除部分管理岗位外，员工享有正常工作日用餐补贴，工作日餐补根 据员工实际出勤日核算，员工休假或缺勤按照休假管理的相关规定 扣减相应的餐补。详细规定参加《京东集团员工福利补贴管理规定》 | 15元/工作日 |",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "无决定个人天数的强制澄清，本题已给一天事假"
+        ],
+        "met": true,
+        "observed": "回答保留餐补适用员工范围，必要时询问当天是否正常工作日/实际请假记录；不把补充核实作为拒答。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 6,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "三项必要事实均有正确实际标签支持；结论由这三项组合成立。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "blind_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "4f6b4feee92a47d921ee7ce97f323e10a8b8b9a314b27b30abda3dcc1d1f283b",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。",
+      "factual_checks": [
+        {
+          "finding": "试用期为一至六个月，以劳动合同为准；故不能把入职两个月直接等同试用期",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "根据岗位不同，试用期为一至六个月，以劳动合同约定为准。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期提前3天规定方式通知，仍须办理离职手续",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "个人辞职试用期至少三日、转正后至少三十日书面申请",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "辞职：因员工个人原因发起的离职。试用期内员工辞职应至少提前三日提出书面离职申请，\n转正后员工应至少提前三十日提出书面离职申请。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "审计具体人员范围按业务需要，签署文件、完成手续后离开",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "离职流程需要通过内控合规部门的“离任审计”，具体人员范围视实际业务需要确定。\n员工须签署相应的法律文件（例如：离职申请书）并在规定时间内完成本节 3.1 条规定的手\n续后，方可离开公司。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加离职工资及专项培训、竞业协议说明与当前来源条件一致",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。\n如果员工接受过公司提供的培训且签署过《京东员工专项培训协议》，并在与公司约定的服\n务期间内离职的，则必须按签订的《京东员工专项培训协议》约定予以支付违约金或赔偿；\n如果员工与公司签订了《保密和竞业限制协议》，且在离职时公司告知需要履行的，离职后\n必须遵守协议内容，否则公司将追究违约赔偿责任及法律责任。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加记过/辞退旷工阈值与实际纪律块一致",
+          "evidence": [
+            {
+              "source_label": "来源7",
+              "chunk_id": "p42-83f9d6df8d",
+              "quote": "连续30 天内旷工 1 天（含）或一年（12 个月）内累计旷工 2 天（含）以内的；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源5",
+              "chunk_id": "p43-54058878ec",
+              "quote": "连续旷工 2 天（含）及以上，或一年内累计旷工 3 天（含）及以上的；",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "劳动合同约定的试用期及是否已转正"
+        ],
+        "met": true,
+        "observed": "六条回答都询问合同试用期及当前转正状态，没有先把3日强套给个人。"
+      },
+      "usability_notes": [
+        "附带旷工处分与多项协议说明较长，核心问题只需合同状态、通知期与手续；此为聚焦度问题，不自动改正确性等级。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 9,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "核心合同、通知期与离职流程标签支持对应事实；未自行指定通知期工作日/自然日。",
+      "scope_note": "“不能仅说一声即马上离开”按当前个人辞职问法理解，不能扩大为双方协商解除必然也受同一辞职通知期。X repeat2显式区分协商解除；其余答案虽未展开所有离职类型，不因未穷举就扣核心正确性。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "blind_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "1dd6bc4c13ad5306aa397064207c1965927f4ed92e6b24daeae90b528e5bda87",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。",
+      "factual_checks": [
+        {
+          "finding": "试用期为一至六个月，以劳动合同为准；故不能把入职两个月直接等同试用期",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "根据岗位不同，试用期为一至六个月，以劳动合同约定为准。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期提前3天规定方式通知，仍须办理离职手续",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "个人辞职试用期至少三日、转正后至少三十日书面申请",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "辞职：因员工个人原因发起的离职。试用期内员工辞职应至少提前三日提出书面离职申请，\n转正后员工应至少提前三十日提出书面离职申请。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "审计具体人员范围按业务需要，签署文件、完成手续后离开",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "离职流程需要通过内控合规部门的“离任审计”，具体人员范围视实际业务需要确定。\n员工须签署相应的法律文件（例如：离职申请书）并在规定时间内完成本节 3.1 条规定的手\n续后，方可离开公司。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加离职工资及专项培训、竞业协议说明与当前来源条件一致",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。\n如果员工接受过公司提供的培训且签署过《京东员工专项培训协议》，并在与公司约定的服\n务期间内离职的，则必须按签订的《京东员工专项培训协议》约定予以支付违约金或赔偿；\n如果员工与公司签订了《保密和竞业限制协议》，且在离职时公司告知需要履行的，离职后\n必须遵守协议内容，否则公司将追究违约赔偿责任及法律责任。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "劳动合同约定的试用期及是否已转正"
+        ],
+        "met": true,
+        "observed": "六条回答都询问合同试用期及当前转正状态，没有先把3日强套给个人。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 11,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "核心合同、通知期与离职流程标签支持对应事实；未自行指定通知期工作日/自然日。",
+      "scope_note": "“不能仅说一声即马上离开”按当前个人辞职问法理解，不能扩大为双方协商解除必然也受同一辞职通知期。X repeat2显式区分协商解除；其余答案虽未展开所有离职类型，不因未穷举就扣核心正确性。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "blind_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "c0ffb549491a4ea0be587145c4ffd39a8a50cef0d0a93522c02a57bdd03bcf7b",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。",
+      "factual_checks": [
+        {
+          "finding": "试用期为一至六个月，以劳动合同为准；故不能把入职两个月直接等同试用期",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "根据岗位不同，试用期为一至六个月，以劳动合同约定为准。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期提前3天规定方式通知，仍须办理离职手续",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "个人辞职试用期至少三日、转正后至少三十日书面申请",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "辞职：因员工个人原因发起的离职。试用期内员工辞职应至少提前三日提出书面离职申请，\n转正后员工应至少提前三十日提出书面离职申请。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "审计具体人员范围按业务需要，签署文件、完成手续后离开",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "离职流程需要通过内控合规部门的“离任审计”，具体人员范围视实际业务需要确定。\n员工须签署相应的法律文件（例如：离职申请书）并在规定时间内完成本节 3.1 条规定的手\n续后，方可离开公司。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加离职工资及专项培训、竞业协议说明与当前来源条件一致",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。\n如果员工接受过公司提供的培训且签署过《京东员工专项培训协议》，并在与公司约定的服\n务期间内离职的，则必须按签订的《京东员工专项培训协议》约定予以支付违约金或赔偿；\n如果员工与公司签订了《保密和竞业限制协议》，且在离职时公司告知需要履行的，离职后\n必须遵守协议内容，否则公司将追究违约赔偿责任及法律责任。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "另行协商解除只有双方协商一致这一明文条件，不把主管口头同意认定为公司协议",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "2.3 双方协商解除：公司与员工双方协商一致可以解除劳动合同。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "劳动合同约定的试用期及是否已转正"
+        ],
+        "met": true,
+        "observed": "六条回答都询问合同试用期及当前转正状态，没有先把3日强套给个人。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 7,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "核心合同、通知期与离职流程标签支持对应事实；未自行指定通知期工作日/自然日。",
+      "scope_note": "“不能仅说一声即马上离开”按当前个人辞职问法理解，不能扩大为双方协商解除必然也受同一辞职通知期。X repeat2显式区分协商解除；其余答案虽未展开所有离职类型，不因未穷举就扣核心正确性。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "blind_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "c65758503ee0742995c20ed6afd04089f0ec25d128e84a83146529c35d8d15c7",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。",
+      "factual_checks": [
+        {
+          "finding": "试用期为一至六个月，以劳动合同为准；故不能把入职两个月直接等同试用期",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "根据岗位不同，试用期为一至六个月，以劳动合同约定为准。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期提前3天规定方式通知，仍须办理离职手续",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "个人辞职试用期至少三日、转正后至少三十日书面申请",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "辞职：因员工个人原因发起的离职。试用期内员工辞职应至少提前三日提出书面离职申请，\n转正后员工应至少提前三十日提出书面离职申请。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "审计具体人员范围按业务需要，签署文件、完成手续后离开",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "离职流程需要通过内控合规部门的“离任审计”，具体人员范围视实际业务需要确定。\n员工须签署相应的法律文件（例如：离职申请书）并在规定时间内完成本节 3.1 条规定的手\n续后，方可离开公司。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加离职工资及专项培训、竞业协议说明与当前来源条件一致",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。\n如果员工接受过公司提供的培训且签署过《京东员工专项培训协议》，并在与公司约定的服\n务期间内离职的，则必须按签订的《京东员工专项培训协议》约定予以支付违约金或赔偿；\n如果员工与公司签订了《保密和竞业限制协议》，且在离职时公司告知需要履行的，离职后\n必须遵守协议内容，否则公司将追究违约赔偿责任及法律责任。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "劳动合同约定的试用期及是否已转正"
+        ],
+        "met": true,
+        "observed": "六条回答都询问合同试用期及当前转正状态，没有先把3日强套给个人。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 6,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "核心合同、通知期与离职流程标签支持对应事实；未自行指定通知期工作日/自然日。",
+      "scope_note": "“不能仅说一声即马上离开”按当前个人辞职问法理解，不能扩大为双方协商解除必然也受同一辞职通知期。X repeat2显式区分协商解除；其余答案虽未展开所有离职类型，不因未穷举就扣核心正确性。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "blind_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "70c82d9e19d59b50e2ac7780b3ff92ad418c5055454887a522650774d3be2d76",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。",
+      "factual_checks": [
+        {
+          "finding": "试用期为一至六个月，以劳动合同为准；故不能把入职两个月直接等同试用期",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "根据岗位不同，试用期为一至六个月，以劳动合同约定为准。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期提前3天规定方式通知，仍须办理离职手续",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "个人辞职试用期至少三日、转正后至少三十日书面申请",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "辞职：因员工个人原因发起的离职。试用期内员工辞职应至少提前三日提出书面离职申请，\n转正后员工应至少提前三十日提出书面离职申请。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "审计具体人员范围按业务需要，签署文件、完成手续后离开",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "离职流程需要通过内控合规部门的“离任审计”，具体人员范围视实际业务需要确定。\n员工须签署相应的法律文件（例如：离职申请书）并在规定时间内完成本节 3.1 条规定的手\n续后，方可离开公司。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加离职工资及专项培训、竞业协议说明与当前来源条件一致",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。\n如果员工接受过公司提供的培训且签署过《京东员工专项培训协议》，并在与公司约定的服\n务期间内离职的，则必须按签订的《京东员工专项培训协议》约定予以支付违约金或赔偿；\n如果员工与公司签订了《保密和竞业限制协议》，且在离职时公司告知需要履行的，离职后\n必须遵守协议内容，否则公司将追究违约赔偿责任及法律责任。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "劳动合同约定的试用期及是否已转正"
+        ],
+        "met": true,
+        "observed": "六条回答都询问合同试用期及当前转正状态，没有先把3日强套给个人。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 6,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "核心合同、通知期与离职流程标签支持对应事实；未自行指定通知期工作日/自然日。",
+      "scope_note": "“不能仅说一声即马上离开”按当前个人辞职问法理解，不能扩大为双方协商解除必然也受同一辞职通知期。X repeat2显式区分协商解除；其余答案虽未展开所有离职类型，不因未穷举就扣核心正确性。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-P01",
+      "blind_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "387d4b6dcf0b5900a2044aee6104acfe0cca4b2319ae9996eba5ae99e1f23d6e",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "明确两个月入职不能确定仍在试用期，按合同/转正状态区分3日和30日书面辞职规则，并保留离职流程及手续要求；实际询问合同试用期和是否已转正。",
+      "factual_checks": [
+        {
+          "finding": "试用期为一至六个月，以劳动合同为准；故不能把入职两个月直接等同试用期",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "根据岗位不同，试用期为一至六个月，以劳动合同约定为准。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期提前3天规定方式通知，仍须办理离职手续",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "个人辞职试用期至少三日、转正后至少三十日书面申请",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "辞职：因员工个人原因发起的离职。试用期内员工辞职应至少提前三日提出书面离职申请，\n转正后员工应至少提前三十日提出书面离职申请。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "审计具体人员范围按业务需要，签署文件、完成手续后离开",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "离职流程需要通过内控合规部门的“离任审计”，具体人员范围视实际业务需要确定。\n员工须签署相应的法律文件（例如：离职申请书）并在规定时间内完成本节 3.1 条规定的手\n续后，方可离开公司。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "附加离职工资及专项培训、竞业协议说明与当前来源条件一致",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p18-cc5ae09343",
+              "quote": "员工的离职工资将在离职交接结束后予以结算，并在公司发薪日发放。\n如果员工接受过公司提供的培训且签署过《京东员工专项培训协议》，并在与公司约定的服\n务期间内离职的，则必须按签订的《京东员工专项培训协议》约定予以支付违约金或赔偿；\n如果员工与公司签订了《保密和竞业限制协议》，且在离职时公司告知需要履行的，离职后\n必须遵守协议内容，否则公司将追究违约赔偿责任及法律责任。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "劳动合同约定的试用期及是否已转正"
+        ],
+        "met": true,
+        "observed": "六条回答都询问合同试用期及当前转正状态，没有先把3日强套给个人。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 11,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "核心合同、通知期与离职流程标签支持对应事实；未自行指定通知期工作日/自然日。",
+      "scope_note": "“不能仅说一声即马上离开”按当前个人辞职问法理解，不能扩大为双方协商解除必然也受同一辞职通知期。X repeat2显式区分协商解除；其余答案虽未展开所有离职类型，不因未穷举就扣核心正确性。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "blind_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "e4fcd5e35897e978c1c6f5579db28794803c814d85d5d88d29074245a6b1d32e",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。",
+      "factual_checks": [
+        {
+          "finding": "辞职条款只载至少提前三日书面申请，没有在该条注明工作日或自然日",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "试用期内员工辞职应至少提前三日提出书面离职申请",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期条款只载提前3天通知及离职流程",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [],
+        "met": true,
+        "observed": "所缺为政策计算口径，不要求用户提供个人信息代替制度核实；建议正式负责渠道确认。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 8,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已知三日规则引用正确；范围性资料未明确口径不是有原文可证明的全局制度不存在断言。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "blind_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "dbcf636ddcfb761f5a8d53cb61966a26dbf795c6889b24ea347ad0e36c6edcc2",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。",
+      "factual_checks": [
+        {
+          "finding": "辞职条款只载至少提前三日书面申请，没有在该条注明工作日或自然日",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "试用期内员工辞职应至少提前三日提出书面离职申请",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期条款只载提前3天通知及离职流程",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "他假婚假自然日和丧假工作日示例正确，但不迁移到辞职通知期",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p24-bea93ab4d6",
+              "quote": "婚假自结婚证签发日起 12 个月内一次性使用完毕，按自然日核算",
+              "admitted": true
+            },
+            {
+              "source_label": "来源7",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "给予 3 个工作日的丧假。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [],
+        "met": true,
+        "observed": "所缺为政策计算口径，不要求用户提供个人信息代替制度核实；建议正式负责渠道确认。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 7,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已知三日规则引用正确；范围性资料未明确口径不是有原文可证明的全局制度不存在断言。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "blind_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "be049e95f5f0f22e6cb2979ec2f32362aaa93aa859d7422f94c9ae2b78455de9",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。",
+      "factual_checks": [
+        {
+          "finding": "辞职条款只载至少提前三日书面申请，没有在该条注明工作日或自然日",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "试用期内员工辞职应至少提前三日提出书面离职申请",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期条款只载提前3天通知及离职流程",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "他假婚假自然日和丧假工作日示例正确，但不迁移到辞职通知期",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p24-bea93ab4d6",
+              "quote": "婚假自结婚证签发日起 12 个月内一次性使用完毕，按自然日核算",
+              "admitted": true
+            },
+            {
+              "source_label": "来源7",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "给予 3 个工作日的丧假。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [],
+        "met": true,
+        "observed": "所缺为政策计算口径，不要求用户提供个人信息代替制度核实；建议正式负责渠道确认。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 5,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已知三日规则引用正确；范围性资料未明确口径不是有原文可证明的全局制度不存在断言。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "blind_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "7d98363d1f08d3d3b27e3656853987c71257d7f71f1bc8bf5f975a8581500753",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。",
+      "factual_checks": [
+        {
+          "finding": "辞职条款只载至少提前三日书面申请，没有在该条注明工作日或自然日",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "试用期内员工辞职应至少提前三日提出书面离职申请",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期条款只载提前3天通知及离职流程",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [],
+        "met": true,
+        "observed": "所缺为政策计算口径，不要求用户提供个人信息代替制度核实；建议正式负责渠道确认。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 2,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已知三日规则引用正确；范围性资料未明确口径不是有原文可证明的全局制度不存在断言。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "blind_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "53a8a2c2e003df03c8bf099779994b75a676234fe965467016cd75f8231ae0b9",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。",
+      "factual_checks": [
+        {
+          "finding": "辞职条款只载至少提前三日书面申请，没有在该条注明工作日或自然日",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "试用期内员工辞职应至少提前三日提出书面离职申请",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期条款只载提前3天通知及离职流程",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [],
+        "met": true,
+        "observed": "所缺为政策计算口径，不要求用户提供个人信息代替制度核实；建议正式负责渠道确认。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 2,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已知三日规则引用正确；范围性资料未明确口径不是有原文可证明的全局制度不存在断言。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-N01",
+      "blind_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "8a030090f5a57e22e8f687cac8368abb34e9c1451644b8b03f313cfac6cfe967",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "正确拒绝推断工作日/自然日，说明已知至少三日书面辞职申请，缺失口径限定在提供资料，并建议HR/离职负责人核实。",
+      "factual_checks": [
+        {
+          "finding": "辞职条款只载至少提前三日书面申请，没有在该条注明工作日或自然日",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p17-18df625d5a",
+              "quote": "试用期内员工辞职应至少提前三日提出书面离职申请",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "试用期条款只载提前3天通知及离职流程",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p15-a99dbf1c9b",
+              "quote": "但应提前3 天以书面形式/邮件方式/系统提报等方式通知另一方。员工\n在试用期离职，也必须依照公司的离职流程办理手续。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "他假婚假自然日和丧假工作日示例正确，但不迁移到辞职通知期",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p24-bea93ab4d6",
+              "quote": "婚假自结婚证签发日起 12 个月内一次性使用完毕，按自然日核算",
+              "admitted": true
+            },
+            {
+              "source_label": "来源6",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "给予 3 个工作日的丧假。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [],
+        "met": true,
+        "observed": "所缺为政策计算口径，不要求用户提供个人信息代替制度核实；建议正式负责渠道确认。"
+      },
+      "usability_notes": [],
+      "citation_label_validation": {
+        "occurrences": 4,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已知三日规则引用正确；范围性资料未明确口径不是有原文可证明的全局制度不存在断言。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "blind_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "e7d49e2d4fb6fa59ba2391895349dcad86d0577a3d64acfbb9950f0d9b8e65a0",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "首先承认指代不明并询问具体假别，没有猜测个人假种或判定个人能否休假；附加年假、公假、公益假与手册时期边界有实际来源支持。",
+      "factual_checks": [
+        {
+          "finding": "福利年假职级、转正、法定+福利合计10/15/20上限的原文",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "福利年假是指公司M3/P7/T7级及以上员工除享受法定年假政策外依据级别不同给予\n额外的福利年假。员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "公益假4小时、最小1小时及公假全薪等附加政策对应实际来源",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "特别给予 4 小时的带薪公益假期，最\n小请假单位为 1 小时，年初自动分配当年有效，未使用部分视为自愿放弃，年底\n清零；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源6",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "12.2 公假属于全薪假。休假期间工资、餐补和全勤奖正常支付。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "欺骗性理由请假属于不诚信行为，附加纪律提示有来源",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p46-0c8bfd37c1",
+              "quote": "10.8 存在弄虚作假、虚报费用等不诚信欺诈行为，包括但不限于：\n10.8.1 提供虚假个人资料；\n10.8.2 以欺骗性理由请假或请病假；",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "手册2018-02-01生效日期不等于确认当下最新版本",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p3-ea5bc5fd17",
+              "quote": "本手册于2018 年2 月1 日起生效",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "所指假期类型或请假事由"
+        ],
+        "met": true,
+        "observed": "首要问题均询问哪一种假/事项；职级、工龄等后续条件尚未明确假种，并非首轮正确性的强制要求。"
+      },
+      "usability_notes": [
+        "在假种未知时仍展开多段政策并一次索取多类个人信息，回复偏长；合理第一步可以只询问假种/事由。此项只评可用性，不自行扣核心澄清正确性。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 12,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已展开的年假/公益假/公假/生效日期等引用标签与实际片段对应。没有主动给出福利产假资格，故不存在该附加遗漏。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "blind_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "82ee0532cc975e468a333b48c547fc0faca8167d9c2250aa0f8d8ecb3fd1e3de",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "首先承认指代不明并询问具体假别，没有猜测个人假种或判定个人能否休假；附加年假、公假、公益假与手册时期边界有实际来源支持。",
+      "factual_checks": [
+        {
+          "finding": "福利年假职级、转正、法定+福利合计10/15/20上限的原文",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "福利年假是指公司M3/P7/T7级及以上员工除享受法定年假政策外依据级别不同给予\n额外的福利年假。员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "公益假4小时、最小1小时及公假全薪等附加政策对应实际来源",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "特别给予 4 小时的带薪公益假期，最\n小请假单位为 1 小时，年初自动分配当年有效，未使用部分视为自愿放弃，年底\n清零；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源6",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "12.2 公假属于全薪假。休假期间工资、餐补和全勤奖正常支付。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "欺骗性理由请假属于不诚信行为，附加纪律提示有来源",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p46-0c8bfd37c1",
+              "quote": "10.8 存在弄虚作假、虚报费用等不诚信欺诈行为，包括但不限于：\n10.8.1 提供虚假个人资料；\n10.8.2 以欺骗性理由请假或请病假；",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "手册2018-02-01生效日期不等于确认当下最新版本",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p3-ea5bc5fd17",
+              "quote": "本手册于2018 年2 月1 日起生效",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "所指假期类型或请假事由"
+        ],
+        "met": true,
+        "observed": "首要问题均询问哪一种假/事项；职级、工龄等后续条件尚未明确假种，并非首轮正确性的强制要求。"
+      },
+      "usability_notes": [
+        "在假种未知时仍展开多段政策并一次索取多类个人信息，回复偏长；合理第一步可以只询问假种/事由。此项只评可用性，不自行扣核心澄清正确性。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 5,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已展开的年假/公益假/公假/生效日期等引用标签与实际片段对应。没有主动给出福利产假资格，故不存在该附加遗漏。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "blind_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "e9a8af5d75ae2695ef22e0ddf3d4eeb21a2c78bd42746a3e2ad3c67524bbb093",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "correct",
+      "reason": "首先承认指代不明并询问具体假别，没有猜测个人假种或判定个人能否休假；附加年假、公假、公益假与手册时期边界有实际来源支持。",
+      "factual_checks": [
+        {
+          "finding": "福利年假职级、转正、法定+福利合计10/15/20上限的原文",
+          "evidence": [
+            {
+              "source_label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "福利年假是指公司M3/P7/T7级及以上员工除享受法定年假政策外依据级别不同给予\n额外的福利年假。员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "公益假4小时、最小1小时及公假全薪等附加政策对应实际来源",
+          "evidence": [
+            {
+              "source_label": "来源6",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "特别给予 4 小时的带薪公益假期，最\n小请假单位为 1 小时，年初自动分配当年有效，未使用部分视为自愿放弃，年底\n清零；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源6",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "12.2 公假属于全薪假。休假期间工资、餐补和全勤奖正常支付。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "欺骗性理由请假属于不诚信行为，附加纪律提示有来源",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p46-0c8bfd37c1",
+              "quote": "10.8 存在弄虚作假、虚报费用等不诚信欺诈行为，包括但不限于：\n10.8.1 提供虚假个人资料；\n10.8.2 以欺骗性理由请假或请病假；",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "手册2018-02-01生效日期不等于确认当下最新版本",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p3-ea5bc5fd17",
+              "quote": "本手册于2018 年2 月1 日起生效",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "clarification_review": {
+        "required": [
+          "所指假期类型或请假事由"
+        ],
+        "met": true,
+        "observed": "首要问题均询问哪一种假/事项；职级、工龄等后续条件尚未明确假种，并非首轮正确性的强制要求。"
+      },
+      "usability_notes": [
+        "在假种未知时仍展开多段政策并一次索取多类个人信息，回复偏长；合理第一步可以只询问假种/事由。此项只评可用性，不自行扣核心澄清正确性。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 6,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已展开的年假/公益假/公假/生效日期等引用标签与实际片段对应。没有主动给出福利产假资格，故不存在该附加遗漏。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "blind_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "0c2218b52cd8da4aae19cf013c7c3c13784111df3baa17f889e0a6ce8355bf7a",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "partial",
+      "reason": "澄清主方向正确，但主动加入福利产假/陪护假资格表述，仅给满三年后怀孕即可30/7天，遗漏完整手册正文首个新生儿和前4季度C/C-绩效限制。此附加政策不完整可误导适用资格。",
+      "factual_checks": [
+        {
+          "finding": "福利年假职级、转正、法定+福利合计10/15/20上限的原文",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "福利年假是指公司M3/P7/T7级及以上员工除享受法定年假政策外依据级别不同给予\n额外的福利年假。员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "公益假4小时、最小1小时及公假全薪等附加政策对应实际来源",
+          "evidence": [
+            {
+              "source_label": "来源7",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "特别给予 4 小时的带薪公益假期，最\n小请假单位为 1 小时，年初自动分配当年有效，未使用部分视为自愿放弃，年底\n清零；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源7",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "12.2 公假属于全薪假。休假期间工资、餐补和全勤奖正常支付。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "欺骗性理由请假属于不诚信行为，附加纪律提示有来源",
+          "evidence": [
+            {
+              "source_label": "来源5",
+              "chunk_id": "p46-0c8bfd37c1",
+              "quote": "10.8 存在弄虚作假、虚报费用等不诚信欺诈行为，包括但不限于：\n10.8.1 提供虚假个人资料；\n10.8.2 以欺骗性理由请假或请病假；",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "手册2018-02-01生效日期不等于确认当下最新版本",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p3-ea5bc5fd17",
+              "quote": "本手册于2018 年2 月1 日起生效",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "实际来源4是福利概览，支持概览中的30/7及180上限，并指向休假管理详细规定",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p29-d2fd640689",
+              "quote": "凡员工或员工配偶于员工入职满三年后怀孕，员工 在子女出生后，可享有公司额外给予的30天福利产假（法定产假与 福利产假累加之和不超过180天，如法定产假已超过180天，以法 定产假为准）或 7 天福利陪护假。详细规定参见本手册休假管理相 关规定。 |  |  | 女员工：30个自然日 男员工： 7个自然日",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [
+        {
+          "scope": "Only for the unsolicited maternity/paternity policy claim, not a required response to the ambiguous user question",
+          "conditions": [
+            "新生儿为员工在职期间首个新生儿",
+            "休相应产假或陪护假前4季度有C或C-不得享福利假"
+          ],
+          "evidence": [
+            {
+              "source_label": null,
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            },
+            {
+              "source_label": null,
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            },
+            {
+              "source_label": null,
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "公司补充福利陪产假是指，男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿，则该员工可在享受法定陪护假后，额外增加 7 个自\n然日的福利陪护假。员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            }
+          ]
+        }
+      ],
+      "unsupported_assertions": [],
+      "citation_issues": [
+        {
+          "type": "scope_limited_support",
+          "source_label": "来源4",
+          "chunk_id": "p29-d2fd640689",
+          "reason": "来源4概览可支持所复述的概览事实，因此不记错号/局部无依据；它未包含完整资格，不能证明满三年后怀孕单独充分。正确性按冻结全文限制另行记partial，不能称实际输入faithfulness失败。"
+        }
+      ],
+      "clarification_review": {
+        "required": [
+          "所指假期类型或请假事由"
+        ],
+        "met": true,
+        "observed": "首要问题均询问哪一种假/事项；职级、工龄等后续条件尚未明确假种，并非首轮正确性的强制要求。"
+      },
+      "usability_notes": [
+        "在假种未知时仍展开多段政策并一次索取多类个人信息，回复偏长；合理第一步可以只询问假种/事由。此项只评可用性，不自行扣核心澄清正确性。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 8,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已展开的年假/公益假/公假/生效日期等引用标签与实际片段对应。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "blind_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "c610f7e5bf4004f8c7c88c945d9e82a33205d7cfd23d943c8aa99b72c81a6e62",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "partial",
+      "reason": "澄清主方向正确，但主动加入福利产假/陪护假资格表述，仅给满三年后怀孕即可30/7天，遗漏完整手册正文首个新生儿和前4季度C/C-绩效限制。此附加政策不完整可误导适用资格。",
+      "factual_checks": [
+        {
+          "finding": "福利年假职级、转正、法定+福利合计10/15/20上限的原文",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "福利年假是指公司M3/P7/T7级及以上员工除享受法定年假政策外依据级别不同给予\n额外的福利年假。员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "公益假4小时、最小1小时及公假全薪等附加政策对应实际来源",
+          "evidence": [
+            {
+              "source_label": "来源7",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "特别给予 4 小时的带薪公益假期，最\n小请假单位为 1 小时，年初自动分配当年有效，未使用部分视为自愿放弃，年底\n清零；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源7",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "12.2 公假属于全薪假。休假期间工资、餐补和全勤奖正常支付。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "欺骗性理由请假属于不诚信行为，附加纪律提示有来源",
+          "evidence": [
+            {
+              "source_label": "来源5",
+              "chunk_id": "p46-0c8bfd37c1",
+              "quote": "10.8 存在弄虚作假、虚报费用等不诚信欺诈行为，包括但不限于：\n10.8.1 提供虚假个人资料；\n10.8.2 以欺骗性理由请假或请病假；",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "手册2018-02-01生效日期不等于确认当下最新版本",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p3-ea5bc5fd17",
+              "quote": "本手册于2018 年2 月1 日起生效",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "实际来源4是福利概览，支持概览中的30/7及180上限，并指向休假管理详细规定",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p29-d2fd640689",
+              "quote": "凡员工或员工配偶于员工入职满三年后怀孕，员工 在子女出生后，可享有公司额外给予的30天福利产假（法定产假与 福利产假累加之和不超过180天，如法定产假已超过180天，以法 定产假为准）或 7 天福利陪护假。详细规定参见本手册休假管理相 关规定。 |  |  | 女员工：30个自然日 男员工： 7个自然日",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [
+        {
+          "scope": "Only for the unsolicited maternity/paternity policy claim, not a required response to the ambiguous user question",
+          "conditions": [
+            "新生儿为员工在职期间首个新生儿",
+            "休相应产假或陪护假前4季度有C或C-不得享福利假"
+          ],
+          "evidence": [
+            {
+              "source_label": null,
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            },
+            {
+              "source_label": null,
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            },
+            {
+              "source_label": null,
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "公司补充福利陪产假是指，男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿，则该员工可在享受法定陪护假后，额外增加 7 个自\n然日的福利陪护假。员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            }
+          ]
+        }
+      ],
+      "unsupported_assertions": [
+        {
+          "type": "potential_scope_misreading",
+          "assertion": "福利年假按级别年度上限为10/15/20天",
+          "reason": "该段省略法定年假和福利年假合计上限措辞，与前述额外福利一起阅读易误认为额外福利额度。记录范围表达不清；不单独认定其明确断言额外10/15/20天。",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "citation_issues": [
+        {
+          "type": "scope_limited_support",
+          "source_label": "来源4",
+          "chunk_id": "p29-d2fd640689",
+          "reason": "来源4概览可支持所复述的概览事实，因此不记错号/局部无依据；它未包含完整资格，不能证明满三年后怀孕单独充分。正确性按冻结全文限制另行记partial，不能称实际输入faithfulness失败。"
+        }
+      ],
+      "clarification_review": {
+        "required": [
+          "所指假期类型或请假事由"
+        ],
+        "met": true,
+        "observed": "首要问题均询问哪一种假/事项；职级、工龄等后续条件尚未明确假种，并非首轮正确性的强制要求。"
+      },
+      "usability_notes": [
+        "在假种未知时仍展开多段政策并一次索取多类个人信息，回复偏长；合理第一步可以只询问假种/事由。此项只评可用性，不自行扣核心澄清正确性。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 8,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已展开的年假/公益假/公假/生效日期等引用标签与实际片段对应。"
+    },
+    {
+      "dataset": "development36",
+      "qid": "C-A01",
+      "blind_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "d8012db58b9057589d869c242147618b24340949c54212786990815c6a4157f2",
+      "reviewer_type": "independent_Codex_source_review",
+      "correctness_grade": "partial",
+      "reason": "澄清主方向正确，但主动加入福利产假/陪护假资格表述，仅给满三年后怀孕即可30/7天，遗漏完整手册正文首个新生儿和前4季度C/C-绩效限制。此附加政策不完整可误导适用资格。",
+      "factual_checks": [
+        {
+          "finding": "福利年假职级、转正、法定+福利合计10/15/20上限的原文",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "福利年假是指公司M3/P7/T7级及以上员工除享受法定年假政策外依据级别不同给予\n额外的福利年假。员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "公益假4小时、最小1小时及公假全薪等附加政策对应实际来源",
+          "evidence": [
+            {
+              "source_label": "来源7",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "特别给予 4 小时的带薪公益假期，最\n小请假单位为 1 小时，年初自动分配当年有效，未使用部分视为自愿放弃，年底\n清零；",
+              "admitted": true
+            },
+            {
+              "source_label": "来源7",
+              "chunk_id": "p25-64fe3a97a0",
+              "quote": "12.2 公假属于全薪假。休假期间工资、餐补和全勤奖正常支付。",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "欺骗性理由请假属于不诚信行为，附加纪律提示有来源",
+          "evidence": [
+            {
+              "source_label": "来源5",
+              "chunk_id": "p46-0c8bfd37c1",
+              "quote": "10.8 存在弄虚作假、虚报费用等不诚信欺诈行为，包括但不限于：\n10.8.1 提供虚假个人资料；\n10.8.2 以欺骗性理由请假或请病假；",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "手册2018-02-01生效日期不等于确认当下最新版本",
+          "evidence": [
+            {
+              "source_label": "来源2",
+              "chunk_id": "p3-ea5bc5fd17",
+              "quote": "本手册于2018 年2 月1 日起生效",
+              "admitted": true
+            }
+          ]
+        },
+        {
+          "finding": "实际来源4是福利概览，支持概览中的30/7及180上限，并指向休假管理详细规定",
+          "evidence": [
+            {
+              "source_label": "来源4",
+              "chunk_id": "p29-d2fd640689",
+              "quote": "凡员工或员工配偶于员工入职满三年后怀孕，员工 在子女出生后，可享有公司额外给予的30天福利产假（法定产假与 福利产假累加之和不超过180天，如法定产假已超过180天，以法 定产假为准）或 7 天福利陪护假。详细规定参见本手册休假管理相 关规定。 |  |  | 女员工：30个自然日 男员工： 7个自然日",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "missing_necessary_conditions": [
+        {
+          "scope": "Only for the unsolicited maternity/paternity policy claim, not a required response to the ambiguous user question",
+          "conditions": [
+            "新生儿为员工在职期间首个新生儿",
+            "休相应产假或陪护假前4季度有C或C-不得享福利假"
+          ],
+          "evidence": [
+            {
+              "source_label": null,
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            },
+            {
+              "source_label": null,
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            },
+            {
+              "source_label": null,
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "公司补充福利陪产假是指，男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿，则该员工可在享受法定陪护假后，额外增加 7 个自\n然日的福利陪护假。员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。",
+              "admitted": false,
+              "scope": "Frozen corpus correctness check; not supplied context evidence or generated citation"
+            }
+          ]
+        }
+      ],
+      "unsupported_assertions": [
+        {
+          "type": "potential_scope_misreading",
+          "assertion": "福利年假按级别年度上限为10/15/20天",
+          "reason": "该段省略法定年假和福利年假合计上限措辞，与前述额外福利一起阅读易误认为额外福利额度。记录范围表达不清；不单独认定其明确断言额外10/15/20天。",
+          "evidence": [
+            {
+              "source_label": "来源3",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天，福利年假在转正后方享有。",
+              "admitted": true
+            }
+          ]
+        }
+      ],
+      "citation_issues": [
+        {
+          "type": "scope_limited_support",
+          "source_label": "来源4",
+          "chunk_id": "p29-d2fd640689",
+          "reason": "来源4概览可支持所复述的概览事实，因此不记错号/局部无依据；它未包含完整资格，不能证明满三年后怀孕单独充分。正确性按冻结全文限制另行记partial，不能称实际输入faithfulness失败。"
+        }
+      ],
+      "clarification_review": {
+        "required": [
+          "所指假期类型或请假事由"
+        ],
+        "met": true,
+        "observed": "首要问题均询问哪一种假/事项；职级、工龄等后续条件尚未明确假种，并非首轮正确性的强制要求。"
+      },
+      "usability_notes": [
+        "在假种未知时仍展开多段政策并一次索取多类个人信息，回复偏长；合理第一步可以只询问假种/事由。此项只评可用性，不自行扣核心澄清正确性。"
+      ],
+      "citation_label_validation": {
+        "occurrences": 7,
+        "invalid_labels": [],
+        "conclusion": "All cited labels exist in this blind input."
+      },
+      "citation_conclusion": "已展开的年假/公益假/公假/生效日期等引用标签与实际片段对应。"
+    }
+  ]
+}

@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 
 
-def number(value):
-    return 'NA' if value is None else f'{value:.4f}'
+def number(value, digits=4):
+    return 'NA' if value is None else f'{value:.{digits}f}'
 
 
 def render(folder):
@@ -28,32 +28,40 @@ def render(folder):
         '表中分数均为0–1附近的评分，不是用户准确率；Δ为D−A。答案指标先平均同题成功配对重复，再等权平均题目；Context指标独立按正题每组一次评审。失败、无效评审与无事实回答不记满分。', '']
     for dataset,title in (('original46','原始46题（35道正题）'),('development36','模拟开发36题（9道正题）')):
         result=summary['datasets'][dataset]
-        lines += [f'### {title}','', '| 指标 | A | D | 绝对变化 | 配对题数 |','|---|---:|---:|---:|---:|']
+        lines += [f'### {title}','', '| 指标 | A | D | 绝对变化 | 配对题数 | 有效重复对 | 评分NA对 |','|---|---:|---:|---:|---:|---:|---:|']
         for field,name in (('faithfulness','Faithfulness'),('citation_support_rate','引用支持率'),
             ('context_recall','Context Recall'),('context_precision','Context Precision（AP）'),
             ('factual_f1','Factual F1'),('answer_correctness','Answer Correctness（自定义）'),
             ('bertscore_f1','BERTScore F1'),('semantic_similarity','BGE余弦相似度')):
             context=field.startswith('context_')
             metric=(result['context_evaluation']['paired']['metrics'] if context else result['paired']['positive_metrics'])[field]
-            lines.append(f"| {name} | {number(metric['A']['mean'])} | {number(metric['D']['mean'])} | {number(metric['delta_D_minus_A'])} | {metric['A']['question_count']} |")
+            digits=6 if field=='answer_correctness' else 4
+            runs='—' if context else metric['A']['paired_run_count']
+            na='—' if context else metric['A']['na_pair_count']
+            lines.append(f"| {name} | {number(metric['A']['mean'], digits)} | {number(metric['D']['mean'], digits)} | {number(metric['delta_D_minus_A'], digits)} | {metric['A']['question_count']} | {runs} | {na} |")
         lines += ['', '| 组别 | 计划生成 | 完成 / 失败 / 未执行 | 自动评审等级：正确 / 部分 / 错误 | 全计划行为通过数 |',
             '|---|---:|---|---|---:|']
         for variant in ('A','D'):
             item=result['variants'][variant]
             grades=item['grades']
             lines.append(f"| {variant} | {item['planned_runs']} | {item['complete']} / {item['failed']} / {item['missing']} | {grades['correct']} / {grades['partial']} / {grades['incorrect']}（已评{item['grade_denominator']}） | {item['rubric']['passed']} / {item['planned_runs']} |")
-        lines += ['', '正、负、含糊题的行为等级分开保存于summary的by_kind；上表全体行为通过比例不能直接命名为答案准确率。','']
+        lines += ['', '正、负、含糊题的行为等级分开保存于summary的by_kind；上表全体行为通过比例不能直接命名为答案准确率。重复对/评分NA以双方成功生成为起点：原始35正题105个计划重复对中3对因生成失败排除，剩102对；开发9正题27对均成功。Context每题每组一次，不使用三重复分母。BERT/BGE与Correctness可能使用不同有效配对，不能直接从其总体均值反推组合分数。','']
     lines += ['## 测量完整性及成本','',
         f"计划{audit['planned_runs']}次，记录{audit['recorded_runs']}次，未执行{audit['missing_runs']}次；审计校验了源输入、标签隔离、原始记录、评分公式、NA/分母、用量及时间汇总。审计不替代语义人工裁定。", '',
-        '| 阶段 | 计划单元 | 完成 | 失败 | 未评审的合格单元 | 记录的应用层请求数 | 输入token | 输出token |',
-        '|---|---:|---:|---:|---:|---:|---:|---:|']
+        '| 阶段 | 全计划单元 | 完成 | 失败 | 未评审的合格单元 | 生成失败而不合格 | 记录的应用层请求数 | 输入token | 输出token |',
+        '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
     for kind,item in summary['judge'].items():
         t=item['tokens']
-        lines.append(f"| {kind} | {item['planned']} | {item['complete']} | {item['failed']} | {item['unreviewed_eligible']} | {t['attempt_count']} | {t['prompt_tokens']} | {t['completion_tokens']} |")
+        lines.append(f"| {kind} | {item['planned']} | {item['complete']} | {item['failed']} | {item['unreviewed_eligible']} | {item.get('ineligible_generation_runs', 0)} | {t['attempt_count']} | {t['prompt_tokens']} | {t['completion_tokens']} |")
     legacy=summary.get('legacy_pro_correctness')
     if legacy:
         t=legacy['tokens']
         lines += ['', f"已停止的旧Pro正确性分支另有{legacy['recorded']}份记录（{legacy['complete']}成功、{legacy['failed']}失败），记录请求{t['attempt_count']}次、输入{t['prompt_tokens']} token、输出{t['completion_tokens']} token。这些分数不参与Flash主成绩；以上用量是额外实验成本。"]
+    lines += ['', '| 评审阶段（全部记录，含失败） | 模型 | 单元耗时P50 / P95秒 |',
+              '|---|---|---|']
+    for kind,item in summary['judge'].items():
+        clock=item['timing']
+        lines.append(f"| {kind} | {item.get('model', judge_description)} | {number(clock['p50'])} / {number(clock['p95'])} |")
     lines += ['', '| 数据 / 组 | 生成输入token | 生成输出token | 生成请求数 | 完成生成P50 / P95秒 |',
         '|---|---:|---:|---:|---|']
     for dataset,result in summary['datasets'].items():
@@ -82,11 +90,12 @@ def render(folder):
     failures=[r for r in scored if r['status']!='complete']
     lines += ['## 失败记录','']
     for row in failures:
-        lines.append(f"- {row['dataset']} / {row['qid']} / {row['variant']} / repeat={row['repeat']}：{row['error']}；耗时{row['generation_seconds']:.3f}秒。原始响应/推理/尝试未覆盖。")
+        lines.append(f"- {row['dataset']} / {row['qid']} / {row['variant']} / repeat={row['repeat']}：{row['error']}；耗时{row['generation_seconds']:.3f}秒。原始尝试及已返回的响应/推理均保留，未替换失败记录；未返回用量仍为未知。")
     if not failures: lines.append('无记录的生成失败。')
     lines += ['', '402等服务失败不能归因于排序质量；质量均值仅使用成功配对，失败同时计入全计划完成率。', '',
-        '## 案例复核与推荐结论','',
-        '正式改善/退化案例与推荐判断由来源复核后另行补充；仅凭自动均值不宣称真实用户或回答正确率提升。', '',
+        '## 案例复核与推荐结论','']
+    conclusion=folder/'CONCLUSION.md'
+    lines += [conclusion.read_text(encoding='utf8') if conclusion.exists() else '案例复核与推荐结论尚未完成；此报告为中间结果。', '',
         '原始逐题数据由manifest的source_directories/source_file_sha256定位；各指标内部两组使用同一评审模型，Pro旧正确性结果独立保留，不混入Flash主分数。版本、评分与审计：manifest.json、summary.json、scored_answers.json、verification.json。']
     (folder/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
 

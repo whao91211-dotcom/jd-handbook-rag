@@ -1,0 +1,7 @@
+# 最终生成对照结果
+
+REPORT.md为主报告，CONCLUSION.md为可复现附加结论；manifest定位不可变的原生成/Pro评审和独立Flash正确性journal，scored_answers.json保留逐题三次重复的主评分。summary.json及verification.json分别为汇总和公式/身份审计。
+
+复现：参见 ../GENERATION_FUSION_PROTOCOL.md。离线重新验证可运行 python evaluation/verify_generation_fusion_results.py evaluation/generation_fusion_combined_2026-10-14；失败原因重算可运行 python evaluation/diagnose_generation_judge_failures.py evaluation/generation_fusion_combined_2026-10-14；报告重绘可运行 python evaluation/report_generation_fusion_results.py evaluation/generation_fusion_combined_2026-10-14。
+
+不按已有分数修改参考、生产策略或提示。有效配对均值、NA与全计划生成完成率分别报告，没有人类准确率结论。旧Pro正确性只记额外成本。

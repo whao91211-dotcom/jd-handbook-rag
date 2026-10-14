@@ -65,3 +65,5 @@ python evaluation/report_generation_fusion_results.py evaluation/generation_fusi
 ```
 
 新评审可用 `--resume` 继续未执行单元，已记录失败不会被覆盖。原Pro正确性仍有未执行项属于旧方案，不能在最终报告中把它列为新Flash主评审的缺失。
+
+完整结果见 `generation_fusion_combined_2026-10-14/REPORT.md`。所有489合格单元已执行；452有效、37禁推断检查数组长度失败，不补分。离线原因复现：`python evaluation/diagnose_generation_judge_failures.py evaluation/generation_fusion_combined_2026-10-14`。该脚本只重放固定验证函数，不清洗响应、不覆盖评分。

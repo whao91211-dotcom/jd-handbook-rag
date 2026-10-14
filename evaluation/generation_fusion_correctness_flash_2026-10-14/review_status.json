@@ -1,0 +1,29 @@
+{
+  "schema_version": "correctness-flash-review-v1",
+  "model": "deepseek-flash",
+  "planned": 489,
+  "recorded": 489,
+  "complete": 452,
+  "failed": 37,
+  "missing": 0,
+  "completion_rate": 0.9243353783231084,
+  "tokens": {
+    "attempt_count": 543,
+    "prompt_tokens": 1874598,
+    "prompt_tokens_unknown_attempts": 0,
+    "completion_tokens": 151418,
+    "completion_tokens_unknown_attempts": 0,
+    "reasoning_tokens": 0,
+    "reasoning_tokens_unknown_attempts": 543
+  },
+  "timing": {
+    "count": 489,
+    "mean": 2.266835153170962,
+    "p50": 2.055000199994538,
+    "p95": 3.84346450001467,
+    "total": 1108.4823899006005
+  },
+  "note": "Correctness only; every successful answer, including negative/ambiguous cases. Old Pro correctness is reference/cost data only.",
+  "quality_note": "Generation requested deepseek-v4-flash; correctness requests catalog model deepseek-flash. Endpoint aliases do not establish identical weights or versions. Flash-family generation and judging may have more correlated errors. Source-grounded references are not human gold adjudication.",
+  "stopped_after_fatal_error": false
+}

@@ -1,0 +1,1840 @@
+{
+  "reviewer_type": "independent_Codex_source_review",
+  "reviewed_at_utc": "2026-10-13T16:26:58+00:00",
+  "review_status": "complete",
+  "scope": "original46 P13/P17/P20/P32, supplied blinded X/Y labels, three repetitions each",
+  "inputs_file": ".superpowers/generation-eval/blinded_case_review_inputs.json",
+  "inputs_file_sha256": "1d6619b65cb95be475e08e58e24d8db3e04cc0cdd5ab2c9bc4e898f31a937211",
+  "checked_questions": 4,
+  "checked_records": 24,
+  "successful_answers_reviewed": 23,
+  "failed_not_scored": 1,
+  "protocol": {
+    "mapping_file_read": false,
+    "Pro_reviews_read": false,
+    "API_or_model_calls": false,
+    "reference_or_runtime_changed": false,
+    "user_adjudicated_gold": false,
+    "formal_automatic_scores_overridden": false,
+    "note": "Codex逐条来源核对，非用户人工金标，不覆盖正式自动评分。参考标注在生成前已经冻结；本代理曾参与原始46题参考标注，因此本次复核独立于Pro评分，但并非参考标注作者之外的独立审查。正确性与局部引用支持分别记录；只依据供给输入的证据，未检查现行法律政策。"
+  },
+  "summary": {
+    "core_correctness_counts": {
+      "correct": 23,
+      "partial": 0,
+      "incorrect": 0,
+      "not_scored": 1
+    },
+    "answers_with_citation_issues": [
+      {
+        "qid": "P13",
+        "blinded_variant": "Y",
+        "repeat": 2
+      },
+      {
+        "qid": "P17",
+        "blinded_variant": "Y",
+        "repeat": 0
+      },
+      {
+        "qid": "P17",
+        "blinded_variant": "Y",
+        "repeat": 1
+      }
+    ],
+    "main_differences": [
+      "成功回答的核心事实与必要条件两盲组均齐备；这4题的定性复核不能证明总体正确性增益。",
+      "局部标签支持问题出现在P17/Y/0、P17/Y/1和P13/Y/2；均为有实际证据支持的可选背景事实，区别于核心回答错误。",
+      "P20/Y/0生成失败，标not_scored；成功答案质量比较不把失败当成功正确，也不以失败答案填零。",
+      "P13/P17/P20成功答案普遍扩展大量背景和澄清；没有个人日期、绩效或工龄资料时均未虚构最终个人天数。"
+    ]
+  },
+  "answers": [
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blinded_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "45a4c99921d16850f998b8a1798601b20510352eea39e918d65d94d1aa00d3a2",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "全薪福利病假按当年度本公司正式服务时间÷365×5天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+            }
+          ]
+        },
+        {
+          "text": "半薪福利病假按当年度本公司正式服务时间÷365×55天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+            }
+          ]
+        },
+        {
+          "text": "不足0.5天不计算，大于0.5且小于1天按0.5天计算；答案未替未知边界补造规则。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+            }
+          ]
+        },
+        {
+          "text": "答案额外提示全薪福利病假转正后享有及未用福利病假年底清零，实际资料支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p22-8f3ddee8c0",
+              "quote": "员工转正后方可享受全薪福利病假天数，员工在每一自然年度未使用的福利病假天数将在年\n底清零，不得结转至下一年度。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的年度5天/60天薪酬分段及地方较高标准有证据支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪（不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+            },
+            {
+              "label": "来源7",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blinded_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "407f2833af3c62bc75238e59403e26c7c2c3044c936d2362f2645aff67f50a84",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "全薪福利病假按当年度本公司正式服务时间÷365×5天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+            }
+          ]
+        },
+        {
+          "text": "半薪福利病假按当年度本公司正式服务时间÷365×55天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+            }
+          ]
+        },
+        {
+          "text": "不足0.5天不计算，大于0.5且小于1天按0.5天计算；答案未替未知边界补造规则。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+            }
+          ]
+        },
+        {
+          "text": "答案额外提示全薪福利病假转正后享有及未用福利病假年底清零，实际资料支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p22-8f3ddee8c0",
+              "quote": "员工转正后方可享受全薪福利病假天数，员工在每一自然年度未使用的福利病假天数将在年\n底清零，不得结转至下一年度。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的年度5天/60天薪酬分段及地方较高标准有证据支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪（不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+            },
+            {
+              "label": "来源7",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blinded_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "a2c149b310152c46043c4f3a057ffeae011f260d833215263d1bc579b12a6f5b",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "全薪福利病假按当年度本公司正式服务时间÷365×5天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+            }
+          ]
+        },
+        {
+          "text": "半薪福利病假按当年度本公司正式服务时间÷365×55天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+            }
+          ]
+        },
+        {
+          "text": "不足0.5天不计算，大于0.5且小于1天按0.5天计算；答案未替未知边界补造规则。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+            }
+          ]
+        },
+        {
+          "text": "答案额外提示全薪福利病假转正后享有及未用福利病假年底清零，实际资料支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p22-8f3ddee8c0",
+              "quote": "员工转正后方可享受全薪福利病假天数，员工在每一自然年度未使用的福利病假天数将在年\n底清零，不得结转至下一年度。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的年度5天/60天薪酬分段及地方较高标准有证据支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪（不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+            },
+            {
+              "label": "来源7",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blinded_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "58cb79bb1a782b9497beb89ea6c2ac85b38854f78e16f53826fafadf033dc1e6",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "全薪福利病假按当年度本公司正式服务时间÷365×5天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+            }
+          ]
+        },
+        {
+          "text": "半薪福利病假按当年度本公司正式服务时间÷365×55天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+            }
+          ]
+        },
+        {
+          "text": "不足0.5天不计算，大于0.5且小于1天按0.5天计算；答案未替未知边界补造规则。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+            }
+          ]
+        },
+        {
+          "text": "答案额外提示全薪福利病假转正后享有及未用福利病假年底清零，实际资料支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p22-8f3ddee8c0",
+              "quote": "员工转正后方可享受全薪福利病假天数，员工在每一自然年度未使用的福利病假天数将在年\n底清零，不得结转至下一年度。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的年度5天/60天薪酬分段及地方较高标准有证据支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源5",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪（不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blinded_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "c3832b976304619f98936af3401bd8ff967f51aab914e09d77932982674ddad2",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "全薪福利病假按当年度本公司正式服务时间÷365×5天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+            }
+          ]
+        },
+        {
+          "text": "半薪福利病假按当年度本公司正式服务时间÷365×55天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+            }
+          ]
+        },
+        {
+          "text": "不足0.5天不计算，大于0.5且小于1天按0.5天计算；答案未替未知边界补造规则。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+            }
+          ]
+        },
+        {
+          "text": "答案额外提示全薪福利病假转正后享有及未用福利病假年底清零，实际资料支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p22-8f3ddee8c0",
+              "quote": "员工转正后方可享受全薪福利病假天数，员工在每一自然年度未使用的福利病假天数将在年\n底清零，不得结转至下一年度。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的年度5天/60天薪酬分段及地方较高标准有证据支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源5",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪（不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P13",
+      "question": "我今年入职不满一年，病假天数怎么折算？",
+      "blinded_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "d82f4e3945f8103b408160f98ec9a65deefd611bf59ca72eab83d5d814ccb68f",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "全薪福利病假按当年度本公司正式服务时间÷365×5天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的全薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*5 天"
+            }
+          ]
+        },
+        {
+          "text": "半薪福利病假按当年度本公司正式服务时间÷365×55天折算。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "当年可享受的半薪福利病假天数为=（当年度在本公司正式服务时间/ 365 天）*55 天；"
+            }
+          ]
+        },
+        {
+          "text": "不足0.5天不计算，大于0.5且小于1天按0.5天计算；答案未替未知边界补造规则。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p21-88de6db287",
+              "quote": "折算后不足 0.5 天\n的不予计算，大于 0.5天小于1 天按 0.5 天计算"
+            }
+          ]
+        },
+        {
+          "text": "答案额外提示全薪福利病假转正后享有及未用福利病假年底清零，实际资料支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p22-8f3ddee8c0",
+              "quote": "员工转正后方可享受全薪福利病假天数，员工在每一自然年度未使用的福利病假天数将在年\n底清零，不得结转至下一年度。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的年度5天/60天薪酬分段及地方较高标准有证据支持。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源5",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "每个自然年度内 5 天以上 60 天以内的病假按照月薪标准的 50%发放日薪（不得低于\n当地最低工资标准的 80%），同时扣除相应的全勤奖和餐补。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p23-2435daf3ec",
+              "quote": "如地方法规与本手册就员工病假薪酬标准的规定存在差异，按照较高标准执行。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [
+        {
+          "severity": "minor",
+          "type": "supporting_clause_not_in_cited_labels",
+          "answer_statement": "公司有权要求补充证明或到指定医院复诊〔来源3〕。",
+          "cited_labels": [
+            "来源3"
+          ],
+          "reason": "来源3支持额外证明材料及就诊/指定医院证明，不直接载有要求到指定医院检查或复诊的行为。直接复诊条款在实际输入来源5；该事实真实且上下文可支持，但这处标签指向不充分。",
+          "direct_support": [
+            {
+              "label": "来源5",
+              "chunk_id": "p22-3579d5cfe2",
+              "quote": "并要求员工到指定医院进行健康\n检查或复诊。"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blinded_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "d42368892d5eb0f1001e63e6f9347ca576eb59ef2bda7ab6a27a456bfeb2d9b9",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "女员工须司龄满三年后怀孕，且为员工在职期间首个新生儿；法定产假后额外30个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "额外增加 30 个自然日的福利产假"
+            }
+          ]
+        },
+        {
+          "text": "男员工须司龄满三年后配偶怀孕生子，且为在职首个新生儿；法定陪护假后额外7个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "额外增加 7 个自\n然日的福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "相应休假前4个季度有C或C-绩效，不享有福利产假或福利陪护假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+            },
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "法定与福利产假合计不超180天，法定产假已超180天时以法定产假为准。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的产假/陪护假带薪扣减福利性质与正常工资、扣餐补全勤奖的事实真实；具体引用支持另行检查。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源3",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blinded_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "02a314f3973dcc7c4d29a171365e6aed409fd97d7ad5ddf5cd840330936e58b7",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "女员工须司龄满三年后怀孕，且为员工在职期间首个新生儿；法定产假后额外30个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "额外增加 30 个自然日的福利产假"
+            }
+          ]
+        },
+        {
+          "text": "男员工须司龄满三年后配偶怀孕生子，且为在职首个新生儿；法定陪护假后额外7个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "额外增加 7 个自\n然日的福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "相应休假前4个季度有C或C-绩效，不享有福利产假或福利陪护假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+            },
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "法定与福利产假合计不超180天，法定产假已超180天时以法定产假为准。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的产假/陪护假带薪扣减福利性质与正常工资、扣餐补全勤奖的事实真实；具体引用支持另行检查。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源3",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blinded_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "7096264096101d57d81596805b404c04f6b92e7ca52525861c56e1f21f78c0cc",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "女员工须司龄满三年后怀孕，且为员工在职期间首个新生儿；法定产假后额外30个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "额外增加 30 个自然日的福利产假"
+            }
+          ]
+        },
+        {
+          "text": "男员工须司龄满三年后配偶怀孕生子，且为在职首个新生儿；法定陪护假后额外7个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "额外增加 7 个自\n然日的福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "相应休假前4个季度有C或C-绩效，不享有福利产假或福利陪护假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+            },
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "法定与福利产假合计不超180天，法定产假已超180天时以法定产假为准。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源4",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的产假/陪护假带薪扣减福利性质与正常工资、扣餐补全勤奖的事实真实；具体引用支持另行检查。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源3",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blinded_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "e5995633956bdabd698c4fba7a3c2edf66e35a4333610724b361281ef0b10aa0",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "女员工须司龄满三年后怀孕，且为员工在职期间首个新生儿；法定产假后额外30个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "额外增加 30 个自然日的福利产假"
+            }
+          ]
+        },
+        {
+          "text": "男员工须司龄满三年后配偶怀孕生子，且为在职首个新生儿；法定陪护假后额外7个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "额外增加 7 个自\n然日的福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "相应休假前4个季度有C或C-绩效，不享有福利产假或福利陪护假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+            },
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "法定与福利产假合计不超180天，法定产假已超180天时以法定产假为准。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的产假/陪护假带薪扣减福利性质与正常工资、扣餐补全勤奖的事实真实；具体引用支持另行检查。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [
+        {
+          "severity": "minor",
+          "type": "supporting_clause_not_in_cited_labels",
+          "answer_statement": "上述产假、陪护假均属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖〔来源4〕〔来源5〕。",
+          "cited_labels": [
+            "来源4",
+            "来源5"
+          ],
+          "reason": "这组引用支持陪护假薪酬或一般假别定义，但没有直接支持产假正常工资及扣餐补全勤的专门规定。一般带薪扣减福利假工资可能为100%或一定比例，不能单独证明产假这里为正常工资。事实本身在实际输入来源2有直接依据，故不是无来源的政策断言。",
+          "direct_support": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blinded_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "8c4bda15e8d72b938cebd06ace6d7f93ce2c3676e3545532d3c249cd5deb8b34",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "女员工须司龄满三年后怀孕，且为员工在职期间首个新生儿；法定产假后额外30个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "额外增加 30 个自然日的福利产假"
+            }
+          ]
+        },
+        {
+          "text": "男员工须司龄满三年后配偶怀孕生子，且为在职首个新生儿；法定陪护假后额外7个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "额外增加 7 个自\n然日的福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "相应休假前4个季度有C或C-绩效，不享有福利产假或福利陪护假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+            },
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "法定与福利产假合计不超180天，法定产假已超180天时以法定产假为准。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的产假/陪护假带薪扣减福利性质与正常工资、扣餐补全勤奖的事实真实；具体引用支持另行检查。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [
+        {
+          "severity": "minor",
+          "type": "supporting_clause_not_in_cited_labels",
+          "answer_statement": "产假、陪护假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。〔来源3〕〔来源4〕",
+          "cited_labels": [
+            "来源3",
+            "来源4"
+          ],
+          "reason": "这组引用支持陪护假薪酬或一般假别定义，但没有直接支持产假正常工资及扣餐补全勤的专门规定。一般带薪扣减福利假工资可能为100%或一定比例，不能单独证明产假这里为正常工资。事实本身在实际输入来源2有直接依据，故不是无来源的政策断言。",
+          "direct_support": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P17",
+      "question": "入职满三年后怀孕，能享多少天福利产假或陪护假？",
+      "blinded_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "84e8ec465cff72798eb8a031e566574e1d6fc5e2b22c62759acb449e63aac079",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "女员工须司龄满三年后怀孕，且为员工在职期间首个新生儿；法定产假后额外30个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "公司补充福利产假是指自员工司龄满三年后怀孕，且该新\n生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "额外增加 30 个自然日的福利产假"
+            }
+          ]
+        },
+        {
+          "text": "男员工须司龄满三年后配偶怀孕生子，且为在职首个新生儿；法定陪护假后额外7个自然日。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "男员工司龄满三年后其配偶怀孕生子，且\n该新生儿为员工在职期间的首个新生儿"
+            },
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "额外增加 7 个自\n然日的福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "相应休假前4个季度有C或C-绩效，不享有福利产假或福利陪护假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "员工休产假前 4 个季度绩效有C 或C-，则不得享有福利产假。"
+            },
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "员工休陪护假前 4 个季度绩效有 C 或 C-，则不得享有福利陪护假。"
+            }
+          ]
+        },
+        {
+          "text": "法定与福利产假合计不超180天，法定产假已超180天时以法定产假为准。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源3",
+              "chunk_id": "p24-3e46efee64",
+              "quote": "法定产假与福\n利产假累加之和不超过 180 天（如法定产假已超过 180 天，以法定产假为准）。"
+            }
+          ]
+        },
+        {
+          "text": "扩展的产假/陪护假带薪扣减福利性质与正常工资、扣餐补全勤奖的事实真实；具体引用支持另行检查。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p24-7893cf4f6d",
+              "quote": "产假属带薪扣减福利假，休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            },
+            {
+              "label": "来源4",
+              "chunk_id": "p25-a584b8e997",
+              "quote": "陪护假属带薪扣减福利假。休假期间正常支付工资，不支付相应餐补和全勤奖。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blinded_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "7b73dc00a4935fcc716076ac070304888ab0d9e57ad834d2e8d3daf24732c173",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "M3及P7/T7级别及以上员工通过试用期转正后享福利年假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "M3 及 P7/T7 级别及以上员工在试用期通过转正后，可享有福利年 假。"
+            }
+          ]
+        },
+        {
+          "text": "当年福利年假按转正日折算；没有虚构独立福利年假公式或个人具体天数。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "福利年假按转正日折算当年应享有天数"
+            }
+          ]
+        },
+        {
+          "text": "各职级10/15/20天为法定加福利年假的合计上限，答案没有将10天误作额外福利额度。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天"
+            }
+          ]
+        },
+        {
+          "text": "额外说明离职时未休福利年假不补偿及通用年休假折算，实际资料支持；这些不是本题必须补齐的细节。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "离职时未使用的福利 年假不予补偿。"
+            },
+            {
+              "label": "来源6",
+              "chunk_id": "p23-27249d61bf",
+              "quote": "本年度在本单位剩余日历天数除以 365 日乘以当年应享受的年休假标准\n天数"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blinded_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "1e426d4cccdad92c6008482ed737b65823886ebfcf937eaeaba9ba1a99941075",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "M3及P7/T7级别及以上员工通过试用期转正后享福利年假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "M3 及 P7/T7 级别及以上员工在试用期通过转正后，可享有福利年 假。"
+            }
+          ]
+        },
+        {
+          "text": "当年福利年假按转正日折算；没有虚构独立福利年假公式或个人具体天数。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "福利年假按转正日折算当年应享有天数"
+            }
+          ]
+        },
+        {
+          "text": "各职级10/15/20天为法定加福利年假的合计上限，答案没有将10天误作额外福利额度。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天"
+            }
+          ]
+        },
+        {
+          "text": "额外说明离职时未休福利年假不补偿及通用年休假折算，实际资料支持；这些不是本题必须补齐的细节。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "离职时未使用的福利 年假不予补偿。"
+            },
+            {
+              "label": "来源6",
+              "chunk_id": "p23-27249d61bf",
+              "quote": "本年度在本单位剩余日历天数除以 365 日乘以当年应享受的年休假标准\n天数"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blinded_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "f99a613dc18c90418403d4e25a849f2eabe5383957426196e4222ec57f1a5a96",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "M3及P7/T7级别及以上员工通过试用期转正后享福利年假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "M3 及 P7/T7 级别及以上员工在试用期通过转正后，可享有福利年 假。"
+            }
+          ]
+        },
+        {
+          "text": "当年福利年假按转正日折算；没有虚构独立福利年假公式或个人具体天数。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "福利年假按转正日折算当年应享有天数"
+            }
+          ]
+        },
+        {
+          "text": "各职级10/15/20天为法定加福利年假的合计上限，答案没有将10天误作额外福利额度。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天"
+            }
+          ]
+        },
+        {
+          "text": "额外说明离职时未休福利年假不补偿及通用年休假折算，实际资料支持；这些不是本题必须补齐的细节。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "离职时未使用的福利 年假不予补偿。"
+            },
+            {
+              "label": "来源6",
+              "chunk_id": "p23-27249d61bf",
+              "quote": "本年度在本单位剩余日历天数除以 365 日乘以当年应享受的年休假标准\n天数"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blinded_variant": "Y",
+      "repeat": 0,
+      "generation_status": "failed",
+      "answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "correctness_grade": "not_scored",
+      "supported_facts": [],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [],
+      "reason": "生成失败且没有成功回答，不进行事实或正确性评分。",
+      "generation_error": {
+        "status_code": null,
+        "type": "EmptyGenerationError"
+      }
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blinded_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "2ca5bd8b2ac7efb182ba0e8843460ace99cf0fb6750d9313c639a65990fc1f68",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "M3及P7/T7级别及以上员工通过试用期转正后享福利年假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "M3 及 P7/T7 级别及以上员工在试用期通过转正后，可享有福利年 假。"
+            }
+          ]
+        },
+        {
+          "text": "当年福利年假按转正日折算；没有虚构独立福利年假公式或个人具体天数。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "福利年假按转正日折算当年应享有天数"
+            }
+          ]
+        },
+        {
+          "text": "各职级10/15/20天为法定加福利年假的合计上限，答案没有将10天误作额外福利额度。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天"
+            }
+          ]
+        },
+        {
+          "text": "额外说明离职时未休福利年假不补偿及通用年休假折算，实际资料支持；这些不是本题必须补齐的细节。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "离职时未使用的福利 年假不予补偿。"
+            },
+            {
+              "label": "来源6",
+              "chunk_id": "p23-27249d61bf",
+              "quote": "本年度在本单位剩余日历天数除以 365 日乘以当年应享受的年休假标准\n天数"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P20",
+      "question": "M3及P7/T7级转正后福利年假怎么算？",
+      "blinded_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "42e65b82532109a75ce832dd97755a8385920dc6ea0fae21b9c2d71d0067e5c3",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "M3及P7/T7级别及以上员工通过试用期转正后享福利年假。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "M3 及 P7/T7 级别及以上员工在试用期通过转正后，可享有福利年 假。"
+            }
+          ]
+        },
+        {
+          "text": "当年福利年假按转正日折算；没有虚构独立福利年假公式或个人具体天数。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "福利年假按转正日折算当年应享有天数"
+            }
+          ]
+        },
+        {
+          "text": "各职级10/15/20天为法定加福利年假的合计上限，答案没有将10天误作额外福利额度。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p23-77b2224c12",
+              "quote": "员工当年享受法定年假和福利年假受最高上限限制，M3/P7/T7 级\n及以上年度上限 10 天，M4/P9/T9 级年度上限15 天，M5/P12/T12 级及以上年度上\n限20 天"
+            }
+          ]
+        },
+        {
+          "text": "额外说明离职时未休福利年假不补偿及通用年休假折算，实际资料支持；这些不是本题必须补齐的细节。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源2",
+              "chunk_id": "p30-d8fe59b41b",
+              "quote": "离职时未使用的福利 年假不予补偿。"
+            },
+            {
+              "label": "来源6",
+              "chunk_id": "p23-27249d61bf",
+              "quote": "本年度在本单位剩余日历天数除以 365 日乘以当年应享受的年休假标准\n天数"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "答案扩展了薪酬、法定假、年假或申请材料等背景，篇幅明显超过所问核心；未把这些可选背景的缺失作为必要事实遗漏，也未因篇幅长给加分。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blinded_variant": "Y",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "727785c35c63eade31061ae745b17468d165c2ca197efdc8a3635433c65fe546",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "查看下属考勤和绩效的明确模块为下属信息，包含打卡与汇总考勤、价值观和绩效。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+            }
+          ]
+        },
+        {
+          "text": "系统访问地址ssc.jd.com。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "1.5.1 访问地址：ssc.jd.com"
+            }
+          ]
+        },
+        {
+          "text": "另有绩效管理模块，包含管理者绩效管理、员工绩效管理、绩效沟通和反馈；答案未把其混同为下属考勤入口。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "绩效管理：管理者绩效管理、员工绩效管理、绩效沟通和反馈等。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blinded_variant": "Y",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "fcca5ea70e2f96ced54e9e2dc6ca6604fef3dbad20238962e211826e03cda624",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "查看下属考勤和绩效的明确模块为下属信息，包含打卡与汇总考勤、价值观和绩效。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+            }
+          ]
+        },
+        {
+          "text": "系统访问地址ssc.jd.com。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "1.5.1 访问地址：ssc.jd.com"
+            }
+          ]
+        },
+        {
+          "text": "另有绩效管理模块，包含管理者绩效管理、员工绩效管理、绩效沟通和反馈；答案未把其混同为下属考勤入口。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "绩效管理：管理者绩效管理、员工绩效管理、绩效沟通和反馈等。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blinded_variant": "Y",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "ef9feca39e081078c7b9767bfbe157e6345dd3feb6a76e3f1ea862a0ed8f6d8d",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "查看下属考勤和绩效的明确模块为下属信息，包含打卡与汇总考勤、价值观和绩效。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+            }
+          ]
+        },
+        {
+          "text": "系统访问地址ssc.jd.com。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "1.5.1 访问地址：ssc.jd.com"
+            }
+          ]
+        },
+        {
+          "text": "另有绩效管理模块，包含管理者绩效管理、员工绩效管理、绩效沟通和反馈；答案未把其混同为下属考勤入口。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "绩效管理：管理者绩效管理、员工绩效管理、绩效沟通和反馈等。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blinded_variant": "X",
+      "repeat": 0,
+      "generation_status": "complete",
+      "answer_sha256": "ce4cc15d4302cb246e7bbcbfbb75242f12dc61fe93073c27bd5d557a52b62aaf",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "查看下属考勤和绩效的明确模块为下属信息，包含打卡与汇总考勤、价值观和绩效。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+            }
+          ]
+        },
+        {
+          "text": "系统访问地址ssc.jd.com。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "1.5.1 访问地址：ssc.jd.com"
+            }
+          ]
+        },
+        {
+          "text": "另有绩效管理模块，包含管理者绩效管理、员工绩效管理、绩效沟通和反馈；答案未把其混同为下属考勤入口。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "绩效管理：管理者绩效管理、员工绩效管理、绩效沟通和反馈等。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [
+        "“具备管理者权限为前提”可按管理者角色范围理解；材料未列具体权限开通步骤，不将此句当作已证明某种独立权限配置流程。未影响本题核心入口回答。"
+      ],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blinded_variant": "X",
+      "repeat": 1,
+      "generation_status": "complete",
+      "answer_sha256": "a8a362d770cd1c8fe0e10143a9a0d019106324b828852c1507aba7758fb6fbe0",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "查看下属考勤和绩效的明确模块为下属信息，包含打卡与汇总考勤、价值观和绩效。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+            }
+          ]
+        },
+        {
+          "text": "系统访问地址ssc.jd.com。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "1.5.1 访问地址：ssc.jd.com"
+            }
+          ]
+        },
+        {
+          "text": "另有绩效管理模块，包含管理者绩效管理、员工绩效管理、绩效沟通和反馈；答案未把其混同为下属考勤入口。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "绩效管理：管理者绩效管理、员工绩效管理、绩效沟通和反馈等。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    },
+    {
+      "dataset": "original46",
+      "qid": "P32",
+      "question": "管理者想看下属考勤和绩效在哪个模块？",
+      "blinded_variant": "X",
+      "repeat": 2,
+      "generation_status": "complete",
+      "answer_sha256": "17e9c69573661a2de877bd60e3f59ffaa8e7115ea88b31b7c9c1cdc42681613a",
+      "correctness_grade": "correct",
+      "supported_facts": [
+        {
+          "text": "查看下属考勤和绩效的明确模块为下属信息，包含打卡与汇总考勤、价值观和绩效。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "下属信息：管理者对下属人员的信息查看，包括下属基本信息、考勤信息（包括打卡及\n汇总信息）、价值观信息、绩效信息。"
+            }
+          ]
+        },
+        {
+          "text": "系统访问地址ssc.jd.com。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "1.5.1 访问地址：ssc.jd.com"
+            }
+          ]
+        },
+        {
+          "text": "另有绩效管理模块，包含管理者绩效管理、员工绩效管理、绩效沟通和反馈；答案未把其混同为下属考勤入口。",
+          "assessment": "supported_by_actual_context",
+          "evidence": [
+            {
+              "label": "来源1",
+              "chunk_id": "p48-ad656e286d",
+              "quote": "绩效管理：管理者绩效管理、员工绩效管理、绩效沟通和反馈等。"
+            }
+          ]
+        }
+      ],
+      "necessary_condition_omissions": [],
+      "unsupported_assertions": [],
+      "citation_issues": [],
+      "observations": [],
+      "reason": "核心回答及必要条件齐备，实际输入证据支持，没有虚构个人天数；局部引用问题作为独立维度记录。",
+      "invalid_citation_labels": []
+    }
+  ]
+}
