@@ -74,11 +74,41 @@ def validate_scored_sources(row, key, reviews, supplements):
         assert row.get('semantic_similarity') is None and row.get('bertscore_f1') is None
 
 
+def resolve_sources(folder, manifest):
+    model_map=manifest['judge'].get('models_by_metric')
+    if not model_map:
+        return dict(generation=folder,models={name:manifest['judge']['model'] for name in
+            ('context','faithfulness','correctness')},review_paths={name:folder/f'{name}_reviews.jsonl'
+            for name in ('context','faithfulness','correctness')})
+    assert model_map=={'context':'deepseek-v4-pro','faithfulness':'deepseek-v4-pro',
+                      'correctness':'deepseek-flash'}, 'Unexpected per-metric model protocol'
+    directories=manifest['source_directories']
+    assert set(directories)=={'generation','correctness'}
+    generation=(ROOT/directories['generation']).resolve()
+    correctness=(ROOT/directories['correctness']).resolve()
+    parent=json.loads((generation/'manifest.json').read_text(encoding='utf8'))
+    for name in ('code_sha256','reference_sha256','source_sha256','selected_cases','repeats',
+                 'case_counts','generator'):
+        assert manifest[name]==parent[name], f'Inherited generation identity changed: {name}'
+    required={generation/name for name in ('answers.jsonl','manifest.json','context_reviews.jsonl',
+        'faithfulness_reviews.jsonl','supplemental_metrics.jsonl','semantic_manifest.json','correctness_reviews.jsonl')}
+    required|={correctness/'manifest.json',correctness/'correctness_reviews.jsonl'}
+    hashes=manifest['source_file_sha256']
+    assert required<={(ROOT/name).resolve() for name in hashes}, 'Incomplete metric provenance'
+    for name,expected in hashes.items():
+        assert runner.file_hash(ROOT/name)==expected, f'Metric source changed: {name}'
+    return dict(generation=generation,models=model_map,review_paths={
+        'context':generation/'context_reviews.jsonl','faithfulness':generation/'faithfulness_reviews.jsonl',
+        'correctness':correctness/'correctness_reviews.jsonl'})
+
+
 def verify(folder):
     manifest = json.loads((folder/'manifest.json').read_text(encoding='utf8'))
+    sources=resolve_sources(folder,manifest)
+    generation=sources['generation']
     args = argparse.Namespace(source_dir=ROOT/'evaluation/guard_fusion_experiment_2026-10-13',
         references_dir=ROOT/'evaluation/generation_fusion_references_v1',
-        judge_model=manifest['judge']['model'])
+        judge_model=sources['models']['context'])
     runner.assert_frozen_inputs(manifest, args)
     for name, expected in manifest['code_sha256'].items():
         assert runner.file_hash(ROOT/name) == expected, f'Code changed: {name}'
@@ -86,7 +116,7 @@ def verify(folder):
     refs, hashes = runner.load_references(args.references_dir, chunks)
     selected = {tuple(k) for k in manifest['selected_cases']}
     cases = [r for r in all_cases if (r['dataset'], r['qid']) in selected]
-    answers = runner.read_keyed(folder/'answers.jsonl')
+    answers = runner.read_keyed(generation/'answers.jsonl')
     runner.validate_existing_answers(answers, cases, chunks, manifest['repeats'], manifest['generator']['model'])
     scheduled = {(r['dataset'], r['qid'], r['variant'], repeat)
                  for r in cases for repeat in range(manifest['repeats'])}
@@ -106,14 +136,15 @@ def verify(folder):
             assert request['extra_body']=={'thinking':{'type':'enabled'}}
             assert runner.value_hash(request)==attempt['request_sha256']
         peer = answers.get((key[0], key[1], 'D' if key[2]=='A' else 'A', key[3]))
-        if peer and key[2] == row['execution_order'][0]:
+        if peer and len(row['execution_order'])==2 and key[2] == row['execution_order'][0]:
             assert row['completed_at_utc'] <= peer['started_at_utc'], 'Pair did not run sequentially'
     reviews = {}
     complete = [r for r in answers.values() if r['status']=='complete']
     for kind in ('context', 'faithfulness', 'correctness'):
-        records = runner.read_keyed(folder/f'{kind}_reviews.jsonl', include_repeat=kind!='context')
+        records = runner.read_keyed(sources['review_paths'][kind], include_repeat=kind!='context')
+        kind_args=argparse.Namespace(judge_model=sources['models'][kind])
         runner.validate_existing_reviews(records, kind,
-            list(prepared.values()) if kind=='context' else complete, refs, args)
+            list(prepared.values()) if kind=='context' else complete, refs, kind_args)
         for key, row in records.items():
             payload = json.loads(row['messages'][1]['content'])
             allowed = {'question', 'answer', 'contexts'} if kind=='faithfulness' else (
@@ -141,8 +172,8 @@ def verify(folder):
                 positions = [i+1 for i,v in enumerate(relevant) if v]
                 close(score['context_precision'], sum(j/i for j,i in enumerate(positions,1))/len(positions) if positions else 0.)
         reviews[kind] = records
-    supplements, semantic = runner.load_supplemental(folder/'supplemental_metrics.jsonl', answers, refs, manifest,
-                                                      folder/'answers.jsonl')
+    supplements, semantic = runner.load_supplemental(generation/'supplemental_metrics.jsonl', answers, refs, manifest,
+                                                      generation/'answers.jsonl')
     scored = json.loads((folder/'scored_answers.json').read_text(encoding='utf8'))
     summary = json.loads((folder/'summary.json').read_text(encoding='utf8'))
     assert len(scored)==len({runner.metrics.row_key(r) for r in scored}), 'Duplicate scored keys'
@@ -164,6 +195,8 @@ def verify(folder):
     assert summary['semantic_manifest']==semantic
     for kind, records in reviews.items():
         stored=summary['judge'][kind]
+        if manifest['judge'].get('models_by_metric'):
+            assert stored['model']==sources['models'][kind]
         planned=len(cases)*(1 if kind=='context' else manifest['repeats'])
         eligible=len(cases) if kind=='context' else len(complete)
         completed=sum(r['status']=='complete' for r in records.values())
@@ -269,6 +302,7 @@ def verify(folder):
         planned_order_counts=dict(order_counts),
         judges={k:dict(Counter(r['status'] for r in rows.values())) for k,rows in reviews.items()},
         supplemental_pairs=len(supplements),
+        models_by_metric=sources['models'],
         note='Input/schema/formula audit only; model judgments still need source-grounded case review.')
     runner.save_json(folder/'verification.json', report)
     print(json.dumps(report, ensure_ascii=False))

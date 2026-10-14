@@ -24,9 +24,9 @@
 
 ## Tasks
 
-- [ ] Create source-grounded original46/development36 reference answers, factual claims, quotes, forbidden inferences and clarification requirements; independently review and freeze.
-- [ ] Implement experiment generation/judge/summary tooling with meaningful failure, isolation, context and pairing tests; review code; commit before full runs.
-- [ ] Prepare isolated bert-score dependency and pinned local encoder; verify official artifacts; run actual generator/judge/BERTScore smoke without altering runtime defaults.
+- [x] Create source-grounded original46/development36 reference answers, factual claims, quotes, forbidden inferences and clarification requirements; independently review and freeze.
+- [x] Implement experiment generation/judge/summary tooling with meaningful failure, isolation, context and pairing tests; review code; commit before full runs.
+- [x] Prepare isolated bert-score dependency and pinned local encoder; verify official artifacts; run actual generator/judge/BERTScore smoke without altering runtime defaults.
 - [ ] Generate492 fresh A/D answers; score admitted contexts once per case/variant and evaluate all complete answers; preserve failures and actual token/latency data.
 - [ ] Independently audit aggregates and reviewed cases; report measured changes/limitations/recommendation; commit, integrate and push verified batch under existing project authorization.
 
@@ -37,3 +37,7 @@
 - Failed/empty/truncated outputs, no-claim answers and partial paired completion.
 - Prompt/response JSON parsing, invalid evidence/citation IDs and retry accounting.
 - Chinese encoder truncation, semantic similarity versus fact correctness, judge model-family bias and cached retrieval timing attribution.
+
+## Approved model change, 2026-10-14
+
+After all 492 generation runs and Pro context/faithfulness reviews were recorded, the user changed subsequent review calls to Flash and restored credits. The new independent correctness journal uses the verified request name deepseek-flash for all 489 successful answers, unchanged references/prompt/formulas, and no old Pro correctness fallback. Original generator records keep deepseek-v4-flash. Provider aliases do not pin internal weights. Offline runner/composer review passed; full-project checks precede the formal Flash run.

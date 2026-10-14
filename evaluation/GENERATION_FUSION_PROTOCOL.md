@@ -48,3 +48,20 @@ python evaluation/verify_generation_fusion_results.py evaluation/generation_fusi
 冒烟固定 P17、C-P06、C-N01、C-A01，各组一次；只检查真实链路契约，不纳入正式比较。正式生成和评审可用 `--resume` 继续未完成项；已记录失败不静默覆盖。源语料、参考、代码或设置发生变化时必须使用新目录。仅结果提交导致 Git HEAD 改变时允许恢复，并保留测量时版本。
 
 结论必须包含 A/D 同期基线、新值、绝对变化、失败/NA、改善及退化实例、生成与评审用量。不得以本轮数据宣称真实用户准确率、人工审核通过率或在线端到端延迟提升；不因结果自动改变默认模式。
+
+## 2026-10-14 用户指定评审模型调整
+
+492次生成已经完整记录（489成功、3失败），生成及参考没有改变。Pro已完成上下文和Faithfulness评审，但正确性仅记录40份时再次遇到HTTP402。用户指定后续调用改为Deepseek-flash。
+
+服务目录和真实正确性冒烟核验了当前请求/返回名称 `deepseek-flash`，服务地址指纹与父实验一致。旧生成请求名称仍为 `deepseek-v4-flash`；不能据别名认定服务内部权重相同。新正确性评审对全部489份成功回答统一采用 `deepseek-flash`、原评分指令与公式，避免在同一指标中混入40份旧Pro分数。Pro已完成的Context/Faithfulness不重评。旧Pro正确性保留为参考和成本，不计主分数。
+
+新结果由 `run_correctness_flash_review.py` 在独立目录记录，`compose_generation_mixed_summary.py` 离线合并。每项指标内A/D两组使用相同评审模型，报告逐项注明模型及文件指纹。输入、参考、正文、旧规则、旧raw journals不被改写；服务及评审失败仍保留。Flash生成与Flash正确性接口可能共享较多偏差，自动评分不能代替独立用户裁定。
+
+```powershell
+python evaluation/run_correctness_flash_review.py --env-file <env>
+python evaluation/compose_generation_mixed_summary.py
+python evaluation/verify_generation_fusion_results.py evaluation/generation_fusion_combined_2026-10-14
+python evaluation/report_generation_fusion_results.py evaluation/generation_fusion_combined_2026-10-14
+```
+
+新评审可用 `--resume` 继续未执行单元，已记录失败不会被覆盖。原Pro正确性仍有未执行项属于旧方案，不能在最终报告中把它列为新Flash主评审的缺失。

@@ -75,5 +75,36 @@ class GenerationAuditTests(unittest.TestCase):
                 with self.assertRaises(AssertionError): audit.validate_scored_sources(row,key,changed,supplements)
         with self.assertRaises(AssertionError): audit.validate_scored_sources(row,key,records,{})
 
+    def test_single_model_sources_remain_unchanged(self):
+        manifest=json.loads((self.folder/'manifest.json').read_text(encoding='utf8'))
+        source=audit.resolve_sources(self.folder,manifest)
+        self.assertEqual(source['generation'],self.folder)
+        self.assertEqual(source['models']['correctness'],'deepseek-v4-pro')
+
+    def test_mixed_metrics_require_distinct_verified_sources(self):
+        with tempfile.TemporaryDirectory(dir=audit.ROOT/'.superpowers') as location:
+            base=Path(location)
+            parent=base/'parent'
+            flash=base/'flash'
+            shutil.copytree(SMOKE,parent)
+            flash.mkdir()
+            shutil.copy2(parent/'correctness_reviews.jsonl',flash/'correctness_reviews.jsonl')
+            (flash/'manifest.json').write_text('{}',encoding='utf8')
+            manifest=json.loads((parent/'manifest.json').read_text(encoding='utf8'))
+            manifest['source_directories']={'generation':str(parent.relative_to(audit.ROOT)),
+                'correctness':str(flash.relative_to(audit.ROOT))}
+            manifest['judge']['models_by_metric']={'context':'deepseek-v4-pro',
+                'faithfulness':'deepseek-v4-pro','correctness':'deepseek-flash'}
+            filenames=[parent/name for name in ('manifest.json','answers.jsonl','context_reviews.jsonl',
+                'faithfulness_reviews.jsonl','supplemental_metrics.jsonl','semantic_manifest.json','correctness_reviews.jsonl')]
+            filenames += [flash/'manifest.json',flash/'correctness_reviews.jsonl']
+            manifest['source_file_sha256']={str(path.relative_to(audit.ROOT)):audit.runner.file_hash(path) for path in filenames}
+            sources=audit.resolve_sources(base,manifest)
+            self.assertEqual(sources['review_paths']['context'],parent/'context_reviews.jsonl')
+            self.assertEqual(sources['review_paths']['correctness'],flash/'correctness_reviews.jsonl')
+            self.assertEqual(sources['models']['correctness'],'deepseek-flash')
+            with (flash/'correctness_reviews.jsonl').open('a',encoding='utf8') as stream:stream.write('\n')
+            with self.assertRaises(AssertionError):audit.resolve_sources(base,manifest)
+
 
 if __name__=='__main__': unittest.main()
